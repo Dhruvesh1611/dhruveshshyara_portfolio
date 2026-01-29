@@ -1,0 +1,380 @@
+'use client';
+import { useState } from 'react';
+import { motion, AnimatePresence, useMotionValue, useTransform, useSpring, motionValue } from 'framer-motion';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import Image from 'next/image';
+
+const allCertificates = [
+    {
+        id: 1,
+        name: "CSS Basic",
+        issuer: "HackerRank",
+        year: "2025",
+        link: "https://www.hackerrank.com/certificates/e72e9d42799c",
+        image: "/certificates/css-basic.png",
+    },
+    {
+        id: 2,
+        name: "JavaScript (Basic)",
+        issuer: "HackerRank",
+        year: "2025",
+        link: "https://www.hackerrank.com/certificates/...",
+        image: "/certificates/javascript-basic.png",
+    },
+    {
+        id: 3,
+        name: "Node (Basic)",
+        issuer: "HackerRank",
+        year: "2025",
+        link: "https://www.hackerrank.com/certificates/ceb3ab163e6d",
+        image: "/certificates/node-basic.png",
+    },
+    {
+        id: 4,
+        name: "Problem Solving (Basic)",
+        issuer: "HackerRank",
+        year: "2025",
+        link: "https://www.hackerrank.com/certificates/0625153f0783",
+        image: "/certificates/problem-solving-basic.png",
+    },
+    {
+        id: 5,
+        name: "Frontend Developer (React)",
+        issuer: "HackerRank",
+        year: "2025",
+        link: "https://www.hackerrank.com/certificates/cc7dcbd6558a",
+        image: "/certificates/frontend-developer-react.png",
+    },
+    {
+        id: 6,
+        name: "Azure Services (Basics)",
+        issuer: "SimpliLearn",
+        year: "2025",
+        link: "https://simpli-web.app.link/e/N5LenkEbDTb",
+        image: "/certificates/azure-services-basics.png",
+    },
+    {
+        id: 7,
+        name: "Amazon DocumentDB",
+        issuer: "SimpliLearn",
+        year: "2025",
+        link: "https://simpli-web.app.link/e/uPhDpKxwETb",
+        image: "/certificates/amazon-documentdb.png",
+    },
+    {
+        id: 8,
+        name: "Gateway Load Balancer",
+        issuer: "SimpliLearn",
+        year: "2025",
+        link: "https://simpli-web.app.link/e/sq0S9jMwETb",
+        image: "/certificates/gateway-load-balancer.png",
+    }
+];
+
+const CertificateCard = ({ cert }) => {
+    const x = motionValue(0);
+    const y = motionValue(0);
+
+    const rotateX = useTransform(y, [-150, 150], [10, -10]);
+    const rotateY = useTransform(x, [-150, 150], [-10, 10]);
+
+    const springConfig = { damping: 20, stiffness: 300 };
+    const springRotateX = useSpring(rotateX, springConfig);
+    const springRotateY = useSpring(rotateY, springConfig);
+
+    const imgY = useTransform(y, [-150, 150], [20, -20]);
+    const springImgY = useSpring(imgY, springConfig);
+
+    function handleMouse(event) {
+        const rect = event.currentTarget.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        x.set(event.clientX - centerX);
+        y.set(event.clientY - centerY);
+    }
+
+    function handleMouseLeave() {
+        x.set(0);
+        y.set(0);
+    }
+
+    return (
+        <motion.div
+            layout
+            onMouseMove={handleMouse}
+            onMouseLeave={handleMouseLeave}
+            style={{
+                perspective: 1000,
+                rotateX: springRotateX,
+                rotateY: springRotateY,
+            }}
+            variants={{
+                hidden: { opacity: 0, y: 30, scale: 0.95 },
+                show: { opacity: 1, y: 0, scale: 1 },
+                hover: {
+                    borderColor: "rgba(168, 85, 247, 1)",
+                    boxShadow: "0 40px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(168, 85, 247, 0.2)",
+                    transition: { duration: 0.3 }
+                }
+            }}
+            initial="hidden"
+            animate="show"
+            whileHover="hover"
+            exit={{ opacity: 0, scale: 0.9 }}
+            className="cert-card-premium"
+        >
+            <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cert-image-wrapper"
+                style={{ display: 'block', textDecoration: 'none' }}
+            >
+                <motion.div
+                    style={{ y: springImgY, scale: 1.1 }}
+                    className="cert-img-container"
+                >
+                    <Image
+                        src={cert.image}
+                        alt={cert.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{ objectFit: 'contain', padding: '40px' }}
+                    />
+                </motion.div>
+
+                <div className="project-hover-overlay">
+                    <div className="hover-content">
+                        <span className="hover-text">VIEW CERTIFICATE</span>
+                        <div className="view-button-premium">
+                            <span>VIEW</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div className="cert-date-tag">{cert.year}</div>
+            </a>
+
+            <div className="cert-content">
+                <motion.h3
+                    className="cert-title"
+                    variants={{
+                        show: { y: 0 },
+                        hover: { y: -5 }
+                    }}
+                >
+                    {cert.name}
+                </motion.h3>
+                <p className="cert-issuer">{cert.issuer}</p>
+            </div>
+        </motion.div>
+    );
+};
+
+const CertificatesPage = () => {
+    return (
+        <>
+            <Navbar />
+            <div className="bg-decorations">
+                <div className="blob blob-2"></div>
+            </div>
+
+            <main className="page-container">
+                <section className="full-page-hero">
+                    <div className="hero-glow"></div>
+                    <div className="hero-content">
+                        <motion.h1
+                            className="hero-main-title"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                        >
+                            Awards
+                        </motion.h1>
+                        <motion.span
+                            className="hero-subtitle"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                        >
+                            VERIFIED SKILLS & ACHIEVEMENTS
+                        </motion.span>
+                        <motion.p
+                            className="hero-bottom-text"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.5 }}
+                        >
+                            my certifications.
+                        </motion.p>
+                    </div>
+                </section>
+
+                <section className="certs-grid-section">
+                    <div className="certs-grid">
+                        <AnimatePresence mode='popLayout'>
+                            {allCertificates.map((cert) => (
+                                <CertificateCard key={cert.id} cert={cert} />
+                            ))}
+                        </AnimatePresence>
+                    </div>
+                </section>
+            </main>
+            <Footer />
+
+            <style jsx>{`
+                .bg-decorations {
+                    position: fixed;
+                    inset: 0;
+                    z-index: -1;
+                    overflow: hidden;
+                    pointer-events: none;
+                }
+
+                .full-page-hero {
+                    height: 90vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    text-align: center;
+                }
+
+
+
+                .hero-subtitle {
+                    display: block;
+                    font-size: 1.8rem;
+                    letter-spacing: 0.6em;
+                    color: #fff;
+                    font-family: var(--font-fira-code);
+                    opacity: 0.8;
+                }
+
+                .certs-grid-section {
+                    padding: 0 5% 150px;
+                    max-width: 1600px;
+                    margin: 0 auto;
+                }
+
+                .certs-grid {
+                    display: grid !important;
+                    grid-template-columns: repeat(3, 1fr) !important;
+                    gap: 40px !important;
+                    width: 100% !important;
+                }
+
+                :global(.cert-card-premium) {
+                    background: rgba(255, 255, 255, 0.03);
+                    border-radius: 32px;
+                    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+                    overflow: hidden;
+                    cursor: pointer;
+                    position: relative;
+                    width: 100% !important;
+                    z-index: 1;
+                    display: flex;
+                    flex-direction: column;
+                    transform-style: preserve-3d;
+                }
+
+                :global(.cert-image-wrapper) {
+                    height: 350px;
+                    position: relative;
+                    overflow: hidden;
+                    background: #111;
+                    transform-style: preserve-3d;
+                }
+
+                :global(.cert-img-container) {
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                :global(.cert-overlay) {
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.4);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                }
+
+                :global(.cert-date-tag) {
+                    position: absolute;
+                    top: 30px;
+                    left: 30px;
+                    background: rgba(255,255,255,0.1);
+                    backdrop-filter: blur(20px);
+                    padding: 10px 24px;
+                    border-radius: 100px;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    border: 1px solid rgba(255,255,255,0.2);
+                    z-index: 4;
+                    color: #fff;
+                }
+
+                :global(.cert-content) {
+                    padding: 40px;
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                :global(.cert-title) {
+                    font-size: 2.8rem;
+                    font-weight: 800;
+                    color: #fff;
+                    margin: 0;
+                    letter-spacing: -0.02em;
+                    line-height: 1.2;
+                }
+
+                :global(.cert-issuer) {
+                    font-size: 1.6rem;
+                    color: var(--color-light-purple);
+                    font-family: var(--font-fira-code);
+                    margin: 0;
+                }
+
+                @media (max-width: 1400px) {
+                    .certs-grid { 
+                        grid-template-columns: repeat(3, 1fr) !important; 
+                        gap: 30px !important;
+                    }
+                    :global(.cert-image-wrapper) { height: 320px; }
+                }
+
+                @media (max-width: 1200px) {
+                    .certs-grid { 
+                        grid-template-columns: repeat(2, 1fr) !important; 
+                    }
+                    :global(.cert-image-wrapper) { height: 280px; }
+                    :global(.cert-title) { font-size: 2.4rem; }
+                }
+
+                @media (max-width: 768px) {
+                    .certs-grid { 
+                        grid-template-columns: 1fr !important; 
+                    }
+                    :global(.cert-image-wrapper) { height: 250px; }
+                    :global(.cert-title) { font-size: 2.2rem; }
+                    .full-page-hero { height: 70vh; }
+                }
+            `}</style>
+        </>
+    );
+};
+
+export default CertificatesPage;

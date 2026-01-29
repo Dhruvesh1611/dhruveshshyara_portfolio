@@ -1,0 +1,35 @@
+.youtube-embed-container {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.youtube-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    background: var(--card-bg, #1a1a1a);
+}
+
+.youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .youtube-embed-container {
+        margin: 1.5rem 0;
+    }
+
+    .youtube-wrapper {
+        border-radius: 8px;
+    }
+}
