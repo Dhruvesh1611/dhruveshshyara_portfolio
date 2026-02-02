@@ -35,7 +35,7 @@ const About = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <Image
-                            src="/png/dhruvesh-avatar.png"
+                            src="/png/profile.png"
                             alt="Dhruvesh Shyara"
                             width={300}
                             height={300}

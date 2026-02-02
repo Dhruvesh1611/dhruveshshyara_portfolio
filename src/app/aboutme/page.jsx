@@ -223,7 +223,7 @@ const AboutMePage = () => {
                             transition={{ duration: 0.8 }}
                         >
                             <Image
-                                src="/png/dhruvesh-home-avatar.png"
+                                src="/png/dhruvesh-home-avatar2.png"
                                 alt="Dhruvesh"
                                 fill
                                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -716,7 +716,6 @@ const AboutMePage = () => {
                 .education-scrolly-container {
                     position: relative;
                     background: #000;
-                    margin-top: 100px;
                 }
 
                 .education-sticky-wrapper {
@@ -772,13 +771,15 @@ const AboutMePage = () => {
                     .about-intro-section {
                         grid-template-columns: 1fr;
                         padding: 80px 5%;
+                        gap: 40px;
                     }
                     .intro-heading { font-size: 3.5rem; }
-                    .section-heading { font-size: 5rem; letter-spacing: -1px; margin-bottom: 40px; }
+                    .intro-image { height: 350px; }
+                    .section-heading { font-size: 6rem; letter-spacing: -1px; margin-bottom: 40px; }
                     .scrolly-grid { 
                         grid-template-columns: 1fr; 
                         text-align: center;
-                        gap: 30px;
+                        gap: 40px;
                     }
                     .semester-title { font-size: 3.5rem; }
                     .semester-highlights { display: inline-block; text-align: left; }
@@ -788,6 +789,89 @@ const AboutMePage = () => {
                     .edu-dot { left: 0; transform: translateX(-50%); }
                     .education-item { justify-content: flex-start; }
                     .edu-content { width: 100%; margin-left: 30px; text-align: left; }
+                    
+                    /* Improve sticky sections on mobile */
+                    .journey-sticky-wrapper,
+                    .education-sticky-wrapper {
+                        height: auto;
+                        min-height: 100vh;
+                    }
+                    
+                    .journey-scroll-content,
+                    .education-scroll-content {
+                        padding: 40px 5%;
+                    }
+                    
+                    /* Make sticky description box responsive */
+                    .sticky-desc-box {
+                        width: 100% !important;
+                        height: auto !important;
+                        min-height: 280px;
+                        padding: 30px 20px !important;
+                        font-size: 1.8rem !important;
+                    }
+                    
+                    .scrolly-sticky-image {
+                        position: relative !important;
+                        width: 100% !important;
+                    }
+                    
+                    .sticky-image-fixed {
+                        position: relative !important;
+                        top: 0 !important;
+                        width: 100% !important;
+                        height: auto !important;
+                    }
+                    
+                    .edu-image-frame {
+                        height: 300px;
+                    }
+                }
+                
+                @media (max-width: 500px) {
+                    .section-heading {
+                        font-size: 4.5rem;
+                        margin-bottom: 30px;
+                    }
+                    
+                    .intro-heading {
+                        font-size: 2.8rem;
+                    }
+                    
+                    .semester-title {
+                        font-size: 2.8rem;
+                    }
+                    
+                    .semester-period,
+                    .edu-year {
+                        font-size: 1.4rem;
+                    }
+                    
+                    .semester-highlights li {
+                        font-size: 1.6rem;
+                    }
+                    
+                    .sticky-desc-box {
+                        font-size: 1.6rem !important;
+                        padding: 25px 18px !important;
+                    }
+                    
+                    .edu-degree {
+                        font-size: 2.2rem;
+                    }
+                    
+                    .edu-school {
+                        font-size: 1.6rem;
+                    }
+                    
+                    .edu-image-frame {
+                        height: 250px;
+                    }
+                    
+                    .journey-scroll-content,
+                    .education-scroll-content {
+                        padding: 30px 5%;
+                    }
                 }
             `}</style>
         </>

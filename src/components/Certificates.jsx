@@ -48,6 +48,37 @@ const CertificateTextSection = ({ cert, setActiveCert, isLast }) => {
 
     return (
         <div ref={ref} className="project-text-section">
+            {/* Mobile: Show certificate image above each item */}
+            <div className="project-mobile-image">
+                <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-image-box"
+                    style={{ border: '2px solid var(--color-light-purple)', display: 'block', position: 'relative' }}
+                >
+                    <Image
+                        src={cert.image}
+                        alt={cert.title}
+                        fill
+                        sizes="(max-width: 998px) 100vw, 0vw"
+                        style={{ objectFit: 'contain', padding: '20px', background: '#0a0a0a' }}
+                        className="project-display-img"
+                    />
+                    <div className="project-hover-overlay">
+                        <div className="hover-content">
+                            <span className="hover-text">VIEW CERTIFICATE</span>
+                            <div className="view-button-premium">
+                                <span>VIEW</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}

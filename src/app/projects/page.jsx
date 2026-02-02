@@ -7,6 +7,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { allProjects } from '@/data/projectsData';
 
+// Note: metadata export doesn't work in 'use client' components
+// Metadata is handled by parent layout
 
 const categories = ['All', 'UI/UX', 'Frontend', 'Backend', 'Fullstack'];
 

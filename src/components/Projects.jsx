@@ -22,6 +22,31 @@ const ProjectTextSection = ({ project, setActiveProject, isLast }) => {
 
     return (
         <div ref={ref} className="project-text-section">
+            {/* Mobile: Show image above each project */}
+            <div className="project-mobile-image">
+                <Link href={`/projects/${project.slug}`}>
+                    <div className="project-image-box">
+                        <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            sizes="(max-width: 998px) 100vw, 0vw"
+                            style={{ objectFit: 'cover' }}
+                            className="project-display-img"
+                            onError={(e) => {
+                                e.target.src = '/projects/yaritu.png';
+                            }}
+                        />
+                        <div className="project-hover-overlay">
+                            <div className="hover-content">
+                                <span className="hover-text">CLICK FOR MORE DESCRIPTION & DETAILS</span>
+                                <span className="hover-arrow">→</span>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+            </div>
+
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
