@@ -20,7 +20,7 @@ const CustomCursor = () => {
         window.addEventListener('mousemove', handleMouseMove);
         document.body.addEventListener('mouseleave', handleMouseLeave);
 
-        // Add hover listeners to interactive elements
+        // Add hover listeners to interactive elements.
         const interactiveElements = document.querySelectorAll('a, button, label');
         interactiveElements.forEach((el) => {
             el.addEventListener('mouseenter', handleHoverStart);

@@ -139,7 +139,7 @@ const Hero = () => {
                 transition={{ delay: 0.5, duration: 0.5 }}
             >
                 <Image
-                    src="/png/profile.png"
+                    src="/png/nav-avatar.png"
                     alt="Dhruvesh Home Avatar"
                     width={400}
                     height={400}
