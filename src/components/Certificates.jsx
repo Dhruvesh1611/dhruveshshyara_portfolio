@@ -53,6 +53,33 @@ const CertificateTextSection = ({ cert, setActiveCert, isLast }) => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
             >
+                {/* Inline image for mobile - hidden on desktop */}
+                <a href={cert.link} target="_blank" rel="noopener noreferrer" className="mobile-project-image-link">
+                    <motion.div
+                        className="mobile-project-image mobile-cert-image"
+                        initial={{ opacity: 0, scale: 0.92 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    >
+                        <div className="project-image-box" style={{ border: '2px solid var(--color-light-purple)' }}>
+                            <Image
+                                src={cert.image}
+                                alt={cert.title}
+                                fill
+                                sizes="(max-width: 998px) 90vw, 1px"
+                                style={{ objectFit: 'contain', padding: '20px', background: '#0a0a0a' }}
+                                className="project-display-img"
+                            />
+                            <div className="project-hover-overlay">
+                                <div className="hover-content">
+                                    <span className="hover-text">VIEW CERTIFICATE</span>
+                                    <span className="hover-arrow">→</span>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                </a>
+
                 <span className="project-number">{cert.issuer} | {cert.date}</span>
                 <h2 className="project-title-display">{cert.title}</h2>
                 <p className="project-desc-display">{cert.description}</p>

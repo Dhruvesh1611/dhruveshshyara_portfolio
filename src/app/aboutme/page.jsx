@@ -10,34 +10,54 @@ const journeyData = [
     {
         id: 1,
         semester: '1st Semester',
-        period: 'Aug 2021 - Dec 2021',
-        highlights: ['C Programming Basics', 'Introduction to Algorithms', 'Mathematics Foundation'],
-        description: 'Started my B.Tech journey with the fundamentals. Learned C programming from scratch, understood basic data structures like arrays and loops, and built a strong foundation in engineering mathematics. Created my first "Hello World" program and felt the excitement of coding.',
+        period: 'Foundations of Web & Programming',
+        highlights: [
+            'Programming Logic — Mastered logic building & problem-solving with C/C++',
+            'Modern Frontend — Built responsive UIs using HTML5, CSS3 & ES6+ JavaScript',
+            'Advanced JavaScript — Deep-dived into Closures, Prototypal Inheritance & Async patterns',
+            'Design & Version Control — Learned UI/UX with Figma, collaboration with Git & GitHub',
+        ],
+        description: 'Laid a rock-solid foundation by learning programming logic from scratch with C/C++, then quickly moved into the web world — crafting responsive interfaces with HTML5, CSS3 and modern JavaScript. Explored advanced JS concepts like closures, prototypal inheritance and asynchronous programming. Also picked up design thinking through Figma and adopted Git & GitHub for professional version control workflows.',
         image: '/png/clogo.png',
     },
     {
         id: 2,
         semester: '2nd Semester',
-        period: 'Jan 2022 - May 2022',
-        highlights: ['C++ & OOP Concepts', 'Data Structures', 'Problem Solving'],
-        description: 'Transitioned to Object-Oriented Programming with C++. Mastered concepts like classes, inheritance, and polymorphism. Started solving problems on coding platforms and developed logical thinking skills.',
-        image: '/png/cpplogo.png',
+        period: 'Modern Web Frameworks & OOPs',
+        highlights: [
+            'Frontend Engineering — Built dynamic SPAs using React.js with component architecture',
+            'Backend Development — Engineered scalable server-side logic with Node.js & Express.js',
+            'Database Management — Worked with MongoDB (NoSQL) & Redis (high-performance caching)',
+            'OOP Mastery — Polymorphism, Inheritance & Encapsulation in C++',
+        ],
+        description: 'Leveled up into modern full-stack development. Built dynamic Single Page Applications with React.js, then engineered scalable backend services using Node.js and Express.js. Specialized in NoSQL databases — MongoDB for document storage and Redis for blazing-fast caching. Simultaneously strengthened core OOP concepts like Polymorphism, Inheritance and Encapsulation in C++.',
+        image: '/png/reactlogo.png',
     },
     {
         id: 3,
         semester: '3rd Semester',
-        period: 'Aug 2022 - Dec 2022',
-        highlights: ['HTML, CSS, JavaScript', 'Frontend Basics', 'Git & GitHub'],
-        description: 'Discovered web development! Built my first websites using HTML and CSS, then added interactivity with JavaScript. Learned version control with Git and started contributing to open source.',
-        image: '/png/htmllogo.png',
+        period: 'Architecture & Data Structures',
+        highlights: [
+            'Advanced Web Tech — Full-stack apps with Next.js (App Router & Server Components)',
+            'DSA — Linked Lists, Stacks, Queues, Searching & Sorting algorithms in C/C++',
+            'Database Systems — Relational DB design, Normalization & complex SQL (DBMS)',
+            'Core Java — JVM architecture, multi-threaded programming & strong Java foundation',
+        ],
+        description: 'Entered the world of production-grade architecture. Developed SEO-friendly, full-stack applications using Next.js with App Router and Server Components. Simultaneously sharpened problem-solving by implementing complex data structures and algorithms — Linked Lists, Stacks, Queues, and various Searching/Sorting techniques in C/C++. Gained deep understanding of Relational Database design, Normalization, and complex SQL querying. Also built a strong foundation in Core Java including JVM internals and multi-threaded programming.',
+        image: '/png/nextlogo.png',
     },
     {
         id: 4,
         semester: '4th Semester',
-        period: 'Jan 2023 - May 2023',
-        highlights: ['React.js', 'Node.js Basics', 'REST APIs'],
-        description: 'Dived into modern frameworks. Built dynamic single-page applications with React, understood component-based architecture, and created my first backend API with Node.js and Express.',
-        image: '/png/reactlogo.png',
+        period: 'Enterprise Applications & Infrastructure',
+        highlights: [
+            'Advance Java — Enterprise apps with Servlets, JSP & JDBC for DB connectivity',
+            'DevOps & Cloud — CI/CD pipelines, containerization & scalable cloud infrastructure',
+            'Operating Systems — Process Scheduling, Memory Management, Deadlocks & System Calls',
+            'System Design — Software Project Management & Agile methodologies',
+        ],
+        description: 'Stepping into enterprise-level engineering. Building robust applications using Servlets, JSP, and JDBC for seamless database connectivity. Exploring DevOps practices — CI/CD pipelines, containerization with Docker, and managing scalable infrastructure on cloud platforms. Deepening knowledge of Operating Systems including process scheduling, memory management, deadlocks, and system calls. Mastering Software Project Management and Agile methodologies to lead technical development cycles effectively.',
+        image: '/png/node.png',
     },
 ];
 
@@ -246,6 +266,21 @@ const AboutMePage = () => {
                                 MY JOURNEY
                             </motion.h2>
 
+                            {/* Timeline Dots */}
+                            <div className="journey-timeline">
+                                <div className="timeline-line">
+                                    <div className="timeline-progress" style={{ width: `${((activeItem.id - 1) / (journeyData.length - 1)) * 100}%` }} />
+                                </div>
+                                {journeyData.map((item) => (
+                                    <div
+                                        key={item.id}
+                                        className={`timeline-dot ${activeItem.id === item.id ? 'active' : ''} ${activeItem.id > item.id ? 'completed' : ''}`}
+                                    >
+                                        <span className="timeline-dot-label">Sem {item.id}</span>
+                                    </div>
+                                ))}
+                            </div>
+
                             <div className="scrolly-grid">
                                 {/* Left Side: Semester & Points */}
                                 <div className="scrolly-left">
@@ -280,7 +315,7 @@ const AboutMePage = () => {
                                                 transition={{ duration: 0.5, ease: 'easeInOut' }}
                                                 className="sticky-image-container sticky-desc-container"
                                             >
-                                                <div className="sticky-desc-box" style={{ border: '2px solid var(--color-light-purple)', background: '#0a0a0a', borderRadius: '24px', width: '620px', height: '380px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', padding: '20px', color: 'var(--color-light-blue)', fontWeight: 500, fontSize: '2.1rem', textAlign: 'center', lineHeight: 1.5 }}>
+                                                <div className="sticky-desc-box" style={{ border: '2px solid var(--color-light-purple)', background: '#0a0a0a', borderRadius: '24px', width: '100%', maxWidth: '620px', height: 'auto', minHeight: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', padding: '30px 20px', color: 'var(--color-light-blue)', fontWeight: 500, fontSize: 'clamp(1.4rem, 2vw, 2.1rem)', textAlign: 'center', lineHeight: 1.5 }}>
                                                     {activeItem.description}
                                                 </div>
                                             </motion.div>
@@ -360,6 +395,21 @@ const AboutMePage = () => {
                                             </div>
                                         </motion.div>
                                     </AnimatePresence>
+                                </div>
+
+                                {/* Vertical Education Timeline */}
+                                <div className="edu-timeline-vertical">
+                                    <div className="edu-timeline-line">
+                                        <div className="edu-timeline-progress" style={{ height: `${((activeEdu.id - 1) / (educationData.length - 1)) * 100}%` }} />
+                                    </div>
+                                    {educationData.map((item) => (
+                                        <div
+                                            key={item.id}
+                                            className={`edu-timeline-dot ${activeEdu.id === item.id ? 'active' : ''} ${activeEdu.id > item.id ? 'completed' : ''}`}
+                                        >
+                                            <span className="edu-timeline-dot-label">{item.degree.split(' ')[0]}</span>
+                                        </div>
+                                    ))}
                                 </div>
 
                                 {/* Sticky Right: Education Image */}
@@ -526,7 +576,7 @@ const AboutMePage = () => {
                     font-weight: 900;
                     margin-bottom: 80px;
                     letter-spacing: -3px;
-                    text-align: center;
+                    text-align: left;
                     font-family: var(--font-anton), sans-serif;
                     text-transform: uppercase;
                 }
@@ -585,6 +635,98 @@ const AboutMePage = () => {
                     line-height: 1.8;
                     color: #aaa;
                     margin: 0;
+                }
+
+                /* Journey Timeline */
+                .journey-timeline {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+                    margin-bottom: 50px;
+                    padding: 0 40px;
+                }
+
+                .timeline-line {
+                    position: absolute;
+                    left: 40px;
+                    right: 40px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 3px;
+                    background: rgba(255, 255, 255, 0.08);
+                    border-radius: 3px;
+                    z-index: 0;
+                    overflow: hidden;
+                }
+
+                .timeline-progress {
+                    height: 100%;
+                    background: linear-gradient(90deg, #a855f7, #cf59e6);
+                    border-radius: 3px;
+                    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 0;
+                }
+
+                .timeline-dot {
+                    position: relative;
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    cursor: default;
+                }
+
+                .timeline-dot::before {
+                    content: '';
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    background: #222;
+                    border: 3px solid rgba(255, 255, 255, 0.15);
+                    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                    box-shadow: none;
+                }
+
+                .timeline-dot.completed::before {
+                    background: #a855f7;
+                    border-color: #a855f7;
+                    box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+                }
+
+                .timeline-dot.active::before {
+                    background: #cf59e6;
+                    border-color: #cf59e6;
+                    box-shadow: 0 0 15px rgba(207, 89, 230, 0.7), 0 0 40px rgba(207, 89, 230, 0.3), 0 0 60px rgba(207, 89, 230, 0.15);
+                    transform: scale(1.3);
+                    animation: dotPulse 2s ease-in-out infinite;
+                }
+
+                @keyframes dotPulse {
+                    0%, 100% { box-shadow: 0 0 15px rgba(207, 89, 230, 0.7), 0 0 40px rgba(207, 89, 230, 0.3); transform: scale(1.3); }
+                    50% { box-shadow: 0 0 25px rgba(207, 89, 230, 0.9), 0 0 60px rgba(207, 89, 230, 0.5); transform: scale(1.45); }
+                }
+
+                .timeline-dot-label {
+                    font-size: 1.2rem;
+                    color: rgba(255, 255, 255, 0.3);
+                    font-family: var(--font-fira-code);
+                    font-weight: 500;
+                    transition: color 0.5s ease;
+                    white-space: nowrap;
+                }
+
+                .timeline-dot.active .timeline-dot-label {
+                    color: #cf59e6;
+                    text-shadow: 0 0 10px rgba(207, 89, 230, 0.5);
+                }
+
+                .timeline-dot.completed .timeline-dot-label {
+                    color: #a855f7;
                 }
 
                 .journey-indicators {
@@ -716,7 +858,6 @@ const AboutMePage = () => {
                 .education-scrolly-container {
                     position: relative;
                     background: #000;
-                    margin-top: 100px;
                 }
 
                 .education-sticky-wrapper {
@@ -743,6 +884,103 @@ const AboutMePage = () => {
                     margin-top: 20px;
                 }
 
+                .education-scrolly-container .scrolly-grid {
+                    grid-template-columns: 1fr auto 1fr;
+                }
+
+                /* Vertical Education Timeline */
+                .edu-timeline-vertical {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+                    padding: 20px 0;
+                    min-height: 300px;
+                }
+
+                .edu-timeline-line {
+                    position: absolute;
+                    top: 20px;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 3px;
+                    background: rgba(255, 255, 255, 0.08);
+                    border-radius: 3px;
+                    z-index: 0;
+                    overflow: hidden;
+                }
+
+                .edu-timeline-progress {
+                    width: 100%;
+                    background: linear-gradient(180deg, #a855f7, #cf59e6);
+                    border-radius: 3px;
+                    transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                .edu-timeline-dot {
+                    position: relative;
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 12px;
+                    cursor: default;
+                }
+
+                .edu-timeline-dot::before {
+                    content: '';
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    background: #222;
+                    border: 3px solid rgba(255, 255, 255, 0.15);
+                    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                    box-shadow: none;
+                    flex-shrink: 0;
+                }
+
+                .edu-timeline-dot.completed::before {
+                    background: #a855f7;
+                    border-color: #a855f7;
+                    box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+                }
+
+                .edu-timeline-dot.active::before {
+                    background: #cf59e6;
+                    border-color: #cf59e6;
+                    box-shadow: 0 0 15px rgba(207, 89, 230, 0.7), 0 0 40px rgba(207, 89, 230, 0.3), 0 0 60px rgba(207, 89, 230, 0.15);
+                    transform: scale(1.3);
+                    animation: eduDotPulse 2s ease-in-out infinite;
+                }
+
+                @keyframes eduDotPulse {
+                    0%, 100% { box-shadow: 0 0 15px rgba(207, 89, 230, 0.7), 0 0 40px rgba(207, 89, 230, 0.3); transform: scale(1.3); }
+                    50% { box-shadow: 0 0 25px rgba(207, 89, 230, 0.9), 0 0 60px rgba(207, 89, 230, 0.5); transform: scale(1.45); }
+                }
+
+                .edu-timeline-dot-label {
+                    font-size: 1.1rem;
+                    color: rgba(255, 255, 255, 0.3);
+                    font-family: var(--font-fira-code);
+                    font-weight: 500;
+                    transition: color 0.5s ease;
+                    white-space: nowrap;
+                }
+
+                .edu-timeline-dot.active .edu-timeline-dot-label {
+                    color: #cf59e6;
+                    text-shadow: 0 0 10px rgba(207, 89, 230, 0.5);
+                }
+
+                .edu-timeline-dot.completed .edu-timeline-dot-label {
+                    color: #a855f7;
+                }
+
                 .edu-image-frame {
                     width: 100%;
                     height: 70%;
@@ -766,21 +1004,82 @@ const AboutMePage = () => {
 
                 @media (max-width: 1024px) {
                     .scrolly-grid { gap: 50px; }
+                    .about-intro-section { gap: 50px; padding: 80px 5%; }
                 }
 
                 @media (max-width: 768px) {
                     .about-intro-section {
                         grid-template-columns: 1fr;
-                        padding: 80px 5%;
+                        padding: 60px 5%;
+                        gap: 40px;
                     }
-                    .intro-heading { font-size: 3.5rem; }
-                    .section-heading { font-size: 5rem; letter-spacing: -1px; margin-bottom: 40px; }
+                    .intro-heading { font-size: 3rem; text-align: center; }
+                    .intro-label { text-align: center; }
+                    .intro-text { text-align: center; font-size: 1.5rem; line-height: 1.7; }
+                    .intro-content { font-size: 1.3rem; text-align: center; }
+                    .intro-image { height: 350px; }
+                    .section-heading { 
+                        font-size: 4rem; 
+                        letter-spacing: -1px; 
+                        margin-bottom: 40px; 
+                        text-align: center;
+                    }
+                    .journey-timeline {
+                        padding: 0 10px;
+                        margin-bottom: 30px;
+                    }
+                    .timeline-line {
+                        left: 10px;
+                        right: 10px;
+                    }
+                    .timeline-dot::before {
+                        width: 14px;
+                        height: 14px;
+                    }
+                    .timeline-dot-label {
+                        font-size: 1rem;
+                    }
                     .scrolly-grid { 
                         grid-template-columns: 1fr; 
                         text-align: center;
                         gap: 30px;
                     }
-                    .semester-title { font-size: 3.5rem; }
+                    .education-scrolly-container .scrolly-grid {
+                        grid-template-columns: 1fr;
+                    }
+                    .edu-timeline-vertical {
+                        flex-direction: row;
+                        min-height: auto;
+                        padding: 0 10px;
+                        margin-bottom: 25px;
+                    }
+                    .edu-timeline-line {
+                        top: 50%;
+                        bottom: auto;
+                        left: 10px;
+                        right: 10px;
+                        transform: translateY(-50%);
+                        width: auto;
+                        height: 3px;
+                    }
+                    .edu-timeline-progress {
+                        height: 100% !important;
+                        width: 0;
+                        transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                    }
+                    .edu-timeline-dot {
+                        flex-direction: column;
+                        gap: 8px;
+                    }
+                    .edu-timeline-dot::before {
+                        width: 14px;
+                        height: 14px;
+                    }
+                    .edu-timeline-dot-label {
+                        font-size: 0.9rem;
+                    }
+                    .semester-title { font-size: 3rem; }
+                    .semester-period { text-align: center; }
                     .semester-highlights { display: inline-block; text-align: left; }
                     .semester-desc-card { padding: 30px; }
                     .semester-desc-card p { font-size: 1.6rem; }
@@ -788,6 +1087,60 @@ const AboutMePage = () => {
                     .edu-dot { left: 0; transform: translateX(-50%); }
                     .education-item { justify-content: flex-start; }
                     .edu-content { width: 100%; margin-left: 30px; text-align: left; }
+                    .edu-degree { font-size: 2.2rem; }
+                    .edu-school { font-size: 1.5rem; }
+                    .edu-year { text-align: center; }
+                    .edu-result-badge { margin-left: auto; margin-right: auto; }
+                    .journey-scroll-content { padding: 0 5%; }
+                    .education-scroll-content { padding: 0 5%; }
+                    .full-page-hero { height: 70vh; }
+                    .hero-subtitle { font-size: 1rem !important; letter-spacing: 0.2em !important; }
+                }
+
+                @media (max-width: 480px) {
+                    .intro-heading { font-size: 2.5rem; }
+                    .intro-text { font-size: 1.3rem; }
+                    .section-heading { font-size: 3rem; margin-bottom: 30px; }
+                    .semester-title { font-size: 2.5rem; }
+                    .journey-timeline {
+                        padding: 0 5px;
+                        margin-bottom: 20px;
+                    }
+                    .timeline-line {
+                        left: 5px;
+                        right: 5px;
+                    }
+                    .timeline-dot::before {
+                        width: 12px;
+                        height: 12px;
+                        border-width: 2px;
+                    }
+                    .timeline-dot-label {
+                        font-size: 0.85rem;
+                    }
+                    .semester-highlights li { font-size: 1.5rem; padding: 8px 0; padding-left: 25px; }
+                    .intro-image { height: 280px; }
+                    .full-page-hero { height: 55vh; }
+                    .about-intro-section { padding: 40px 4%; }
+                    .edu-degree { font-size: 1.8rem; }
+                    .edu-school { font-size: 1.3rem; }
+                    .edu-board, .edu-percentage { font-size: 1.3rem; }
+                    .edu-result-badge { padding: 10px 20px; gap: 15px; }
+                    .edu-timeline-vertical {
+                        padding: 0 5px;
+                    }
+                    .edu-timeline-line {
+                        left: 5px;
+                        right: 5px;
+                    }
+                    .edu-timeline-dot::before {
+                        width: 12px;
+                        height: 12px;
+                        border-width: 2px;
+                    }
+                    .edu-timeline-dot-label {
+                        font-size: 0.8rem;
+                    }
                 }
             `}</style>
         </>

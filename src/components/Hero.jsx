@@ -17,8 +17,7 @@ const Hero = () => {
     };
 
     const handleResumeClick = () => {
-        // Open the same Drive file preview used elsewhere
-        window.open('https://drive.google.com/file/d/1Ue44O731CEX0YFhF86NXe9GCbUcHtZRu/preview', '_blank');
+        window.open('https://drive.google.com/file/d/1TCuMvk8GpC6dyOXG2l4mPnnNzuXmkBac/view', '_blank');
     };
 
     return (

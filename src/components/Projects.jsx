@@ -27,6 +27,33 @@ const ProjectTextSection = ({ project, setActiveProject, isLast }) => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
             >
+                {/* Inline image for mobile - hidden on desktop */}
+                <Link href={`/projects/${project.slug}`} className="mobile-project-image-link">
+                    <motion.div
+                        className="mobile-project-image"
+                        initial={{ opacity: 0, scale: 0.92 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    >
+                        <div className="project-image-box">
+                            <Image
+                                src={project.image}
+                                alt={project.title}
+                                fill
+                                sizes="(max-width: 998px) 90vw, 1px"
+                                style={{ objectFit: 'cover' }}
+                                className="project-display-img"
+                            />
+                            <div className="project-hover-overlay">
+                                <div className="hover-content">
+                                    <span className="hover-text">VIEW PROJECT</span>
+                                    <span className="hover-arrow">→</span>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                </Link>
+
                 <span className="project-number">0{project.id}</span>
                 <h2 className="project-title-display">{project.title}</h2>
                 <p className="project-desc-display">{project.description}</p>

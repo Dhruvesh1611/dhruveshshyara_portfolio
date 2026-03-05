@@ -24,12 +24,14 @@ export default function ProjectPage({ params }) {
     const navItems = [
         { name: "Project Overview", id: "overview" },
         ...(project.youtubeVideoId ? [{ name: "🎥 Video Explanation", id: "video" }] : []),
-        { name: "🎯 Project Purpose", id: "purpose" },
-        { name: "🛍️ Project Checkouts", id: "features" },
-        { name: "🧩 Technology Stack", id: "arch" },
-        { name: "📚 Data Layer", id: "datalayer" },
-        { name: "🚀 Future Roadmap", id: "roadmap" },
-        { name: "⭐ Standout Features", id: "standout" }
+        ...(project.purpose ? [{ name: "🎯 Project Purpose", id: "purpose" }] : []),
+        ...(project.features?.length ? [{ name: "🛍️ Project Checkouts", id: "features" }] : []),
+        ...(project.architecture ? [{ name: "🧩 Technology Stack", id: "arch" }] : []),
+        ...(project.dataLayer?.length ? [{ name: "📚 Data Layer", id: "datalayer" }] : []),
+        ...(project.roadmap?.length ? [{ name: "🚀 Future Roadmap", id: "roadmap" }] : []),
+        ...(project.challenges?.length ? [{ name: "🧠 Challenges & Solutions", id: "challenges" }] : []),
+        ...(project.projectStructure?.length ? [{ name: "📂 Project Structure", id: "structure" }] : []),
+        ...(project.standoutPoints?.length ? [{ name: "⭐ Standout Features", id: "standout" }] : [])
     ];
 
     useEffect(() => {
@@ -72,12 +74,16 @@ export default function ProjectPage({ params }) {
             <header className="detail-header">
                 <div className="header-left">
                     <div className="metadata-badges">
-                        <span className="meta-badge">
-                            <strong>TIME:</strong> {project.timeTaken || "8 Weeks"}
-                        </span>
-                        <span className="meta-badge">
-                            <strong>ROLE:</strong> {project.role || "Lead Developer"}
-                        </span>
+                                                {project.slug === 'yaritu' && (
+                                                    <>
+                                                        <span className="meta-badge">
+                                                            <strong>TIMELINE:</strong> {project.timeline}
+                                                        </span>
+                                                        <span className="meta-badge">
+                                                            <strong>ROLE:</strong> {project.role}
+                                                        </span>
+                                                    </>
+                                                )}
                     </div>
                     <motion.h1
                         className="project-large-title"
@@ -124,43 +130,61 @@ export default function ProjectPage({ params }) {
                         </section>
                     )}
 
-                    <section id="purpose" className="detail-article">
-                        <h2 className="detail-section-title">🎯 Project Purpose</h2>
-                        <div className="detail-text white-space-pre">{project.purpose}</div>
-                    </section>
+                    {project.purpose && (
+                        <section id="purpose" className="detail-article">
+                            <h2 className="detail-section-title">🎯 Project Purpose</h2>
+                            <div className="detail-text white-space-pre">{project.purpose}</div>
+                        </section>
+                    )}
 
-                    <section id="features" className="detail-article">
-                        <h2 className="detail-section-title">🛍️ Project Checkouts (Key Highlights)</h2>
-                        <ul className="highlights-list">
-                            {(project.features || []).map((feature, i) => (
-                                <li key={i} className="highlight-item">
-                                    <span className="highlight-icon">{feature.icon}</span>
-                                    <div className="highlight-text-content">
-                                        <h4 className="highlight-title">{feature.title}</h4>
-                                        <p className="detail-text" style={{ marginTop: '5px' }}>{feature.description}</p>
+                    {project.features?.length > 0 && (
+                        <section id="features" className="detail-article">
+                            <h2 className="detail-section-title">🛍️ Project Checkouts (Key Highlights)</h2>
+                            <ul className="highlights-list">
+                                {project.features.map((feature, i) => (
+                                    <li key={i} className="highlight-item">
+                                        <span className="highlight-icon">{feature.icon}</span>
+                                        <div className="highlight-text-content">
+                                            <h4 className="highlight-title">{feature.title}</h4>
+                                            <p className="detail-text" style={{ marginTop: '5px' }}>{feature.description}</p>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    )}
+
+                    {project.architecture && (
+                        <section id="arch" className="detail-article">
+                            <h2 className="detail-section-title">🧩 Technology Stack</h2>
+                            <div className="arch-grid">
+                                {project.architecture.frontend && (
+                                    <div className="arch-card">
+                                        <h4>Frontend</h4>
+                                        <p>{project.architecture.frontend}</p>
                                     </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </section>
-
-                    <section id="arch" className="detail-article">
-                        <h2 className="detail-section-title">🧩 Technology Stack</h2>
-                        <div className="arch-grid">
-                            <div className="arch-card">
-                                <h4>Frontend</h4>
-                                <p>{project.architecture?.frontend}</p>
+                                )}
+                                {project.architecture.backend && (
+                                    <div className="arch-card">
+                                        <h4>Backend</h4>
+                                        <p>{project.architecture.backend}</p>
+                                    </div>
+                                )}
+                                {project.architecture.database && (
+                                    <div className="arch-card">
+                                        <h4>Cloud & Infrastructure</h4>
+                                        <p>{project.architecture.database}</p>
+                                    </div>
+                                )}
+                                {project.architecture.core && (
+                                    <div className="arch-card">
+                                        <h4>Core Architecture</h4>
+                                        <p>{project.architecture.core}</p>
+                                    </div>
+                                )}
                             </div>
-                            <div className="arch-card">
-                                <h4>Backend</h4>
-                                <p>{project.architecture?.backend}</p>
-                            </div>
-                            <div className="arch-card">
-                                <h4>Cloud & Infrastructure</h4>
-                                <p>{project.architecture?.database}</p>
-                            </div>
-                        </div>
-                    </section>
+                        </section>
+                    )}
 
                     {project.dataLayer && (
                         <section id="datalayer" className="detail-article">
@@ -173,16 +197,47 @@ export default function ProjectPage({ params }) {
                         </section>
                     )}
 
-                    <section id="roadmap" className="detail-article">
-                        <h2 className="detail-section-title">🚀 Future Roadmap</h2>
-                        <div className="roadmap-items">
-                            {(project.roadmap || []).map((step, i) => (
-                                <div key={i} className="roadmap-step">{step}</div>
-                            ))}
-                        </div>
-                    </section>
+                    {project.roadmap?.length > 0 && (
+                        <section id="roadmap" className="detail-article">
+                            <h2 className="detail-section-title">🚀 Future Roadmap</h2>
+                            <div className="roadmap-items">
+                                {project.roadmap.map((step, i) => (
+                                    <div key={i} className="roadmap-step">{step}</div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
 
-                    {project.standoutPoints && (
+                    {project.challenges?.length > 0 && (
+                        <section id="challenges" className="detail-article">
+                            <h2 className="detail-section-title">🧠 Challenges & Solutions</h2>
+                            <div className="challenges-list">
+                                {project.challenges.map((item, i) => (
+                                    <div key={i} className="challenge-card">
+                                        <div className="challenge-problem">
+                                            <strong>Problem:</strong> {item.problem}
+                                        </div>
+                                        <div className="challenge-solution">
+                                            <strong>Solution:</strong> {item.solution}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {project.projectStructure?.length > 0 && (
+                        <section id="structure" className="detail-article">
+                            <h2 className="detail-section-title">📂 Project Structure</h2>
+                            <div className="structure-list">
+                                {project.projectStructure.map((item, i) => (
+                                    <div key={i} className="structure-item">{item}</div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {project.standoutPoints?.length > 0 && (
                         <section id="standout" className="detail-article">
                             <h2 className="detail-section-title">⭐ Why This Project Stands Out</h2>
                             <ul className="highlights-list standout-grid">

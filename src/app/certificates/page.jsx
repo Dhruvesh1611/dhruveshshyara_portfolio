@@ -19,7 +19,7 @@ const allCertificates = [
         name: "JavaScript (Basic)",
         issuer: "HackerRank",
         year: "2025",
-        link: "https://www.hackerrank.com/certificates/...",
+        link: "https://www.hackerrank.com/certificates/065ed799b22f",
         image: "/certificates/javascript-basic.png",
     },
     {
@@ -110,8 +110,14 @@ const CertificateCard = ({ cert }) => {
                 rotateY: springRotateY,
             }}
             variants={{
-                hidden: { opacity: 0, y: 30, scale: 0.95 },
-                show: { opacity: 1, y: 0, scale: 1 },
+                hidden: { opacity: 0 },
+                show: {
+                    opacity: 1,
+                    transition: {
+                        staggerChildren: 0.2,
+                        delayChildren: 0.05
+                    }
+                },
                 hover: {
                     borderColor: "rgba(168, 85, 247, 1)",
                     boxShadow: "0 40px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(168, 85, 247, 0.2)",
@@ -124,12 +130,19 @@ const CertificateCard = ({ cert }) => {
             exit={{ opacity: 0, scale: 0.9 }}
             className="cert-card-premium"
         >
-            <a
+            <motion.a
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cert-image-wrapper"
                 style={{ display: 'block', textDecoration: 'none' }}
+                variants={{
+                    hidden: { opacity: 0, scale: 0.92, y: 20 },
+                    show: {
+                        opacity: 1, scale: 1, y: 0,
+                        transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
+                    }
+                }}
             >
                 <motion.div
                     style={{ y: springImgY, scale: 1.1 }}
@@ -156,9 +169,18 @@ const CertificateCard = ({ cert }) => {
                     </div>
                 </div>
                 <div className="cert-date-tag">{cert.year}</div>
-            </a>
+            </motion.a>
 
-            <div className="cert-content">
+            <motion.div
+                className="cert-content"
+                variants={{
+                    hidden: { opacity: 0, y: 25 },
+                    show: {
+                        opacity: 1, y: 0,
+                        transition: { duration: 0.5, ease: "easeOut" }
+                    }
+                }}
+            >
                 <motion.h3
                     className="cert-title"
                     variants={{
@@ -169,7 +191,7 @@ const CertificateCard = ({ cert }) => {
                     {cert.name}
                 </motion.h3>
                 <p className="cert-issuer">{cert.issuer}</p>
-            </div>
+            </motion.div>
         </motion.div>
     );
 };
@@ -367,10 +389,26 @@ const CertificatesPage = () => {
                 @media (max-width: 768px) {
                     .certs-grid { 
                         grid-template-columns: 1fr !important; 
+                        gap: 25px !important;
                     }
                     :global(.cert-image-wrapper) { height: 250px; }
                     :global(.cert-title) { font-size: 2.2rem; }
+                    :global(.cert-content) { padding: 20px; gap: 10px; }
+                    :global(.cert-issuer) { font-size: 1.3rem; }
+                    :global(.cert-date-tag) { top: 15px; left: 15px; padding: 6px 14px; font-size: 1rem; }
                     .full-page-hero { height: 70vh; }
+                    .certs-grid-section { padding: 0 4% 100px; }
+                    .hero-subtitle { font-size: 1rem !important; letter-spacing: 0.2em !important; }
+                }
+
+                @media (max-width: 480px) {
+                    .certs-grid { gap: 20px !important; }
+                    :global(.cert-image-wrapper) { height: 200px; }
+                    :global(.cert-title) { font-size: 1.8rem; }
+                    :global(.cert-content) { padding: 16px; }
+                    :global(.cert-issuer) { font-size: 1.2rem; }
+                    .full-page-hero { height: 60vh; }
+                    .certs-grid-section { padding: 0 3% 80px; }
                 }
             `}</style>
         </>

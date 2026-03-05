@@ -331,6 +331,61 @@
     border-radius: 24px;
 }
 
+/* Challenges Section */
+.challenges-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.challenge-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.challenge-problem {
+    color: #ff6b6b;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.challenge-solution {
+    color: #69db7c;
+    font-size: 1.6rem;
+}
+
+.challenge-problem strong,
+.challenge-solution strong {
+    color: #fff;
+    margin-right: 8px;
+}
+
+/* Project Structure Section */
+.structure-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 25px 30px;
+    font-family: 'Fira Code', 'Monaco', monospace;
+}
+
+.structure-item {
+    font-size: 1.4rem;
+    color: #a5d6ff;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.structure-item:last-child {
+    border-bottom: none;
+}
+
 /* Mobile Sticky Action Bar */
 .mobile-action-bar {
     display: none;
@@ -375,5 +430,186 @@
 
     .detail-main-layout {
         padding: 0 20px 100px;
+        gap: 40px;
+    }
+
+    .breadcrumb-nav {
+        padding: 120px 20px 15px;
+        font-size: 1rem;
+    }
+
+    .project-large-title {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+
+    .project-one-liner {
+        font-size: 1.3rem;
+    }
+
+    .detail-section-title {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .detail-text {
+        font-size: 1.6rem;
+        line-height: 1.7;
+    }
+
+    .arch-card {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .arch-card h4 {
+        font-size: 1.3rem;
+    }
+
+    .arch-card p {
+        font-size: 1.6rem;
+    }
+
+    .standout-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .standout-card {
+        padding: 25px;
+    }
+
+    .highlight-title {
+        font-size: 1.8rem;
+    }
+
+    .highlight-icon {
+        font-size: 2.5rem;
+    }
+
+    .roadmap-step {
+        padding: 15px 20px;
+        font-size: 1.6rem;
+    }
+
+    .challenge-card {
+        padding: 20px;
+    }
+
+    .challenge-problem,
+    .challenge-solution {
+        font-size: 1.4rem;
+    }
+
+    .structure-list {
+        padding: 15px 20px;
+    }
+
+    .structure-item {
+        font-size: 1.2rem;
+    }
+
+    .detail-content-side {
+        gap: 60px;
+    }
+
+    .meta-badge {
+        font-size: 1.3rem;
+        padding: 6px 14px;
+    }
+
+    .metadata-badges {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .project-main-visual {
+        border-radius: 20px;
+    }
+
+    .lightbox-overlay {
+        padding: 15px;
+    }
+
+    .action-button {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+    }
+
+    .mobile-action-bar {
+        padding: 12px 15px;
+        gap: 10px;
+    }
+
+    .mobile-action-bar .action-button {
+        flex: 1;
+        justify-content: center;
+        padding: 12px 16px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .detail-header {
+        padding: 15px;
+    }
+
+    .project-large-title {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .project-one-liner {
+        font-size: 1.1rem;
+    }
+
+    .detail-main-layout {
+        padding: 0 15px 100px;
+        gap: 30px;
+    }
+
+    .breadcrumb-nav {
+        padding: 110px 15px 10px;
+        font-size: 0.9rem;
+    }
+
+    .detail-section-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .detail-text {
+        font-size: 1.4rem;
+    }
+
+    .arch-card p {
+        font-size: 1.4rem;
+    }
+
+    .highlight-title {
+        font-size: 1.5rem;
+    }
+
+    .roadmap-step {
+        font-size: 1.4rem;
+        padding: 12px 15px;
+    }
+
+    .challenge-problem,
+    .challenge-solution {
+        font-size: 1.2rem;
+    }
+
+    .detail-content-side {
+        gap: 40px;
+    }
+
+    .meta-badge {
+        font-size: 1.1rem;
+        padding: 5px 10px;
+        gap: 8px;
+    }
+
+    .standout-card {
+        padding: 20px;
     }
 }

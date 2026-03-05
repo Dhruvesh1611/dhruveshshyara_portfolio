@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { allProjects } from '@/data/projectsData';
 
 
-const categories = ['All', 'UI/UX', 'Frontend', 'Backend', 'Fullstack'];
+const categories = ['All', 'Fullstack', 'UI/UX', 'Frontend', 'Backend', 'Extension', 'App'];
 
 const ProjectCard = ({ project }) => {
     const x = motionValue(0);
@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
     }
 
     return (
-        <Link href={`/projects/${project.slug}`} style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+        <Link href={`/projects/${project.slug}`} style={{ display: 'block', textDecoration: 'none', color: 'inherit', height: '100%' }}>
             <motion.div
                 layout
                 onMouseMove={handleMouse}
@@ -50,8 +50,14 @@ const ProjectCard = ({ project }) => {
                     rotateY: springRotateY,
                 }}
                 variants={{
-                    hidden: { opacity: 0, y: 30, scale: 0.95 },
-                    show: { opacity: 1, y: 0, scale: 1 },
+                    hidden: { opacity: 0 },
+                    show: {
+                        opacity: 1,
+                        transition: {
+                            staggerChildren: 0.2,
+                            delayChildren: 0.05
+                        }
+                    },
                     hover: {
                         borderColor: "rgba(168, 85, 247, 1)",
                         boxShadow: "0 40px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(168, 85, 247, 0.2)",
@@ -66,6 +72,13 @@ const ProjectCard = ({ project }) => {
             >
                 <motion.div
                     className="card-image-wrapper"
+                    variants={{
+                        hidden: { opacity: 0, scale: 0.92, y: 20 },
+                        show: {
+                            opacity: 1, scale: 1, y: 0,
+                            transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
+                        }
+                    }}
                 >
                     <motion.div
                         style={{ y: springImgY, scale: 1.2 }}
@@ -89,7 +102,16 @@ const ProjectCard = ({ project }) => {
                     <div className="card-category-tag">{project.category}</div>
                 </motion.div>
 
-                <div className="card-content">
+                <motion.div
+                    className="card-content"
+                    variants={{
+                        hidden: { opacity: 0, y: 25 },
+                        show: {
+                            opacity: 1, y: 0,
+                            transition: { duration: 0.5, ease: "easeOut" }
+                        }
+                    }}
+                >
                     <motion.h3
                         className="card-title"
                         variants={{
@@ -117,7 +139,7 @@ const ProjectCard = ({ project }) => {
                             ))}
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </motion.div>
         </Link>
     );
@@ -128,7 +150,9 @@ const ProjectsPage = () => {
 
     const filteredProjects = activeCategory === 'All'
         ? allProjects
-        : allProjects.filter(p => p.category === activeCategory);
+        : activeCategory === 'Extension'
+            ? allProjects.filter(p => p.category === 'Extension' || p.category === 'Browser Extension')
+            : allProjects.filter(p => p.category === activeCategory);
 
     return (
         <>
@@ -265,6 +289,7 @@ const ProjectsPage = () => {
                     grid-template-columns: repeat(3, 1fr) !important;
                     gap: 40px !important;
                     width: 100% !important;
+                    align-items: stretch;
                 }
 
                 :global(.project-card-premium) {
@@ -275,6 +300,7 @@ const ProjectsPage = () => {
                     cursor: pointer;
                     position: relative;
                     width: 100% !important;
+                    height: 100%;
                     z-index: 1;
                     display: flex;
                     flex-direction: column;
@@ -282,7 +308,8 @@ const ProjectsPage = () => {
                 }
 
                 :global(.card-image-wrapper) {
-                    height: 400px;
+                    height: 280px;
+                    min-height: 280px;
                     position: relative;
                     overflow: hidden;
                     background: #000;
@@ -324,30 +351,37 @@ const ProjectsPage = () => {
                 }
 
                 :global(.card-content) {
-                    padding: 40px;
-                    flex-grow: 1;
+                    padding: 30px;
+                    flex: 1;
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
+                    gap: 15px;
+                    min-height: 280px;
                 }
 
                 :global(.card-title) {
-                    font-size: 3.2rem;
+                    font-size: 2.4rem;
                     font-weight: 900;
                     color: #fff;
                     margin: 0;
                     letter-spacing: -0.02em;
-                }
-
-                :global(.card-desc) {
-                    font-size: 1.6rem;
-                    color: rgba(255,255,255,0.6);
-                    line-height: 1.7;
-                    margin: 0;
                     display: -webkit-box;
                     -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
+                    min-height: 2.8em;
+                }
+
+                :global(.card-desc) {
+                    font-size: 1.4rem;
+                    color: rgba(255,255,255,0.6);
+                    line-height: 1.6;
+                    margin: 0;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    flex: 1;
                 }
 
                 :global(.card-footer) {
@@ -356,15 +390,17 @@ const ProjectsPage = () => {
 
                 :global(.card-tags) {
                     display: flex;
-                    gap: 12px;
+                    gap: 10px;
                     flex-wrap: wrap;
+                    max-height: 70px;
+                    overflow: hidden;
                 }
 
                 :global(.card-tag) {
                     font-size: 1rem;
                     background: rgba(255,255,255,0.05);
                     border: 1px solid rgba(255,255,255,0.1);
-                    padding: 8px 16px;
+                    padding: 6px 14px;
                     border-radius: 100px;
                     color: rgba(255,255,255,0.8);
                     font-family: var(--font-fira-code);
@@ -375,23 +411,46 @@ const ProjectsPage = () => {
                         grid-template-columns: repeat(3, 1fr) !important; 
                         gap: 30px !important;
                     }
-                    :global(.card-image-wrapper) { height: 400px; }
+                    :global(.card-image-wrapper) { height: 260px; min-height: 260px; }
+                    :global(.card-content) { min-height: 260px; }
                 }
 
                 @media (max-width: 1200px) {
                     .projects-grid { 
                         grid-template-columns: repeat(2, 1fr) !important; 
                     }
-                    :global(.card-image-wrapper) { height: 350px; }
+                    :global(.card-image-wrapper) { height: 280px; min-height: 280px; }
+                    :global(.card-content) { min-height: 260px; }
                 }
 
                 @media (max-width: 768px) {
                     .projects-grid { 
                         grid-template-columns: 1fr !important; 
+                        gap: 30px !important;
                     }
-                    :global(.card-image-wrapper) { height: 320px; }
-                    :global(.card-title) { font-size: 2.8rem; }
+                    :global(.card-image-wrapper) { height: 280px; min-height: 280px; }
+                    :global(.card-content) { min-height: auto; padding: 20px; }
+                    :global(.card-title) { font-size: 2rem; min-height: auto; }
+                    :global(.card-desc) { font-size: 1.3rem; }
+                    :global(.card-category-tag) { top: 15px; left: 15px; padding: 6px 14px; font-size: 1rem; }
                     .full-page-hero { height: 70vh; }
+                    .projects-grid-section { padding: 0 4% 100px; }
+                    .filter-tabs { gap: 8px; margin-bottom: 40px; }
+                    .filter-tab { padding: 8px 16px; font-size: 1.2rem; }
+                    .hero-subtitle { font-size: 1rem !important; letter-spacing: 0.2em !important; }
+                }
+
+                @media (max-width: 480px) {
+                    .projects-grid { gap: 20px !important; }
+                    :global(.card-image-wrapper) { height: 220px; min-height: 220px; }
+                    :global(.card-content) { padding: 16px; gap: 10px; }
+                    :global(.card-title) { font-size: 1.8rem; }
+                    :global(.card-desc) { font-size: 1.2rem; -webkit-line-clamp: 2; }
+                    :global(.card-tag) { font-size: 0.9rem; padding: 4px 10px; }
+                    .full-page-hero { height: 60vh; }
+                    .projects-grid-section { padding: 0 3% 80px; }
+                    .filter-tabs { gap: 6px; margin-bottom: 30px; }
+                    .filter-tab { padding: 6px 12px; font-size: 1.1rem; }
                 }
             `}</style>
         </>
