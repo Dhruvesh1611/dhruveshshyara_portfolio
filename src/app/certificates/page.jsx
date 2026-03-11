@@ -1,6 +1,6 @@
 'use client';
-import { useState } from 'react';
-import { motion, AnimatePresence, useMotionValue, useTransform, useSpring, motionValue } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
@@ -11,6 +11,7 @@ const allCertificates = [
         name: "CSS Basic",
         issuer: "HackerRank",
         year: "2025",
+        description: "Certified in CSS fundamentals including layouts, selectors, styling techniques, and responsive design principles.",
         link: "https://www.hackerrank.com/certificates/e72e9d42799c",
         image: "/certificates/css-basic.png",
     },
@@ -19,6 +20,7 @@ const allCertificates = [
         name: "JavaScript (Basic)",
         issuer: "HackerRank",
         year: "2025",
+        description: "Certified in JavaScript basics covering core language features, DOM manipulation, and fundamental programming concepts.",
         link: "https://www.hackerrank.com/certificates/065ed799b22f",
         image: "/certificates/javascript-basic.png",
     },
@@ -27,6 +29,7 @@ const allCertificates = [
         name: "Node (Basic)",
         issuer: "HackerRank",
         year: "2025",
+        description: "Certified in Node.js fundamentals including server-side JavaScript, modules, and asynchronous programming.",
         link: "https://www.hackerrank.com/certificates/ceb3ab163e6d",
         image: "/certificates/node-basic.png",
     },
@@ -35,6 +38,7 @@ const allCertificates = [
         name: "Problem Solving (Basic)",
         issuer: "HackerRank",
         year: "2025",
+        description: "Certified in problem solving fundamentals covering data structures, algorithms, and computational thinking.",
         link: "https://www.hackerrank.com/certificates/0625153f0783",
         image: "/certificates/problem-solving-basic.png",
     },
@@ -43,6 +47,7 @@ const allCertificates = [
         name: "Frontend Developer (React)",
         issuer: "HackerRank",
         year: "2025",
+        description: "Certified Frontend Developer with React, skilled in building modern, responsive web applications.",
         link: "https://www.hackerrank.com/certificates/cc7dcbd6558a",
         image: "/certificates/frontend-developer-react.png",
     },
@@ -51,6 +56,7 @@ const allCertificates = [
         name: "Azure Services (Basics)",
         issuer: "SimpliLearn",
         year: "2025",
+        description: "Completed Azure Services Basics, demonstrating proficiency in cloud infrastructure, deployment, and management.",
         link: "https://simpli-web.app.link/e/N5LenkEbDTb",
         image: "/certificates/azure-services-basics.png",
     },
@@ -59,6 +65,7 @@ const allCertificates = [
         name: "Amazon DocumentDB",
         issuer: "SimpliLearn",
         year: "2025",
+        description: "Certified in Amazon DocumentDB, covering managed NoSQL database service compatible with MongoDB workloads.",
         link: "https://simpli-web.app.link/e/uPhDpKxwETb",
         image: "/certificates/amazon-documentdb.png",
     },
@@ -67,136 +74,69 @@ const allCertificates = [
         name: "Gateway Load Balancer",
         issuer: "SimpliLearn",
         year: "2025",
+        description: "Certified in Gateway Load Balancer concepts, covering network traffic distribution and high availability patterns.",
         link: "https://simpli-web.app.link/e/sq0S9jMwETb",
         image: "/certificates/gateway-load-balancer.png",
     }
 ];
 
-const CertificateCard = ({ cert }) => {
-    const x = motionValue(0);
-    const y = motionValue(0);
+const CertTextSection = ({ cert, setActiveCert }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, {
+        margin: "-45% 0px -45% 0px"
+    });
 
-    const rotateX = useTransform(y, [-150, 150], [10, -10]);
-    const rotateY = useTransform(x, [-150, 150], [-10, 10]);
-
-    const springConfig = { damping: 20, stiffness: 300 };
-    const springRotateX = useSpring(rotateX, springConfig);
-    const springRotateY = useSpring(rotateY, springConfig);
-
-    const imgY = useTransform(y, [-150, 150], [20, -20]);
-    const springImgY = useSpring(imgY, springConfig);
-
-    function handleMouse(event) {
-        const rect = event.currentTarget.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        x.set(event.clientX - centerX);
-        y.set(event.clientY - centerY);
-    }
-
-    function handleMouseLeave() {
-        x.set(0);
-        y.set(0);
-    }
+    useEffect(() => {
+        if (isInView) {
+            setActiveCert(cert);
+        }
+    }, [isInView, cert, setActiveCert]);
 
     return (
-        <motion.div
-            layout
-            onMouseMove={handleMouse}
-            onMouseLeave={handleMouseLeave}
-            style={{
-                perspective: 1000,
-                rotateX: springRotateX,
-                rotateY: springRotateY,
-            }}
-            variants={{
-                hidden: { opacity: 0 },
-                show: {
-                    opacity: 1,
-                    transition: {
-                        staggerChildren: 0.2,
-                        delayChildren: 0.05
-                    }
-                },
-                hover: {
-                    borderColor: "rgba(168, 85, 247, 1)",
-                    boxShadow: "0 40px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(168, 85, 247, 0.2)",
-                    transition: { duration: 0.3 }
-                }
-            }}
-            initial="hidden"
-            animate="show"
-            whileHover="hover"
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="cert-card-premium"
-        >
-            <motion.a
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cert-image-wrapper"
-                style={{ display: 'block', textDecoration: 'none' }}
-                variants={{
-                    hidden: { opacity: 0, scale: 0.92, y: 20 },
-                    show: {
-                        opacity: 1, scale: 1, y: 0,
-                        transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
-                    }
-                }}
-            >
-                <motion.div
-                    style={{ y: springImgY, scale: 1.1 }}
-                    className="cert-img-container"
-                >
-                    <Image
-                        src={cert.image}
-                        alt={cert.name}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        style={{ objectFit: 'contain', padding: '40px' }}
-                    />
-                </motion.div>
-
-                <div className="project-hover-overlay">
-                    <div className="hover-content">
-                        <span className="hover-text">VIEW CERTIFICATE</span>
-                        <div className="view-button-premium">
-                            <span>VIEW</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div className="cert-date-tag">{cert.year}</div>
-            </motion.a>
-
+        <div ref={ref} className="project-text-section">
             <motion.div
-                className="cert-content"
-                variants={{
-                    hidden: { opacity: 0, y: 25 },
-                    show: {
-                        opacity: 1, y: 0,
-                        transition: { duration: 0.5, ease: "easeOut" }
-                    }
-                }}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
             >
-                <motion.h3
-                    className="cert-title"
-                    variants={{
-                        show: { y: 0 },
-                        hover: { y: -5 }
-                    }}
-                >
-                    {cert.name}
-                </motion.h3>
-                <p className="cert-issuer">{cert.issuer}</p>
+                {/* Inline image for mobile */}
+                <a href={cert.link} target="_blank" rel="noopener noreferrer" className="mobile-project-image-link">
+                    <motion.div
+                        className="mobile-project-image mobile-cert-image"
+                        initial={{ opacity: 0, scale: 0.92 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    >
+                        <div className="project-image-box" style={{ border: '2px solid var(--color-light-purple)' }}>
+                            <Image
+                                src={cert.image}
+                                alt={cert.name}
+                                fill
+                                sizes="(max-width: 998px) 90vw, 1px"
+                                style={{ objectFit: 'contain', padding: '20px', background: '#0a0a0a' }}
+                                className="project-display-img"
+                            />
+                            <div className="project-hover-overlay">
+                                <div className="hover-content">
+                                    <span className="hover-text">VIEW CERTIFICATE</span>
+                                    <span className="hover-arrow">→</span>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                </a>
+
+                <span className="project-number">{cert.issuer} | {cert.year}</span>
+                <h2 className="project-title-display">{cert.name}</h2>
+                <p className="project-desc-display">{cert.description}</p>
             </motion.div>
-        </motion.div>
+        </div>
     );
 };
 
 const CertificatesPage = () => {
+    const [activeCert, setActiveCert] = useState(allCertificates[0]);
+
     return (
         <>
             <Navbar />
@@ -235,13 +175,63 @@ const CertificatesPage = () => {
                     </div>
                 </section>
 
-                <section className="certs-grid-section">
-                    <div className="certs-grid">
-                        <AnimatePresence mode='popLayout'>
+                <section className="projects-scrolly-container" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                    <div className="scrolly-layout">
+                        {/* Left: Certificate Texts */}
+                        <div className="scrolly-left-content">
                             {allCertificates.map((cert) => (
-                                <CertificateCard key={cert.id} cert={cert} />
+                                <CertTextSection
+                                    key={cert.id}
+                                    cert={cert}
+                                    setActiveCert={setActiveCert}
+                                />
                             ))}
-                        </AnimatePresence>
+                        </div>
+
+                        {/* Right: Sticky Visual */}
+                        <div className="scrolly-right-visual">
+                            <div className="sticky-image-fixed">
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={activeCert.id}
+                                        initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+                                        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                                        exit={{ opacity: 0, scale: 1.1, rotate: 2 }}
+                                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                                        className="sticky-image-container"
+                                    >
+                                        <a
+                                            href={activeCert.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="project-image-box"
+                                            style={{ border: '2px solid var(--color-light-purple)', display: 'block', position: 'relative' }}
+                                        >
+                                            <Image
+                                                src={activeCert.image}
+                                                alt={activeCert.name}
+                                                fill
+                                                sizes="(max-width: 768px) 100vw, 50vw"
+                                                style={{ objectFit: 'contain', padding: '20px', background: '#0a0a0a' }}
+                                                className="project-display-img"
+                                            />
+                                            <div className="project-hover-overlay">
+                                                <div className="hover-content">
+                                                    <span className="hover-text">VIEW CERTIFICATE</span>
+                                                    <div className="view-button-premium">
+                                                        <span>VIEW</span>
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div className="image-overlay-glow" style={{ background: 'radial-gradient(circle, var(--color-light-blue) 0%, transparent 70%)' }}></div>
+                                    </motion.div>
+                                </AnimatePresence>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
@@ -266,8 +256,6 @@ const CertificatesPage = () => {
                     text-align: center;
                 }
 
-
-
                 .hero-subtitle {
                     display: block;
                     font-size: 1.8rem;
@@ -277,138 +265,13 @@ const CertificatesPage = () => {
                     opacity: 0.8;
                 }
 
-                .certs-grid-section {
-                    padding: 0 5% 150px;
-                    max-width: 1600px;
-                    margin: 0 auto;
-                }
-
-                .certs-grid {
-                    display: grid !important;
-                    grid-template-columns: repeat(3, 1fr) !important;
-                    gap: 40px !important;
-                    width: 100% !important;
-                }
-
-                :global(.cert-card-premium) {
-                    background: rgba(255, 255, 255, 0.03);
-                    border-radius: 32px;
-                    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-                    overflow: hidden;
-                    cursor: pointer;
-                    position: relative;
-                    width: 100% !important;
-                    z-index: 1;
-                    display: flex;
-                    flex-direction: column;
-                    transform-style: preserve-3d;
-                }
-
-                :global(.cert-image-wrapper) {
-                    height: 350px;
-                    position: relative;
-                    overflow: hidden;
-                    background: #111;
-                    transform-style: preserve-3d;
-                }
-
-                :global(.cert-img-container) {
-                    position: absolute;
-                    inset: 0;
-                    width: 100%;
-                    height: 100%;
-                }
-
-                :global(.cert-overlay) {
-                    position: absolute;
-                    inset: 0;
-                    background: rgba(0, 0, 0, 0.4);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    z-index: 2;
-                }
-
-                :global(.cert-date-tag) {
-                    position: absolute;
-                    top: 30px;
-                    left: 30px;
-                    background: rgba(255,255,255,0.1);
-                    backdrop-filter: blur(20px);
-                    padding: 10px 24px;
-                    border-radius: 100px;
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    letter-spacing: 0.1em;
-                    text-transform: uppercase;
-                    border: 1px solid rgba(255,255,255,0.2);
-                    z-index: 4;
-                    color: #fff;
-                }
-
-                :global(.cert-content) {
-                    padding: 40px;
-                    flex-grow: 1;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                }
-
-                :global(.cert-title) {
-                    font-size: 2.8rem;
-                    font-weight: 800;
-                    color: #fff;
-                    margin: 0;
-                    letter-spacing: -0.02em;
-                    line-height: 1.2;
-                }
-
-                :global(.cert-issuer) {
-                    font-size: 1.6rem;
-                    color: var(--color-light-purple);
-                    font-family: var(--font-fira-code);
-                    margin: 0;
-                }
-
-                @media (max-width: 1400px) {
-                    .certs-grid { 
-                        grid-template-columns: repeat(3, 1fr) !important; 
-                        gap: 30px !important;
-                    }
-                    :global(.cert-image-wrapper) { height: 320px; }
-                }
-
-                @media (max-width: 1200px) {
-                    .certs-grid { 
-                        grid-template-columns: repeat(2, 1fr) !important; 
-                    }
-                    :global(.cert-image-wrapper) { height: 280px; }
-                    :global(.cert-title) { font-size: 2.4rem; }
-                }
-
                 @media (max-width: 768px) {
-                    .certs-grid { 
-                        grid-template-columns: 1fr !important; 
-                        gap: 25px !important;
-                    }
-                    :global(.cert-image-wrapper) { height: 250px; }
-                    :global(.cert-title) { font-size: 2.2rem; }
-                    :global(.cert-content) { padding: 20px; gap: 10px; }
-                    :global(.cert-issuer) { font-size: 1.3rem; }
-                    :global(.cert-date-tag) { top: 15px; left: 15px; padding: 6px 14px; font-size: 1rem; }
                     .full-page-hero { height: 70vh; }
-                    .certs-grid-section { padding: 0 4% 100px; }
                     .hero-subtitle { font-size: 1rem !important; letter-spacing: 0.2em !important; }
                 }
 
                 @media (max-width: 480px) {
-                    .certs-grid { gap: 20px !important; }
-                    :global(.cert-image-wrapper) { height: 200px; }
-                    :global(.cert-title) { font-size: 1.8rem; }
-                    :global(.cert-content) { padding: 16px; }
-                    :global(.cert-issuer) { font-size: 1.2rem; }
                     .full-page-hero { height: 60vh; }
-                    .certs-grid-section { padding: 0 3% 80px; }
                 }
             `}</style>
         </>
