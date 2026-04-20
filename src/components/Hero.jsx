@@ -61,7 +61,7 @@ const Hero = () => {
                             {char}
                         </motion.p>
                     ))}
-                    &nbsp;
+                    <span className="name-gap" aria-hidden="true">&nbsp;</span>
                     {nameLast.split('').map((char, i) => (
                         <motion.p
                             key={i + nameFirst.length}
@@ -100,7 +100,7 @@ const Hero = () => {
                             <p key={i} className="jello">{c}</p>
                         ))}
                     </div>
-                    <div>
+                    <div className="work-web-word">
                         {'web.'.split('').map((c, i) => (
                             <p key={i} className="jello">{c}</p>
                         ))}
@@ -138,13 +138,13 @@ const Hero = () => {
                 transition={{ delay: 0.5, duration: 0.5 }}
             >
                 <Image
-                    src="/png/nav-avatar.png"
+                    src="/png/dhruvesh-home-avatar.png"
                     alt="Dhruvesh Home Avatar"
                     width={400}
                     height={400}
                     style={{
                         borderRadius: '50%',
-                        boxShadow: '0 4px 32px #3a8bfd88',
+                        boxShadow: '0 8px 40px rgba(96, 165, 250, 0.35)',
                         objectFit: 'cover',
                         background: '#000',
                     }}

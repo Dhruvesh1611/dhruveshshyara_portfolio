@@ -41,7 +41,7 @@ export const allProjects = [
             "Zero-Code Management: Completely dynamic backend for full client control."
         ],
         github: "https://github.com/Dhruvesh1611/yaritu",
-        live: "https://yaritu.com/"
+        live: "https://yaritu.vercel.app"
     },
     {
         id: 2,

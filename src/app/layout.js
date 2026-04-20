@@ -1,4 +1,4 @@
-import { Fira_Code, Anton, Passions_Conflict, Playfair_Display } from 'next/font/google';
+import { Fira_Code, Anton, Passions_Conflict, Playfair_Display, Inter, Outfit } from 'next/font/google';
 import './globals.css';
 import Preloader from '@/components/Preloader';
 
@@ -25,6 +25,18 @@ const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
   weight: ['400'],
   style: ['italic'],
+});
+
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+});
+
+const outfit = Outfit({
+  variable: '--font-outfit',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
 });
 
 export const metadata = {
@@ -54,7 +66,7 @@ import PageTransition from '@/components/PageTransition';
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`body ${firaCode.variable} ${anton.variable} ${passionsConflict.variable} ${playfairDisplay.variable}`}>
+      <body className={`body ${firaCode.variable} ${anton.variable} ${passionsConflict.variable} ${playfairDisplay.variable} ${inter.variable} ${outfit.variable}`}>
         <Preloader />
         <PageTransition>
           {children}

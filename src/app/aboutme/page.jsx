@@ -157,6 +157,13 @@ const SemesterPage = ({ item, setActiveItem, isLast }) => {
 const AboutMePage = () => {
     const [activeItem, setActiveItem] = useState(journeyData[0]);
     const [activeEdu, setActiveEdu] = useState(educationData[0]);
+    const [emailCopied, setEmailCopied] = useState(false);
+
+    const handleCopyEmail = () => {
+        navigator.clipboard.writeText('dhruvesh.shyara.cg@gmail.com');
+        setEmailCopied(true);
+        setTimeout(() => setEmailCopied(false), 2000);
+    };
 
     return (
         <>
@@ -253,8 +260,273 @@ const AboutMePage = () => {
                     </div>
                 </section>
 
+                {/* ── Digital Presence Hub ── */}
+                <section className="hub-section">
+                    <motion.div
+                        className="hub-header"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7 }}
+                    >
+                        <span className="hub-eyebrow">FIND ME EVERYWHERE</span>
+                        <h2 className="hub-title">Digital <span className="hub-title-accent">Presence</span></h2>
+                        <p className="hub-subtitle">All my links, stats, and socials — in one place.</p>
+                    </motion.div>
+
+                    <div className="hub-grid">
+
+                        {/* — GitHub Card (large) — */}
+                        <motion.a
+                            href="https://github.com/Dhruvesh1611"
+                            target="_blank" rel="noopener noreferrer"
+                            className="hub-card hub-card--github hub-card--large"
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.1 }}
+                            whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                        >
+                            <div className="hub-card-inner">
+                                <div className="hub-card-top">
+                                    <div className="hub-icon-wrap hub-icon-wrap--github">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg>
+                                    </div>
+                                    <div>
+                                        <p className="hub-card-label">GitHub</p>
+                                        <p className="hub-card-handle">@Dhruvesh1611</p>
+                                    </div>
+                                    <span className="hub-card-arrow">↗</span>
+                                </div>
+                                <div className="hub-card-body">
+                                    <div className="hub-stats-row">
+                                        <div className="hub-stat"><span className="hub-stat-num">20+</span><span className="hub-stat-label">Repos</span></div>
+                                        <div className="hub-stat"><span className="hub-stat-num">500+</span><span className="hub-stat-label">Commits</span></div>
+                                        <div className="hub-stat"><span className="hub-stat-num">3+</span><span className="hub-stat-label">Years</span></div>
+                                    </div>
+                                </div>
+                                <div className="hub-commit-graph">
+                                    <img
+                                        src="https://ghchart.rshah.org/7c3aed/Dhruvesh1611"
+                                        alt="GitHub Contribution Graph"
+                                        className="commit-graph-img"
+                                        loading="lazy"
+                                    />
+                                    <span className="commit-graph-label">Contribution Graph</span>
+                                </div>
+                            </div>
+                            <div className="hub-card-glow hub-card-glow--github" />
+                        </motion.a>
+
+                        {/* — LinkedIn Card — */}
+                        <motion.a
+                            href="https://linkedin.com/in/dhruveshshyara"
+                            target="_blank" rel="noopener noreferrer"
+                            className="hub-card hub-card--linkedin"
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                        >
+                            <div className="hub-card-inner">
+                                <div className="hub-card-top">
+                                    <div className="hub-icon-wrap hub-icon-wrap--linkedin">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                                    </div>
+                                    <div>
+                                        <p className="hub-card-label">LinkedIn</p>
+                                        <p className="hub-card-handle">dhruveshshyara</p>
+                                    </div>
+                                    <span className="hub-card-arrow">↗</span>
+                                </div>
+                                <p className="hub-card-desc">Full Stack Developer · MERN Stack · Open to opportunities</p>
+                                <div className="hub-badge">Connect with me →</div>
+                            </div>
+                            <div className="hub-card-glow hub-card-glow--linkedin" />
+                        </motion.a>
+
+                        {/* — LeetCode Card — */}
+                        <motion.a
+                            href="https://leetcode.com/u/Dhruvesh1611/"
+                            target="_blank" rel="noopener noreferrer"
+                            className="hub-card hub-card--leetcode"
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.25 }}
+                            whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                        >
+                            <div className="hub-card-inner">
+                                <div className="hub-card-top">
+                                    <div className="hub-icon-wrap hub-icon-wrap--leetcode">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" /></svg>
+                                    </div>
+                                    <div>
+                                        <p className="hub-card-label">LeetCode</p>
+                                        <p className="hub-card-handle">@Dhruvesh1611</p>
+                                    </div>
+                                    <span className="hub-card-arrow">↗</span>
+                                </div>
+                                <div className="leetcode-stats">
+                                    <div className="leetcode-ring">
+                                        <svg viewBox="0 0 36 36" className="ring-svg">
+                                            <circle cx="18" cy="18" r="15.9" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="3" />
+                                            <circle cx="18" cy="18" r="15.9" fill="none" stroke="#ffa116" strokeWidth="3" strokeDasharray="71 29" strokeLinecap="round" strokeDashoffset="25" />
+                                        </svg>
+                                        <span className="ring-label">70.61%<br /><small>Acceptance</small></span>
+                                    </div>
+                                    <div className="leetcode-counts">
+                                        <div className="lc-count lc-easy"><span>Easy</span><b>113</b></div>
+                                        <div className="lc-count lc-medium"><span>Medium</span><b>22</b></div>
+                                        <div className="lc-count lc-hard"><span>Hard</span><b>2</b></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="hub-card-glow hub-card-glow--leetcode" />
+                        </motion.a>
+
+                        {/* — YouTube Card — */}
+                        <motion.a
+                            href="https://www.youtube.com/@Mr.shyara"
+                            target="_blank" rel="noopener noreferrer"
+                            className="hub-card hub-card--youtube"
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                            whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                        >
+                            <div className="hub-card-inner">
+                                <div className="hub-card-top">
+                                    <div className="hub-icon-wrap hub-icon-wrap--youtube">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
+                                    </div>
+                                    <div>
+                                        <p className="hub-card-label">YouTube</p>
+                                        <p className="hub-card-handle">@Mr.shyara</p>
+                                    </div>
+                                    <span className="hub-card-arrow">↗</span>
+                                </div>
+                                <p className="hub-card-desc">Dev tutorials, project walkthroughs & tech content</p>
+                                <div className="hub-badge hub-badge--red">Subscribe →</div>
+                            </div>
+                            <div className="hub-card-glow hub-card-glow--youtube" />
+                        </motion.a>
+
+                        {/* — Email Card — */}
+                        <motion.div
+                            className="hub-card hub-card--email"
+                            onClick={handleCopyEmail}
+                            style={{ cursor: 'pointer' }}
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.35 }}
+                            whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                            whileTap={{ scale: 0.97 }}
+                        >
+                            <div className="hub-card-inner">
+                                <div className="hub-card-top">
+                                    <div className="hub-icon-wrap hub-icon-wrap--email">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="26" height="26"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                                    </div>
+                                    <div>
+                                        <p className="hub-card-label">Email</p>
+                                        <p className="hub-card-handle" style={{ fontSize: '1.1rem' }}>dhruvesh.shyara.cg@gmail.com</p>
+                                    </div>
+                                </div>
+                                <AnimatePresence mode="wait">
+                                    {emailCopied ? (
+                                        <motion.div key="copied" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="hub-copy-feedback">
+                                            ✓ Copied!
+                                        </motion.div>
+                                    ) : (
+                                        <motion.div key="copy" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="hub-badge">
+                                            Click to copy →
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                            <div className="hub-card-glow hub-card-glow--email" />
+                        </motion.div>
+
+                        {/* — Resume Card — */}
+                        <motion.a
+                            href="https://drive.google.com/file/d/1TCuMvk8GpC6dyOXG2l4mPnnNzuXmkBac/view"
+                            target="_blank" rel="noopener noreferrer"
+                            className="hub-card hub-card--resume"
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                            whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                        >
+                            <div className="hub-card-inner">
+                                <div className="hub-card-top">
+                                    <div className="hub-icon-wrap hub-icon-wrap--resume">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="26" height="26"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                    </div>
+                                    <div>
+                                        <p className="hub-card-label">Resume</p>
+                                        <p className="hub-card-handle">View / Download</p>
+                                    </div>
+                                    <span className="hub-card-arrow">↗</span>
+                                </div>
+                                <div className="hub-badge hub-badge--white">Open Resume →</div>
+                            </div>
+                            <div className="hub-card-glow hub-card-glow--resume" />
+                        </motion.a>
+
+                        {/* — Instagram Card — */}
+                        <motion.a
+                            href="https://www.instagram.com/mr_shyara/"
+                            target="_blank" rel="noopener noreferrer"
+                            className="hub-card hub-card--instagram"
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.45 }}
+                            whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                        >
+                            <div className="hub-card-inner">
+                                <div className="hub-card-top">
+                                    <div className="hub-icon-wrap hub-icon-wrap--instagram">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" /></svg>
+                                    </div>
+                                    <div>
+                                        <p className="hub-card-label">Instagram</p>
+                                        <p className="hub-card-handle">@mr_shyara</p>
+                                    </div>
+                                    <span className="hub-card-arrow">↗</span>
+                                </div>
+                                <p className="hub-card-desc">Personal life, dev journey & behind the scenes</p>
+                            </div>
+                            <div className="hub-card-glow hub-card-glow--instagram" />
+                        </motion.a>
+
+                        {/* — Quote / Motto Card — */}
+                        <motion.div
+                            className="hub-card hub-card--motto"
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.5 }}
+                        >
+                            <div className="hub-card-inner">
+                                <span className="hub-quote-mark">"</span>
+                                <p className="hub-quote-text">Build things that matter. Ship fast. Learn faster.</p>
+                                <span className="hub-quote-author">— Dhruvesh Shyara</span>
+                            </div>
+                            <div className="hub-card-glow hub-card-glow--motto" />
+                        </motion.div>
+
+                    </div>
+                </section>
+
                 {/* My Journey Section - Pinned Scrollytelling */}
                 <section className="journey-scrolly-container">
+
                     <div className="journey-sticky-wrapper">
                         <div className="journey-scroll-content">
                             <motion.h2
@@ -315,7 +587,8 @@ const AboutMePage = () => {
                                                 transition={{ duration: 0.5, ease: 'easeInOut' }}
                                                 className="sticky-image-container sticky-desc-container"
                                             >
-                                                <div className="sticky-desc-box" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)', borderRadius: '24px', width: '100%', maxWidth: '620px', height: 'auto', minHeight: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', padding: '30px 20px', color: 'rgba(230,235,255,0.92)', fontWeight: 400, fontSize: 'clamp(1.4rem, 1.8vw, 2rem)', textAlign: 'center', lineHeight: 1.7, boxShadow: '0 8px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)' }}>
+                                                <div className="sticky-desc-box" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)', borderRadius: '24px', width: '100%', maxWidth: '620px', height: 'auto', minHeight: '220px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', margin: '0 auto', padding: '40px 35px', color: 'rgba(235,240,255,0.95)', fontWeight: 400, fontSize: 'clamp(1.2rem, 1.6vw, 1.8rem)', textAlign: 'left', lineHeight: 1.8, boxShadow: '0 8px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)' }}>
+                                                    <span style={{ color: 'var(--color-light-purple)', fontFamily: 'var(--font-fira-code)', fontSize: '1.2rem', marginBottom: '15px', display: 'block', letterSpacing: '2px', fontWeight: 600 }}>OVERVIEW</span>
                                                     {activeItem.description}
                                                 </div>
                                             </motion.div>
@@ -474,6 +747,535 @@ const AboutMePage = () => {
             <Footer />
 
             <style jsx>{`
+                /* ══════════════════════════════
+                   HUB SECTION — Premium Redesign
+                ══════════════════════════════ */
+                .hub-section {
+                    padding: 140px 7% 120px;
+                    background: linear-gradient(180deg, #020206 0%, #060310 50%, #000 100%);
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                /* Ambient glow background */
+                .hub-section::before {
+                    content: '';
+                    position: absolute;
+                    top: -200px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 900px;
+                    height: 600px;
+                    background: radial-gradient(ellipse, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+                    pointer-events: none;
+                    z-index: 0;
+                }
+
+                .hub-header {
+                    text-align: center;
+                    margin-bottom: 80px;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .hub-eyebrow {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-family: var(--font-fira-code), monospace;
+                    font-size: 1.1rem;
+                    letter-spacing: 5px;
+                    color: rgba(168, 85, 247, 0.8);
+                    margin-bottom: 20px;
+                    text-transform: uppercase;
+                }
+
+                .hub-eyebrow::before,
+                .hub-eyebrow::after {
+                    content: '';
+                    display: block;
+                    width: 40px;
+                    height: 1px;
+                    background: rgba(168, 85, 247, 0.4);
+                }
+
+                .hub-title {
+                    font-family: var(--font-outfit), sans-serif;
+                    font-size: 6rem;
+                    font-weight: 800;
+                    letter-spacing: -3px;
+                    line-height: 1;
+                    margin-bottom: 20px;
+                    color: #fff;
+                }
+
+                .hub-title-accent {
+                    background: linear-gradient(130deg, #a855f7 0%, #818cf8 50%, #c084fc 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                }
+
+                .hub-subtitle {
+                    font-size: 1.6rem;
+                    color: rgba(255, 255, 255, 0.35);
+                    font-weight: 300;
+                    letter-spacing: 0.3px;
+                }
+
+                /* ── Grid ── */
+                .hub-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-auto-rows: minmax(200px, auto);
+                    gap: 16px;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                /* ── Base Card ── */
+                .hub-card {
+                    position: relative;
+                    background: rgba(12, 10, 20, 0.7);
+                    border: 1px solid rgba(255, 255, 255, 0.07);
+                    border-radius: 24px;
+                    overflow: hidden;
+                    text-decoration: none;
+                    color: #fff;
+                    display: block;
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    transition: border-color 0.35s ease, transform 0.25s ease, box-shadow 0.35s ease;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.04);
+                }
+
+                .hub-card::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    border-radius: 24px;
+                    padding: 1px;
+                    background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 50%, transparent 100%);
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    -webkit-mask-composite: xor;
+                    mask-composite: exclude;
+                    pointer-events: none;
+                }
+
+                .hub-card:hover {
+                    border-color: rgba(255, 255, 255, 0.14);
+                    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255,255,255,0.07);
+                }
+
+                /* Platform-specific hover border tints */
+                .hub-card--github:hover { border-color: rgba(255, 255, 255, 0.18); }
+                .hub-card--linkedin:hover { border-color: rgba(10, 102, 194, 0.4); }
+                .hub-card--leetcode:hover { border-color: rgba(255, 161, 22, 0.35); }
+                .hub-card--youtube:hover { border-color: rgba(255, 40, 40, 0.35); }
+                .hub-card--email:hover { border-color: rgba(52, 211, 153, 0.35); }
+                .hub-card--resume:hover { border-color: rgba(99, 102, 241, 0.4); }
+                .hub-card--instagram:hover { border-color: rgba(228, 64, 95, 0.35); }
+
+                .hub-card--large {
+                    grid-column: span 2;
+                    grid-row: span 2;
+                }
+
+                /* ── Card Inner ── */
+                .hub-card-inner {
+                    position: relative;
+                    z-index: 2;
+                    padding: 32px 34px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 18px;
+                }
+
+                /* ── Card Top Row ── */
+                .hub-card-top {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                }
+
+                .hub-card-arrow {
+                    margin-left: auto;
+                    font-size: 1.6rem;
+                    color: rgba(255, 255, 255, 0.2);
+                    transition: transform 0.3s ease, color 0.3s ease;
+                    flex-shrink: 0;
+                }
+
+                .hub-card:hover .hub-card-arrow {
+                    transform: translate(3px, -3px);
+                    color: rgba(255, 255, 255, 0.7);
+                }
+
+                .hub-card-label {
+                    font-size: 1.05rem;
+                    font-weight: 600;
+                    font-family: var(--font-fira-code), monospace;
+                    color: rgba(255, 255, 255, 0.35);
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 3px;
+                }
+
+                .hub-card-handle {
+                    font-size: 1.7rem;
+                    font-weight: 700;
+                    color: #fff;
+                    font-family: var(--font-outfit), sans-serif;
+                    line-height: 1.2;
+                }
+
+                .hub-card-desc {
+                    font-size: 1.4rem;
+                    color: rgba(255, 255, 255, 0.4);
+                    line-height: 1.65;
+                    font-weight: 300;
+                }
+
+                /* ── Global override: strip browser default link colors from hub cards ── */
+                :global(.hub-card),
+                :global(.hub-card *) {
+                    text-decoration: none !important;
+                    color: inherit !important;
+                }
+
+                :global(.hub-card-handle) {
+                    color: #ffffff !important;
+                }
+
+                :global(.hub-card-label) {
+                    color: rgba(255, 255, 255, 0.35) !important;
+                }
+
+                :global(.hub-card-desc) {
+                    color: rgba(255, 255, 255, 0.4) !important;
+                }
+
+                :global(.hub-stat-num) {
+                    color: unset !important;
+                }
+
+                :global(.commit-graph-label) {
+                    font-size: 1.05rem;
+                    color: rgba(255, 255, 255, 0.25) !important;
+                    font-family: var(--font-fira-code), monospace;
+                    letter-spacing: 1px;
+                    text-decoration: none !important;
+                }
+
+                /* ── Icon Wraps ── */
+                .hub-icon-wrap {
+                    width: 52px;
+                    height: 52px;
+                    border-radius: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                }
+
+                .hub-icon-wrap--github {
+                    background: rgba(255, 255, 255, 0.1);
+                    color: #fff;
+                    border: 1px solid rgba(255,255,255,0.12);
+                }
+                .hub-icon-wrap--linkedin {
+                    background: rgba(10, 102, 194, 0.2);
+                    color: #4da3ff;
+                    border: 1px solid rgba(10, 102, 194, 0.25);
+                }
+                .hub-icon-wrap--leetcode {
+                    background: rgba(255, 161, 22, 0.15);
+                    color: #ffa116;
+                    border: 1px solid rgba(255, 161, 22, 0.2);
+                }
+                .hub-icon-wrap--youtube {
+                    background: rgba(255, 40, 40, 0.15);
+                    color: #ff4444;
+                    border: 1px solid rgba(255, 40, 40, 0.2);
+                }
+                .hub-icon-wrap--email {
+                    background: rgba(52, 211, 153, 0.13);
+                    color: #34d399;
+                    border: 1px solid rgba(52, 211, 153, 0.18);
+                }
+                .hub-icon-wrap--resume {
+                    background: rgba(99, 102, 241, 0.18);
+                    color: #a5b4fc;
+                    border: 1px solid rgba(99, 102, 241, 0.22);
+                }
+                .hub-icon-wrap--instagram {
+                    background: rgba(228, 64, 95, 0.15);
+                    color: #f06292;
+                    border: 1px solid rgba(228, 64, 95, 0.2);
+                }
+
+                /* ── Badge ── */
+                .hub-badge {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 10px 18px;
+                    border-radius: 100px;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    background: rgba(255, 255, 255, 0.06);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    color: rgba(255, 255, 255, 0.6);
+                    width: fit-content;
+                    margin-top: auto;
+                    transition: background 0.3s ease, border-color 0.3s ease;
+                }
+
+                .hub-card:hover .hub-badge {
+                    background: rgba(255, 255, 255, 0.1);
+                    border-color: rgba(255, 255, 255, 0.18);
+                    color: rgba(255, 255, 255, 0.85);
+                }
+
+                .hub-badge--red {
+                    color: #ff6666;
+                    border-color: rgba(255, 60, 60, 0.2);
+                    background: rgba(255, 60, 60, 0.07);
+                }
+
+                .hub-card:hover .hub-badge--red {
+                    background: rgba(255, 60, 60, 0.12);
+                    border-color: rgba(255, 60, 60, 0.35);
+                    color: #ff8888;
+                }
+
+                .hub-badge--white {
+                    color: #fff;
+                    border-color: rgba(255, 255, 255, 0.18);
+                    background: rgba(255, 255, 255, 0.07);
+                }
+
+                .hub-copy-feedback {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 10px 18px;
+                    border-radius: 100px;
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    background: rgba(52, 211, 153, 0.12);
+                    border: 1px solid rgba(52, 211, 153, 0.3);
+                    color: #34d399;
+                    width: fit-content;
+                    margin-top: auto;
+                }
+
+                /* ── GitHub Stats ── */
+                .hub-stats-row {
+                    display: flex;
+                    gap: 32px;
+                    padding: 20px 0;
+                    border-top: 1px solid rgba(255,255,255,0.06);
+                    border-bottom: 1px solid rgba(255,255,255,0.06);
+                }
+
+                .hub-stat {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                }
+
+                .hub-stat-num {
+                    font-size: 2.8rem;
+                    font-weight: 800;
+                    font-family: var(--font-outfit), sans-serif;
+                    background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    line-height: 1;
+                }
+
+                .hub-stat-label {
+                    font-size: 1.05rem;
+                    color: rgba(255, 255, 255, 0.3);
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    font-family: var(--font-fira-code), monospace;
+                }
+
+                /* ── Commit Graph ── */
+                .hub-commit-graph {
+                    margin-top: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                .commit-graph-img {
+                    width: 100%;
+                    border-radius: 10px;
+                    opacity: 0.9;
+                    filter: brightness(1.2) saturate(1.3);
+                }
+
+                .commit-graph-label {
+                    font-size: 1.05rem;
+                    color: rgba(255, 255, 255, 0.25);
+                    font-family: var(--font-fira-code), monospace;
+                    letter-spacing: 1px;
+                }
+
+                /* ── LeetCode Ring ── */
+                .leetcode-stats {
+                    display: flex;
+                    align-items: center;
+                    gap: 28px;
+                    margin-top: 8px;
+                }
+
+                .leetcode-ring {
+                    position: relative;
+                    width: 90px;
+                    height: 90px;
+                    flex-shrink: 0;
+                }
+
+                .ring-svg {
+                    width: 90px;
+                    height: 90px;
+                    transform: rotate(-90deg);
+                }
+
+                .ring-label {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 1.2rem;
+                    font-weight: 800;
+                    text-align: center;
+                    line-height: 1.2;
+                    color: #ffa116;
+                    font-family: var(--font-outfit), sans-serif;
+                }
+
+                .ring-label small {
+                    font-size: 0.85rem;
+                    color: rgba(255, 255, 255, 0.35);
+                    font-weight: 400;
+                    font-family: var(--font-fira-code), monospace;
+                }
+
+                .leetcode-counts {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                .lc-count {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 1.4rem;
+                }
+
+                .lc-count span {
+                    color: rgba(255, 255, 255, 0.35);
+                    font-family: var(--font-fira-code), monospace;
+                    font-size: 1.2rem;
+                    min-width: 60px;
+                }
+
+                .lc-count b { font-weight: 800; font-size: 1.6rem; }
+                .lc-easy b { color: #34d399; }
+                .lc-medium b { color: #ffa116; }
+                .lc-hard b { color: #ff6b6b; }
+
+                /* ── Quote Card ── */
+                .hub-quote-mark {
+                    font-size: 5rem;
+                    font-family: Georgia, serif;
+                    color: rgba(168, 85, 247, 0.25);
+                    line-height: 0.5;
+                    display: block;
+                    margin-bottom: 8px;
+                }
+
+                .hub-quote-text {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    color: rgba(255, 255, 255, 0.8);
+                    font-family: var(--font-outfit), sans-serif;
+                    flex: 1;
+                }
+
+                .hub-quote-author {
+                    font-size: 1.2rem;
+                    color: rgba(255, 255, 255, 0.25);
+                    font-family: var(--font-fira-code), monospace;
+                    margin-top: 4px;
+                    display: block;
+                    letter-spacing: 1px;
+                }
+
+                /* ── Glow Overlays ── */
+                .hub-card-glow {
+                    position: absolute;
+                    inset: 0;
+                    z-index: 1;
+                    opacity: 0;
+                    transition: opacity 0.5s ease;
+                    pointer-events: none;
+                    border-radius: 24px;
+                }
+
+                .hub-card:hover .hub-card-glow { opacity: 1; }
+
+                .hub-card-glow--github {
+                    background: radial-gradient(circle at 10% 90%, rgba(255,255,255,0.04) 0%, transparent 55%);
+                }
+                .hub-card-glow--linkedin {
+                    background: radial-gradient(circle at 10% 90%, rgba(10, 102, 194, 0.1) 0%, transparent 60%);
+                }
+                .hub-card-glow--leetcode {
+                    background: radial-gradient(circle at 10% 90%, rgba(255, 161, 22, 0.1) 0%, transparent 60%);
+                }
+                .hub-card-glow--youtube {
+                    background: radial-gradient(circle at 10% 90%, rgba(255, 40, 40, 0.1) 0%, transparent 60%);
+                }
+                .hub-card-glow--email {
+                    background: radial-gradient(circle at 10% 90%, rgba(52, 211, 153, 0.1) 0%, transparent 60%);
+                }
+                .hub-card-glow--resume {
+                    background: radial-gradient(circle at 10% 90%, rgba(99, 102, 241, 0.12) 0%, transparent 60%);
+                }
+                .hub-card-glow--instagram {
+                    background: radial-gradient(circle at 10% 90%, rgba(228, 64, 95, 0.1) 0%, transparent 60%);
+                }
+                .hub-card-glow--motto {
+                    background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.07) 0%, transparent 70%);
+                }
+
+                /* ── Responsive ── */
+                @media (max-width: 1100px) {
+                    .hub-grid { grid-template-columns: repeat(2, 1fr); }
+                    .hub-card--large { grid-column: span 2; grid-row: span 1; }
+                    .hub-title { font-size: 4.5rem; }
+                }
+
+                @media (max-width: 640px) {
+                    .hub-section { padding: 80px 5% 80px; }
+                    .hub-grid { grid-template-columns: 1fr; gap: 12px; }
+                    .hub-card--large { grid-column: span 1; }
+                    .hub-title { font-size: 3.2rem; letter-spacing: -1.5px; }
+                    .hub-stat-num { font-size: 2.2rem; }
+                    .hub-card-handle { font-size: 1.5rem; }
+                    .hub-card-inner { padding: 24px; }
+                }
+
+
+
                 .bg-decorations {
                     position: fixed;
                     inset: 0;
@@ -515,11 +1317,12 @@ const AboutMePage = () => {
                     -webkit-text-fill-color: transparent;
                 }
 
-                .intro-text {
-                    font-size: 2.1rem;
-                    line-height: 2.1;
-                    color: #f2f2f2;
+                 .intro-text {
+                    font-size: 1.9rem;
+                    line-height: 1.8;
+                    color: rgba(255, 255, 255, 0.8);
                     margin-bottom: 28px;
+                    font-weight: 300;
                 }
 
                 .intro-content {
@@ -572,12 +1375,12 @@ const AboutMePage = () => {
                 }
 
                 .section-heading {
-                    font-size: 12rem;
+                    font-size: 10rem;
                     font-weight: 900;
                     margin-bottom: 80px;
-                    letter-spacing: -3px;
+                    letter-spacing: -2px;
                     text-align: left;
-                    font-family: var(--font-anton), sans-serif;
+                    font-family: var(--font-outfit), sans-serif;
                     text-transform: uppercase;
                 }
 
@@ -597,9 +1400,10 @@ const AboutMePage = () => {
                 }
 
                 .semester-title {
-                    font-size: 5rem;
-                    font-weight: 900;
+                    font-size: 4.5rem;
+                    font-weight: 800;
                     margin-bottom: 30px;
+                    font-family: var(--font-outfit), sans-serif;
                 }
 
                 .semester-highlights {
@@ -608,11 +1412,12 @@ const AboutMePage = () => {
                 }
 
                 .semester-highlights li {
-                    font-size: 1.8rem;
-                    color: #ccc;
-                    padding: 12px 0;
+                    font-size: 1.6rem;
+                    color: rgba(255, 255, 255, 0.7);
+                    padding: 10px 0;
                     padding-left: 30px;
                     position: relative;
+                    line-height: 1.5;
                 }
 
                 .semester-highlights li::before {
