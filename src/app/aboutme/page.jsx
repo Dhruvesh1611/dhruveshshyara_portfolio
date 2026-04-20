@@ -315,7 +315,7 @@ const AboutMePage = () => {
                                                 transition={{ duration: 0.5, ease: 'easeInOut' }}
                                                 className="sticky-image-container sticky-desc-container"
                                             >
-                                                <div className="sticky-desc-box" style={{ border: '2px solid var(--color-light-purple)', background: '#0a0a0a', borderRadius: '24px', width: '100%', maxWidth: '620px', height: 'auto', minHeight: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', padding: '30px 20px', color: 'var(--color-light-blue)', fontWeight: 500, fontSize: 'clamp(1.4rem, 2vw, 2.1rem)', textAlign: 'center', lineHeight: 1.5 }}>
+                                                <div className="sticky-desc-box" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)', borderRadius: '24px', width: '100%', maxWidth: '620px', height: 'auto', minHeight: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', padding: '30px 20px', color: 'rgba(230,235,255,0.92)', fontWeight: 400, fontSize: 'clamp(1.4rem, 1.8vw, 2rem)', textAlign: 'center', lineHeight: 1.7, boxShadow: '0 8px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)' }}>
                                                     {activeItem.description}
                                                 </div>
                                             </motion.div>

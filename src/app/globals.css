@@ -720,7 +720,7 @@ noscript {
         flex-direction: column-reverse;
         justify-content: center;
         gap: 50px;
-        padding-top: 200px;
+        /* padding-top: 200px; */
         height: auto;
         min-height: calc(100vh - 115px);
     }
@@ -2150,6 +2150,7 @@ footer {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    overflow-x: clip;
     text-align: center;
     padding: 0 5%;
 }
@@ -2204,8 +2205,21 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* Reduce top gap and make hero start nearer the top on mobile */
+    .full-page-hero {
+        justify-content: flex-start;
+        padding-top: 36px;
+        padding-bottom: 36px;
+        height: auto;
+        min-height: 60vh;
+    }
+
+    .full-page-hero .hero-content {
+        margin-top: 8px;
+    }
+
     .full-page-hero .hero-main-title {
-        font-size: 22vw;
+        font-size: 15vw;
     }
 
     .full-page-hero .hero-bottom-text {
@@ -2214,7 +2228,52 @@ footer {
 
     .full-page-hero .hero-subtitle {
         font-size: 1.2rem;
-        letter-spacing: 0.3em;
+        letter-spacing: 0.2em;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+/* Ensure global mobile hero matches Awards styling (applies to /explanation & /certificates) */
+@media (max-width: 768px) {
+    /* prevent horizontal scrolling on small screens */
+    html, body {
+        overflow-x: hidden !important;
+    }
+    .full-page-hero {
+        justify-content: center !important;
+        align-items: center !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        min-height: 60vh !important;
+        background: linear-gradient(180deg, rgba(10,7,14,0.98) 0%, #070607 30%) !important;
+    }
+
+    .full-page-hero .hero-glow {
+        position: absolute !important;
+        width: min(560px, 90vw) !important;
+        height: min(560px, 90vw) !important;
+        background: radial-gradient(circle, rgba(132,70,255,0.25) 0%, transparent 55%) !important;
+        top: 40% !important;
+        left: 50% !important;
+        transform: translate(-50%, -40%) !important;
+        pointer-events: none !important;
+        z-index: 0 !important;
+        opacity: 1 !important;
+        will-change: transform, opacity;
+    }
+
+    .full-page-hero .hero-content {
+        position: relative !important;
+        z-index: 1 !important;
+        text-align: center !important;
+        margin-top: 0 !important;
+    }
+
+    .full-page-hero .hero-main-title {
+        font-size: 9.5vw !important;
+        line-height: 0.95 !important;
+        margin-bottom: 8px !important;
     }
 }
 
@@ -2982,12 +3041,15 @@ footer {
 
     .full-page-hero .hero-subtitle {
         font-size: 1rem;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.15em;
         word-break: break-word;
+        max-width: 100%;
+        padding: 0 10px;
     }
 
     .full-page-hero .hero-main-title {
-        font-size: 18vw;
+        font-size: 13vw;
+        max-width: 100%;
     }
 
     .full-page-hero .hero-bottom-text {
@@ -3098,8 +3160,10 @@ footer {
         height: calc(76vw/2)
     }
 
-    .full-page-hero .hero-main-title {
-        font-size: 20vw;
+    @media (min-width: 1200px) {
+        .full-page-hero .hero-main-title {
+            font-size: 20vw;
+        }
     }
 
     .full-page-hero .hero-bottom-text {
@@ -3153,9 +3217,7 @@ footer {
         font-size: 42%
     }
 
-    .dp img {
-        width: 200px
-    }
+   
 
     .two-words {
         height: 50px
