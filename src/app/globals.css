@@ -64,6 +64,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
     }
+
     .hub-card--large {
         grid-column: 1 / -1;
     }
@@ -74,9 +75,11 @@
         grid-template-columns: 1fr;
         gap: 20px;
     }
+
     .hub-card--large {
         grid-column: auto;
     }
+
     .hub-title {
         font-size: 2.8rem;
     }
@@ -108,7 +111,7 @@
 .hub-card:hover {
     transform: translateY(-8px) scale(1.02);
     border-color: rgba(168, 85, 247, 0.3);
-    box-shadow: 
+    box-shadow:
         0 20px 60px rgba(168, 85, 247, 0.15),
         0 0 40px rgba(168, 85, 247, 0.1),
         inset 0 1px 0 rgba(255, 255, 255, 0.08);
@@ -417,6 +420,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -676,7 +680,12 @@ body {
     color: var(--color-white);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-outfit), sans-serif;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -1025,7 +1034,7 @@ noscript {
     z-index: 999;
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 50px;
-    box-shadow: 
+    box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.1),
         inset 0 1px 0 rgba(255, 255, 255, 0.08);
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -1318,7 +1327,8 @@ noscript {
         justify-content: center;
     }
 
-    #name, #work {
+    #name,
+    #work {
         justify-content: center;
         text-align: center;
     }
@@ -1597,7 +1607,7 @@ noscript {
     letter-spacing: 0.06em;
     text-transform: none;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 1.7rem;
     display: flex;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     box-shadow: 0 8px 22px rgba(96, 165, 250, 0.3);
@@ -1648,7 +1658,7 @@ noscript {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 
+    box-shadow:
         0 12px 32px rgba(147, 51, 234, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.15);
     background: linear-gradient(135deg, #9333ea, #d946ef);
@@ -1662,7 +1672,7 @@ noscript {
     width: 140px;
     border-radius: 40px;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: 
+    box-shadow:
         0 16px 48px rgba(168, 85, 247, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     transform: translateY(-4px);
@@ -2792,6 +2802,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
     /* Reduce top gap and make hero start nearer the top on mobile */
     .full-page-hero {
         justify-content: flex-start;
@@ -2823,24 +2834,27 @@ footer {
 
 /* Ensure global mobile hero matches Awards styling (applies to /explanation & /certificates) */
 @media (max-width: 768px) {
+
     /* prevent horizontal scrolling on small screens */
-    html, body {
+    html,
+    body {
         overflow-x: hidden !important;
     }
+
     .full-page-hero {
         justify-content: center !important;
         align-items: center !important;
         padding-top: 20px !important;
         padding-bottom: 20px !important;
         min-height: 60vh !important;
-        background: linear-gradient(180deg, rgba(10,7,14,0.98) 0%, #070607 30%) !important;
+        background: linear-gradient(180deg, rgba(10, 7, 14, 0.98) 0%, #070607 30%) !important;
     }
 
     .full-page-hero .hero-glow {
         position: absolute !important;
         width: min(560px, 90vw) !important;
         height: min(560px, 90vw) !important;
-        background: radial-gradient(circle, rgba(132,70,255,0.25) 0%, transparent 55%) !important;
+        background: radial-gradient(circle, rgba(132, 70, 255, 0.25) 0%, transparent 55%) !important;
         top: 40% !important;
         left: 50% !important;
         transform: translate(-50%, -40%) !important;
@@ -3804,7 +3818,7 @@ footer {
         font-size: 42%
     }
 
-   
+
 
     .two-words {
         height: 50px

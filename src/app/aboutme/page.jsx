@@ -300,9 +300,9 @@ const AboutMePage = () => {
                                 </div>
                                 <div className="hub-card-body">
                                     <div className="hub-stats-row">
-                                        <div className="hub-stat"><span className="hub-stat-num">20+</span><span className="hub-stat-label">Repos</span></div>
-                                        <div className="hub-stat"><span className="hub-stat-num">500+</span><span className="hub-stat-label">Commits</span></div>
-                                        <div className="hub-stat"><span className="hub-stat-num">3+</span><span className="hub-stat-label">Years</span></div>
+                                        <div className="hub-stat"><span className="hub-stat-num">49</span><span className="hub-stat-label">Repos</span></div>
+                                        <div className="hub-stat"><span className="hub-stat-num">77</span><span className="hub-stat-label">Followers</span></div>
+                                        <div className="hub-stat"><span className="hub-stat-num">140</span><span className="hub-stat-label">Following</span></div>
                                     </div>
                                 </div>
                                 <div className="hub-commit-graph">
@@ -388,7 +388,7 @@ const AboutMePage = () => {
 
                         {/* — YouTube Card — */}
                         <motion.a
-                            href="https://www.youtube.com/@Mr.shyara"
+                            href="https://www.youtube.com/@dhruveshshyara1611"
                             target="_blank" rel="noopener noreferrer"
                             className="hub-card hub-card--youtube"
                             initial={{ opacity: 0, y: 60 }}
@@ -404,7 +404,7 @@ const AboutMePage = () => {
                                     </div>
                                     <div>
                                         <p className="hub-card-label">YouTube</p>
-                                        <p className="hub-card-handle">@Mr.shyara</p>
+                                        <p className="hub-card-handle">@dhruveshshyara1611</p>
                                     </div>
                                     <span className="hub-card-arrow">↗</span>
                                 </div>
@@ -496,7 +496,7 @@ const AboutMePage = () => {
                                     </div>
                                     <div>
                                         <p className="hub-card-label">Instagram</p>
-                                        <p className="hub-card-handle">@mr_shyara</p>
+                                        <p className="hub-card-handle">@dhruveshshyara1611</p>
                                     </div>
                                     <span className="hub-card-arrow">↗</span>
                                 </div>
