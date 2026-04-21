@@ -12,7 +12,7 @@ const certificates = [
         description: "Certified in AWS Cloud Essentials, covering core cloud concepts, services, and architecture best practices.",
         date: "2025",
         image: "/certificates/amazon-documentdb.png",
-        link: "https://aws.amazon.com/training/essentials/"
+        link: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0NDkwIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODM4NjI5N184NzQxMjc5MTc0ODE2MDQ0ODk2NC5wbmciLCJ1c2VybmFtZSI6IkRocnV2ZXNoIFNoeWFyYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F7421%2FGetting-Started-with-Amazon-DocumentDB-%2528with-MongoDB-compatibility%2529%2Fcertificate%2Fdownload-skillup&%24web_only=true"
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ const certificates = [
         description: "Completed Azure Services Basics, demonstrating proficiency in cloud infrastructure, deployment, and management.",
         date: "2025",
         image: "/certificates/azure-services-basics.png",
-        link: "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/"
+        link: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIyMDEwIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODM4MzcxM184NzM2MDkxMTc0ODA5MDg0OTcyMy5wbmciLCJ1c2VybmFtZSI6IkRocnV2ZXNoIFNoeWFyYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F4621%2FIntroduction-to-the-Basics-of-Azure-Services%2Fcertificate%2Fdownload-skillup&%24web_only=true"
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ const certificates = [
         description: "Certified Frontend Developer with React, skilled in building modern, responsive web applications.",
         date: "2025",
         image: "/certificates/frontend-developer-react.png",
-        link: "https://www.coursera.org/professional-certificates/meta-front-end-developer"
+        link: "https://www.hackerrank.com/certificates/cc7dcbd6558a"
     }
 ];
 
