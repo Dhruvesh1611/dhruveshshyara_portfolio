@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import { allProjects } from '@/data/projectsData';
 
-const featuredProjects = allProjects.slice(0, 4);
+const featuredProjects = allProjects.filter(p => p.category === 'Fullstack').slice(0, 4);
 
 const ProjectTextSection = ({ project, setActiveProject, isLast }) => {
     const ref = useRef(null);
