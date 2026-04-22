@@ -60,7 +60,7 @@ export const allProjects = [
         image: "/projects/shyaragold.png",
         tags: ["React.js", "Vite", "HTML5", "CSS3", "Node.js", "Express.js", "MongoDB", "Cloudinary"],
         purpose: "Shyara Gold provides a premium jewelry shopping experience with high-fidelity visuals, real-time search, and secure checkout.",
-            detailedDescription: `Key Features (Main Functions):
+        detailedDescription: `Key Features (Main Functions):
 
     - Dynamic Product Categories for all major jewelry types
     - Real-time product search with SearchContext
@@ -179,7 +179,7 @@ export const allProjects = [
             "Open Source: Built as a community-driven project with clean, scalable architecture."
         ],
         github: "https://github.com/Dhruvesh1611/tattoo-studio",
-        live: "https://dhruveshshyara.com/"
+        live: "https://tattoos-dreamers-studio.onrender.com/"
     },
     {
         id: 4,
@@ -401,7 +401,8 @@ export const allProjects = [
             { name: "UI/UX", icon: "📱" }
         ],
         github: "#",
-        live: "#"
+        live: "#",
+        figma: "#"
     },
     {
         id: 10,
@@ -435,7 +436,8 @@ export const allProjects = [
             { name: "UI/UX", icon: "📱" }
         ],
         github: "#",
-        live: "#"
+        live: "#",
+        figma: "#"
     },
     {
         id: 11,
@@ -469,6 +471,7 @@ export const allProjects = [
             { name: "UI/UX", icon: "📱" }
         ],
         github: "#",
-        live: "#"
+        live: "#",
+        figma: "#"
     }
 ];

@@ -336,12 +336,20 @@ const AboutMePage = () => {
                                     </div>
                                     <div>
                                         <p className="hub-card-label">LinkedIn</p>
-                                        <p className="hub-card-handle">dhruveshshyara</p>
+                                        <p className="hub-card-handle">Dhruvesh Shyara</p>
                                     </div>
                                     <span className="hub-card-arrow">↗</span>
                                 </div>
-                                <p className="hub-card-desc">Full Stack Developer · MERN Stack · Open to opportunities</p>
-                                <div className="hub-badge">Connect with me →</div>
+                                <div className="linkedin-status">
+                                    <span className="linkedin-dot" />
+                                    <span className="linkedin-status-text">Open to Work</span>
+                                </div>
+                                <div className="linkedin-skills">
+                                    <span className="linkedin-tag">MERN Stack</span>
+                                    <span className="linkedin-tag">Full Stack Developer</span>
+                                    <span className="linkedin-tag">React.js</span>
+                                </div>
+                                <div className="hub-badge hub-badge--blue">Connect with me →</div>
                             </div>
                             <div className="hub-card-glow hub-card-glow--linkedin" />
                         </motion.a>
@@ -408,7 +416,24 @@ const AboutMePage = () => {
                                     </div>
                                     <span className="hub-card-arrow">↗</span>
                                 </div>
-                                <p className="hub-card-desc">Dev tutorials, project walkthroughs & tech content</p>
+                                <div className="yt-content-tags">
+                                    <span className="yt-tag">🎥 Dev Tutorials</span>
+                                    <span className="yt-tag">💡 Project Walkthroughs</span>
+                                    <span className="yt-tag">🧠 DSA Solutions</span>
+                                </div>
+                                <div className="yt-mini-player">
+                                    <div className="yt-play-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z" /></svg>
+                                    </div>
+                                    <div className="yt-wave-bars">
+                                        <span className="yt-bar" style={{animationDelay: '0s'}} />
+                                        <span className="yt-bar" style={{animationDelay: '0.15s'}} />
+                                        <span className="yt-bar" style={{animationDelay: '0.3s'}} />
+                                        <span className="yt-bar" style={{animationDelay: '0.45s'}} />
+                                        <span className="yt-bar" style={{animationDelay: '0.6s'}} />
+                                    </div>
+                                    <span className="yt-live-text">Content Creator</span>
+                                </div>
                                 <div className="hub-badge hub-badge--red">Subscribe →</div>
                             </div>
                             <div className="hub-card-glow hub-card-glow--youtube" />
@@ -436,13 +461,21 @@ const AboutMePage = () => {
                                         <p className="hub-card-handle" style={{ fontSize: '1.1rem' }}>dhruvesh.shyara.cg@gmail.com</p>
                                     </div>
                                 </div>
+                                <div className="email-visual">
+                                    <div className="email-envelope">
+                                        <div className="email-line" style={{width: '80%'}} />
+                                        <div className="email-line" style={{width: '60%'}} />
+                                        <div className="email-line" style={{width: '40%'}} />
+                                    </div>
+                                    <p className="email-hint">Available for freelance & collaboration</p>
+                                </div>
                                 <AnimatePresence mode="wait">
                                     {emailCopied ? (
                                         <motion.div key="copied" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="hub-copy-feedback">
                                             ✓ Copied!
                                         </motion.div>
                                     ) : (
-                                        <motion.div key="copy" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="hub-badge">
+                                        <motion.div key="copy" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="hub-badge hub-badge--green">
                                             Click to copy →
                                         </motion.div>
                                     )}
@@ -473,7 +506,21 @@ const AboutMePage = () => {
                                     </div>
                                     <span className="hub-card-arrow">↗</span>
                                 </div>
-                                <div className="hub-badge hub-badge--white">Open Resume →</div>
+                                <div className="resume-preview">
+                                    <div className="resume-mini">
+                                        <div className="resume-mini-header" />
+                                        <div className="resume-mini-line" style={{width: '70%'}} />
+                                        <div className="resume-mini-line" style={{width: '90%'}} />
+                                        <div className="resume-mini-line" style={{width: '55%'}} />
+                                        <div className="resume-mini-line" style={{width: '80%'}} />
+                                    </div>
+                                    <div className="resume-highlights">
+                                        <span className="resume-hl-tag">B.Tech CSE</span>
+                                        <span className="resume-hl-tag">MERN Stack</span>
+                                        <span className="resume-hl-tag">Full Stack</span>
+                                    </div>
+                                </div>
+                                <div className="hub-badge hub-badge--indigo">Open Resume →</div>
                             </div>
                             <div className="hub-card-glow hub-card-glow--resume" />
                         </motion.a>
@@ -1067,6 +1114,213 @@ const AboutMePage = () => {
                     color: #34d399;
                     width: fit-content;
                     margin-top: auto;
+                }
+
+                /* ── Badge Variants ── */
+                .hub-badge--blue {
+                    color: #4da3ff;
+                    border-color: rgba(10, 102, 194, 0.25);
+                    background: rgba(10, 102, 194, 0.08);
+                }
+                .hub-card:hover .hub-badge--blue {
+                    background: rgba(10, 102, 194, 0.15);
+                    border-color: rgba(10, 102, 194, 0.4);
+                    color: #7bbfff;
+                }
+                .hub-badge--green {
+                    color: #34d399;
+                    border-color: rgba(52, 211, 153, 0.2);
+                    background: rgba(52, 211, 153, 0.07);
+                }
+                .hub-card:hover .hub-badge--green {
+                    background: rgba(52, 211, 153, 0.12);
+                    border-color: rgba(52, 211, 153, 0.35);
+                    color: #5ee8b7;
+                }
+                .hub-badge--indigo {
+                    color: #a5b4fc;
+                    border-color: rgba(99, 102, 241, 0.22);
+                    background: rgba(99, 102, 241, 0.08);
+                }
+                .hub-card:hover .hub-badge--indigo {
+                    background: rgba(99, 102, 241, 0.15);
+                    border-color: rgba(99, 102, 241, 0.4);
+                    color: #c4b5fd;
+                }
+
+                /* ── LinkedIn Card Enhancements ── */
+                .linkedin-status {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 8px 14px;
+                    background: rgba(52, 211, 153, 0.06);
+                    border: 1px solid rgba(52, 211, 153, 0.12);
+                    border-radius: 100px;
+                    width: fit-content;
+                }
+                .linkedin-dot {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: #34d399;
+                    animation: pulse-dot 2s ease-in-out infinite;
+                    flex-shrink: 0;
+                }
+                @keyframes pulse-dot {
+                    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.5); }
+                    50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+                }
+                .linkedin-status-text {
+                    font-size: 1.15rem;
+                    font-weight: 600;
+                    color: #34d399;
+                    font-family: var(--font-fira-code), monospace;
+                    letter-spacing: 0.5px;
+                }
+                .linkedin-skills {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                }
+                .linkedin-tag {
+                    padding: 6px 14px;
+                    border-radius: 8px;
+                    font-size: 1.15rem;
+                    font-weight: 500;
+                    background: rgba(10, 102, 194, 0.08);
+                    border: 1px solid rgba(10, 102, 194, 0.15);
+                    color: rgba(255, 255, 255, 0.55);
+                    font-family: var(--font-fira-code), monospace;
+                }
+
+                /* ── YouTube Card Enhancements ── */
+                .yt-content-tags {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                }
+                .yt-tag {
+                    padding: 6px 12px;
+                    border-radius: 8px;
+                    font-size: 1.15rem;
+                    font-weight: 500;
+                    background: rgba(255, 40, 40, 0.06);
+                    border: 1px solid rgba(255, 40, 40, 0.12);
+                    color: rgba(255, 255, 255, 0.55);
+                }
+                .yt-mini-player {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 12px 16px;
+                    background: rgba(255, 40, 40, 0.05);
+                    border: 1px solid rgba(255, 40, 40, 0.1);
+                    border-radius: 12px;
+                }
+                .yt-play-icon {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    background: rgba(255, 40, 40, 0.15);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #ff4444;
+                    flex-shrink: 0;
+                }
+                .yt-wave-bars {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 3px;
+                    height: 24px;
+                }
+                .yt-bar {
+                    width: 4px;
+                    border-radius: 2px;
+                    background: linear-gradient(to top, #ff4444, #ff8888);
+                    animation: yt-wave 1.2s ease-in-out infinite;
+                }
+                @keyframes yt-wave {
+                    0%, 100% { height: 6px; }
+                    50% { height: 20px; }
+                }
+                .yt-live-text {
+                    font-size: 1.1rem;
+                    color: rgba(255, 255, 255, 0.35);
+                    font-family: var(--font-fira-code), monospace;
+                    letter-spacing: 0.5px;
+                    margin-left: auto;
+                }
+
+                /* ── Email Card Enhancements ── */
+                .email-visual {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                }
+                .email-envelope {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    flex: 1;
+                }
+                .email-line {
+                    height: 3px;
+                    border-radius: 2px;
+                    background: linear-gradient(90deg, rgba(52, 211, 153, 0.2) 0%, rgba(52, 211, 153, 0.05) 100%);
+                }
+                .email-hint {
+                    font-size: 1.2rem;
+                    color: rgba(255, 255, 255, 0.35);
+                    font-weight: 400;
+                    line-height: 1.5;
+                }
+
+                /* ── Resume Card Enhancements ── */
+                .resume-preview {
+                    display: flex;
+                    gap: 18px;
+                    align-items: flex-start;
+                }
+                .resume-mini {
+                    width: 70px;
+                    padding: 10px 8px;
+                    background: rgba(99, 102, 241, 0.06);
+                    border: 1px solid rgba(99, 102, 241, 0.12);
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    flex-shrink: 0;
+                }
+                .resume-mini-header {
+                    height: 8px;
+                    border-radius: 2px;
+                    background: linear-gradient(90deg, #a5b4fc, #818cf8);
+                    width: 60%;
+                    margin-bottom: 2px;
+                }
+                .resume-mini-line {
+                    height: 3px;
+                    border-radius: 1px;
+                    background: rgba(99, 102, 241, 0.2);
+                }
+                .resume-highlights {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                }
+                .resume-hl-tag {
+                    padding: 5px 12px;
+                    border-radius: 6px;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    background: rgba(99, 102, 241, 0.07);
+                    border: 1px solid rgba(99, 102, 241, 0.12);
+                    color: rgba(255, 255, 255, 0.5);
+                    font-family: var(--font-fira-code), monospace;
+                    width: fit-content;
                 }
 
                 /* ── GitHub Stats ── */
