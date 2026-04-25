@@ -1238,7 +1238,7 @@ noscript {
 }
 
 .blob {
-    position: absolute;
+    /* position: absolute;
     right: -15%;
     top: 0;
     background-color: var(--color-light-purple);
@@ -1246,7 +1246,7 @@ noscript {
     height: 100vh;
     filter: blur(300px);
     opacity: .3;
-    animation: 1s linear infinite alternate-reverse breath
+    animation: 1s linear infinite alternate-reverse breath */
 }
 
 @keyframes breath {
@@ -2928,10 +2928,10 @@ footer {
 
 .full-page-hero .hero-glow {
     position: absolute;
-    width: 700px;
-    height: 700px;
+    width: 900px;
+    height: 900px;
     background: radial-gradient(circle, rgba(132, 70, 255, 0.2) 0%, transparent 70%);
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;

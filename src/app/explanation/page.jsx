@@ -103,6 +103,7 @@ const ExplanationPage = () => {
 
             <main className="page-container">
                 <section className="full-page-hero">
+                    <div className="hero-glow"></div>
                     <div className="hero-content">
                         <motion.h1
                             className="hero-main-title"
