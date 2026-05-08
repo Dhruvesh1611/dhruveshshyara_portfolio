@@ -101,8 +101,13 @@ export default function ProjectPage({ params }) {
                     <motion.p className="project-one-liner">{project.subtitle || project.description}</motion.p>
                 </div>
                 <div className="header-right">
-                    <Link href={project.live} target="_blank" className="action-button visit-btn">Visit Site</Link>
+                    {project.live && project.live !== "#" && (
+                        <Link href={project.live} target="_blank" className="action-button visit-btn">Visit Site</Link>
+                    )}
                     <Link href={project.github} target="_blank" className="action-button github-link">GitHub</Link>
+                    {project.youtubeVideoId && (
+                        <Link href={`https://www.youtube.com/watch?v=${project.youtubeVideoId}`} target="_blank" className="action-button youtube-btn">🎥 Watch Video</Link>
+                    )}
                     {project.marketplace && (
                         <Link href={project.marketplace} target="_blank" className="action-button marketplace-btn">VS Code Marketplace</Link>
                     )}
@@ -368,7 +373,12 @@ export default function ProjectPage({ params }) {
 
             <div className="mobile-action-bar">
                 <Link href={project.github} target="_blank" className="action-button github-link" style={{ flex: 1, justifyContent: 'center' }}>View Code</Link>
-                <Link href={project.live} target="_blank" className="action-button visit-btn" style={{ flex: 1, justifyContent: 'center' }}>Live Demo</Link>
+                {project.youtubeVideoId && (
+                    <Link href={`https://www.youtube.com/watch?v=${project.youtubeVideoId}`} target="_blank" className="action-button youtube-btn" style={{ flex: 1, justifyContent: 'center' }}>🎥 Video</Link>
+                )}
+                {project.live && project.live !== "#" && (
+                    <Link href={project.live} target="_blank" className="action-button visit-btn" style={{ flex: 1, justifyContent: 'center' }}>Live Demo</Link>
+                )}
             </div>
 
             <Footer />

@@ -7,6 +7,7 @@ export const allProjects = [
         description: "🏆 1st Place among 33 teams — AI-powered VS Code extension that detects Azure SDK coding context and generates Copilot-style inline ghost text suggestions, backed by a RAG pipeline with ChromaDB, feedback collection, and a companion product website.",
         image: "/projects/doppelganger.png",
         tags: ["TypeScript", "VS Code API", "Azure OpenAI", "Node.js", "Express", "ChromaDB", "MongoDB", "React", "Groq LLM"],
+        youtubeVideoId: "gNV1cgxKt5U",
         subtitle: "🏆 1st Place — Doppelganger 30-Hour Build Sprint by OpenPools",
         timeline: "March 2026 (30-Hour Build Sprint)",
         role: "Frontend Developer & Project Workflow Coordinator",
@@ -143,6 +144,7 @@ export const allProjects = [
         ],
         image: "/projects/shyaragold.png",
         tags: ["React.js", "Vite", "HTML5", "CSS3", "Node.js", "Express.js", "MongoDB", "Cloudinary"],
+        youtubeVideoId: "OAvjmlRpBAA",
         purpose: "Shyara Gold provides a premium jewelry shopping experience with high-fidelity visuals, real-time search, and secure checkout.",
         detailedDescription: `Key Features (Main Functions):
 
@@ -273,6 +275,7 @@ export const allProjects = [
         description: "A high-performance Chrome extension that enhances YouTube Shorts viewing by intelligently auto-scrolling to the next video when one ends, with an automated 'Skip Sponsored' mode to filter ads seamlessly.",
         image: "/projects/yt-shorts-scroller.png",
         tags: ["JavaScript", "Chrome Extension", "Manifest V3", "MutationObserver", "HTML5 Video API"],
+        youtubeVideoId: "ciPr7EpB4Vo",
         purpose: "Built to solve the frustration of manually scrolling through YouTube Shorts. This extension provides a hands-free viewing experience with smart ad detection and skip functionality.",
         detailedDescription: "YouTube Shorts Auto-Scroller is an intelligent browser extension that transforms the Shorts viewing experience. Since YouTube Shorts loop automatically, the standard HTML5 'ended' event never fires—making traditional detection methods useless. This extension implements a sophisticated timeupdate listener that calculates remaining duration and triggers smooth scrolling when the video is within 0.5 seconds of completion.\n\nThe extension also tackles YouTube's SPA architecture by intercepting history.pushState and history.replaceState, combined with a MutationObserver to ensure the script re-initializes precisely when URL or DOM changes occur. The ad-filtering system uses advanced pattern matching to identify and automatically bypass sponsored shorts.",
         features: [
@@ -311,7 +314,7 @@ export const allProjects = [
             "Seamless SPA Handling: Advanced navigation detection for YouTube's dynamic routing."
         ],
         github: "https://github.com/Dhruvesh1611/youtube-shorts-auto-scroller",
-        live: "#"
+        live: null
     },
     {
         id: 6,

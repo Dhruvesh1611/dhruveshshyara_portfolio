@@ -126,6 +126,12 @@ const ProjectCard = ({ project }) => {
                                     <span>GitHub</span>
                                 </a>
                             )}
+                            {project.youtubeVideoId && (
+                                <a href={`https://www.youtube.com/watch?v=${project.youtubeVideoId}`} target="_blank" rel="noopener noreferrer" className="hover-btn hover-btn--youtube" onClick={(e) => e.stopPropagation()}>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
+                                    <span>Video</span>
+                                </a>
+                            )}
                             {project.live && project.live !== '#' && (
                                 <a href={project.live} target="_blank" rel="noopener noreferrer" className="hover-btn hover-btn--live" onClick={(e) => e.stopPropagation()}>
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
@@ -596,6 +602,18 @@ const ProjectsPage = () => {
                     border-color: rgba(255, 255, 255, 0.35);
                     transform: translateY(-3px);
                     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+                }
+
+                :global(.hover-btn--youtube) {
+                    background: rgba(255, 0, 0, 0.2);
+                    color: #ff6b6b;
+                    border-color: rgba(255, 0, 0, 0.3);
+                }
+                :global(.hover-btn--youtube:hover) {
+                    background: rgba(255, 0, 0, 0.35);
+                    border-color: rgba(255, 0, 0, 0.5);
+                    transform: translateY(-3px);
+                    box-shadow: 0 12px 30px rgba(255, 0, 0, 0.3);
                 }
 
                 :global(.hover-btn--live) {
