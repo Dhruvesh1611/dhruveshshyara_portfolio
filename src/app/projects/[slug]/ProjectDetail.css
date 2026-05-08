@@ -743,7 +743,7 @@
 }
 
 .team-member-highlight::after {
-    content: "You";
+    content: "me";
     position: absolute;
     top: 12px;
     right: 12px;
