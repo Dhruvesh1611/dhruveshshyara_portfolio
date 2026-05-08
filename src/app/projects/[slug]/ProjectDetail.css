@@ -613,3 +613,286 @@
         padding: 20px;
     }
 }
+
+/* ── Hackathon Achievement Section ── */
+.hackathon-meta-badge {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(245, 158, 11, 0.15)) !important;
+    border-color: rgba(251, 191, 36, 0.4) !important;
+    animation: hackathon-badge-pulse 2.5s ease-in-out infinite alternate;
+}
+
+.hackathon-meta-badge strong {
+    color: #fbbf24 !important;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+}
+
+@keyframes hackathon-badge-pulse {
+    0% { box-shadow: 0 0 10px rgba(251, 191, 36, 0.1); }
+    100% { box-shadow: 0 0 25px rgba(251, 191, 36, 0.25); }
+}
+
+.hackathon-achievement-card {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.06) 0%, rgba(168, 85, 247, 0.04) 50%, rgba(0, 0, 0, 0.3) 100%);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.hackathon-trophy-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.trophy-icon {
+    font-size: 5rem;
+    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.4));
+    animation: trophy-bounce 3s ease-in-out infinite;
+}
+
+@keyframes trophy-bounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(-3deg); }
+    75% { transform: translateY(-3px) rotate(3deg); }
+}
+
+.hackathon-achievement-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin: 0;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b, #fde68a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.01em;
+}
+
+.hackathon-event-name {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 8px 0 0;
+}
+
+.hackathon-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.hackathon-meta-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+.hackathon-meta-label {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+}
+
+.hackathon-meta-value {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.hackathon-subtitle {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 20px;
+}
+
+.team-members-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.team-member-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.team-member-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.team-member-highlight {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(168, 85, 247, 0.08)) !important;
+    border-color: rgba(251, 191, 36, 0.3) !important;
+    position: relative;
+}
+
+.team-member-highlight::after {
+    content: "You";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 100px;
+    letter-spacing: 0.05em;
+}
+
+.team-member-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.team-member-role {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hackathon-mentors {
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hackathon-learnings {
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hackathon-learnings-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hackathon-learning-item {
+    font-size: 1.6rem;
+    color: #e0e0e0;
+    padding: 14px 20px;
+    background: rgba(168, 85, 247, 0.05);
+    border: 1px solid rgba(168, 85, 247, 0.1);
+    border-radius: 12px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.hackathon-learning-item::before {
+    content: "✨";
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Marketplace Button */
+.marketplace-btn {
+    background: linear-gradient(135deg, rgba(0, 120, 212, 0.2), rgba(0, 120, 212, 0.1));
+    border: 1px solid rgba(0, 120, 212, 0.3);
+    color: #4fc3f7;
+}
+
+.marketplace-btn:hover {
+    background: linear-gradient(135deg, rgba(0, 120, 212, 0.3), rgba(0, 120, 212, 0.2));
+    border-color: rgba(0, 120, 212, 0.5);
+}
+
+/* ── Hackathon Responsive ── */
+@media screen and (max-width: 768px) {
+    .hackathon-achievement-card {
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .trophy-icon {
+        font-size: 3.5rem;
+    }
+
+    .hackathon-achievement-title {
+        font-size: 2rem;
+    }
+
+    .hackathon-event-name {
+        font-size: 1.3rem;
+    }
+
+    .hackathon-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .team-members-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .hackathon-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .hackathon-learning-item {
+        font-size: 1.4rem;
+        padding: 12px 16px 12px 36px;
+    }
+
+    .team-member-name {
+        font-size: 1.4rem;
+    }
+
+    .team-member-role {
+        font-size: 1.2rem;
+    }
+
+    .hackathon-meta-value {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hackathon-achievement-card {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .hackathon-trophy-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .trophy-icon {
+        font-size: 3rem;
+    }
+
+    .hackathon-achievement-title {
+        font-size: 1.8rem;
+    }
+
+    .hackathon-event-name {
+        font-size: 1.2rem;
+    }
+
+    .hackathon-learning-item {
+        font-size: 1.2rem;
+    }
+}

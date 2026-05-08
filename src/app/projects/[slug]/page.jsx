@@ -31,6 +31,7 @@ export default function ProjectPage({ params }) {
         ...(project.roadmap?.length ? [{ name: "🚀 Future Roadmap", id: "roadmap" }] : []),
         ...(project.challenges?.length ? [{ name: "🧠 Challenges & Solutions", id: "challenges" }] : []),
         ...(project.projectStructure?.length ? [{ name: "📂 Project Structure", id: "structure" }] : []),
+        ...(project.hackathon ? [{ name: "🏆 Hackathon Achievement", id: "hackathon" }] : []),
         ...(project.standoutPoints?.length ? [{ name: "⭐ Standout Features", id: "standout" }] : [])
     ];
 
@@ -74,15 +75,20 @@ export default function ProjectPage({ params }) {
             <header className="detail-header">
                 <div className="header-left">
                     <div className="metadata-badges">
-                                                {project.slug === 'yaritu' && (
-                                                    <>
-                                                        <span className="meta-badge">
-                                                            <strong>TIMELINE:</strong> {project.timeline}
-                                                        </span>
-                                                        <span className="meta-badge">
-                                                            <strong>ROLE:</strong> {project.role}
-                                                        </span>
-                                                    </>
+                                                {project.timeline && (
+                                                    <span className="meta-badge">
+                                                        <strong>TIMELINE:</strong> {project.timeline}
+                                                    </span>
+                                                )}
+                                                {project.role && (
+                                                    <span className="meta-badge">
+                                                        <strong>ROLE:</strong> {project.role}
+                                                    </span>
+                                                )}
+                                                {project.hackathon && (
+                                                    <span className="meta-badge hackathon-meta-badge">
+                                                        <strong>{project.hackathon.achievement}</strong>
+                                                    </span>
                                                 )}
                     </div>
                     <motion.h1
@@ -97,6 +103,9 @@ export default function ProjectPage({ params }) {
                 <div className="header-right">
                     <Link href={project.live} target="_blank" className="action-button visit-btn">Visit Site</Link>
                     <Link href={project.github} target="_blank" className="action-button github-link">GitHub</Link>
+                    {project.marketplace && (
+                        <Link href={project.marketplace} target="_blank" className="action-button marketplace-btn">VS Code Marketplace</Link>
+                    )}
                 </div>
             </header>
 
@@ -233,6 +242,66 @@ export default function ProjectPage({ params }) {
                                 {project.projectStructure.map((item, i) => (
                                     <div key={i} className="structure-item">{item}</div>
                                 ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {project.hackathon && (
+                        <section id="hackathon" className="detail-article">
+                            <h2 className="detail-section-title">🏆 Hackathon Achievement</h2>
+                            <div className="hackathon-achievement-card">
+                                <div className="hackathon-trophy-header">
+                                    <span className="trophy-icon">🏆</span>
+                                    <div className="trophy-text">
+                                        <h3 className="hackathon-achievement-title">{project.hackathon.achievement}</h3>
+                                        <p className="hackathon-event-name">{project.hackathon.eventName} — organized by {project.hackathon.organizer}</p>
+                                    </div>
+                                </div>
+
+                                <div className="hackathon-meta-grid">
+                                    <div className="hackathon-meta-item">
+                                        <span className="hackathon-meta-label">Duration</span>
+                                        <span className="hackathon-meta-value">{project.hackathon.duration}</span>
+                                    </div>
+                                    <div className="hackathon-meta-item">
+                                        <span className="hackathon-meta-label">Category</span>
+                                        <span className="hackathon-meta-value">{project.hackathon.category}</span>
+                                    </div>
+                                    <div className="hackathon-meta-item">
+                                        <span className="hackathon-meta-label">Team</span>
+                                        <span className="hackathon-meta-value">{project.hackathon.teamName}</span>
+                                    </div>
+                                </div>
+
+                                <div className="hackathon-team-section">
+                                    <h4 className="hackathon-subtitle">👥 Team Members</h4>
+                                    <div className="team-members-grid">
+                                        {project.hackathon.teamMembers.map((member, i) => (
+                                            <div key={i} className={`team-member-card ${i === 0 ? 'team-member-highlight' : ''}`}>
+                                                <span className="team-member-name">{member.name}</span>
+                                                <span className="team-member-role">{member.role}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {project.hackathon.mentors && (
+                                    <div className="hackathon-mentors">
+                                        <h4 className="hackathon-subtitle">🙏 Special Thanks</h4>
+                                        <p className="detail-text">{project.hackathon.mentors} — for continuous support, mentorship, and guidance throughout the hackathon journey.</p>
+                                    </div>
+                                )}
+
+                                {project.hackathon.keyLearnings?.length > 0 && (
+                                    <div className="hackathon-learnings">
+                                        <h4 className="hackathon-subtitle">✨ Key Learnings</h4>
+                                        <ul className="hackathon-learnings-list">
+                                            {project.hackathon.keyLearnings.map((learning, i) => (
+                                                <li key={i} className="hackathon-learning-item">{learning}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
                             </div>
                         </section>
                     )}

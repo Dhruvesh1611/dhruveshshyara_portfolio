@@ -1,6 +1,90 @@
 export const allProjects = [
     {
         id: 1,
+        slug: "doppelganger",
+        title: "Doppelganger — Azure AI Code Assistant",
+        category: "Fullstack",
+        description: "🏆 1st Place among 33 teams — AI-powered VS Code extension that detects Azure SDK coding context and generates Copilot-style inline ghost text suggestions, backed by a RAG pipeline with ChromaDB, feedback collection, and a companion product website.",
+        image: "/projects/doppelganger.png",
+        tags: ["TypeScript", "VS Code API", "Azure OpenAI", "Node.js", "Express", "ChromaDB", "MongoDB", "React", "Groq LLM"],
+        subtitle: "🏆 1st Place — Doppelganger 30-Hour Build Sprint by OpenPools",
+        timeline: "March 2026 (30-Hour Build Sprint)",
+        role: "Frontend Developer & Project Workflow Coordinator",
+        hackathon: {
+            achievement: "🏆 1st Place winner",
+            eventName: "Doppelganger 30-Hour Build Sprint",
+            organizer: "OpenPools.in",
+            duration: "30 Hours",
+            category: "AI + Cloud + Developer Tools",
+            teamName: "Team Eklavya",
+            teamMembers: [
+                { name: "Dhruvesh Shyara", role: "Frontend Development & Project Workflow Coordination" },
+                { name: "Priy Mavani", role: "Backend Developer (API Development & Deployment)" },
+                { name: "Arjun Divraniya", role: "Extension Logic Pipeline & Integration" },
+                { name: "Mayank Dudhatra", role: "RAG System, Research & Feedback System" }
+            ],
+            mentors: "CodingGita & Patel Neel Maheshkumar",
+            keyLearnings: [
+                "The power of team collaboration under pressure",
+                "Building real developer tools in a limited time",
+                "Turning an idea into a working product within 30 hours"
+            ]
+        },
+        purpose: "Built during the Doppelganger 30-Hour Build Sprint hackathon organized by OpenPools — where Team Eklavya secured 1st Rank among 33 teams. The extension eliminates AI hallucinations in Azure SDK code suggestions by using context-injected Azure documentation retrieval (RAG) to provide accurate, grounded inline completions for JS/TS/C# developers.",
+        detailedDescription: "Doppelganger is a full-stack developer tool consisting of a VS Code extension, an Express backend API, and a React-based marketing website — built in an intense 30-hour hackathon sprint.\n\nThe extension detects when a developer is working with Azure SDKs (storage, cosmos, identity, keyvault, service-bus, etc.) and provides inline ghost text suggestions powered by Groq's Llama model. A RAG pipeline using ChromaDB ensures suggestions are grounded in real Azure documentation, drastically reducing hallucinations.\n\nThe backend orchestrates the entire pipeline — context analysis, vector retrieval with SDK-specific filtering, prompt construction, and response cleanup. A feedback endpoint with MongoDB persistence enables continuous improvement of suggestion quality. The extension also features automatic Azure import injection, intent detection from comments, and a multi-layer caching system (session + Redis) that reduces API calls by 80%+.\n\nWhile working with Azure SDKs, developers often need to repeatedly go through documentation and copy commands manually — slowing down the development process. Our solution simplifies this workflow by providing AI-powered suggestions directly inside VS Code, helping developers use Azure SDKs without constantly switching to documentation.",
+        features: [
+            { icon: "⚡", title: "Copilot-Style Inline Suggestions", description: "Ghost text completions appear directly in the editor as you type Azure SDK code — accept with Tab, dismiss with Escape." },
+            { icon: "🧠", title: "Azure-Aware Context Detection", description: "Automatically detects Azure SDK usage in JS/TS/C# (storage, cosmos, identity, keyvault, service-bus) and tailors suggestions accordingly." },
+            { icon: "🔎", title: "RAG-Powered Documentation Grounding", description: "ChromaDB + embedding service retrieves relevant Azure docs to ground every suggestion in real documentation — no hallucinations." },
+            { icon: "🛠️", title: "Auto Import & Quick Fixes", description: "Automatically injects missing Azure SDK imports and provides quick fix code actions for common patterns." },
+            { icon: "⭐", title: "Feedback & Continuous Improvement", description: "Built-in feedback endpoint with MongoDB persistence allows rating suggestions for continuous model improvement." },
+            { icon: "🧪", title: "Mock Mode for Local Development", description: "One boolean switch enables full local development without cloud dependencies — perfect for offline coding." }
+        ],
+        architecture: {
+            frontend: "React (Marketing Website + VS Code Webview Panel)",
+            backend: "Node.js, Express.js (API Service + RAG Pipeline)",
+            database: "MongoDB (Feedback Storage), ChromaDB (Vector Store)",
+            core: "TypeScript (VS Code Extension Host), Groq Llama LLM"
+        },
+        challenges: [
+            {
+                problem: "AI code assistants often hallucinate Azure SDK APIs that don't exist.",
+                solution: "Implemented a RAG pipeline using ChromaDB with embedded Azure documentation, ensuring every suggestion is grounded in real, verified SDK references."
+            },
+            {
+                problem: "YouTube Shorts-style SPA navigation in VS Code can cause content scripts to lose context.",
+                solution: "Intercepted VS Code editor events, used MutationObserver patterns, and implemented a singleton architecture to ensure the extension reinitializes correctly on context changes."
+            },
+            {
+                problem: "High API call volume during rapid typing creates latency and cost issues.",
+                solution: "Built a multi-layer caching system (session + Redis) achieving 80%+ API call reduction, combined with a debounced typing watcher for intelligent trigger timing."
+            },
+            {
+                problem: "Developers need to quickly switch between mock and production environments during development.",
+                solution: "Designed a single-boolean configuration switch that seamlessly toggles between mock fallback behavior and full cloud backend — zero config changes needed."
+            }
+        ],
+        projectStructure: [
+            "azure-ai-code-extension/extension/src — VS Code extension host, inline provider, code watcher, Azure detector",
+            "azure-ai-code-extension/backend/src — Express API, RAG service, LLM integration, feedback controller",
+            "azure-ai-code-extension/extension/webview — React app rendered in VS Code panel",
+            "azure-ai-code-extension/extension/frontend — React marketing/demo website",
+            "azure-ai-code-extension/shared — Shared constants and types across packages"
+        ],
+        standoutPoints: [
+            "🏆 1st Place Winner: Secured 1st Rank among 33 teams at the Doppelganger 30-Hour Build Sprint by OpenPools.",
+            "Published on VS Code Marketplace: Live extension available for immediate download and use.",
+            "Zero Hallucination Architecture: RAG pipeline eliminates the #1 problem with AI code assistants.",
+            "Security-First: Always suggests DefaultAzureCredential over connection strings.",
+            "Intent Detection: Detects developer intent from comments (e.g., '// I need to upload to blob' → generates full function).",
+            "30-Hour Sprint: Entire project — extension, backend API, RAG pipeline, and marketing website — built in just 30 hours."
+        ],
+        github: "https://github.com/Dhruvesh1611/Doppelganger-March-2026-Eklavya",
+        live: "https://azure-ai-code-assistant.vercel.app/",
+        marketplace: "https://marketplace.visualstudio.com/items?itemName=TEAMEKLAVYA.azure-ai-code-assistant"
+    },
+    {
+        id: 2,
         slug: "yaritu",
         title: "Yaritu — Premium Fashion & Jewelry Showcase",
         category: "Fullstack",
@@ -44,7 +128,7 @@ export const allProjects = [
         live: "https://yaritu.vercel.app"
     },
     {
-        id: 2,
+        id: 3,
         slug: "shyara-gold",
         title: "Shyara Gold (Full-Stack Jewelry E-commerce Platform)",
         category: "Fullstack",
@@ -115,7 +199,7 @@ export const allProjects = [
         live: "https://shyara-gold.netlify.app/"
     },
     {
-        id: 3,
+        id: 4,
         slug: "tattoo-studio",
         title: "Tattoo Studio - Membership Program",
         category: "Fullstack",
@@ -182,7 +266,7 @@ export const allProjects = [
         live: "https://tattoos-dreamers-studio.onrender.com/"
     },
     {
-        id: 4,
+        id: 5,
         slug: "youtube-shorts-auto-scroller",
         title: "YouTube Shorts Auto-Scroller",
         category: "Browser Extension",
@@ -230,7 +314,7 @@ export const allProjects = [
         live: "#"
     },
     {
-        id: 5,
+        id: 6,
         slug: "eatclub-clone",
         title: "EatClub Clone",
         category: "Frontend",
@@ -265,7 +349,7 @@ export const allProjects = [
         live: "https://eatclub-clone.netlify.app/"
     },
     {
-        id: 6,
+        id: 7,
         slug: "rolls-royce-clone",
         title: "Rolls-Royce Clone",
         category: "Frontend",
@@ -300,7 +384,7 @@ export const allProjects = [
         live: "https://rollsroyce-clone.netlify.app/"
     },
     {
-        id: 7,
+        id: 8,
         slug: "libas-clone",
         title: "Libas Clone",
         category: "Frontend",
@@ -335,7 +419,7 @@ export const allProjects = [
         live: "https://libas-web.netlify.app/"
     },
     {
-        id: 8,
+        id: 9,
         slug: "snake-game",
         title: "Snake Game",
         category: "Frontend",
@@ -370,7 +454,7 @@ export const allProjects = [
         live: "https://snake-game-demo.netlify.app/"
     },
     {
-        id: 9,
+        id: 10,
         slug: "ui-ux-yaritu",
         title: "UI/UX Design - Yaritu",
         category: "UI/UX",
@@ -405,7 +489,7 @@ export const allProjects = [
         figma: "#"
     },
     {
-        id: 10,
+        id: 11,
         slug: "ui-ux-shyara-gold",
         title: "UI/UX Design - Shyara Gold",
         category: "UI/UX",
@@ -440,7 +524,7 @@ export const allProjects = [
         figma: "#"
     },
     {
-        id: 11,
+        id: 12,
         slug: "ui-ux-docscanx",
         title: "UI/UX Design - DocScanX",
         category: "UI/UX",

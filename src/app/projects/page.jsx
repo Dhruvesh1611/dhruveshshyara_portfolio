@@ -136,6 +136,9 @@ const ProjectCard = ({ project }) => {
                     </div>
                 )}
                 <div className="card-category-tag">{project.category}</div>
+                {project.hackathon?.achievement && (
+                    <div className="card-hackathon-badge">{project.hackathon.achievement}</div>
+                )}
             </motion.div>
 
                 <motion.div
@@ -409,6 +412,30 @@ const ProjectsPage = () => {
                     align-items: center;
                     justify-content: center;
                     z-index: 2;
+                }
+
+                :global(.card-hackathon-badge) {
+                    position: absolute;
+                    top: 16px;
+                    right: 16px;
+                    background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+                    color: #000;
+                    padding: 8px 18px;
+                    border-radius: 100px;
+                    font-size: 1.1rem;
+                    font-weight: 800;
+                    letter-spacing: 0.03em;
+                    z-index: 5;
+                    box-shadow: 0 4px 20px rgba(251, 191, 36, 0.5), 0 0 30px rgba(251, 191, 36, 0.2);
+                    animation: badge-glow 2s ease-in-out infinite alternate;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+                    white-space: nowrap;
+                }
+
+                @keyframes badge-glow {
+                    0% { box-shadow: 0 4px 20px rgba(251, 191, 36, 0.4), 0 0 20px rgba(251, 191, 36, 0.15); }
+                    100% { box-shadow: 0 4px 25px rgba(251, 191, 36, 0.7), 0 0 40px rgba(251, 191, 36, 0.3); }
                 }
 
                 :global(.card-category-tag) {
