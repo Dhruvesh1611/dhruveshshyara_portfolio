@@ -268,7 +268,85 @@ export const allProjects = [
         live: "https://tattoos-dreamers-studio.onrender.com/"
     },
     {
-        id: 5,
+    id: 5,
+    slug: "hirelens",
+    title: "HireLens — AI Resume Optimization Platform",
+    category: "Fullstack",
+    description: "AI-powered SaaS platform that analyzes resumes and professional profiles to deliver intelligent, actionable optimization insights. Multi-agent pipeline system that evaluates resume content, identifies gaps, and provides structured improvements.",
+    image: "/projects/hirelens.png",
+    tags: ["Next.js", "TypeScript", "MongoDB", "Gemini API", "Groq LLM", "Redis", "Watermelon UI", "Node.js"],
+    youtubeVideoId: "zMP6AqtPqTc",
+    subtitle: "AI Resume Analysis & Optimization Engine",
+    timeline: "April 3–5, 2026 (48-Hour Hackathon)",
+    role: "Full Stack Developer",
+    hackathon: {
+        achievement: "🏆 Finalist",
+        eventName: "OceanLab × CHARUSAT Hacks 2026",
+        organizer: "CHARUSAT",
+        duration: "48 Hours",
+        category: "AI + SaaS",
+        teamName: "Team Velox",
+        teamMembers: [
+            { name: "Dhruvesh Shyara", role: "Full Stack Development & AI Integration" },
+            { name: "Priyasha Yadav", role: "Backend & AI Pipeline Optimization" }
+        ],
+        mentors: "CodingGita Team",
+        keyLearnings: [
+            "Building production-ready AI-powered SaaS platforms",
+            "Multi-agent LLM pipeline architecture",
+            "Rapid prototyping and deployment under time pressure"
+        ]
+    },
+    purpose: "Built to solve the problem of ineffective resume optimization. Job applicants lack actionable insights on why resumes fail to progress in hiring processes. HireLens provides AI-driven, context-aware feedback that goes beyond keyword matching to deliver measurable, meaningful resume improvements.",
+    detailedDescription: "HireLens is a comprehensive AI SaaS platform designed to transform the traditional resume-building process into an insight-driven, iterative journey. The system is powered by a sophisticated Multi-Agent LLM Pipeline where three specialized agents collaborate to maximize professional impact:Analyzer Agent: Conducts a deep dive into the resume to extract key skills and experience while pinpointing critical gaps, such as weak phrasing or a lack of quantifiable metrics.Optimizer Agent: Leverages advanced AI to rewrite descriptions with high-impact action verbs, ensuring every bullet point highlights measurable achievements.Reviewer Agent: Performs a final quality check by comparing original and optimized content to generate a definitive improvement score (0-100%) and a clear justification for every change.",
+    features: [
+        { icon: "🧠", title: "Multi-Agent AI Analysis", description: "Specialized analyzer, optimizer, and reviewer agents work in sequence to extract issues, improve content, and validate enhancements with detailed explanations." },
+        { icon: "📊", title: "Structured Resume Analysis", description: "Detects weak phrasing, missing metrics, formatting issues, and provides semantic analysis of resume-to-job-requirement alignment." },
+        { icon: "✨", title: "AI-Powered Content Optimization", description: "Rewrites bullet points with measurable impact, enhances action verbs, and generates improved professional content." },
+        { icon: "🔗", title: "Profile Aggregation", description: "Integrates LinkedIn, GitHub, and portfolio data to consolidate professional information and auto-generate resume content." },
+        { icon: "📈", title: "Insight-Driven Feedback", description: "Provides percentage-based improvement scores with detailed explanations of why changes enhance hiring effectiveness." },
+        { icon: "🎯", title: "Job-Specific Customization", description: "Analyzes target job descriptions and suggests role-specific optimizations for maximum compatibility." }
+    ],
+    architecture: {
+        frontend: "Next.js (App Router), TypeScript, Watermelon UI, Vercel deployment",
+        backend: "Node.js API Routes, async processing with Redis/Upstash queues",
+        database: "MongoDB Atlas with flexible schema for resume data",
+        ai: "Multi-LLM strategy: Gemini (primary), Groq (speed), Hugging Face"
+    },
+    challenges: [
+        {
+            problem: "Resume analysis requires understanding both technical accuracy and hiring market expectations.",
+            solution: "Implemented multi-agent pipeline where specialized agents handle analysis, optimization, and validation with context-aware improvements."
+        },
+        {
+            problem: "High latency for AI processing could degrade user experience during content optimization.",
+            solution: "Used Redis-based async queue system with multiple LLM providers to ensure fast responses and ensure reliability."
+        },
+        {
+            problem: "Fragmented professional data across multiple platforms (LinkedIn, GitHub, portfolio) needed consolidation.",
+            solution: "Built profile aggregation layer that unifies data sources and enables seamless resume generation from multiple profiles."
+        }
+    ],
+    projectStructure: [
+        "src/app/api/pipeline/ - Core multi-agent orchestration",
+        "src/agents/ - Logic for Analyzer, Optimizer, and Reviewer agents",
+        "src/services/ai.provider.ts - Multi-LLM provider integration",
+        "src/models/ - Mongoose schemas for Resume and Analysis tracking",
+        "src/components/watermelon-ui/ - Custom UI components library",
+        "src/lib/db/ - MongoDB connection and configuration"
+    ],
+    standoutPoints: [
+        "Multi-Agent LLM Architecture: Coordinated AI agents (Analyzer, Optimizer, Reviewer) for sequential resume optimization.",
+        "Insight Generation: Provides measurable impact scores (0-100%) with detailed explanations of improvements.",
+        "Speed & Reliability: Multi-LLM strategy using Gemini for quality and Groq for high-speed inference.",
+        "48-Hour Build: Entire SaaS platform designed, built, and deployed during CHARUSAT Hacks 2026.",
+        "Scalable Infrastructure: Deployed with Vercel, MongoDB Atlas, and Upstash Redis for production readiness."
+    ],
+    github: "https://github.com/Dhruvesh1611/Team-Velox-AI-RESUME-OPTIMIZER",
+    live: "https://hirelens.dev"
+},
+    {
+        id: 6,
         slug: "youtube-shorts-auto-scroller",
         title: "YouTube Shorts Auto-Scroller",
         category: "Browser Extension",
@@ -317,7 +395,7 @@ export const allProjects = [
         live: null
     },
     {
-        id: 6,
+        id: 7,
         slug: "eatclub-clone",
         title: "EatClub Clone",
         category: "Frontend",
@@ -352,7 +430,7 @@ export const allProjects = [
         live: "https://eatclub-clone.netlify.app/"
     },
     {
-        id: 7,
+        id: 8,
         slug: "rolls-royce-clone",
         title: "Rolls-Royce Clone",
         category: "Frontend",
@@ -387,7 +465,7 @@ export const allProjects = [
         live: "https://rollsroyce-clone.netlify.app/"
     },
     {
-        id: 8,
+        id: 9,
         slug: "libas-clone",
         title: "Libas Clone",
         category: "Frontend",
@@ -422,7 +500,7 @@ export const allProjects = [
         live: "https://libas-web.netlify.app/"
     },
     {
-        id: 9,
+        id: 10,
         slug: "snake-game",
         title: "Snake Game",
         category: "Frontend",
@@ -457,7 +535,7 @@ export const allProjects = [
         live: "https://snake-game-demo.netlify.app/"
     },
     {
-        id: 10,
+        id: 11,
         slug: "ui-ux-yaritu",
         title: "UI/UX Design - Yaritu",
         category: "UI/UX",
@@ -492,7 +570,7 @@ export const allProjects = [
         figma: "#"
     },
     {
-        id: 11,
+        id: 12,
         slug: "ui-ux-shyara-gold",
         title: "UI/UX Design - Shyara Gold",
         category: "UI/UX",
@@ -527,7 +605,7 @@ export const allProjects = [
         figma: "#"
     },
     {
-        id: 12,
+        id: 13,
         slug: "ui-ux-docscanx",
         title: "UI/UX Design - DocScanX",
         category: "UI/UX",
