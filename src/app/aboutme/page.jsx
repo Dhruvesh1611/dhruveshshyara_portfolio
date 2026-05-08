@@ -486,7 +486,7 @@ const AboutMePage = () => {
 
                         {/* — Resume Card — */}
                         <motion.a
-                            href="https://drive.google.com/file/d/1TCuMvk8GpC6dyOXG2l4mPnnNzuXmkBac/view"
+                            href="https://drive.google.com/file/d/1Hk6RZF-T9-8Za_laaa_eo-TO3yBqNonT/view?usp=drive_link"
                             target="_blank" rel="noopener noreferrer"
                             className="hub-card hub-card--resume"
                             initial={{ opacity: 0, y: 60 }}

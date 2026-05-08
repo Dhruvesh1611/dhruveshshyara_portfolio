@@ -349,7 +349,7 @@ export const allProjects = [
         id: 6,
         slug: "youtube-shorts-auto-scroller",
         title: "YouTube Shorts Auto-Scroller",
-        category: "Browser Extension",
+        category: "Extension",
         description: "A high-performance Chrome extension that enhances YouTube Shorts viewing by intelligently auto-scrolling to the next video when one ends, with an automated 'Skip Sponsored' mode to filter ads seamlessly.",
         image: "/projects/yt-shorts-scroller.png",
         tags: ["JavaScript", "Chrome Extension", "Manifest V3", "MutationObserver", "HTML5 Video API"],
