@@ -15,7 +15,13 @@ const Skills = () => {
         { name: 'Git', icon: '/png/gitlogo.png' },
         { name: 'GitHub', icon: '/png/githublogo.png', invert: true },
         { name: 'UI/UX Design (Figma)', icon: '/png/figmalogo.png' },
-        { name: 'Canva', icon: '/png/canvalogo.png' },
+        { name: 'MongoDB', icon: '/png/mongodb.png' },
+        { name: 'Express.js', icon: '/png/Express.png' },
+        { name: 'TypeScript', icon: '/png/typescript.png' },
+        { name: 'Tailwind CSS', icon: '/png/tailwind.png' },
+        { name: 'AWS S3', icon: '/png/aws.png' },
+        { name: 'Framer Motion', icon: '/png/Framer.svg' },
+        { name: 'Redis', icon: '/png/redis.png' },
     ];
 
     return (
