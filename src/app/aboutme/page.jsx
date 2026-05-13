@@ -158,6 +158,39 @@ const AboutMePage = () => {
     const [activeItem, setActiveItem] = useState(journeyData[0]);
     const [activeEdu, setActiveEdu] = useState(educationData[0]);
     const [emailCopied, setEmailCopied] = useState(false);
+    const [leetcodeStats, setLeetcodeStats] = useState({
+        totalSolved: 0,
+        easySolved: 0,
+        mediumSolved: 0,
+        hardSolved: 0,
+        ranking: null,
+        loading: true,
+    });
+
+    useEffect(() => {
+        const fetchLeetcodeStats = async () => {
+            try {
+                const res = await fetch('/api/leetcode');
+                const data = await res.json();
+                if (!data.error) {
+                    setLeetcodeStats({
+                        totalSolved: data.totalSolved,
+                        easySolved: data.easySolved,
+                        mediumSolved: data.mediumSolved,
+                        hardSolved: data.hardSolved,
+                        ranking: data.ranking,
+                        loading: false,
+                    });
+                } else {
+                    setLeetcodeStats(prev => ({ ...prev, loading: false }));
+                }
+            } catch (err) {
+                console.error('Failed to fetch LeetCode stats:', err);
+                setLeetcodeStats(prev => ({ ...prev, loading: false }));
+            }
+        };
+        fetchLeetcodeStats();
+    }, []);
 
     const handleCopyEmail = () => {
         navigator.clipboard.writeText('dhruvesh.shyara.cg@gmail.com');
@@ -379,17 +412,24 @@ const AboutMePage = () => {
                                 <div className="leetcode-stats">
                                     <div className="leetcode-ring">
                                         <svg viewBox="0 0 36 36" className="ring-svg">
-                                            <circle cx="18" cy="18" r="15.9" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="3" />
-                                            <circle cx="18" cy="18" r="15.9" fill="none" stroke="#ffa116" strokeWidth="3" strokeDasharray="71 29" strokeLinecap="round" strokeDashoffset="25" />
+                                            <circle cx="18" cy="18" r="15.9" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="2.5" />
+                                            <circle cx="18" cy="18" r="15.9" fill="none" stroke="url(#lcGradient)" strokeWidth="2.5" strokeDasharray={`${Math.round((leetcodeStats.totalSolved / 3398) * 100)} ${100 - Math.round((leetcodeStats.totalSolved / 3398) * 100)}`} strokeLinecap="round" strokeDashoffset="25" className="lc-ring-progress" />
+                                            <defs>
+                                                <linearGradient id="lcGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" stopColor="#ffa116" />
+                                                    <stop offset="100%" stopColor="#ffcc02" />
+                                                </linearGradient>
+                                            </defs>
                                         </svg>
-                                        <span className="ring-label">70.61%<br /><small>Acceptance</small></span>
+                                        <span className="ring-label">{leetcodeStats.loading ? '...' : leetcodeStats.totalSolved}<br /><small>Solved</small></span>
                                     </div>
                                     <div className="leetcode-counts">
-                                        <div className="lc-count lc-easy"><span>Easy</span><b>113</b></div>
-                                        <div className="lc-count lc-medium"><span>Medium</span><b>22</b></div>
-                                        <div className="lc-count lc-hard"><span>Hard</span><b>2</b></div>
+                                        <div className="lc-count lc-easy"><span className="lc-dot lc-dot--easy" /><span className="lc-diff-label">Easy</span><b>{leetcodeStats.loading ? '...' : leetcodeStats.easySolved}</b></div>
+                                        <div className="lc-count lc-medium"><span className="lc-dot lc-dot--medium" /><span className="lc-diff-label">Medium</span><b>{leetcodeStats.loading ? '...' : leetcodeStats.mediumSolved}</b></div>
+                                        <div className="lc-count lc-hard"><span className="lc-dot lc-dot--hard" /><span className="lc-diff-label">Hard</span><b>{leetcodeStats.loading ? '...' : leetcodeStats.hardSolved}</b></div>
                                     </div>
                                 </div>
+                                <div className="hub-badge hub-badge--orange">View Profile →</div>
                             </div>
                             <div className="hub-card-glow hub-card-glow--leetcode" />
                         </motion.a>
@@ -1007,6 +1047,29 @@ const AboutMePage = () => {
                     color: unset !important;
                 }
 
+                :global(.ring-label) {
+                    color: #ffa116 !important;
+                }
+
+                :global(.ring-label small) {
+                    color: rgba(255, 255, 255, 0.4) !important;
+                }
+
+                :global(.lc-easy b) { color: #34d399 !important; }
+                :global(.lc-medium b) { color: #ffa116 !important; }
+                :global(.lc-hard b) { color: #ff6b6b !important; }
+
+                :global(.lc-diff-label) {
+                    color: rgba(255, 255, 255, 0.5) !important;
+                }
+
+                :global(.lc-dot--easy) { background: #34d399 !important; }
+                :global(.lc-dot--medium) { background: #ffa116 !important; }
+                :global(.lc-dot--hard) { background: #ff6b6b !important; }
+
+                :global(.hub-badge--orange) { color: #ffa116 !important; }
+                :global(.hub-card:hover .hub-badge--orange) { color: #ffcc02 !important; }
+
                 :global(.commit-graph-label) {
                     font-size: 1.05rem;
                     color: rgba(255, 255, 255, 0.25) !important;
@@ -1100,6 +1163,18 @@ const AboutMePage = () => {
                     color: #fff;
                     border-color: rgba(255, 255, 255, 0.18);
                     background: rgba(255, 255, 255, 0.07);
+                }
+
+                .hub-badge--orange {
+                    color: #ffa116;
+                    border-color: rgba(255, 161, 22, 0.25);
+                    background: rgba(255, 161, 22, 0.08);
+                }
+
+                .hub-card:hover .hub-badge--orange {
+                    background: rgba(255, 161, 22, 0.15);
+                    border-color: rgba(255, 161, 22, 0.4);
+                    color: #ffcc02;
                 }
 
                 .hub-copy-feedback {
@@ -1383,21 +1458,27 @@ const AboutMePage = () => {
                 .leetcode-stats {
                     display: flex;
                     align-items: center;
-                    gap: 28px;
-                    margin-top: 8px;
+                    gap: 32px;
+                    margin-top: 12px;
+                    flex: 1;
                 }
 
                 .leetcode-ring {
                     position: relative;
-                    width: 90px;
-                    height: 90px;
+                    width: 120px;
+                    height: 120px;
                     flex-shrink: 0;
                 }
 
                 .ring-svg {
-                    width: 90px;
-                    height: 90px;
+                    width: 120px;
+                    height: 120px;
                     transform: rotate(-90deg);
+                    filter: drop-shadow(0 0 8px rgba(255, 161, 22, 0.25));
+                }
+
+                .lc-ring-progress {
+                    transition: stroke-dasharray 1s ease;
                 }
 
                 .ring-label {
@@ -1405,45 +1486,73 @@ const AboutMePage = () => {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    font-size: 1.2rem;
+                    font-size: 1.9rem;
                     font-weight: 800;
                     text-align: center;
-                    line-height: 1.2;
+                    line-height: 1.15;
                     color: #ffa116;
                     font-family: var(--font-outfit), sans-serif;
                 }
 
                 .ring-label small {
                     font-size: 0.85rem;
-                    color: rgba(255, 255, 255, 0.35);
-                    font-weight: 400;
+                    color: rgba(255, 255, 255, 0.4);
+                    font-weight: 500;
                     font-family: var(--font-fira-code), monospace;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
                 }
 
                 .leetcode-counts {
                     display: flex;
                     flex-direction: column;
-                    gap: 10px;
+                    gap: 14px;
+                    flex: 1;
                 }
 
                 .lc-count {
                     display: flex;
                     align-items: center;
-                    gap: 10px;
-                    font-size: 1.4rem;
+                    gap: 12px;
+                    font-size: 1.5rem;
+                    padding: 6px 12px;
+                    border-radius: 10px;
+                    background: rgba(255, 255, 255, 0.03);
+                    transition: background 0.25s ease;
                 }
 
-                .lc-count span {
-                    color: rgba(255, 255, 255, 0.35);
+                .lc-count:hover {
+                    background: rgba(255, 255, 255, 0.06);
+                }
+
+                .lc-dot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    flex-shrink: 0;
+                }
+
+                .lc-dot--easy { background: #34d399; box-shadow: 0 0 6px rgba(52, 211, 153, 0.4); }
+                .lc-dot--medium { background: #ffa116; box-shadow: 0 0 6px rgba(255, 161, 22, 0.4); }
+                .lc-dot--hard { background: #ff6b6b; box-shadow: 0 0 6px rgba(255, 107, 107, 0.4); }
+
+                .lc-diff-label {
+                    color: rgba(255, 255, 255, 0.5) !important;
                     font-family: var(--font-fira-code), monospace;
-                    font-size: 1.2rem;
-                    min-width: 60px;
+                    font-size: 1.15rem;
+                    min-width: 75px;
+                    letter-spacing: 0.5px;
                 }
 
-                .lc-count b { font-weight: 800; font-size: 1.6rem; }
-                .lc-easy b { color: #34d399; }
-                .lc-medium b { color: #ffa116; }
-                .lc-hard b { color: #ff6b6b; }
+                .lc-count b {
+                    font-weight: 800;
+                    font-size: 1.7rem;
+                    margin-left: auto;
+                    font-family: var(--font-outfit), sans-serif;
+                }
+                .lc-easy b { color: #34d399 !important; }
+                .lc-medium b { color: #ffa116 !important; }
+                .lc-hard b { color: #ff6b6b !important; }
 
                 /* ── Quote Card ── */
                 .hub-quote-mark {
