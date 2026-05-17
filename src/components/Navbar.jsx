@@ -44,8 +44,8 @@ const Navbar = () => {
                 <motion.nav
                     className="navbar"
                     id="navbar"
-                    initial={{ y: -80, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
+                    initial={{ x: '-50%', y: -80, opacity: 0 }}
+                    animate={{ x: '-50%', y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
                 >
                     {/* Nav Links */}

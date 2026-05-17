@@ -618,7 +618,7 @@ const ProjectsPage = () => {
 
                 :global(.hover-btn--live) {
                     background: rgba(168, 85, 247, 0.2);
-                    color: #c084fc;
+                    color: #6b8cfa;
                     border-color: rgba(168, 85, 247, 0.3);
                 }
                 :global(.hover-btn--live:hover) {
@@ -668,7 +668,7 @@ const ProjectsPage = () => {
                 .coming-soon-title {
                     font-size: 3rem;
                     font-weight: 800;
-                    background: linear-gradient(135deg, #c084fc, #818cf8);
+                    background: linear-gradient(135deg, #6b8cfa, #818cf8);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;

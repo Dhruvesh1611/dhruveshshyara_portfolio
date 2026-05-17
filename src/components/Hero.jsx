@@ -1,154 +1,119 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 
 const Hero = () => {
-    const nameFirst = "DHRUVESH";
-    const nameLast = "SHYARA.";
-    const greeting = "Namaste(); I'm";
+    const canvasRef = useRef(null);
 
-    const letterAnimation = {
-        hidden: { opacity: 0, y: 20 },
-        visible: (i) => ({
-            opacity: 1,
-            y: 0,
-            transition: { delay: i * 0.03 },
-        }),
-    };
+    /* ── Star Particles Canvas ── */
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
 
-    const handleResumeClick = () => {
-        window.open('https://drive.google.com/file/d/1Hk6RZF-T9-8Za_laaa_eo-TO3yBqNonT/view?usp=drive_link', '_blank');
-    };
+        const ctx = canvas.getContext('2d');
+        let animId;
+        let stars = [];
+
+        const resize = () => {
+            canvas.width = canvas.offsetWidth * window.devicePixelRatio;
+            canvas.height = canvas.offsetHeight * window.devicePixelRatio;
+            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+            initStars();
+        };
+
+        const initStars = () => {
+            const w = canvas.offsetWidth;
+            const h = canvas.offsetHeight;
+            stars = Array.from({ length: 80 }, () => ({
+                x: Math.random() * w,
+                y: Math.random() * h,
+                r: Math.random() * 1.5 + 0.3,
+                opacity: Math.random() * 0.6 + 0.1,
+                speed: Math.random() * 0.0008 + 0.0003,
+                phase: Math.random() * Math.PI * 2,
+            }));
+        };
+
+        const draw = (time) => {
+            const w = canvas.offsetWidth;
+            const h = canvas.offsetHeight;
+            ctx.clearRect(0, 0, w, h);
+
+            stars.forEach((s) => {
+                const flicker = Math.sin(time * s.speed + s.phase) * 0.3 + 0.7;
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(180, 200, 255, ${s.opacity * flicker})`;
+                ctx.fill();
+            });
+
+            animId = requestAnimationFrame(draw);
+        };
+
+        resize();
+        animId = requestAnimationFrame(draw);
+        window.addEventListener('resize', resize);
+
+        return () => {
+            cancelAnimationFrame(animId);
+            window.removeEventListener('resize', resize);
+        };
+    }, []);
 
     return (
-        <section className="landing-page-container" id="home">
-            <div className="blob"></div>
+        <section className="hero-section" id="home">
+            {/* ── Star particles ── */}
+            <canvas ref={canvasRef} className="hero-stars-canvas" />
 
-            <div className="text-content">
-                <motion.article
-                    id="hello-friend"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                >
-                    {greeting.split('').map((char, i) => (
-                        <motion.p
-                            key={i}
-                            className="jello"
-                            custom={i}
-                            variants={letterAnimation}
-                            initial="hidden"
-                            animate="visible"
-                            whileHover={{ color: '#03e6ff', scale: 1.1 }}
-                        >
-                            {char === ' ' ? '\u00A0' : char}
-                        </motion.p>
-                    ))}
-                </motion.article>
+            {/* ── Cosmic nebula / smoke effects ── */}
+            <div className="hero-nebula hero-nebula--left" />
+            <div className="hero-nebula hero-nebula--right" />
+            <div className="hero-nebula hero-nebula--center" />
 
-                <motion.article
-                    id="name"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                >
-                    {nameFirst.split('').map((char, i) => (
-                        <motion.p
-                            key={i}
-                            className="jello"
-                            whileHover={{ color: '#03e6ff', scale: 1.1 }}
-                        >
-                            {char}
-                        </motion.p>
-                    ))}
-                    <span className="name-gap" aria-hidden="true">&nbsp;</span>
-                    {nameLast.split('').map((char, i) => (
-                        <motion.p
-                            key={i + nameFirst.length}
-                            className="jello"
-                            whileHover={{ color: '#03e6ff', scale: 1.1 }}
-                        >
-                            {char}
-                        </motion.p>
-                    ))}
-                </motion.article>
-
-                <motion.article
-                    id="work"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 }}
-                >
-                    <div>
-                        <p className="jello">I</p>
-                    </div>
-                    <div>
-                        {'design'.split('').map((c, i) => (
-                            <p key={i} className="jello">{c}</p>
-                        ))}
-                    </div>
-                    <div>
-                        <p className="jello">&</p>
-                    </div>
-                    <div>
-                        {'code'.split('').map((c, i) => (
-                            <p key={i} className="jello">{c}</p>
-                        ))}
-                    </div>
-                    <div>
-                        {'for'.split('').map((c, i) => (
-                            <p key={i} className="jello">{c}</p>
-                        ))}
-                    </div>
-                    <div className="work-web-word">
-                        {'web.'.split('').map((c, i) => (
-                            <p key={i} className="jello">{c}</p>
-                        ))}
-                    </div>
-                </motion.article>
-
-                <motion.p
-                    id="info-para"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8 }}
-                >
-                    Full Stack Developer (MERN) with a passion for building scalable web apps and modern UIs.
-                    <br /><br />
-                    I value clean code, robust backend, and seamless user experience.
-                </motion.p>
-
-                <motion.div
-                    className="contact-btn-div"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1 }}
-                >
-                    <button className="letsTalkBtn" onClick={handleResumeClick}>
-                        <p className="letsTalkBtn-text">Resume</p>
-                        <span className="letsTalkBtn-BG"></span>
-                    </button>
-                </motion.div>
-            </div>
-
+            {/* ─── Main Heading ─── */}
             <motion.div
-                className="home-avatar"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                className="hero-heading-wrap"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             >
-                <Image
-                    src="/png/dhruvesh.png"
-                    alt="Dhruvesh Shyara"
-                    width={400}
-                    height={400}
-                    style={{
-                        borderRadius: '50%',
-                        boxShadow: '0 8px 40px rgba(96, 165, 250, 0.35)',
-                        objectFit: 'cover',
-                        background: '#000',
-                    }}
-                />
+                <h1 className="hero-heading">
+                    <span className="hero-heading-line">Transforming Ideas Into</span>
+                    <span className="hero-heading-line">
+                        Stunning <span className="hero-heading-accent">Web</span> Experiences
+                    </span>
+                </h1>
+            </motion.div>
+
+            {/* ─── Profile Image with Rings ─── */}
+            <motion.div
+                className="hero-photo-container"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            >
+                {/* Centered glow behind image */}
+                <div className="hero-photo-glow" />
+
+                {/* Concentric rings — perfectly centered */}
+                <div className="hero-ring hero-ring--outer" />
+                <div className="hero-ring hero-ring--inner" />
+
+                {/* Profile photo */}
+                <div className="hero-photo-wrapper">
+                    <Image
+                        src="/png/dhruvesh-hero.png"
+                        alt="Dhruvesh Shyara"
+                        width={750}
+                        height={900}
+                        priority
+                        className="hero-photo"
+                    />
+                </div>
+
+                {/* Bottom cinematic fade */}
+                <div className="hero-photo-fade" />
             </motion.div>
         </section>
     );

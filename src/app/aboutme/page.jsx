@@ -340,7 +340,7 @@ const AboutMePage = () => {
                                 </div>
                                 <div className="hub-commit-graph">
                                     <img
-                                        src="https://ghchart.rshah.org/7c3aed/Dhruvesh1611"
+                                        src="https://ghchart.rshah.org/4a6cf7/Dhruvesh1611"
                                         alt="GitHub Contribution Graph"
                                         className="commit-graph-img"
                                         loading="lazy"
@@ -690,7 +690,7 @@ const AboutMePage = () => {
                             <div className="journey-indicators">
                                 <div className="scroll-down-arrow">
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 12L16 20L24 12" stroke="#cf59e6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M8 12L16 20L24 12" stroke="#6b8cfa" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
                             </div>
@@ -803,7 +803,7 @@ const AboutMePage = () => {
                             <div className="journey-indicators">
                                 <div className="scroll-down-arrow">
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 12L16 20L24 12" stroke="#cf59e6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M8 12L16 20L24 12" stroke="#6b8cfa" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
                             </div>
@@ -897,7 +897,7 @@ const AboutMePage = () => {
                 }
 
                 .hub-title-accent {
-                    background: linear-gradient(130deg, #a855f7 0%, #818cf8 50%, #c084fc 100%);
+                    background: linear-gradient(130deg, #6b8cfa 0%, #818cf8 50%, #6b8cfa 100%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
@@ -1675,7 +1675,7 @@ const AboutMePage = () => {
                 .name-highlight {
                     font-family: var(--font-playfair), serif;
                     font-style: italic;
-                    background: linear-gradient(135deg, #a855f7, #3b82f6);
+                    background: linear-gradient(135deg, #6b8cfa, #3b82f6);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
@@ -1830,7 +1830,7 @@ const AboutMePage = () => {
 
                 .timeline-progress {
                     height: 100%;
-                    background: linear-gradient(90deg, #a855f7, #cf59e6);
+                    background: linear-gradient(90deg, #6b8cfa, #6b8cfa);
                     border-radius: 3px;
                     transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
                     position: absolute;
@@ -1861,14 +1861,14 @@ const AboutMePage = () => {
                 }
 
                 .timeline-dot.completed::before {
-                    background: #a855f7;
-                    border-color: #a855f7;
+                    background: #6b8cfa;
+                    border-color: #6b8cfa;
                     box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
                 }
 
                 .timeline-dot.active::before {
-                    background: #cf59e6;
-                    border-color: #cf59e6;
+                    background: #6b8cfa;
+                    border-color: #6b8cfa;
                     box-shadow: 0 0 15px rgba(207, 89, 230, 0.7), 0 0 40px rgba(207, 89, 230, 0.3), 0 0 60px rgba(207, 89, 230, 0.15);
                     transform: scale(1.3);
                     animation: dotPulse 2s ease-in-out infinite;
@@ -1889,12 +1889,12 @@ const AboutMePage = () => {
                 }
 
                 .timeline-dot.active .timeline-dot-label {
-                    color: #cf59e6;
+                    color: #6b8cfa;
                     text-shadow: 0 0 10px rgba(207, 89, 230, 0.5);
                 }
 
                 .timeline-dot.completed .timeline-dot-label {
-                    color: #a855f7;
+                    color: #6b8cfa;
                 }
 
                 .journey-indicators {
@@ -2082,7 +2082,7 @@ const AboutMePage = () => {
 
                 .edu-timeline-progress {
                     width: 100%;
-                    background: linear-gradient(180deg, #a855f7, #cf59e6);
+                    background: linear-gradient(180deg, #6b8cfa, #6b8cfa);
                     border-radius: 3px;
                     transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
                     position: absolute;
@@ -2113,14 +2113,14 @@ const AboutMePage = () => {
                 }
 
                 .edu-timeline-dot.completed::before {
-                    background: #a855f7;
-                    border-color: #a855f7;
+                    background: #6b8cfa;
+                    border-color: #6b8cfa;
                     box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
                 }
 
                 .edu-timeline-dot.active::before {
-                    background: #cf59e6;
-                    border-color: #cf59e6;
+                    background: #6b8cfa;
+                    border-color: #6b8cfa;
                     box-shadow: 0 0 15px rgba(207, 89, 230, 0.7), 0 0 40px rgba(207, 89, 230, 0.3), 0 0 60px rgba(207, 89, 230, 0.15);
                     transform: scale(1.3);
                     animation: eduDotPulse 2s ease-in-out infinite;
@@ -2141,12 +2141,12 @@ const AboutMePage = () => {
                 }
 
                 .edu-timeline-dot.active .edu-timeline-dot-label {
-                    color: #cf59e6;
+                    color: #6b8cfa;
                     text-shadow: 0 0 10px rgba(207, 89, 230, 0.5);
                 }
 
                 .edu-timeline-dot.completed .edu-timeline-dot-label {
-                    color: #a855f7;
+                    color: #6b8cfa;
                 }
 
                 .edu-image-frame {
