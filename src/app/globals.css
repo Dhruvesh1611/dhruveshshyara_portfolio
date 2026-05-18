@@ -1679,10 +1679,10 @@ noscript {
     padding: 130px 5% 0;
     gap: 0;
     background: #030508;
-    background-image:
-        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(6, 12, 30, 0.35) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 80% at 20% 50%, rgba(4, 8, 22, 0.3) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 80% at 80% 50%, rgba(4, 8, 22, 0.3) 0%, transparent 60%);
+    background-image: url('/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* Bridge gradient from hero bg to body bg */
