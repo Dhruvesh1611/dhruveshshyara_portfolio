@@ -64,7 +64,7 @@ const Hero = () => {
     return (
         <section className="hero-section" id="home">
             {/* ── Star particles ── */}
-            <canvas ref={canvasRef} className="hero-stars-canvas" />
+            {/* <canvas ref={canvasRef} className="hero-stars-canvas" /> */}
 
             {/* ── Cosmic nebula / smoke effects ── */}
             <div className="hero-nebula hero-nebula--left" />
