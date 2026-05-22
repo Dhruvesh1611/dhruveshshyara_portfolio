@@ -1,0 +1,41 @@
+[
+  {
+    "id": "cert_1",
+    "title": "AWS Cloud Essentials",
+    "issuer": "Amazon Web Services",
+    "description": "Certified in AWS Cloud Essentials, covering core cloud concepts, services, and architecture best practices.",
+    "date": "2025",
+    "image": "/certificates/amazon-documentdb.png",
+    "link": "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0NDkwIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODM4NjI5N184NzQxMjc5MTc0ODE2MDQ0ODk2NC5wbmciLCJ1c2VybmFtZSI6IkRocnV2ZXNoIFNoeWFyYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion",
+    "relatedSkills": ["AWS S3"],
+    "featured": true,
+    "displayOrder": 1,
+    "status": "published"
+  },
+  {
+    "id": "cert_2",
+    "title": "Azure Services Basics",
+    "issuer": "Microsoft Azure",
+    "description": "Completed Azure Services Basics, demonstrating proficiency in cloud infrastructure, deployment, and management.",
+    "date": "2025",
+    "image": "/certificates/azure-services-basics.png",
+    "link": "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIyMDEwIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODM4MzcxM184NzM2MDkxMTc0ODA5MDg0OTcyMy5wbmciLCJ1c2VybmFtZSI6IkRocnV2ZXNoIFNoeWFyYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion",
+    "relatedSkills": [],
+    "featured": true,
+    "displayOrder": 2,
+    "status": "published"
+  },
+  {
+    "id": "cert_3",
+    "title": "Frontend Developer (React)",
+    "issuer": "Meta",
+    "description": "Certified Frontend Developer with React, skilled in building modern, responsive web applications.",
+    "date": "2025",
+    "image": "/certificates/frontend-developer-react.png",
+    "link": "https://www.hackerrank.com/certificates/cc7dcbd6558a",
+    "relatedSkills": ["React.js"],
+    "featured": true,
+    "displayOrder": 3,
+    "status": "published"
+  }
+]

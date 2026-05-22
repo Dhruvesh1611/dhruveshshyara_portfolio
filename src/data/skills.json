@@ -1,0 +1,20 @@
+[
+  { "id": "skill_1", "name": "React.js", "icon": "/png/reactlogo.png", "category": "Frontend", "level": 90, "featured": true, "displayOrder": 1, "invert": false },
+  { "id": "skill_2", "name": "Next.js", "icon": "/png/nextlogo.png", "category": "Frontend", "level": 85, "featured": true, "displayOrder": 2, "invert": false },
+  { "id": "skill_3", "name": "HTML5", "icon": "/png/htmllogo.png", "category": "Frontend", "level": 95, "featured": true, "displayOrder": 3, "invert": false },
+  { "id": "skill_4", "name": "CSS3", "icon": "/png/csslogo.png", "category": "Frontend", "level": 90, "featured": true, "displayOrder": 4, "invert": false },
+  { "id": "skill_5", "name": "JavaScript (ES6+)", "icon": "/png/jslogo.png", "category": "Frontend", "level": 90, "featured": true, "displayOrder": 5, "invert": false },
+  { "id": "skill_6", "name": "Node.js", "icon": "/png/node.png", "category": "Backend", "level": 85, "featured": true, "displayOrder": 6, "invert": false },
+  { "id": "skill_7", "name": "C", "icon": "/png/clogo.png", "category": "Other", "level": 70, "featured": false, "displayOrder": 7, "invert": false },
+  { "id": "skill_8", "name": "C++", "icon": "/png/cpplogo.png", "category": "Other", "level": 70, "featured": false, "displayOrder": 8, "invert": false },
+  { "id": "skill_9", "name": "Git", "icon": "/png/gitlogo.png", "category": "Tools", "level": 85, "featured": true, "displayOrder": 9, "invert": false },
+  { "id": "skill_10", "name": "GitHub", "icon": "/png/githublogo.png", "category": "Tools", "level": 85, "featured": true, "displayOrder": 10, "invert": true },
+  { "id": "skill_11", "name": "UI/UX Design (Figma)", "icon": "/png/figmalogo.png", "category": "Tools", "level": 80, "featured": true, "displayOrder": 11, "invert": false },
+  { "id": "skill_12", "name": "MongoDB", "icon": "/png/mongodb.png", "category": "Database", "level": 80, "featured": true, "displayOrder": 12, "invert": false },
+  { "id": "skill_13", "name": "Express.js", "icon": "/png/Express.png", "category": "Backend", "level": 85, "featured": true, "displayOrder": 13, "invert": false },
+  { "id": "skill_14", "name": "TypeScript", "icon": "/png/TypeScript.png", "category": "Frontend", "level": 75, "featured": true, "displayOrder": 14, "invert": false },
+  { "id": "skill_15", "name": "Tailwind CSS", "icon": "/png/tailwind.png", "category": "Frontend", "level": 80, "featured": true, "displayOrder": 15, "invert": false },
+  { "id": "skill_16", "name": "AWS S3", "icon": "/png/aws.png", "category": "Cloud", "level": 70, "featured": false, "displayOrder": 16, "invert": false },
+  { "id": "skill_17", "name": "Framer Motion", "icon": "/png/Framer.svg", "category": "Frontend", "level": 80, "featured": true, "displayOrder": 17, "invert": false },
+  { "id": "skill_18", "name": "Redis", "icon": "/png/Redis.png", "category": "Database", "level": 65, "featured": false, "displayOrder": 18, "invert": false }
+]

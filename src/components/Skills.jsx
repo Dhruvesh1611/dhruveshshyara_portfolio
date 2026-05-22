@@ -1,28 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import skillsData from '@/data/skills.json';
 
 const Skills = () => {
-    const skills = [
-        { name: 'React.js', icon: '/png/reactlogo.png' },
-        { name: 'Next.js', icon: '/png/nextlogo.png' },
-        { name: 'HTML5', icon: '/png/htmllogo.png' },
-        { name: 'CSS3', icon: '/png/csslogo.png' },
-        { name: 'JavaScript (ES6+)', icon: '/png/jslogo.png' },
-        { name: 'Node.js', icon: '/png/node.png' },
-        { name: 'C', icon: '/png/clogo.png' },
-        { name: 'C++', icon: '/png/cpplogo.png' },
-        { name: 'Git', icon: '/png/gitlogo.png' },
-        { name: 'GitHub', icon: '/png/githublogo.png', invert: true },
-        { name: 'UI/UX Design (Figma)', icon: '/png/figmalogo.png' },
-        { name: 'MongoDB', icon: '/png/mongodb.png' },
-        { name: 'Express.js', icon: '/png/Express.png' },
-        { name: 'TypeScript', icon: '/png/TypeScript.png' },
-        { name: 'Tailwind CSS', icon: '/png/tailwind.png' },
-        { name: 'AWS S3', icon: '/png/aws.png' },
-        { name: 'Framer Motion', icon: '/png/Framer.svg' },
-        { name: 'Redis', icon: '/png/Redis.png' },
-    ];
+    const skills = [...skillsData].sort((a, b) => a.displayOrder - b.displayOrder);
 
     return (
         <section className="skills-section-container" id="skills">

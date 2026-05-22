@@ -1,0 +1,24 @@
+{
+  "heroTitle": "Transforming Ideas Into",
+  "heroTitleAccent": "Web",
+  "heroTitleEnd": "Experiences",
+  "heroSubtitle": "Stunning",
+  "name": "Dhruvesh Shyara",
+  "role": "Full Stack Developer | MERN Stack Developer",
+  "description": "With a strong background in building scalable web applications and modern user interfaces.",
+  "focusText": "I enjoy working on both frontend and backend, and love to solve real-world problems with code. My main focus is on React, Next.js, Node.js, and MongoDB.",
+  "learnText": "Always eager to learn new technologies and contribute to open source.",
+  "profileImage": "/png/dhruvesh-avatar.png",
+  "heroImage": "/png/dhruvesh-hero.png",
+  "resumeUrl": "https://drive.google.com/file/d/1Hk6RZF-T9-8Za_laaa_eo-TO3yBqNonT/view?usp=drive_link",
+  "education": "Bachelor of Technology (Rai University) - CGPA: 9.4/10",
+  "location": "India",
+  "contactEmail": "dhruvesh.shyara.cg@gmail.com",
+  "contactPhone": "+91-9327595429",
+  "socialLinks": {
+    "github": "https://github.com/Dhruvesh1611",
+    "linkedin": "https://linkedin.com/in/dhruveshshyara",
+    "email": "mailto:dhruvesh.shyara.cg@gmail.com"
+  },
+  "quote": "Learning, Living, and Leveling Up."
+}
