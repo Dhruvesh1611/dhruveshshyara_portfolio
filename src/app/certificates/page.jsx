@@ -4,73 +4,23 @@ import { motion, AnimatePresence, useMotionValue, useTransform, useSpring, motio
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
+import { isValidImageSrc } from '@/lib/imageUtils';
+import certificatesData from '@/data/certificates.json';
 
-const allCertificates = [
-    {
-        id: 1,
-        name: "CSS Basic",
-        issuer: "HackerRank",
-        year: "2025",
-        link: "https://www.hackerrank.com/certificates/e72e9d42799c",
-        image: "/certificates/css-basic.png",
-    },
-    {
-        id: 2,
-        name: "JavaScript (Basic)",
-        issuer: "HackerRank",
-        year: "2025",
-        link: "https://www.hackerrank.com/certificates/065ed799b22f",
-        image: "/certificates/javascript-basic.png",
-    },
-    {
-        id: 3,
-        name: "Node (Basic)",
-        issuer: "HackerRank",
-        year: "2025",
-        link: "https://www.hackerrank.com/certificates/ceb3ab163e6d",
-        image: "/certificates/node-basic.png",
-    },
-    {
-        id: 4,
-        name: "Problem Solving (Basic)",
-        issuer: "HackerRank",
-        year: "2025",
-        link: "https://www.hackerrank.com/certificates/0625153f0783",
-        image: "/certificates/problem-solving-basic.png",
-    },
-    {
-        id: 5,
-        name: "Frontend Developer (React)",
-        issuer: "HackerRank",
-        year: "2025",
-        link: "https://www.hackerrank.com/certificates/cc7dcbd6558a",
-        image: "/certificates/frontend-developer-react.png",
-    },
-    {
-        id: 6,
-        name: "Azure Services (Basics)",
-        issuer: "SimpliLearn",
-        year: "2025",
-        link: "https://simpli-web.app.link/e/N5LenkEbDTb",
-        image: "/certificates/azure-services-basics.png",
-    },
-    {
-        id: 7,
-        name: "Amazon DocumentDB",
-        issuer: "SimpliLearn",
-        year: "2025",
-        link: "https://simpli-web.app.link/e/uPhDpKxwETb",
-        image: "/certificates/amazon-documentdb.png",
-    },
-    {
-        id: 8,
-        name: "Gateway Load Balancer",
-        issuer: "SimpliLearn",
-        year: "2025",
-        link: "https://simpli-web.app.link/e/sq0S9jMwETb",
-        image: "/certificates/gateway-load-balancer.png",
-    }
-];
+// Read from the admin-managed JSON, show ALL published certificates on this page
+const allCertificates = [...certificatesData]
+    .filter(c => c.status === 'published')
+    .sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0))
+    .map(c => ({
+        id: c.id,
+        name: c.title,
+        issuer: c.issuer,
+        year: c.date,
+        link: c.link,
+        image: c.image,
+        description: c.description,
+        featured: c.featured,
+    }));
 
 const CertificateCard = ({ cert }) => {
     const x = motionValue(0);
@@ -148,13 +98,17 @@ const CertificateCard = ({ cert }) => {
                     style={{ y: springImgY, scale: 1.1 }}
                     className="cert-img-container"
                 >
-                    <Image
-                        src={cert.image}
-                        alt={cert.name}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        style={{ objectFit: 'contain', padding: '40px' }}
-                    />
+                    {isValidImageSrc(cert.image) ? (
+                        <Image
+                            src={cert.image}
+                            alt={cert.name}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            style={{ objectFit: 'contain', padding: '40px' }}
+                        />
+                    ) : (
+                        <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#111', color: '#64748b', fontSize: '1rem' }}>No Image</div>
+                    )}
                 </motion.div>
 
                 <div className="project-hover-overlay">

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { isValidImageSrc } from '@/lib/imageUtils';
 
 import { allProjects } from '@/data/projectsData';
 
@@ -36,14 +37,18 @@ const ProjectTextSection = ({ project, setActiveProject, isLast }) => {
                         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
                         <div className="project-image-box">
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                fill
-                                sizes="(max-width: 998px) 90vw, 1px"
-                                style={{ objectFit: 'cover' }}
-                                className="project-display-img"
-                            />
+                            {isValidImageSrc(project.image) ? (
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    sizes="(max-width: 998px) 90vw, 1px"
+                                    style={{ objectFit: 'cover' }}
+                                    className="project-display-img"
+                                />
+                            ) : (
+                                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#111', color: '#64748b', fontSize: '1rem' }}>No Image</div>
+                            )}
                             <div className="project-hover-overlay">
                                 <div className="hover-content">
                                     <span className="hover-text">VIEW PROJECT</span>
@@ -123,17 +128,18 @@ const Projects = () => {
                             >
                                 <Link href={`/projects/${activeProject.slug}`} style={{ display: 'block', width: '100%', height: '100%' }}>
                                     <div className="project-image-box">
-                                        <Image
-                                            src={activeProject.image}
-                                            alt={activeProject.title}
-                                            fill
-                                            sizes="(max-width: 768px) 100vw, 50vw"
-                                            style={{ objectFit: 'cover' }}
-                                            className="project-display-img"
-                                            onError={(e) => {
-                                                e.target.src = '/projects/yaritu.png';
-                                            }}
-                                        />
+                                        {isValidImageSrc(activeProject.image) ? (
+                                            <Image
+                                                src={activeProject.image}
+                                                alt={activeProject.title}
+                                                fill
+                                                sizes="(max-width: 768px) 100vw, 50vw"
+                                                style={{ objectFit: 'cover' }}
+                                                className="project-display-img"
+                                            />
+                                        ) : (
+                                            <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#111', color: '#64748b', fontSize: '1rem' }}>No Image</div>
+                                        )}
                                         <div className="project-hover-overlay">
                                             <div className="hover-content">
                                                 <span className="hover-text">CLICK FOR MORE DESCRIPTION & DETAILS</span>

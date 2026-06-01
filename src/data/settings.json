@@ -1,6 +1,6 @@
 {
   "siteTitle": "Dhruvesh Shyara | Portfolio",
-  "siteDescription": "Dhruvesh Shyara | Portfolio, Full Stack Developer (MERN), Projects, Experience, and Contact Information.",
+  "siteDescription": "Dhruvesh Shyara | Portfolio, Full Stack Developer , Projects, Experience, and Contact Information.",
   "siteKeywords": "dhruvesh shyara,dhruvesh portfolio,full stack developer,mern developer,react,express,nodejs,mongodb",
   "author": "Dhruvesh Shyara",
   "socialLinks": {
@@ -23,17 +23,46 @@
   },
   "appearance": {
     "sections": [
-      { "id": "hero", "name": "Hero", "visible": true, "order": 1 },
-      { "id": "about", "name": "About", "visible": true, "order": 2 },
-      { "id": "skills", "name": "Skills", "visible": true, "order": 3 },
-      { "id": "projects", "name": "Projects", "visible": true, "order": 4 },
-      { "id": "certificates", "name": "Certificates", "visible": true, "order": 5 }
+      {
+        "id": "hero",
+        "name": "Hero",
+        "visible": true,
+        "order": 1
+      },
+      {
+        "id": "about",
+        "name": "About",
+        "visible": true,
+        "order": 2
+      },
+      {
+        "id": "skills",
+        "name": "Skills",
+        "visible": true,
+        "order": 3
+      },
+      {
+        "id": "projects",
+        "name": "Projects",
+        "visible": true,
+        "order": 4
+      },
+      {
+        "id": "certificates",
+        "name": "Certificates",
+        "visible": true,
+        "order": 5
+      }
     ],
     "featuredMode": false
   },
   "analytics": {
     "totalVisits": 0,
     "projectViews": {},
-    "deviceSummary": { "desktop": 0, "mobile": 0, "tablet": 0 }
+    "deviceSummary": {
+      "desktop": 0,
+      "mobile": 0,
+      "tablet": 0
+    }
   }
 }

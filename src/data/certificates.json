@@ -7,7 +7,9 @@
     "date": "2025",
     "image": "/certificates/amazon-documentdb.png",
     "link": "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0NDkwIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODM4NjI5N184NzQxMjc5MTc0ODE2MDQ0ODk2NC5wbmciLCJ1c2VybmFtZSI6IkRocnV2ZXNoIFNoeWFyYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion",
-    "relatedSkills": ["AWS S3"],
+    "relatedSkills": [
+      "AWS S3"
+    ],
     "featured": true,
     "displayOrder": 1,
     "status": "published"
@@ -33,9 +35,26 @@
     "date": "2025",
     "image": "/certificates/frontend-developer-react.png",
     "link": "https://www.hackerrank.com/certificates/cc7dcbd6558a",
-    "relatedSkills": ["React.js"],
+    "relatedSkills": [
+      "React.js"
+    ],
     "featured": true,
     "displayOrder": 3,
     "status": "published"
+  },
+  {
+    "title": "b",
+    "issuer": "b",
+    "description": "qwd",
+    "date": "b",
+    "image": "",
+    "link": "b",
+    "status": "published",
+    "featured": false,
+    "relatedSkills": [],
+    "id": "mph2nlckemlde6msq",
+    "displayOrder": 4,
+    "createdAt": "2026-05-22T15:25:53.492Z",
+    "updatedAt": "2026-05-22T15:27:48.751Z"
   }
 ]

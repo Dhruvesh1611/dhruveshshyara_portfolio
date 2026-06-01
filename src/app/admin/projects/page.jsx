@@ -184,7 +184,7 @@ export default function ProjectsListPage() {
                 <tr key={project.id}>
                   <td>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                      {project.image && (
+                      {project.image && (project.image.startsWith('/') || project.image.startsWith('http')) && (
                         <img src={project.image} alt="" className="admin-table-thumb" />
                       )}
                       <div>

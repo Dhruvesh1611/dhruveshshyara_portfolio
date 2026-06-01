@@ -4,10 +4,11 @@ import { motion, AnimatePresence, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import certificatesData from '@/data/certificates.json';
+import { isValidImageSrc } from '@/lib/imageUtils';
 
 const certificates = [...certificatesData]
-    .filter(c => c.status === 'published')
-    .sort((a, b) => a.displayOrder - b.displayOrder);
+    .filter(c => c.status === 'published' && c.featured)
+    .sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0));
 
 const CertificateTextSection = ({ cert, setActiveCert, isLast }) => {
     const ref = useRef(null);
@@ -37,14 +38,18 @@ const CertificateTextSection = ({ cert, setActiveCert, isLast }) => {
                         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
                         <div className="project-image-box" style={{ border: '2px solid var(--color-light-purple)' }}>
-                            <Image
-                                src={cert.image}
-                                alt={cert.title}
-                                fill
-                                sizes="(max-width: 998px) 90vw, 1px"
-                                style={{ objectFit: 'contain', padding: '20px', background: '#0a0a0a' }}
-                                className="project-display-img"
-                            />
+                            {isValidImageSrc(cert.image) ? (
+                                <Image
+                                    src={cert.image}
+                                    alt={cert.title}
+                                    fill
+                                    sizes="(max-width: 998px) 90vw, 1px"
+                                    style={{ objectFit: 'contain', padding: '20px', background: '#0a0a0a' }}
+                                    className="project-display-img"
+                                />
+                            ) : (
+                                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0a0a0a', color: '#64748b', fontSize: '1rem' }}>No Image</div>
+                            )}
                             <div className="project-hover-overlay">
                                 <div className="hover-content">
                                     <span className="hover-text">VIEW CERTIFICATE</span>
@@ -124,14 +129,18 @@ const Certificates = () => {
                                     className="project-image-box"
                                     style={{ border: '2px solid var(--color-light-purple)', display: 'block', position: 'relative' }}
                                 >
-                                    <Image
-                                        src={activeCert.image}
-                                        alt={activeCert.title}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        style={{ objectFit: 'contain', padding: '20px', background: '#0a0a0a' }}
-                                        className="project-display-img"
-                                    />
+                                    {isValidImageSrc(activeCert.image) ? (
+                                        <Image
+                                            src={activeCert.image}
+                                            alt={activeCert.title}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            style={{ objectFit: 'contain', padding: '20px', background: '#0a0a0a' }}
+                                            className="project-display-img"
+                                        />
+                                    ) : (
+                                        <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0a0a0a', color: '#64748b', fontSize: '1rem' }}>No Image</div>
+                                    )}
                                     <div className="project-hover-overlay">
                                         <div className="hover-content">
                                             <span className="hover-text">VIEW CERTIFICATE</span>

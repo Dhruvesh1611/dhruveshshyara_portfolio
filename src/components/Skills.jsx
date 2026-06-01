@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import skillsData from '@/data/skills.json';
+import { isValidImageSrc } from '@/lib/imageUtils';
 
 const Skills = () => {
     const skills = [...skillsData].sort((a, b) => a.displayOrder - b.displayOrder);
@@ -48,13 +49,33 @@ const Skills = () => {
                                 transition={{ delay: index * 0.05, duration: 0.3 }}
                                 whileHover={{ scale: 1.1 }}
                             >
-                                <Image
-                                    src={skill.icon}
-                                    alt={skill.name}
-                                    width={50}
-                                    height={50}
-                                    className={`tech-stack-logo ${skill.invert ? 'needtobeinvert' : ''}`}
-                                />
+                                {isValidImageSrc(skill.icon) ? (
+                                    <Image
+                                        src={skill.icon}
+                                        alt={skill.name}
+                                        width={50}
+                                        height={50}
+                                        className={`tech-stack-logo ${skill.invert ? 'needtobeinvert' : ''}`}
+                                    />
+                                ) : (
+                                    <div
+                                        className="tech-stack-logo"
+                                        style={{
+                                            width: 50,
+                                            height: 50,
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            background: 'rgba(99, 102, 241, 0.15)',
+                                            borderRadius: '12px',
+                                            color: '#a78bfa',
+                                            fontWeight: 700,
+                                            fontSize: '1.2rem',
+                                        }}
+                                    >
+                                        {skill.name?.charAt(0)?.toUpperCase() || '?'}
+                                    </div>
+                                )}
                                 <span className="tooltip">{skill.name}</span>
                             </motion.li>
                         ))}

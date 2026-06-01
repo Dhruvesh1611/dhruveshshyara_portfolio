@@ -36,6 +36,7 @@ export default function ProjectForm({ initialData, onSubmit, isEdit = false }) {
 
   const [tagInput, setTagInput] = useState('');
   const [saving, setSaving] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const updateField = (field, value) => {
     setForm(prev => ({ ...prev, [field]: value }));
@@ -97,10 +98,23 @@ export default function ProjectForm({ initialData, onSubmit, isEdit = false }) {
   };
 
   const handleSubmit = async (publishStatus) => {
-    if (!form.title.trim()) {
-      toast.error('Project title is required');
+    const newErrors = {};
+    if (!form.title.trim()) newErrors.title = 'Project Title is mandatory.';
+    if (form.image && form.image.trim() && !form.image.trim().startsWith('/') && !form.image.trim().startsWith('http')) {
+      newErrors.image = 'Image path must start with "/" (e.g., /projects/my-project.png) or be a full URL. Leave empty if no image.';
+    }
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      toast.error('Validation Error: Please fix the highlighted fields.', {
+        duration: 4000,
+        icon: '⚠️',
+        style: { background: '#f87171', color: '#fff' },
+      });
       return;
     }
+    
+    setErrors({});
     setSaving(true);
     try {
       await onSubmit({ ...form, status: publishStatus || form.status });
@@ -114,8 +128,9 @@ export default function ProjectForm({ initialData, onSubmit, isEdit = false }) {
       {/* Title & Slug */}
       <div className="admin-form-row">
         <div className="admin-form-group">
-          <label className="admin-form-label">Project Title *</label>
-          <input className="admin-form-input" style={{ paddingLeft: 14 }} value={form.title} onChange={(e) => updateField('title', e.target.value)} placeholder="My Awesome Project" />
+          <label className="admin-form-label">Project Title <span className="admin-required-star">*</span></label>
+          <input className={`admin-form-input ${errors.title ? 'admin-form-input--error' : ''}`} style={{ paddingLeft: 14 }} value={form.title} onChange={(e) => { updateField('title', e.target.value); if(errors.title) setErrors({...errors, title: null}); }} placeholder="My Awesome Project" />
+          {errors.title && <div className="admin-form-error-msg">⚠️ {errors.title}</div>}
         </div>
         <div className="admin-form-group">
           <label className="admin-form-label">Slug</label>
@@ -153,7 +168,8 @@ export default function ProjectForm({ initialData, onSubmit, isEdit = false }) {
       <div className="admin-form-row">
         <div className="admin-form-group">
           <label className="admin-form-label">Thumbnail Image Path</label>
-          <input className="admin-form-input" style={{ paddingLeft: 14 }} value={form.image} onChange={(e) => updateField('image', e.target.value)} placeholder="/projects/my-project.png" />
+          <input className={`admin-form-input ${errors.image ? 'admin-form-input--error' : ''}`} style={{ paddingLeft: 14 }} value={form.image} onChange={(e) => { updateField('image', e.target.value); if(errors.image) setErrors({...errors, image: null}); }} placeholder="/projects/my-project.png or leave empty" />
+          {errors.image && <div className="admin-form-error-msg">⚠️ {errors.image}</div>}
         </div>
         <div className="admin-form-group">
           <label className="admin-form-label">YouTube Video ID</label>

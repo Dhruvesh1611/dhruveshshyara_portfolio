@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 import { allProjects } from '@/data/projectsData';
+import { isValidImageSrc } from '@/lib/imageUtils';
 import { notFound } from 'next/navigation';
 import './ProjectDetail.css';
 
@@ -122,14 +123,18 @@ export default function ProjectPage({ params }) {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                     >
-                        <Image
-                            src={project.image}
-                            alt={project.title}
-                            fill
-                            priority
-                            sizes="(max-width: 1200px) 100vw, 1000px"
-                            style={{ objectFit: 'cover' }}
-                        />
+                        {isValidImageSrc(project.image) ? (
+                            <Image
+                                src={project.image}
+                                alt={project.title}
+                                fill
+                                priority
+                                sizes="(max-width: 1200px) 100vw, 1000px"
+                                style={{ objectFit: 'cover' }}
+                            />
+                        ) : (
+                            <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#111', color: '#64748b', fontSize: '1.2rem' }}>No Image Available</div>
+                        )}
                     </motion.div>
 
                     <section id="overview" className="detail-article">
@@ -359,13 +364,17 @@ export default function ProjectPage({ params }) {
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.9, opacity: 0 }}
                         >
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                width={1200}
-                                height={800}
-                                style={{ objectFit: 'contain', borderRadius: '12px' }}
-                            />
+                            {isValidImageSrc(project.image) ? (
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    width={1200}
+                                    height={800}
+                                    style={{ objectFit: 'contain', borderRadius: '12px' }}
+                                />
+                            ) : (
+                                <div style={{ width: 400, height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#111', color: '#64748b', fontSize: '1.2rem', borderRadius: '12px' }}>No Image Available</div>
+                            )}
                         </motion.div>
                     </motion.div>
                 )}

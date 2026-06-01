@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { allProjects } from '@/data/projectsData';
+import { isValidImageSrc } from '@/lib/imageUtils';
 
 
 const categories = ['All', 'Fullstack', 'UI/UX', 'Extension', 'App', 'Other'];
@@ -86,13 +87,17 @@ const ProjectCard = ({ project }) => {
                     style={{ y: springImgY, scale: 1.2 }}
                     className="card-img-container"
                 >
-                    <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        style={{ objectFit: 'cover' }}
-                    />
+                    {isValidImageSrc(project.image) ? (
+                        <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            style={{ objectFit: 'cover' }}
+                        />
+                    ) : (
+                        <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#111', color: '#64748b', fontSize: '1rem' }}>No Image</div>
+                    )}
                 </motion.div>
 
                 {isFullstack ? (
