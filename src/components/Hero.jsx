@@ -105,8 +105,8 @@ const Hero = () => {
                     <Image
                         src="/png/dhruvesh-hero.png"
                         alt="Dhruvesh Shyara"
-                        width={750}
-                        height={900}
+                        width={650}
+                        height={700}
                         priority
                         className="hero-photo"
                     />

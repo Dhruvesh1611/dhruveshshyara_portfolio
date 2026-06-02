@@ -35,7 +35,7 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   color: var(--admin-text);
-  font-size: 16px; /* Increased from 14px */
+  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -148,7 +148,7 @@
 }
 
 .admin-login-title {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 8px;
@@ -156,7 +156,7 @@
 }
 
 .admin-login-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: var(--admin-text-dim);
 }
 
@@ -169,7 +169,7 @@
   border: 1px solid rgba(248, 113, 113, 0.3);
   border-radius: var(--admin-radius-sm);
   color: var(--admin-danger);
-  font-size: 1rem;
+  font-size: 1.15rem;
   margin-bottom: 24px;
   animation: admin-shake 0.4s ease-out;
 }
@@ -195,7 +195,7 @@
 }
 
 .admin-form-label {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--admin-text-dim);
   letter-spacing: 0.03em;
@@ -222,7 +222,7 @@
   border: 1px solid var(--admin-border);
   border-radius: var(--admin-radius-sm);
   color: var(--admin-text);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-family: inherit;
   transition: all var(--admin-transition);
   outline: none;
@@ -265,7 +265,7 @@
   border: none;
   border-radius: var(--admin-radius-sm);
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
@@ -307,7 +307,7 @@
   gap: 8px;
   color: var(--admin-text-dim);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.15rem;
   transition: color var(--admin-transition);
 }
 
@@ -325,7 +325,7 @@
   gap: 20px;
   background: var(--admin-bg);
   color: var(--admin-text-dim);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 .admin-loading-spinner {
@@ -399,7 +399,7 @@
 }
 
 .admin-sidebar-brand-text {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 700;
   white-space: nowrap;
   letter-spacing: -0.01em;
@@ -448,7 +448,7 @@
 
 .admin-sidebar-divider {
   padding: 20px 16px 8px;
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -464,7 +464,7 @@
   border-radius: var(--admin-radius-sm);
   color: var(--admin-text-dim);
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 500;
   white-space: nowrap;
   transition: all var(--admin-transition);
@@ -525,7 +525,7 @@
   justify-content: center;
   color: white;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.25rem;
   flex-shrink: 0;
 }
 
@@ -536,7 +536,7 @@
 }
 
 .admin-sidebar-user-name {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--admin-text);
   white-space: nowrap;
@@ -545,7 +545,7 @@
 }
 
 .admin-sidebar-user-role {
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   color: var(--admin-text-muted);
 }
 
@@ -573,7 +573,7 @@
 }
 
 .admin-page-title {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: -0.02em;
@@ -581,7 +581,7 @@
 }
 
 .admin-page-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: var(--admin-text-dim);
 }
 
@@ -615,7 +615,7 @@
 }
 
 .admin-card-title {
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   font-weight: 600;
   color: #fff;
 }
@@ -654,7 +654,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 1.6rem;
+  font-size: 1.75rem;
 }
 
 .admin-stat-icon--purple { background: rgba(99, 102, 241, 0.2); color: var(--admin-accent); }
@@ -670,7 +670,7 @@
 }
 
 .admin-stat-value {
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: -0.02em;
@@ -678,7 +678,7 @@
 }
 
 .admin-stat-label {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--admin-text-dim);
   font-weight: 500;
 }
@@ -691,7 +691,7 @@
   gap: 10px;
   padding: 12px 20px;
   border-radius: var(--admin-radius-sm);
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
@@ -747,7 +747,7 @@
 
 .admin-btn--sm {
   padding: 8px 14px;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
 }
 
 .admin-btn--icon {
@@ -765,13 +765,13 @@
 .admin-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .admin-table th {
   text-align: left;
   padding: 16px 20px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -806,7 +806,7 @@
 .admin-table-title {
   font-weight: 600;
   color: #fff;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .admin-table-actions {
@@ -822,7 +822,7 @@
   gap: 6px;
   padding: 6px 12px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -863,7 +863,7 @@
   border: 1px solid var(--admin-border);
   border-radius: var(--admin-radius-sm);
   color: var(--admin-text);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-family: inherit;
   resize: vertical;
   outline: none;
@@ -882,7 +882,7 @@
   border: 1px solid var(--admin-border);
   border-radius: var(--admin-radius-sm);
   color: var(--admin-text);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-family: inherit;
   outline: none;
   cursor: pointer;
@@ -932,7 +932,7 @@
   border: 1px solid var(--admin-border);
   border-radius: var(--admin-radius-sm);
   color: var(--admin-text);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-family: inherit;
   outline: none;
   transition: all var(--admin-transition);
@@ -1010,7 +1010,7 @@
   background: var(--admin-surface-3);
   border: 1px solid var(--admin-border);
   border-radius: 24px;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--admin-text);
 }
 
@@ -1041,20 +1041,20 @@
 }
 
 .admin-empty-state-icon {
-  font-size: 4rem;
+  font-size: 4.5rem;
   margin-bottom: 20px;
   opacity: 0.6;
 }
 
 .admin-empty-state-title {
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   font-weight: 600;
   color: var(--admin-text);
   margin-bottom: 12px;
 }
 
 .admin-empty-state-desc {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   margin-bottom: 24px;
 }
 
@@ -1083,14 +1083,14 @@
 }
 
 .admin-dialog-title {
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 12px;
 }
 
 .admin-dialog-message {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   color: var(--admin-text-dim);
   margin-bottom: 32px;
   line-height: 1.6;
@@ -1126,7 +1126,7 @@
 }
 
 .admin-widget-title {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 600;
   color: #fff;
 }
@@ -1159,7 +1159,7 @@
 }
 
 .admin-activity-text {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--admin-text);
 }
 
@@ -1168,7 +1168,7 @@
 }
 
 .admin-activity-time {
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   color: var(--admin-text-muted);
   margin-top: 4px;
 }
@@ -1191,7 +1191,7 @@
   border-radius: var(--admin-radius);
   text-decoration: none;
   color: var(--admin-text);
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 500;
   transition: all var(--admin-transition);
   cursor: pointer;
@@ -1247,7 +1247,7 @@
   flex: 1;
   font-weight: 500;
   color: var(--admin-text);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 /* ═══ ANIMATIONS ═══ */
@@ -1342,7 +1342,7 @@
 
 .admin-form-error-msg {
   color: var(--admin-danger);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   margin-top: 8px;
   display: flex;
   align-items: center;

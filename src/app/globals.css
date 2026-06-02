@@ -2596,7 +2596,7 @@ footer {
 
 .scrolly-layout {
     display: flex;
-    gap: 50px;
+    gap: 1px;
     position: relative;
 }
 
