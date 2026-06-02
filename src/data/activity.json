@@ -1,5 +1,12 @@
 [
   {
+    "id": "1780404101023",
+    "action": "Deleted",
+    "entityType": "certificate",
+    "entityTitle": "Misc / Personal",
+    "timestamp": "2026-06-02T12:41:41.023Z"
+  },
+  {
     "id": "1780324220734",
     "action": "Updated",
     "entityType": "certificate",

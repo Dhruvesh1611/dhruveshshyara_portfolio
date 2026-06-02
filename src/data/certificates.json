@@ -7,7 +7,9 @@
     "date": "2025",
     "image": "/certificates/amazon-documentdb.png",
     "link": "/certificates/amazon-documentdb.png",
-    "relatedSkills": ["AWS S3"],
+    "relatedSkills": [
+      "AWS S3"
+    ],
     "featured": true,
     "displayOrder": 1,
     "status": "published"
@@ -20,7 +22,9 @@
     "date": "2025",
     "image": "/certificates/azure-services-basics.png",
     "link": "https://simpli-web.app.link/e/N5LenkEbDTb",
-    "relatedSkills": ["Azure"],
+    "relatedSkills": [
+      "Azure"
+    ],
     "featured": true,
     "displayOrder": 2,
     "status": "published"
@@ -33,7 +37,9 @@
     "date": "2025",
     "image": "/certificates/frontend-developer-react.png",
     "link": "https://www.hackerrank.com/certificates/cc7dcbd6558a",
-    "relatedSkills": ["React.js"],
+    "relatedSkills": [
+      "React.js"
+    ],
     "featured": true,
     "displayOrder": 3,
     "status": "published"
@@ -46,7 +52,9 @@
     "date": "2025",
     "image": "/certificates/javascript-basic.png",
     "link": "https://www.hackerrank.com/certificates/065ed799b22f",
-    "relatedSkills": ["JavaScript"],
+    "relatedSkills": [
+      "JavaScript"
+    ],
     "featured": false,
     "displayOrder": 4,
     "status": "published"
@@ -59,7 +67,10 @@
     "date": "2025",
     "image": "/certificates/css-basic.png",
     "link": "https://www.hackerrank.com/certificates/e72e9d42799c",
-    "relatedSkills": ["CSS", "Responsive Design"],
+    "relatedSkills": [
+      "CSS",
+      "Responsive Design"
+    ],
     "featured": false,
     "displayOrder": 5,
     "status": "published"
@@ -72,7 +83,10 @@
     "date": "2025",
     "image": "/certificates/node-basic.png",
     "link": "https://www.hackerrank.com/certificates/ceb3ab163e6d",
-    "relatedSkills": ["Node.js", "Express"],
+    "relatedSkills": [
+      "Node.js",
+      "Express"
+    ],
     "featured": false,
     "displayOrder": 6,
     "status": "published"
@@ -85,7 +99,10 @@
     "date": "2025",
     "image": "/certificates/problem-solving-basic.png",
     "link": "https://www.hackerrank.com/certificates/0625153f0783",
-    "relatedSkills": ["Algorithms", "DSA"],
+    "relatedSkills": [
+      "Algorithms",
+      "DSA"
+    ],
     "featured": false,
     "displayOrder": 7,
     "status": "published"
@@ -98,7 +115,10 @@
     "date": "2025",
     "image": "/certificates/gateway-load-balancer.png",
     "link": "https://simpli-web.app.link/e/sq0S9jMwETb",
-    "relatedSkills": ["Networking", "Load Balancing"],
+    "relatedSkills": [
+      "Networking",
+      "Load Balancing"
+    ],
     "featured": false,
     "displayOrder": 8,
     "status": "published"
@@ -111,24 +131,12 @@
     "date": "2025",
     "image": "/certificates/amazon-documentdb.png",
     "link": "https://simpli-web.app.link/e/uPhDpKxwETb",
-    "relatedSkills": ["DocumentDB", "Databases"],
+    "relatedSkills": [
+      "DocumentDB",
+      "Databases"
+    ],
     "featured": false,
     "displayOrder": 9,
     "status": "published"
-  },
-  {
-    "id": "mph2nlckemlde6msq",
-    "title": "Misc / Personal",
-    "issuer": "Self",
-    "description": "Placeholder certificate entry added via admin.",
-    "date": "2026",
-    "image": "",
-    "link": "/certificates/frontend-developer-react.png",
-    "status": "published",
-    "featured": false,
-    "relatedSkills": [],
-    "displayOrder": 10,
-    "createdAt": "2026-05-22T15:25:53.492Z",
-    "updatedAt": "2026-06-01T14:30:20.733Z"
   }
 ]
