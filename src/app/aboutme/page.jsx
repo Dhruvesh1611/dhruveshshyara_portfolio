@@ -611,10 +611,11 @@ const AboutMePage = () => {
                     </div>
                 </section>
 
-                {/* My Journey Section - Pinned Scrollytelling */}
+                {/* My Journey Section - Desktop: Pinned Scrollytelling, Mobile: Simple card list */}
                 <section className="journey-scrolly-container">
 
-                    <div className="journey-sticky-wrapper">
+                    {/* Desktop: Sticky Scrollytelling */}
+                    <div className="journey-sticky-wrapper desktop-only-journey">
                         <div className="journey-scroll-content">
                             <motion.h2
                                 className="section-heading"
@@ -682,8 +683,6 @@ const AboutMePage = () => {
                                         </AnimatePresence>
                                     </div>
                                 </div>
-
-                                {/* Right Side: Detailed Description (REMOVED, only sticky description remains) */}
                             </div>
 
                             {/* Scroll Down Arrow Indicator */}
@@ -694,15 +693,11 @@ const AboutMePage = () => {
                                     </svg>
                                 </div>
                             </div>
-
-                            {/* Remove the small description at the bottom of the journey section */}
-
-                            {/* Remove the small bottom text (description) under the journey section */}
                         </div>
                     </div>
 
-                    {/* Scroll Triggers (invisible divs to drive the sticky state) */}
-                    <div className="scroll-triggers" style={{ position: 'relative', top: '-50vh' }}>
+                    {/* Desktop: Scroll Triggers */}
+                    <div className="scroll-triggers desktop-only-journey" style={{ position: 'relative', top: '-50vh' }}>
                         {journeyData.map((item) => (
                             <div
                                 key={item.id}
@@ -720,11 +715,51 @@ const AboutMePage = () => {
                             ></div>
                         ))}
                     </div>
+
+                    {/* Mobile: Simple scrollable card list */}
+                    <div className="mobile-only-journey">
+                        <motion.h2
+                            className="section-heading"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                        >
+                            MY JOURNEY
+                        </motion.h2>
+                        <div className="mobile-journey-list">
+                            {journeyData.map((item, index) => (
+                                <motion.div
+                                    key={item.id}
+                                    className="mobile-journey-card"
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                                >
+                                    <div className="mobile-journey-card-header">
+                                        <span className="mobile-journey-sem">Sem {item.id}</span>
+                                        <span className="semester-period">{item.period}</span>
+                                    </div>
+                                    <h3 className="semester-title">{item.semester}</h3>
+                                    <ul className="semester-highlights">
+                                        {item.highlights.map((point, i) => (
+                                            <li key={i}>{point}</li>
+                                        ))}
+                                    </ul>
+                                    <div className="mobile-journey-desc">
+                                        <span className="mobile-journey-overview-label">OVERVIEW</span>
+                                        <p>{item.description}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
                 </section>
 
-                {/* Education Section */}
+                {/* Education Section - Desktop: Scrollytelling, Mobile: Simple card list */}
                 <section className="education-scrolly-container">
-                    <div className="education-sticky-wrapper">
+                    {/* Desktop: Sticky Education */}
+                    <div className="education-sticky-wrapper desktop-only-education">
                         <div className="education-scroll-content">
                             <motion.h2
                                 className="section-heading"
@@ -810,8 +845,8 @@ const AboutMePage = () => {
                         </div>
                     </div>
 
-                    {/* Scroll Triggers */}
-                    <div className="scroll-triggers">
+                    {/* Desktop: Scroll Triggers */}
+                    <div className="scroll-triggers desktop-only-education">
                         {educationData.map((item) => (
                             <div
                                 key={item.id}
@@ -829,6 +864,49 @@ const AboutMePage = () => {
                             ></div>
                         ))}
                     </div>
+
+                    {/* Mobile: Simple scrollable education cards */}
+                    <div className="mobile-only-education">
+                        <motion.h2
+                            className="section-heading"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                        >
+                            EDUCATION
+                        </motion.h2>
+                        <div className="mobile-education-list">
+                            {educationData.map((item, index) => (
+                                <motion.div
+                                    key={item.id}
+                                    className="mobile-education-card"
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                                >
+                                    <div className="mobile-edu-image-wrap">
+                                        <Image
+                                            src={item.image}
+                                            alt={item.degree}
+                                            fill
+                                            sizes="(max-width: 768px) 90vw, 1px"
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                    <div className="mobile-edu-info">
+                                        <span className="edu-year">{item.year}</span>
+                                        <h3 className="edu-degree">{item.degree}</h3>
+                                        <h4 className="edu-school">{item.school}</h4>
+                                        <div className="edu-result-badge">
+                                            <span className="edu-board">{item.board}</span>
+                                            <span className="edu-percentage">{item.percentage}</span>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
                 </section>
             </main>
             <Footer />
@@ -842,6 +920,186 @@ const AboutMePage = () => {
                     background: linear-gradient(180deg, #020206 0%, #060310 50%, #000 100%);
                     position: relative;
                     overflow: hidden;
+                }
+
+                /* ═══ Desktop/Mobile Toggle ═══ */
+                .mobile-only-journey,
+                .mobile-only-education {
+                    display: none;
+                }
+
+                @media (max-width: 768px) {
+                    .desktop-only-journey,
+                    .desktop-only-education {
+                        display: none !important;
+                    }
+                    .mobile-only-journey,
+                    .mobile-only-education {
+                        display: block;
+                        padding: 60px 5% 40px;
+                    }
+                }
+
+                /* ═══ Mobile Journey Cards ═══ */
+                .mobile-journey-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                }
+
+                .mobile-journey-card {
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border-radius: 20px;
+                    padding: 28px 24px;
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                }
+
+                .mobile-journey-card-header {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    margin-bottom: 12px;
+                }
+
+                .mobile-journey-sem {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 6px 14px;
+                    background: linear-gradient(135deg, rgba(107, 140, 250, 0.2), rgba(107, 140, 250, 0.08));
+                    border: 1px solid rgba(107, 140, 250, 0.25);
+                    border-radius: 50px;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    color: #6b8cfa;
+                    font-family: var(--font-fira-code), monospace;
+                    letter-spacing: 1px;
+                }
+
+                .mobile-journey-card .semester-title {
+                    font-size: 2.4rem;
+                    margin-bottom: 16px;
+                }
+
+                .mobile-journey-card .semester-period {
+                    font-size: 1.2rem;
+                    margin-bottom: 0;
+                }
+
+                .mobile-journey-card .semester-highlights {
+                    margin-bottom: 20px;
+                }
+
+                .mobile-journey-card .semester-highlights li {
+                    font-size: 1.3rem;
+                    padding: 6px 0;
+                    padding-left: 22px;
+                }
+
+                .mobile-journey-desc {
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.06);
+                    border-radius: 14px;
+                    padding: 20px;
+                    margin-top: 8px;
+                }
+
+                .mobile-journey-overview-label {
+                    display: block;
+                    font-size: 1rem;
+                    color: var(--color-light-purple);
+                    font-family: var(--font-fira-code), monospace;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    margin-bottom: 10px;
+                }
+
+                .mobile-journey-desc p {
+                    font-size: 1.3rem;
+                    color: rgba(255, 255, 255, 0.7);
+                    line-height: 1.7;
+                    margin: 0;
+                }
+
+                /* ═══ Mobile Education Cards ═══ */
+                .mobile-education-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                }
+
+                .mobile-education-card {
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border-radius: 20px;
+                    overflow: hidden;
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                }
+
+                .mobile-edu-image-wrap {
+                    position: relative;
+                    width: 100%;
+                    height: 200px;
+                    overflow: hidden;
+                }
+
+                .mobile-edu-image-wrap img {
+                    object-fit: cover;
+                }
+
+                .mobile-edu-info {
+                    padding: 24px 24px;
+                    text-align: center;
+                }
+
+                .mobile-edu-info .edu-year {
+                    text-align: center;
+                }
+
+                .mobile-edu-info .edu-degree {
+                    font-size: 2rem;
+                    margin-bottom: 8px;
+                }
+
+                .mobile-edu-info .edu-school {
+                    font-size: 1.4rem;
+                    margin-bottom: 12px;
+                }
+
+                .mobile-edu-info .edu-result-badge {
+                    display: inline-flex;
+                    margin: 0 auto;
+                }
+
+                @media (max-width: 480px) {
+                    .mobile-journey-card {
+                        padding: 22px 18px;
+                    }
+                    .mobile-journey-card .semester-title {
+                        font-size: 2rem;
+                    }
+                    .mobile-journey-card .semester-highlights li {
+                        font-size: 1.2rem;
+                    }
+                    .mobile-journey-desc p {
+                        font-size: 1.2rem;
+                    }
+                    .mobile-edu-image-wrap {
+                        height: 160px;
+                    }
+                    .mobile-edu-info .edu-degree {
+                        font-size: 1.7rem;
+                    }
+                    .mobile-edu-info .edu-school {
+                        font-size: 1.2rem;
+                    }
+                    .mobile-only-journey,
+                    .mobile-only-education {
+                        padding: 40px 4% 30px;
+                    }
                 }
 
                 /* Ambient glow background */
@@ -2179,22 +2437,37 @@ const AboutMePage = () => {
                     .about-intro-section {
                         grid-template-columns: 1fr;
                         padding: 60px 5%;
-                        gap: 40px;
+                        gap: 30px;
                     }
                     .intro-heading { font-size: 3rem; text-align: center; }
-                    .intro-label { text-align: center; }
-                    .intro-text { text-align: center; font-size: 1.5rem; line-height: 1.7; }
-                    .intro-content { font-size: 1.3rem; text-align: center; }
-                    .intro-image { height: 350px; }
+                    .intro-label { text-align: center; font-size: 1.1rem; }
+                    .intro-text { text-align: center; font-size: 1.4rem; line-height: 1.7; }
+                    .intro-content { font-size: 1.3rem; text-align: center; max-width: 100%; }
+                    .intro-image { height: 300px; }
                     .section-heading { 
                         font-size: 4rem; 
                         letter-spacing: -1px; 
-                        margin-bottom: 40px; 
+                        margin-bottom: 30px; 
                         text-align: center;
+                    }
+
+                    /* === JOURNEY SECTION — Simple scrollable on mobile === */
+                    .journey-scrolly-container {
+                        overflow: visible;
+                    }
+                    .journey-sticky-wrapper {
+                        position: relative;
+                        top: auto;
+                        height: auto;
+                        min-height: auto;
+                        overflow: visible;
+                    }
+                    .journey-scroll-content {
+                        padding: 60px 5% 40px;
                     }
                     .journey-timeline {
                         padding: 0 10px;
-                        margin-bottom: 30px;
+                        margin-bottom: 20px;
                     }
                     .timeline-line {
                         left: 10px;
@@ -2210,7 +2483,52 @@ const AboutMePage = () => {
                     .scrolly-grid { 
                         grid-template-columns: 1fr; 
                         text-align: center;
-                        gap: 30px;
+                        gap: 24px;
+                    }
+                    .scrolly-left {
+                        order: 1;
+                    }
+                    .scrolly-sticky-image {
+                        order: 2;
+                    }
+                    .sticky-image-fixed {
+                        position: relative;
+                        top: auto;
+                        height: auto;
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                    .sticky-image-container {
+                        width: 100%;
+                        height: auto;
+                        min-height: 200px;
+                    }
+                    .sticky-desc-box {
+                        padding: 24px 20px !important;
+                        font-size: 1.3rem !important;
+                        min-height: auto !important;
+                        border-radius: 16px !important;
+                    }
+                    .scroll-triggers {
+                        display: none;
+                    }
+                    .journey-indicators {
+                        display: none;
+                    }
+
+                    /* === EDUCATION SECTION — Simple scrollable on mobile === */
+                    .education-scrolly-container {
+                        overflow: visible;
+                    }
+                    .education-sticky-wrapper {
+                        position: relative;
+                        top: auto;
+                        height: auto;
+                        min-height: auto;
+                        overflow: visible;
+                    }
+                    .education-scroll-content {
+                        padding: 60px 5% 40px;
                     }
                     .education-scrolly-container .scrolly-grid {
                         grid-template-columns: 1fr;
@@ -2219,7 +2537,7 @@ const AboutMePage = () => {
                         flex-direction: row;
                         min-height: auto;
                         padding: 0 10px;
-                        margin-bottom: 25px;
+                        margin-bottom: 20px;
                     }
                     .edu-timeline-line {
                         top: 50%;
@@ -2246,33 +2564,42 @@ const AboutMePage = () => {
                     .edu-timeline-dot-label {
                         font-size: 0.9rem;
                     }
+                    .education-scrolly-container .scrolly-sticky-image {
+                        height: auto;
+                        max-width: 100%;
+                    }
+                    .edu-image-frame {
+                        height: 250px;
+                        border-radius: 20px;
+                    }
                     .semester-title { font-size: 3rem; }
                     .semester-period { text-align: center; }
                     .semester-highlights { display: inline-block; text-align: left; }
                     .semester-desc-card { padding: 30px; }
                     .semester-desc-card p { font-size: 1.6rem; }
-                    .education-timeline::before { left: 0; transform: none; }
-                    .edu-dot { left: 0; transform: translateX(-50%); }
-                    .education-item { justify-content: flex-start; }
-                    .edu-content { width: 100%; margin-left: 30px; text-align: left; }
                     .edu-degree { font-size: 2.2rem; }
                     .edu-school { font-size: 1.5rem; }
                     .edu-year { text-align: center; }
                     .edu-result-badge { margin-left: auto; margin-right: auto; }
-                    .journey-scroll-content { padding: 0 5%; }
-                    .education-scroll-content { padding: 0 5%; }
-                    .full-page-hero { height: 70vh; }
+                    .journey-scroll-content { padding: 40px 5%; }
+                    .education-scroll-content { padding: 40px 5%; }
+                    .full-page-hero { 
+                        height: 100svh;
+                        height: 100vh;
+                        min-height: 100svh;
+                        min-height: 100vh;
+                    }
                     .hero-subtitle { font-size: 1rem !important; letter-spacing: 0.2em !important; }
                 }
 
                 @media (max-width: 480px) {
                     .intro-heading { font-size: 2.5rem; }
-                    .intro-text { font-size: 1.3rem; }
-                    .section-heading { font-size: 3rem; margin-bottom: 30px; }
+                    .intro-text { font-size: 1.2rem; }
+                    .section-heading { font-size: 3rem; margin-bottom: 25px; }
                     .semester-title { font-size: 2.5rem; }
                     .journey-timeline {
                         padding: 0 5px;
-                        margin-bottom: 20px;
+                        margin-bottom: 15px;
                     }
                     .timeline-line {
                         left: 5px;
@@ -2286,10 +2613,9 @@ const AboutMePage = () => {
                     .timeline-dot-label {
                         font-size: 0.85rem;
                     }
-                    .semester-highlights li { font-size: 1.5rem; padding: 8px 0; padding-left: 25px; }
-                    .intro-image { height: 280px; }
-                    .full-page-hero { height: 55vh; }
-                    .about-intro-section { padding: 40px 4%; }
+                    .semester-highlights li { font-size: 1.4rem; padding: 6px 0; padding-left: 22px; }
+                    .intro-image { height: 240px; }
+                    .about-intro-section { padding: 30px 4%; }
                     .edu-degree { font-size: 1.8rem; }
                     .edu-school { font-size: 1.3rem; }
                     .edu-board, .edu-percentage { font-size: 1.3rem; }
@@ -2309,6 +2635,23 @@ const AboutMePage = () => {
                     .edu-timeline-dot-label {
                         font-size: 0.8rem;
                     }
+                    .hub-section { padding: 60px 4% 60px; }
+                    .hub-header { margin-bottom: 40px; }
+                    .hub-title { font-size: 2.8rem; letter-spacing: -1px; }
+                    .hub-eyebrow { font-size: 0.9rem; letter-spacing: 3px; }
+                    .hub-card-inner { padding: 20px; gap: 14px; }
+                    .hub-card-handle { font-size: 1.4rem; }
+                    .hub-stat-num { font-size: 1.8rem; }
+                    .hub-stats-row { gap: 20px; padding: 14px 0; }
+                    .leetcode-stats { gap: 20px; flex-direction: column; align-items: flex-start; }
+                    .leetcode-ring { width: 90px; height: 90px; }
+                    .ring-svg { width: 90px; height: 90px; }
+                    .ring-label { font-size: 1.5rem; }
+                    .sticky-desc-box {
+                        padding: 20px 16px !important;
+                        font-size: 1.2rem !important;
+                    }
+                    .edu-image-frame { height: 200px; border-radius: 16px; }
                 }
             `}</style>
         </>
