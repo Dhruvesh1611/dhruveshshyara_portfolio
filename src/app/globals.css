@@ -1912,17 +1912,17 @@ noscript {
     }
 
     .hero-photo {
-        width: 340px !important;
+        width: 380px !important;
     }
 
     .hero-photo-fade {
         height: 250px;
         background: linear-gradient(to bottom,
-            transparent 0%,
-            rgba(3, 5, 8, 0.2) 20%,
-            rgba(3, 5, 8, 0.5) 40%,
-            rgba(3, 5, 8, 0.8) 65%,
-            #030508 100%);
+                transparent 0%,
+                rgba(3, 5, 8, 0.2) 20%,
+                rgba(3, 5, 8, 0.5) 40%,
+                rgba(3, 5, 8, 0.8) 65%,
+                #030508 100%);
     }
 
     .hero-nebula--left,
@@ -1976,12 +1976,12 @@ noscript {
     .hero-photo-fade {
         height: 220px;
         background: linear-gradient(to bottom,
-            transparent 0%,
-            rgba(3, 5, 8, 0.15) 15%,
-            rgba(3, 5, 8, 0.45) 35%,
-            rgba(3, 5, 8, 0.75) 55%,
-            rgba(3, 5, 8, 0.95) 80%,
-            #030508 100%);
+                transparent 0%,
+                rgba(3, 5, 8, 0.15) 15%,
+                rgba(3, 5, 8, 0.45) 35%,
+                rgba(3, 5, 8, 0.75) 55%,
+                rgba(3, 5, 8, 0.95) 80%,
+                #030508 100%);
     }
 
     .hero-nebula--left,
