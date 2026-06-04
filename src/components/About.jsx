@@ -27,26 +27,8 @@ const About = () => {
 
                 <div className="info-dp-section">
                     <motion.div
-                        className="dp"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <Image
-                            src="/png/dhruvesh-avatar.png"
-                            alt="Dhruvesh Shyara"
-                            width={300}
-                            height={300}
-                            className="about-avatar-img"
-                            tabIndex={0}
-                            aria-label="image of Dhruvesh"
-                        />
-                    </motion.div>
-
-                    <motion.div
                         className="about-info stylish-about-info"
-                        initial={{ opacity: 0, x: 50 }}
+                        initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.2 }}
@@ -86,6 +68,24 @@ const About = () => {
                             </div>
                             <div className="text">Resume</div>
                         </button>
+                    </motion.div>
+
+                    <motion.div
+                        className="dp"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Image
+                            src="/png/image1.png"
+                            alt="Dhruvesh Shyara"
+                            width={500}
+                            height={700}
+                            className="about-avatar-img"
+                            tabIndex={0}
+                            aria-label="image of Dhruvesh"
+                        />
                     </motion.div>
                 </div>
             </div>
