@@ -1,6 +1,51 @@
 {
   "pageViews": [
     {
+      "id": "mpzg67c4qk1v7huqu",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-04T12:04:07.972Z"
+    },
+    {
+      "id": "mpzg60cmf3gggxwr1",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-04T12:03:58.918Z"
+    },
+    {
+      "id": "mpzg5yolfmauc7grx",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-04T12:03:56.756Z"
+    },
+    {
+      "id": "mpzg5w9bvkprvq3lj",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-04T12:03:53.614Z"
+    },
+    {
+      "id": "mpzg5tdoj0fg9g7va",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-04T12:03:49.883Z"
+    },
+    {
       "id": "mpz2ev1yxd64cla3p",
       "path": "/",
       "referrer": "http://localhost:3000/",
@@ -20,21 +65,24 @@
     }
   ],
   "summary": {
-    "totalVisits": 2,
+    "totalVisits": 7,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 2
+      "/": 4,
+      "/aboutme": 1,
+      "/projects": 1,
+      "/certificates": 1
     },
     "deviceBreakdown": {
-      "desktop": 2,
+      "desktop": 7,
       "mobile": 0,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 2
+      "Chrome": 7
     },
     "dailyVisits": {
-      "2026-06-04": 2
+      "2026-06-04": 7
     }
   }
 }
