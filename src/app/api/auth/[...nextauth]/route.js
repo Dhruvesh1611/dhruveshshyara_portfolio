@@ -11,7 +11,7 @@ const handler = NextAuth({
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-        const adminUsername = process.env.ADMIN_USERNAME || 'admin1611';
+        const adminUsername = process.env.ADMIN_USERNAME || 'admin';
         const adminPasswordHash = process.env.ADMIN_PASSWORD_HASH;
 
         if (!credentials?.username || !credentials?.password) return null;
@@ -19,7 +19,7 @@ const handler = NextAuth({
 
         // If no hash is set yet, allow a default password for first login
         if (!adminPasswordHash) {
-          if (credentials.password === 'Admin@1611') {
+          if (credentials.password === '123456') {
             return { id: '1', name: 'Admin', email: 'admin@portfolio.local' };
           }
           return null;
