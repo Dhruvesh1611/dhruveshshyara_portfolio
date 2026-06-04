@@ -37,7 +37,7 @@ const CertificateTextSection = ({ cert, setActiveCert, isLast }) => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
-                        <div className="project-image-box" style={{ border: '2px solid var(--color-light-purple)' }}>
+                        <div className="project-image-box" style={{ border: '1px solid var(--color-light-purple)' }}>
                             {isValidImageSrc(cert.image) ? (
                                 <Image
                                     src={cert.image}

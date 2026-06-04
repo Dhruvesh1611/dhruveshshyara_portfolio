@@ -103,7 +103,7 @@ const Hero = () => {
                 {/* Profile photo */}
                 <div className="hero-photo-wrapper">
                     <Image
-                        src="/png/dhruvesh-hero.png"
+                        src="/png/dhruvesh-professional.png"
                         alt="Dhruvesh Shyara"
                         width={750}
                         height={900}
