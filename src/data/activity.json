@@ -1,5 +1,12 @@
 [
   {
+    "id": "1780550652749",
+    "action": "Updated",
+    "entityType": "certificate",
+    "entityTitle": "Amazon DocumentDB",
+    "timestamp": "2026-06-04T05:24:12.749Z"
+  },
+  {
     "id": "1780404101023",
     "action": "Deleted",
     "entityType": "certificate",

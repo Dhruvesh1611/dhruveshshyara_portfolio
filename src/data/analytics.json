@@ -1,0 +1,40 @@
+{
+  "pageViews": [
+    {
+      "id": "mpz2ev1yxd64cla3p",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-04T05:38:57.334Z"
+    },
+    {
+      "id": "mpz25xd8117l872ze",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-04T05:32:00.428Z"
+    }
+  ],
+  "summary": {
+    "totalVisits": 2,
+    "uniqueVisitors": 1,
+    "topPages": {
+      "/": 2
+    },
+    "deviceBreakdown": {
+      "desktop": 2,
+      "mobile": 0,
+      "tablet": 0
+    },
+    "browserBreakdown": {
+      "Chrome": 2
+    },
+    "dailyVisits": {
+      "2026-06-04": 2
+    }
+  }
+}

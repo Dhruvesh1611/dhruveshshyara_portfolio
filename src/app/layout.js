@@ -62,11 +62,18 @@ export const metadata = {
 };
 
 import PageTransition from '@/components/PageTransition';
+import AnalyticsTracker from '@/components/AnalyticsTracker';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+import { Suspense } from 'react';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`body ${firaCode.variable} ${anton.variable} ${passionsConflict.variable} ${playfairDisplay.variable} ${inter.variable} ${outfit.variable}`}>
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
+        <AnalyticsTracker />
         <Preloader />
         <PageTransition>
           {children}

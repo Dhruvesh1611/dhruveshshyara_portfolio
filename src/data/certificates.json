@@ -135,8 +135,9 @@
       "DocumentDB",
       "Databases"
     ],
-    "featured": false,
+    "featured": true,
     "displayOrder": 9,
-    "status": "published"
+    "status": "published",
+    "updatedAt": "2026-06-04T05:24:12.748Z"
   }
 ]

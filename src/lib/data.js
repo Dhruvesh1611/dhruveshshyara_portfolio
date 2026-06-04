@@ -148,3 +148,11 @@ export function saveMedia(media) {
 export function getActivity() {
   return readData('activity.json') || [];
 }
+
+export function getAnalytics() {
+  return readData('analytics.json') || { pageViews: [], summary: { totalVisits: 0, uniqueVisitors: 0, topPages: {}, deviceBreakdown: { desktop: 0, mobile: 0, tablet: 0 }, browserBreakdown: {}, dailyVisits: {} } };
+}
+
+export function saveAnalytics(data) {
+  return writeData('analytics.json', data);
+}
