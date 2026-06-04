@@ -85,7 +85,7 @@ const educationData = [
         id: 3,
         degree: 'B.Tech in Computer Science',
         school: 'Rai University',
-        year: '2021 - Present',
+        year: '2024 - Present',
         percentage: 'CGPA: 9.4/10',
         board: 'Final Year',
         image: '/png/college-education.jpg',
@@ -466,11 +466,11 @@ const AboutMePage = () => {
                                         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z" /></svg>
                                     </div>
                                     <div className="yt-wave-bars">
-                                        <span className="yt-bar" style={{animationDelay: '0s'}} />
-                                        <span className="yt-bar" style={{animationDelay: '0.15s'}} />
-                                        <span className="yt-bar" style={{animationDelay: '0.3s'}} />
-                                        <span className="yt-bar" style={{animationDelay: '0.45s'}} />
-                                        <span className="yt-bar" style={{animationDelay: '0.6s'}} />
+                                        <span className="yt-bar" style={{ animationDelay: '0s' }} />
+                                        <span className="yt-bar" style={{ animationDelay: '0.15s' }} />
+                                        <span className="yt-bar" style={{ animationDelay: '0.3s' }} />
+                                        <span className="yt-bar" style={{ animationDelay: '0.45s' }} />
+                                        <span className="yt-bar" style={{ animationDelay: '0.6s' }} />
                                     </div>
                                     <span className="yt-live-text">Content Creator</span>
                                 </div>
@@ -503,9 +503,9 @@ const AboutMePage = () => {
                                 </div>
                                 <div className="email-visual">
                                     <div className="email-envelope">
-                                        <div className="email-line" style={{width: '80%'}} />
-                                        <div className="email-line" style={{width: '60%'}} />
-                                        <div className="email-line" style={{width: '40%'}} />
+                                        <div className="email-line" style={{ width: '80%' }} />
+                                        <div className="email-line" style={{ width: '60%' }} />
+                                        <div className="email-line" style={{ width: '40%' }} />
                                     </div>
                                     <p className="email-hint">Available for freelance & collaboration</p>
                                 </div>
@@ -549,10 +549,10 @@ const AboutMePage = () => {
                                 <div className="resume-preview">
                                     <div className="resume-mini">
                                         <div className="resume-mini-header" />
-                                        <div className="resume-mini-line" style={{width: '70%'}} />
-                                        <div className="resume-mini-line" style={{width: '90%'}} />
-                                        <div className="resume-mini-line" style={{width: '55%'}} />
-                                        <div className="resume-mini-line" style={{width: '80%'}} />
+                                        <div className="resume-mini-line" style={{ width: '70%' }} />
+                                        <div className="resume-mini-line" style={{ width: '90%' }} />
+                                        <div className="resume-mini-line" style={{ width: '55%' }} />
+                                        <div className="resume-mini-line" style={{ width: '80%' }} />
                                     </div>
                                     <div className="resume-highlights">
                                         <span className="resume-hl-tag">B.Tech CSE</span>
