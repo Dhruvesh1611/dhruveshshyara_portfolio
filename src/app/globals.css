@@ -2915,14 +2915,15 @@ footer {
 
 @media (max-width: 998px) {
     .cert-image-wrapper {
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 3 / 2.5;
         border-radius: 16px;
         margin-bottom: 16px;
+        background: rgba(255, 255, 255, 0.03);
     }
 
     .cert-img-container img {
-        object-fit: cover !important;
-        padding: 0 !important;
+        object-fit: contain !important;
+        padding: 10px !important;
     }
 
     .cert-card-premium {
