@@ -3672,14 +3672,20 @@ footer {
         height: auto;
         min-height: auto;
         position: relative;
-        padding: 40px 0;
+        padding: 40px 0 0 0;
+    }
+
+    .footer-bottom {
+        height: auto;
+        padding: 15px 0;
+        margin-top: 10px;
     }
 
     .footer-avatar-container {
-        transform: scale(1.4);
+        transform: scale(1.1);
         transform-origin: center bottom;
         margin-top: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 0;
     }
 
     .footer-avatar-img {
