@@ -1,6 +1,51 @@
 {
   "pageViews": [
     {
+      "id": "mq3r812ujoztxxhio",
+      "path": "/projects",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:24:33.654Z"
+    },
+    {
+      "id": "mq3r803on9p1i7m23",
+      "path": "/aboutme",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:24:32.388Z"
+    },
+    {
+      "id": "mq3r3vkwrahxkliw7",
+      "path": "/projects/shyara-gold",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:21:19.904Z"
+    },
+    {
+      "id": "mq3r3t8bc3m6m6o5w",
+      "path": "/projects",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:21:16.859Z"
+    },
+    {
+      "id": "mq3r3nuprke8qt3sb",
+      "path": "/",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:21:09.889Z"
+    },
+    {
       "id": "mq3qp8641onwdw1h8",
       "path": "/",
       "referrer": "http://localhost:3000/aboutme",
@@ -398,29 +443,30 @@
     }
   ],
   "summary": {
-    "totalVisits": 44,
+    "totalVisits": 49,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 20,
-      "/aboutme": 10,
-      "/projects": 8,
+      "/": 21,
+      "/aboutme": 11,
+      "/projects": 10,
       "/certificates": 5,
-      "/explanation": 1
+      "/explanation": 1,
+      "/projects/shyara-gold": 1
     },
     "deviceBreakdown": {
-      "desktop": 41,
+      "desktop": 46,
       "mobile": 3,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 42,
+      "Chrome": 47,
       "Safari": 2
     },
     "dailyVisits": {
       "2026-06-04": 9,
       "2026-06-05": 7,
       "2026-06-06": 6,
-      "2026-06-07": 22
+      "2026-06-07": 27
     }
   }
 }

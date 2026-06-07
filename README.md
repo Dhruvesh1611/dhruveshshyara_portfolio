@@ -472,9 +472,7 @@ The hero features a full-screen immersive experience with:
 
 ### ⌘ Command Palette (Cmd+K)
 
-<div align="center">
-<img src="docs/screenshots/command-palette-detail.png" alt="Command Palette with Search Results" width="90%" />
-</div>
+
 
 VS Code-inspired command palette with:
 - **Fuzzy search** across all portfolio content (projects, skills, pages)
