@@ -49,7 +49,7 @@ A **cinematic, high-performance** developer portfolio built with **Next.js 16**,
 
 ### 🎬 Hero Section — Cinematic Landing Experience
 
-<img src="docs/screenshots/hero.png" alt="Hero Section" width="90%" />
+<img src="docs/screenshots/hero1.png" alt="Hero Section" width="90%" />
 
 <br/><br/>
 
