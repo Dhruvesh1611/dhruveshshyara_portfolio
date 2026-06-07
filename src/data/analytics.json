@@ -1,6 +1,213 @@
 {
   "pageViews": [
     {
+      "id": "mq381ng2at0agm50p",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T03:27:43.346Z"
+    },
+    {
+      "id": "mq381meowdlxlchvp",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T03:27:42.000Z"
+    },
+    {
+      "id": "mq381l81iq9ra6574",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T03:27:40.465Z"
+    },
+    {
+      "id": "mq381jtvkmt80rvrs",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T03:27:38.659Z"
+    },
+    {
+      "id": "mq381iwjbjj8a48yw",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T03:27:37.459Z"
+    },
+    {
+      "id": "mq381g3d38uxslsjf",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T03:27:33.817Z"
+    },
+    {
+      "id": "mq3818ldp5klpupwk",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T03:27:24.097Z"
+    },
+    {
+      "id": "mq3811b3cpxt2y268",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T03:27:14.655Z"
+    },
+    {
+      "id": "mq1shsmvlxq8e94rf",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-06T03:24:36.534Z"
+    },
+    {
+      "id": "mq1shj7j6jd65dyqe",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-06T03:24:24.319Z"
+    },
+    {
+      "id": "mq1sh30hl96clh77s",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-06T03:24:03.329Z"
+    },
+    {
+      "id": "mq1sgpg14ypmmdf11",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-06T03:23:45.745Z"
+    },
+    {
+      "id": "mq1sfzmdh75rn1dwi",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-06T03:23:12.277Z"
+    },
+    {
+      "id": "mq1sfy9boiebtmumv",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-06T03:23:10.507Z"
+    },
+    {
+      "id": "mq10uh64al7bfhvcg",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-05T14:30:38.956Z"
+    },
+    {
+      "id": "mq10tuddsyig31zau",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-05T14:30:09.408Z"
+    },
+    {
+      "id": "mq10ttiq1fb6dpa0z",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-05T14:30:08.306Z"
+    },
+    {
+      "id": "mq10tp0sg4l59a2j1",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-05T14:30:02.476Z"
+    },
+    {
+      "id": "mq10ss78rl4zasumk",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-05T14:29:19.940Z"
+    },
+    {
+      "id": "mq10sp4duk48f7wjn",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-05T14:29:15.948Z"
+    },
+    {
+      "id": "mq10so2j40n8a65e1",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-05T14:29:14.587Z"
+    },
+    {
+      "id": "mpzhd334h7hu50klx",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-04T12:37:28.672Z"
+    },
+    {
+      "id": "mpzgm1yz5dun8fdxc",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-04T12:16:27.514Z"
+    },
+    {
       "id": "mpzg67c4qk1v7huqu",
       "path": "/",
       "referrer": "",
@@ -65,24 +272,28 @@
     }
   ],
   "summary": {
-    "totalVisits": 7,
+    "totalVisits": 30,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 4,
-      "/aboutme": 1,
-      "/projects": 1,
-      "/certificates": 1
+      "/": 12,
+      "/aboutme": 5,
+      "/projects": 8,
+      "/certificates": 4,
+      "/explanation": 1
     },
     "deviceBreakdown": {
-      "desktop": 7,
+      "desktop": 30,
       "mobile": 0,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 7
+      "Chrome": 30
     },
     "dailyVisits": {
-      "2026-06-04": 7
+      "2026-06-04": 9,
+      "2026-06-05": 7,
+      "2026-06-06": 6,
+      "2026-06-07": 8
     }
   }
 }
