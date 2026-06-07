@@ -63,11 +63,37 @@ A **cinematic, high-performance** developer portfolio built with **Next.js 16**,
 
 <img src="docs/screenshots/preloader.png" alt="Preloader Screen" width="90%" />
 
+<br/><br/>
+
+### 👤 About Me Page — Education Timeline & Bio
+
+<img src="docs/screenshots/aboutme.png" alt="About Me Page" width="90%" />
+
+<br/><br/>
+
+### 📜 Certificates Page — Achievement Showcase
+
+<img src="docs/screenshots/certificates.png" alt="Certificates Page" width="90%" />
+
+<br/><br/>
+
+### ⌘ Command Palette — VS Code-Style Search
+
+<img src="docs/screenshots/command-palette.png" alt="Command Palette" width="90%" />
+
+<br/><br/>
+
+### 📱 Mobile Responsive — Seamless on Every Device
+
+<img src="docs/screenshots/mobile-responsive.png" alt="Mobile Responsive View" width="45%" />
+
 </div>
 
 ---
 
 ## ✨ Highlights
+
+<br/>
 
 | Feature | Description |
 |---------|-------------|
@@ -187,6 +213,7 @@ flowchart LR
 
 ## 📄 Pages & Routes
 
+
 ### Public Pages
 
 | Route | Page | Description |
@@ -250,6 +277,10 @@ graph TD
 ---
 
 ## 🛠️ Tech Stack
+
+<div align="center">
+<img src="docs/screenshots/tech-stack.png" alt="Tech Stack Overview" width="90%" />
+</div>
 
 ### Core Framework
 
@@ -441,6 +472,10 @@ The hero features a full-screen immersive experience with:
 
 ### ⌘ Command Palette (Cmd+K)
 
+<div align="center">
+<img src="docs/screenshots/command-palette-detail.png" alt="Command Palette with Search Results" width="90%" />
+</div>
+
 VS Code-inspired command palette with:
 - **Fuzzy search** across all portfolio content (projects, skills, pages)
 - **Social links** browsable when no query is entered
@@ -450,12 +485,20 @@ VS Code-inspired command palette with:
 
 ### 👁️ Interactive Footer Avatar
 
+<div align="center">
+<img src="docs/screenshots/footer-avatar.png" alt="Interactive Footer with Eye-Tracking Avatar" width="90%" />
+</div>
+
 Animated avatar in the footer with:
 - **Mouse-tracking eyes** — Pupils follow cursor position in real-time
 - **Math-based movement** — Position calculated as fraction of viewport dimensions
 - **Smooth transitions** — CSS transform with calculated `translate()` values
 
 ### 📊 Custom Analytics
+
+<div align="center">
+<img src="docs/screenshots/analytics.png" alt="Custom Analytics Dashboard" width="90%" />
+</div>
 
 Built-in analytics system independent of Google Analytics:
 - **Page view tracking** per route
@@ -466,6 +509,10 @@ Built-in analytics system independent of Google Analytics:
 ---
 
 ## 📊 Admin Dashboard
+
+<div align="center">
+<img src="docs/screenshots/admin-dashboard.png" alt="Admin Dashboard Overview" width="90%" />
+</div>
 
 The portfolio includes a full-featured admin CMS accessible at `/admin`:
 
@@ -506,6 +553,8 @@ graph LR
 ```
 
 ### Admin Features
+
+
 
 - **Full CRUD operations** for all content types
 - **JSON file-based data persistence** — no external database required
@@ -599,6 +648,10 @@ flowchart LR
 
 ## 📈 Performance
 
+<div align="center">
+<img src="docs/screenshots/lighthouse-score.png" alt="Lighthouse Performance Score" width="90%" />
+</div>
+
 The portfolio is optimized for performance with:
 
 - **Next.js Image Optimization** — Automatic resizing, lazy loading, and WebP conversion
@@ -612,14 +665,18 @@ The portfolio is optimized for performance with:
 
 ## 📁 Featured Projects
 
+<div align="center">
+<img src="docs/screenshots/featured-projects.png" alt="Featured Projects Showcase" width="90%" />
+</div>
+
 | # | Project | Tech Stack | Links |
 |---|---------|------------|-------|
 | 🏆 | **Doppelganger** — Azure AI Code Assistant | TypeScript, VS Code API, Azure OpenAI, ChromaDB | [GitHub](https://github.com/Dhruvesh1611/Doppelganger-March-2026-Eklavya) · [Live](https://azure-ai-code-assistant.vercel.app/) |
 | 👗 | **Yaritu** — Premium Fashion Showcase | Next.js, MongoDB, AWS S3, Cloudinary | [GitHub](https://github.com/Dhruvesh1611/yaritu) · [Live](https://yaritu.vercel.app) |
 | 💍 | **Shyara Gold** — Jewelry E-commerce | React, Node.js, Express, MongoDB | [GitHub](https://github.com/codinggita/shyara_gold) · [Live](https://shyara-gold.netlify.app/) |
-| 🎨 | **Tattoo Studio** — Membership Platform | React, Node.js, JWT, MongoDB | [GitHub](https://github.com/Dhruvesh1611/tattoo-studio) · [Live](https://tattoos-dreamers-studio.onrender.com/) |
+| 🎨 | **Tattoo Studio** — Membership Platform | React, Node.js, JWT, MongoDB | [GitHub](https://github.com/Dhruvesh1611/tattoos_website) · [Live](https://tattoos-dreamers-studio.onrender.com/) |
 | 📄 | **HireLens** — AI Resume Optimizer | Next.js, TypeScript, Gemini API, Redis | [GitHub](https://github.com/Dhruvesh1611/Team-Velox-AI-RESUME-OPTIMIZER) · [Live](https://hirelens.dev) |
-| 🔄 | **YT Shorts Auto-Scroller** | JavaScript, Chrome Extension, Manifest V3 | [GitHub](https://github.com/Dhruvesh1611/youtube-shorts-auto-scroller) |
+| 🔄 | **YT Shorts Auto-Scroller** | JavaScript, Chrome Extension, Manifest V3 | [GitHub](https://github.com/Dhruvesh1611/auto-scroll-extension) |
 
 ---
 

@@ -1,6 +1,123 @@
 {
   "pageViews": [
     {
+      "id": "mq3qp8641onwdw1h8",
+      "path": "/",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:09:56.380Z"
+    },
+    {
+      "id": "mq3qp33l58z9gxce0",
+      "path": "/aboutme",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:09:49.808Z"
+    },
+    {
+      "id": "mq3qm6z2takmosylo",
+      "path": "/aboutme",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:07:34.862Z"
+    },
+    {
+      "id": "mq3ql0k67stehkf66",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:06:39.893Z"
+    },
+    {
+      "id": "mq3qk2g50ec1wrof0",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:05:55.685Z"
+    },
+    {
+      "id": "mq3qi3zl99auxkjpb",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:04:24.369Z"
+    },
+    {
+      "id": "mq3qhhe097k8j9nct",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:03:55.079Z"
+    },
+    {
+      "id": "mq3qge5pojm15ypgh",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:03:04.237Z"
+    },
+    {
+      "id": "mq3qgda8j3i5hjrk3",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T12:03:03.104Z"
+    },
+    {
+      "id": "mq3q916h77ds3dpco",
+      "path": "/",
+      "referrer": "",
+      "device": "mobile",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T11:57:20.824Z"
+    },
+    {
+      "id": "mq3q90eh2st23cj8t",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T11:57:19.817Z"
+    },
+    {
+      "id": "mq3q8u6sjw09d49uk",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T11:57:11.763Z"
+    },
+    {
+      "id": "mq3q8l67cce5j2p6k",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-07T11:57:00.079Z"
+    },
+    {
       "id": "mq3bhch42mo558fst",
       "path": "/",
       "referrer": "",
@@ -281,28 +398,29 @@
     }
   ],
   "summary": {
-    "totalVisits": 31,
+    "totalVisits": 44,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 13,
-      "/aboutme": 5,
+      "/": 20,
+      "/aboutme": 10,
       "/projects": 8,
-      "/certificates": 4,
+      "/certificates": 5,
       "/explanation": 1
     },
     "deviceBreakdown": {
-      "desktop": 31,
-      "mobile": 0,
+      "desktop": 41,
+      "mobile": 3,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 31
+      "Chrome": 42,
+      "Safari": 2
     },
     "dailyVisits": {
       "2026-06-04": 9,
       "2026-06-05": 7,
       "2026-06-06": 6,
-      "2026-06-07": 9
+      "2026-06-07": 22
     }
   }
 }
