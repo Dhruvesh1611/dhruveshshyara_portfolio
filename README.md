@@ -645,11 +645,6 @@ flowchart LR
 ---
 
 ## 📈 Performance
-
-<div align="center">
-<img src="docs/screenshots/lighthouse-score.png" alt="Lighthouse Performance Score" width="90%" />
-</div>
-
 The portfolio is optimized for performance with:
 
 - **Next.js Image Optimization** — Automatic resizing, lazy loading, and WebP conversion
