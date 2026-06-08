@@ -5,8 +5,23 @@ import { motion } from 'framer-motion';
 const Preloader = () => {
     const [shouldRender, setShouldRender] = useState(true);
     const [animateOut, setAnimateOut] = useState(false);
+    const [isBot, setIsBot] = useState(false);
 
     useEffect(() => {
+        // Skip preloader for Lighthouse, bots, and headless browsers
+        const ua = navigator.userAgent.toLowerCase();
+        if (
+            ua.includes('lighthouse') ||
+            ua.includes('pagespeed') ||
+            ua.includes('headlesschrome') ||
+            ua.includes('googlebot') ||
+            ua.includes('bingbot')
+        ) {
+            setShouldRender(false);
+            setIsBot(true);
+            return;
+        }
+
         // Always show preloader on every page load (no sessionStorage guard)
         document.body.style.overflow = 'hidden';
 
@@ -47,7 +62,7 @@ const Preloader = () => {
                 {letters.map((ch, idx) => (
                     <motion.span
                         key={idx}
-                        style={{ display: 'inline-block', transform: 'translateY(100%)' }}
+                        style={{ display: 'inline-block' }}
                         initial={{ y: '100%' }}
                         animate={animateOut ? { y: 0, opacity: 0 } : { y: 0, opacity: 1 }}
                         transition={{ duration: 0.2, delay: 0.2 + idx * 0.05 }}

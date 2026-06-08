@@ -1,6 +1,69 @@
 {
   "pageViews": [
     {
+      "id": "mq4o940b84am54mrk",
+      "path": "/explanation",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-08T03:49:11.435Z"
+    },
+    {
+      "id": "mq4o8ypf6amyfn3ln",
+      "path": "/explanation",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-08T03:49:04.563Z"
+    },
+    {
+      "id": "mq4o8x14mypegm1g4",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-08T03:49:02.392Z"
+    },
+    {
+      "id": "mq4o8w1tehsmdml8i",
+      "path": "/projects",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-08T03:49:01.121Z"
+    },
+    {
+      "id": "mq4o8ueo99etf4u7o",
+      "path": "/aboutme",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-08T03:48:58.991Z"
+    },
+    {
+      "id": "mq4o8ra4dog8y5uy4",
+      "path": "/projects",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-08T03:48:54.939Z"
+    },
+    {
+      "id": "mq4o8o4phuscg5v27",
+      "path": "/aboutme",
+      "referrer": "http://localhost:3000/aboutme",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-08T03:48:50.856Z"
+    },
+    {
       "id": "mq3r812ujoztxxhio",
       "path": "/projects",
       "referrer": "http://localhost:3000/aboutme",
@@ -443,30 +506,31 @@
     }
   ],
   "summary": {
-    "totalVisits": 49,
+    "totalVisits": 56,
     "uniqueVisitors": 1,
     "topPages": {
       "/": 21,
-      "/aboutme": 11,
-      "/projects": 10,
-      "/certificates": 5,
-      "/explanation": 1,
+      "/aboutme": 13,
+      "/projects": 12,
+      "/certificates": 6,
+      "/explanation": 3,
       "/projects/shyara-gold": 1
     },
     "deviceBreakdown": {
-      "desktop": 46,
+      "desktop": 53,
       "mobile": 3,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 47,
+      "Chrome": 54,
       "Safari": 2
     },
     "dailyVisits": {
       "2026-06-04": 9,
       "2026-06-05": 7,
       "2026-06-06": 6,
-      "2026-06-07": 27
+      "2026-06-07": 27,
+      "2026-06-08": 7
     }
   }
 }
