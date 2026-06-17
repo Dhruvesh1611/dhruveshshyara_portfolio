@@ -12,7 +12,8 @@
     ],
     "featured": true,
     "displayOrder": 1,
-    "status": "published"
+    "status": "published",
+    "category": "Skill"
   },
   {
     "id": "cert_2",
@@ -27,7 +28,8 @@
     ],
     "featured": true,
     "displayOrder": 2,
-    "status": "published"
+    "status": "published",
+    "category": "Skill"
   },
   {
     "id": "cert_3",
@@ -42,7 +44,8 @@
     ],
     "featured": true,
     "displayOrder": 3,
-    "status": "published"
+    "status": "published",
+    "category": "Skill"
   },
   {
     "id": "cert_4",
@@ -57,7 +60,8 @@
     ],
     "featured": false,
     "displayOrder": 4,
-    "status": "published"
+    "status": "published",
+    "category": "Skill"
   },
   {
     "id": "cert_5",
@@ -73,7 +77,8 @@
     ],
     "featured": false,
     "displayOrder": 5,
-    "status": "published"
+    "status": "published",
+    "category": "Skill"
   },
   {
     "id": "cert_6",
@@ -89,7 +94,8 @@
     ],
     "featured": false,
     "displayOrder": 6,
-    "status": "published"
+    "status": "published",
+    "category": "Skill"
   },
   {
     "id": "cert_7",
@@ -105,7 +111,8 @@
     ],
     "featured": false,
     "displayOrder": 7,
-    "status": "published"
+    "status": "published",
+    "category": "Skill"
   },
   {
     "id": "cert_8",
@@ -121,7 +128,8 @@
     ],
     "featured": false,
     "displayOrder": 8,
-    "status": "published"
+    "status": "published",
+    "category": "Skill"
   },
   {
     "id": "cert_9",
@@ -138,6 +146,94 @@
     "featured": true,
     "displayOrder": 9,
     "status": "published",
-    "updatedAt": "2026-06-04T05:24:12.748Z"
+    "updatedAt": "2026-06-04T05:24:12.748Z",
+    "category": "Skill"
+  },
+  {
+    "id": "cert_5vwcw4t2j",
+    "title": "Doppelganger Build Sprint - 1st Rank",
+    "issuer": "OpenPools.in",
+    "description": "Certificate of Excellence for achieving Top Rank in Doppelganger, the OpenPools collaborative 30 hours build sprint. Team Eklavya demonstrated exceptional synergy, execution, and innovation.",
+    "date": "2026",
+    "image": "/certificates/doppelganger-1st.png",
+    "link": "",
+    "relatedSkills": [
+      "Hackathon",
+      "AI",
+      "Development"
+    ],
+    "featured": true,
+    "displayOrder": 10,
+    "status": "published",
+    "category": "Hackathon"
+  },
+  {
+    "id": "cert_vie4m70xx",
+    "title": "OceanLab X CHARUSAT Hacks 2026",
+    "issuer": "DEPSTAR & OceanLab Technology",
+    "description": "Participated in the AI-First Open Innovation Hackathon — 'BUILD AI-FIRST SAAS', a national-level 48-hour offline hackathon.",
+    "date": "April 2026",
+    "image": "/certificates/charusat-hacks-2026.png",
+    "link": "",
+    "relatedSkills": [
+      "Hackathon",
+      "SaaS",
+      "AI"
+    ],
+    "featured": true,
+    "displayOrder": 11,
+    "status": "published",
+    "category": "Hackathon"
+  },
+  {
+    "id": "cert_munxlguec",
+    "title": "DOTSLASH 9.0",
+    "issuer": "SVNIT, Surat",
+    "description": "Successfully qualified through the online screening and secured a spot in the offline round of DOTSLASH 9.0 hackathon.",
+    "date": "2026",
+    "image": "/certificates/dotslash-9.png",
+    "link": "",
+    "relatedSkills": [
+      "Hackathon",
+      "Problem Solving"
+    ],
+    "featured": true,
+    "displayOrder": 12,
+    "status": "published",
+    "category": "Hackathon"
+  },
+  {
+    "id": "cert_o7swiwzzp",
+    "title": "NEXOTHON 2025",
+    "issuer": "IEEE GCET Student Branch",
+    "description": "Actively participated in NEXOTHON 2025, a 24-Hour Hackathon held at G H Patel College of Engineering & Technology.",
+    "date": "August 2025",
+    "image": "/certificates/nexothon-2025.png",
+    "link": "",
+    "relatedSkills": [
+      "Hackathon",
+      "Development"
+    ],
+    "featured": true,
+    "displayOrder": 13,
+    "status": "published",
+    "category": "Hackathon"
+  },
+  {
+    "id": "cert_buh0ghb89",
+    "title": "TECH EXPO - 2025",
+    "issuer": "Rai University",
+    "description": "Successfully participated in TECH EXPO - 2025 Project Exhibition organized by Rai School of Engineering.",
+    "date": "February 2025",
+    "image": "/certificates/tech-expo-2025.png",
+    "link": "",
+    "relatedSkills": [
+      "Exhibition",
+      "Project Showcase"
+    ],
+    "featured": true,
+    "displayOrder": 14,
+    "status": "published",
+    "category": "Hackathon"
   }
 ]

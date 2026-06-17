@@ -118,6 +118,7 @@ export default function CertificatesListPage() {
               <tr>
                 <th>Certificate</th>
                 <th>Issuer</th>
+                <th>Category</th>
                 <th>Status</th>
                 <th>Featured</th>
                 <th>Actions</th>
@@ -133,6 +134,7 @@ export default function CertificatesListPage() {
                     </div>
                   </td>
                   <td>{cert.issuer}</td>
+                  <td><span className="admin-badge" style={{ background: 'rgba(255,255,255,0.05)', color: '#fff' }}>{cert.category || 'Skill'}</span></td>
                   <td><span className={`admin-badge admin-badge--${cert.status}`}>{cert.status}</span></td>
                   <td>
                     <button className="admin-btn admin-btn--ghost admin-btn--icon" onClick={() => handleToggleFeatured(cert)}>

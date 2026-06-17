@@ -5,7 +5,7 @@ import { HiOutlineSave, HiOutlineEye } from 'react-icons/hi';
 
 export default function CertForm({ initialData, onSubmit, isEdit = false }) {
   const [form, setForm] = useState({
-    title: '', issuer: '', description: '', date: '', image: '', link: '', status: 'draft', featured: false, relatedSkills: [], ...initialData
+    title: '', issuer: '', description: '', date: '', image: '', link: '', status: 'draft', featured: false, category: 'Skill', relatedSkills: [], ...initialData
   });
   const [saving, setSaving] = useState(false);
   const [errors, setErrors] = useState({});
@@ -53,6 +53,13 @@ export default function CertForm({ initialData, onSubmit, isEdit = false }) {
           <label className="admin-form-label">Credential Link</label>
           <input className="admin-form-input" value={form.link} onChange={e => setForm({ ...form, link: e.target.value })} />
         </div>
+      </div>
+      <div className="admin-form-group">
+        <label className="admin-form-label">Category</label>
+        <select className="admin-form-input" value={form.category} onChange={e => setForm({ ...form, category: e.target.value })}>
+          <option value="Skill">Skill</option>
+          <option value="Hackathon">Hackathon</option>
+        </select>
       </div>
       <div className="admin-form-group">
         <label className="admin-form-label">Description</label>

@@ -317,15 +317,6 @@ const ProjectsPage = () => {
                     pointer-events: none;
                 }
 
-                .full-page-hero {
-                    height: 90vh;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    text-align: center;
-                }
 
 
 
@@ -549,8 +540,6 @@ const ProjectsPage = () => {
                     :global(.card-title) { font-size: 2rem; min-height: auto; }
                     :global(.card-desc) { font-size: 1.3rem; }
                     :global(.card-category-tag) { top: 15px; left: 15px; padding: 6px 14px; font-size: 1rem; }
-                    .full-page-hero { height: 70vh; }
-                    .projects-grid-section { padding: 0 4% 100px; }
                     .filter-tabs { gap: 8px; margin-bottom: 40px; }
                     .filter-tab { padding: 8px 16px; font-size: 1.2rem; }
                     .hero-subtitle { font-size: 1rem !important; letter-spacing: 0.2em !important; }
@@ -563,8 +552,6 @@ const ProjectsPage = () => {
                     :global(.card-title) { font-size: 1.8rem; }
                     :global(.card-desc) { font-size: 1.2rem; -webkit-line-clamp: 2; }
                     :global(.card-tag) { font-size: 0.9rem; padding: 4px 10px; }
-                    .full-page-hero { height: 60vh; }
-                    .projects-grid-section { padding: 0 3% 80px; }
                     .filter-tabs { gap: 6px; margin-bottom: 30px; }
                     .filter-tab { padding: 6px 12px; font-size: 1.1rem; }
                 }

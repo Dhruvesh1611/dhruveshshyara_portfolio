@@ -2583,12 +2583,6 @@ const AboutMePage = () => {
                     .edu-result-badge { margin-left: auto; margin-right: auto; }
                     .journey-scroll-content { padding: 40px 5%; }
                     .education-scroll-content { padding: 40px 5%; }
-                    .full-page-hero { 
-                        height: 100svh;
-                        height: 100vh;
-                        min-height: 100svh;
-                        min-height: 100vh;
-                    }
                     .hero-subtitle { font-size: 1rem !important; letter-spacing: 0.2em !important; }
                 }
 

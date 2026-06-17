@@ -20,6 +20,7 @@ const allCertificates = [...certificatesData]
         image: c.image,
         description: c.description,
         featured: c.featured,
+        category: c.category || 'Skill',
     }));
 
 const CertificateCard = ({ cert }) => {
@@ -150,7 +151,17 @@ const CertificateCard = ({ cert }) => {
     );
 };
 
+const categories = ['All', 'Skill Certificates', 'Hackathon Certificates'];
+
 const CertificatesPage = () => {
+    const [activeCategory, setActiveCategory] = useState('All');
+
+    const filteredCertificates = activeCategory === 'All'
+        ? allCertificates
+        : activeCategory === 'Skill Certificates'
+            ? allCertificates.filter(c => c.category === 'Skill')
+            : allCertificates.filter(c => c.category === 'Hackathon');
+
     return (
         <>
             <Navbar />
@@ -190,11 +201,36 @@ const CertificatesPage = () => {
                 </section>
 
                 <section className="certs-grid-section">
+                    <div className="filter-tabs">
+                        {categories.map((cat) => (
+                            <button
+                                key={cat}
+                                className={`filter-tab ${activeCategory === cat ? 'active' : ''}`}
+                                onClick={() => setActiveCategory(cat)}
+                            >
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
+
                     <div className="certs-grid">
                         <AnimatePresence mode='popLayout'>
-                            {allCertificates.map((cert) => (
-                                <CertificateCard key={cert.id} cert={cert} />
-                            ))}
+                            {filteredCertificates.length > 0 ? (
+                                filteredCertificates.map((cert) => (
+                                    <CertificateCard key={cert.id} cert={cert} />
+                                ))
+                            ) : (
+                                <motion.div
+                                    className="coming-soon-card"
+                                    initial={{ opacity: 0, y: 40 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                                    style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '100px 40px', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '32px', border: '1px dashed rgba(255, 255, 255, 0.1)' }}
+                                >
+                                    <h3 style={{ fontSize: '2rem', color: '#fff', marginBottom: '10px' }}>Nothing here yet</h3>
+                                    <p style={{ color: 'rgba(255, 255, 255, 0.4)', fontSize: '1.2rem' }}>Check back later for updates to this category.</p>
+                                </motion.div>
+                            )}
                         </AnimatePresence>
                     </div>
                 </section>
@@ -210,15 +246,6 @@ const CertificatesPage = () => {
                     pointer-events: none;
                 }
 
-                .full-page-hero {
-                    height: 90vh;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    text-align: center;
-                }
 
 
 
@@ -235,6 +262,38 @@ const CertificatesPage = () => {
                     padding: 0 5% 150px;
                     max-width: 1600px;
                     margin: 0 auto;
+                }
+
+                .filter-tabs {
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                    margin-bottom: 60px;
+                }
+
+                .filter-tab {
+                    padding: 12px 28px;
+                    background: rgba(255,255,255,0.03);
+                    border: 1px solid rgba(255,255,255,0.08);
+                    color: #fff;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    font-size: 1.4rem;
+                    font-family: var(--font-fira-code);
+                    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+                }
+
+                .filter-tab:hover {
+                    background: rgba(255,255,255,0.08);
+                    border-color: rgba(255,255,255,0.2);
+                }
+
+                .filter-tab.active {
+                    background: #fff;
+                    color: #000;
+                    border-color: #fff;
+                    box-shadow: 0 10px 30px rgba(255,255,255,0.2);
                 }
 
                 .certs-grid {
@@ -350,8 +409,6 @@ const CertificatesPage = () => {
                     :global(.cert-content) { padding: 20px; gap: 10px; }
                     :global(.cert-issuer) { font-size: 1.3rem; }
                     :global(.cert-date-tag) { top: 15px; left: 15px; padding: 6px 14px; font-size: 1rem; }
-                    .full-page-hero { height: 70vh; }
-                    .certs-grid-section { padding: 0 4% 100px; }
                     .hero-subtitle { font-size: 1rem !important; letter-spacing: 0.2em !important; }
                 }
 
@@ -361,8 +418,6 @@ const CertificatesPage = () => {
                     :global(.cert-title) { font-size: 1.8rem; }
                     :global(.cert-content) { padding: 16px; }
                     :global(.cert-issuer) { font-size: 1.2rem; }
-                    .full-page-hero { height: 60vh; }
-                    .certs-grid-section { padding: 0 3% 80px; }
                 }
             `}</style>
         </>
