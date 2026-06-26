@@ -20,10 +20,10 @@ const HackathonsPage = () => {
 
     // Specific positions and data for the floating layout
     const positions = [
-        { top: "8%", left: "4%", rotate: -8, label: "The Vibe" },
-        { top: "16%", right: "4%", rotate: 6, label: "The Energy" },
-        { bottom: "16%", left: "6%", rotate: -5, label: "The Squad" },
-        { bottom: "8%", right: "6%", rotate: 8, label: "Moments" }
+        { top: "12%", left: "12%", rotate: -8, label: "The Vibe" },
+        { top: "20%", right: "8%", rotate: 6, label: "The Energy" },
+        { bottom: "22%", left: "14%", rotate: -5, label: "The Squad" },
+        { bottom: "14%", right: "12%", rotate: 8, label: "Moments" }
     ];
 
     return (
@@ -32,56 +32,61 @@ const HackathonsPage = () => {
 
             <main className="page-container">
                 {/* ── Hero Section ── */}
-                <section className="hack-hero">
-                    <div className="hack-hero-bg-glow" />
-
-                    <motion.span
-                        className="hack-hero-subtitle"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                        MEMORIES &amp; MOMENTS
-                    </motion.span>
-
-                    <motion.h1
-                        className="hack-hero-title"
-                        initial={{ opacity: 0, scale: 0.85, y: 30 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
-                    >
-                        HACKATHONS
-                    </motion.h1>
-
-                    <motion.p
-                        className="hack-hero-bottom-text"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.8 }}
-                    >
-                        Snapshots from the builds, the people, and the memories.
-                    </motion.p>
-
+                <section className="full-page-hero">
+                    <div className="hero-glow"></div>
+                    <div className="hero-content">
+                        <motion.span
+                            className="hero-subtitle"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            MEMORIES &amp; MOMENTS
+                        </motion.span>
+                        <motion.h1
+                            className="hero-main-title"
+                            initial={{ opacity: 0, scale: 0.85, y: 30 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
+                        >
+                            HACKATHONS
+                        </motion.h1>
+                        <motion.div
+                            className="hero-flare"
+                            initial={{ scaleX: 0, opacity: 0 }}
+                            animate={{ scaleX: 1, opacity: 1 }}
+                            transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
+                            style={{ transformOrigin: 'center' }}
+                        >
+                            <div className="hero-flare-dot" />
+                        </motion.div>
+                        <motion.p
+                            className="hero-bottom-text"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.8 }}
+                        >
+                            Snapshots from the builds, the people, and the memories.
+                        </motion.p>
+                    </div>
                     <motion.div
-                        className="hack-hero-scroll"
+                        className="hero-scroll-indicator"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.4, duration: 0.8 }}
                         onClick={scrollToGallery}
                     >
-                        <div className="hack-scroll-mouse">
-                            <div className="hack-scroll-wheel" />
-                        </div>
-                        <span className="hack-scroll-text">SCROLL</span>
+                        <div className="hero-scroll-mouse"><div className="hero-scroll-wheel" /></div>
+                        <span className="hero-scroll-text">SCROLL TO EXPLORE</span>
                     </motion.div>
                 </section>
 
                 {/* ── Floating Memory Collage Section ── */}
                 <section className="collage-section" id="collage-section" ref={containerRef}>
                     <div className="collage-container">
-                        
+
                         {/* Center Card */}
-                        <motion.div 
+                        <motion.div
                             className="center-card"
                             initial={{ opacity: 0, scale: 0.8, y: 50 }}
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -89,28 +94,28 @@ const HackathonsPage = () => {
                             transition={{ duration: 1, type: "spring", stiffness: 80 }}
                         >
                             <div className="center-card-header">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{marginRight: '8px'}}><path d="M12 2L2 22h20L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px' }}><path d="M12 2L2 22h20L12 2z" /></svg>
                                 OCEANLAB × CHARUSAT HACKS 2026
                             </div>
                             <div className="center-card-title">48 HOURS</div>
                             <div className="center-card-subtitle">of Ideas, Code &amp; Passion</div>
                             <p className="center-card-text">
-                                Built an AI-first SaaS solution,<br/>
-                                collaborated with amazing people,<br/>
+                                Built an AI-first SaaS solution,<br />
+                                collaborated with amazing people,<br />
                                 and created memories for a lifetime.
                             </p>
                             <div className="center-card-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
                             </div>
                         </motion.div>
 
                         {/* Floating Photos */}
                         {photos.slice(0, 4).map((photo, index) => {
                             const pos = positions[index];
-                            if(!pos) return null;
+                            if (!pos) return null;
 
                             return (
-                                <motion.div 
+                                <motion.div
                                     key={photo.id || index}
                                     className={`collage-photo-wrapper float-anim-${index}`}
                                     style={{
@@ -132,7 +137,7 @@ const HackathonsPage = () => {
                                             <div style={{ position: 'absolute', inset: 0, background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>No Image</div>
                                         )}
                                     </div>
-                                    
+
                                     <div className={`handwritten-label label-${index}`}>
                                         <span className="label-text">{pos.label}</span>
                                         <svg className="handdrawn-arrow" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -150,114 +155,7 @@ const HackathonsPage = () => {
             <Footer />
 
             <style jsx>{`
-                .hack-hero {
-                    width: 100%;
-                    height: 100vh;
-                    min-height: 100vh;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    overflow: hidden;
-                    text-align: center;
-                    background: #050816;
-                    padding: 0 5%;
-                    margin-top: -90px;
-                    padding-top: 90px;
-                }
 
-                .hack-hero-bg-glow {
-                    position: absolute;
-                    width: 1000px;
-                    height: 1000px;
-                    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    pointer-events: none;
-                    z-index: 0;
-                }
-
-                :global(.hack-hero-subtitle) {
-                    font-size: 1.1rem;
-                    letter-spacing: 0.4em;
-                    color: rgba(255, 255, 255, 0.6);
-                    font-family: var(--font-fira-code);
-                    text-transform: uppercase;
-                    margin-bottom: 24px;
-                    position: relative;
-                    z-index: 1;
-                }
-
-                :global(.hack-hero-title) {
-                    font-size: 15vw;
-                    font-weight: 900;
-                    line-height: 0.85;
-                    margin: 0;
-                    letter-spacing: 0.02em;
-                    color: #fff;
-                    text-transform: uppercase;
-                    font-family: var(--font-anton), sans-serif;
-                    position: relative;
-                    z-index: 1;
-                    text-shadow: 0 0 100px rgba(59, 130, 246, 0.25);
-                }
-
-                :global(.hack-hero-bottom-text) {
-                    font-family: var(--font-playfair), serif;
-                    font-style: italic;
-                    font-size: clamp(1.4rem, 2.5vw, 2.2rem);
-                    margin-top: 40px;
-                    color: rgba(255, 255, 255, 0.7);
-                    font-weight: 400;
-                    position: relative;
-                    z-index: 1;
-                }
-
-                :global(.hack-hero-scroll) {
-                    position: absolute;
-                    bottom: 50px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 12px;
-                    cursor: pointer;
-                    z-index: 1;
-                }
-
-                .hack-scroll-mouse {
-                    width: 24px;
-                    height: 38px;
-                    border: 2px solid rgba(255, 255, 255, 0.4);
-                    border-radius: 14px;
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                }
-
-                .hack-scroll-wheel {
-                    width: 3px;
-                    height: 8px;
-                    background: rgba(255, 255, 255, 0.7);
-                    border-radius: 3px;
-                    margin-top: 8px;
-                    animation: scrollPulse 2s infinite ease-in-out;
-                }
-
-                @keyframes scrollPulse {
-                    0%, 100% { opacity: 1; transform: translateY(0); }
-                    50% { opacity: 0.3; transform: translateY(6px); }
-                }
-
-                .hack-scroll-text {
-                    font-size: 0.7rem;
-                    letter-spacing: 0.2em;
-                    color: rgba(255, 255, 255, 0.4);
-                    font-family: var(--font-fira-code);
-                }
 
                 /* ── Collage Section ── */
                 .collage-section {
@@ -352,7 +250,7 @@ const HackathonsPage = () => {
                 /* ── Floating Photos ── */
                 :global(.collage-photo-wrapper) {
                     position: absolute;
-                    width: clamp(240px, 22vw, 360px);
+                    width: clamp(280px, 28vw, 460px);
                     aspect-ratio: 4/3;
                 }
 
@@ -437,9 +335,7 @@ const HackathonsPage = () => {
                 }
                 
                 @media (max-width: 768px) {
-                    .hack-hero { height: 100svh; min-height: 100svh; }
-                    :global(.hack-hero-subtitle) { font-size: 0.9rem; letter-spacing: 0.3em; }
-                    :global(.hack-hero-bottom-text) { font-size: 1.1rem; margin-top: 30px; }
+                    .hero-section { height: 100svh; min-height: 100svh; }
                     
                     .collage-section { padding: 40px 0 100px; }
                     .collage-container {
