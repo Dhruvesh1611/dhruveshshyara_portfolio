@@ -1,0 +1,68 @@
+
+> portfolio-nextjs@0.1.0 build
+> next build
+
+▲ Next.js 16.1.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.3s
+  Running TypeScript ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/35) ...
+  Generating static pages using 7 workers (8/35) 
+  Generating static pages using 7 workers (17/35) 
+  Generating static pages using 7 workers (26/35) 
+✓ Generating static pages using 7 workers (35/35) in 187.8ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /aboutme
+├ ○ /admin
+├ ○ /admin/about
+├ ○ /admin/analytics
+├ ○ /admin/appearance
+├ ○ /admin/certificates
+├ ƒ /admin/certificates/[id]/edit
+├ ○ /admin/certificates/new
+├ ○ /admin/content
+├ ○ /admin/experience
+├ ○ /admin/login
+├ ○ /admin/media
+├ ○ /admin/messages
+├ ○ /admin/projects
+├ ƒ /admin/projects/[id]/edit
+├ ○ /admin/projects/new
+├ ○ /admin/seo
+├ ○ /admin/settings
+├ ○ /admin/skills
+├ ƒ /api/admin/about
+├ ƒ /api/admin/analytics
+├ ƒ /api/admin/certificates
+├ ƒ /api/admin/certificates/[id]
+├ ƒ /api/admin/dashboard
+├ ƒ /api/admin/experience
+├ ƒ /api/admin/experience/[id]
+├ ƒ /api/admin/projects
+├ ƒ /api/admin/projects/[id]
+├ ƒ /api/admin/settings
+├ ƒ /api/admin/skills
+├ ƒ /api/admin/skills/[id]
+├ ƒ /api/admin/skills/reorder
+├ ƒ /api/analytics/track
+├ ƒ /api/auth/[...nextauth]
+├ ○ /certificates
+├ ○ /explanation
+├ ○ /icon.png
+├ ○ /projects
+└ ƒ /projects/[slug]
+
+Route (pages)
+┌ ƒ /api/leetcode
+└ ƒ /api/youtube
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

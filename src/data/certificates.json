@@ -143,10 +143,10 @@
       "DocumentDB",
       "Databases"
     ],
-    "featured": true,
+    "featured": false,
     "displayOrder": 9,
     "status": "published",
-    "updatedAt": "2026-06-04T05:24:12.748Z",
+    "updatedAt": "2026-06-26T05:38:38.032Z",
     "category": "Skill"
   },
   {
@@ -165,7 +165,8 @@
     "featured": true,
     "displayOrder": 10,
     "status": "published",
-    "category": "Hackathon"
+    "category": "Hackathon",
+    "updatedAt": "2026-06-26T05:38:44.774Z"
   },
   {
     "id": "cert_vie4m70xx",
@@ -180,10 +181,11 @@
       "SaaS",
       "AI"
     ],
-    "featured": true,
+    "featured": false,
     "displayOrder": 11,
     "status": "published",
-    "category": "Hackathon"
+    "category": "Hackathon",
+    "updatedAt": "2026-06-26T05:38:40.025Z"
   },
   {
     "id": "cert_munxlguec",
@@ -197,10 +199,11 @@
       "Hackathon",
       "Problem Solving"
     ],
-    "featured": true,
+    "featured": false,
     "displayOrder": 12,
     "status": "published",
-    "category": "Hackathon"
+    "category": "Hackathon",
+    "updatedAt": "2026-06-26T05:38:40.825Z"
   },
   {
     "id": "cert_o7swiwzzp",
@@ -214,10 +217,11 @@
       "Hackathon",
       "Development"
     ],
-    "featured": true,
+    "featured": false,
     "displayOrder": 13,
     "status": "published",
-    "category": "Hackathon"
+    "category": "Hackathon",
+    "updatedAt": "2026-06-26T05:38:41.324Z"
   },
   {
     "id": "cert_buh0ghb89",
@@ -231,9 +235,10 @@
       "Exhibition",
       "Project Showcase"
     ],
-    "featured": true,
+    "featured": false,
     "displayOrder": 14,
     "status": "published",
-    "category": "Hackathon"
+    "category": "Hackathon",
+    "updatedAt": "2026-06-26T05:38:42.037Z"
   }
 ]

@@ -1,6 +1,87 @@
 {
   "pageViews": [
     {
+      "id": "mqui6h9yzhsbpivt6",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T05:41:11.541Z"
+    },
+    {
+      "id": "mqui4lacdo1ejzw2a",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T05:39:43.427Z"
+    },
+    {
+      "id": "mqui0jyqybzi3gnji",
+      "path": "/login",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T05:36:35.090Z"
+    },
+    {
+      "id": "mqui0g3hd2k6soi5u",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T05:36:30.077Z"
+    },
+    {
+      "id": "mqui0baevv0f6yd40",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T05:36:23.845Z"
+    },
+    {
+      "id": "mquhzidtfaxwyhuhy",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T05:35:46.385Z"
+    },
+    {
+      "id": "mquhzhbnmyao0rq0z",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T05:35:45.011Z"
+    },
+    {
+      "id": "mquhz5hkx6zfdtiga",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T05:35:29.672Z"
+    },
+    {
+      "id": "mquhs4b6l2kioym44",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T05:30:01.553Z"
+    },
+    {
       "id": "mqhlyx4h4fn9up4ej",
       "path": "/explanation",
       "referrer": "",
@@ -1649,23 +1730,24 @@
     }
   ],
   "summary": {
-    "totalVisits": 183,
+    "totalVisits": 192,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 36,
-      "/aboutme": 45,
+      "/": 40,
+      "/aboutme": 46,
       "/projects": 47,
-      "/certificates": 32,
-      "/explanation": 22,
-      "/projects/shyara-gold": 1
+      "/certificates": 33,
+      "/explanation": 24,
+      "/projects/shyara-gold": 1,
+      "/login": 1
     },
     "deviceBreakdown": {
-      "desktop": 180,
+      "desktop": 189,
       "mobile": 3,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 181,
+      "Chrome": 190,
       "Safari": 2
     },
     "dailyVisits": {
@@ -1674,7 +1756,8 @@
       "2026-06-06": 6,
       "2026-06-07": 27,
       "2026-06-08": 48,
-      "2026-06-17": 86
+      "2026-06-17": 86,
+      "2026-06-26": 9
     }
   }
 }
