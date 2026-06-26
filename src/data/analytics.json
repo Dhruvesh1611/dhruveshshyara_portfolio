@@ -1,6 +1,168 @@
 {
   "pageViews": [
     {
+      "id": "mquqku2yn0nrwxwlp",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:36:18.250Z"
+    },
+    {
+      "id": "mquqkqullhopxb1kw",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:36:14.060Z"
+    },
+    {
+      "id": "mquqkp671fc26v4yq",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:36:11.886Z"
+    },
+    {
+      "id": "mquqkmwpktu5f4rrt",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:36:08.952Z"
+    },
+    {
+      "id": "mquqkkj7d60ajdfp0",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:36:05.874Z"
+    },
+    {
+      "id": "mquqkgil11t5oqulq",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:36:00.668Z"
+    },
+    {
+      "id": "mquqjz7424cocfhlg",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:35:38.224Z"
+    },
+    {
+      "id": "mquqjrk32c1jtmpg5",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:35:28.321Z"
+    },
+    {
+      "id": "mquqjh12ofgbluvrp",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:35:14.676Z"
+    },
+    {
+      "id": "mquqj42edw3x8fz78",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:34:57.877Z"
+    },
+    {
+      "id": "mquqiyzmn005rn0en",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:34:51.297Z"
+    },
+    {
+      "id": "mquqivvet5ul2vlna",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:34:47.258Z"
+    },
+    {
+      "id": "mquqiqlk6aly9yw3e",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:34:40.423Z"
+    },
+    {
+      "id": "mquqidouk5upqlyuu",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:34:23.694Z"
+    },
+    {
+      "id": "mquqic38k5urmu6f6",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:34:21.620Z"
+    },
+    {
+      "id": "mquqi9dwp0e5em4rj",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:34:18.116Z"
+    },
+    {
+      "id": "mquqi7qd3c4x4nclh",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:34:15.973Z"
+    },
+    {
+      "id": "mquqi53xs1vl77a6r",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:34:12.572Z"
+    },
+    {
       "id": "mquqerjaasz3jvn5z",
       "path": "/hackathons",
       "referrer": "",
@@ -2684,27 +2846,27 @@
     }
   ],
   "summary": {
-    "totalVisits": 298,
+    "totalVisits": 316,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 52,
-      "/aboutme": 52,
-      "/projects": 58,
-      "/certificates": 60,
-      "/explanation": 47,
+      "/": 53,
+      "/aboutme": 55,
+      "/projects": 62,
+      "/certificates": 63,
+      "/explanation": 51,
       "/projects/shyara-gold": 1,
       "/login": 1,
       "/projects/doppelganger": 3,
       "/projects/yaritu": 1,
-      "/hackathons": 23
+      "/hackathons": 26
     },
     "deviceBreakdown": {
-      "desktop": 288,
+      "desktop": 306,
       "mobile": 10,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 289,
+      "Chrome": 307,
       "Safari": 9
     },
     "dailyVisits": {
@@ -2714,7 +2876,7 @@
       "2026-06-07": 27,
       "2026-06-08": 48,
       "2026-06-17": 86,
-      "2026-06-26": 115
+      "2026-06-26": 133
     }
   }
 }

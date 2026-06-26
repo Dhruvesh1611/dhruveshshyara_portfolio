@@ -1,14 +1,50 @@
 [
   {
-    "title": "w",
-    "description": "",
-    "date": "",
-    "image": "/certificates/charusat-hacks-2026.png",
+    "title": "OceanLab x Charusat Hacks",
+    "description": "48 HOURS of Ideas, Code & Passion",
+    "date": "April 2026",
+    "image": "/hackathons/charusat/charusat1.png",
+    "status": "published",
+    "featured": true,
+    "id": "charusat1",
+    "displayOrder": 1,
+    "createdAt": "2026-06-26T10:00:00.000Z",
+    "updatedAt": "2026-06-26T10:00:00.000Z"
+  },
+  {
+    "title": "The Squad",
+    "description": "Building an AI-first SaaS solution, collaborating with amazing people.",
+    "date": "April 2026",
+    "image": "/hackathons/charusat/charusat2.png",
     "status": "published",
     "featured": false,
-    "id": "mqukyn5s9c1jw09h0",
-    "displayOrder": 1,
-    "createdAt": "2026-06-26T06:59:04.768Z",
-    "updatedAt": "2026-06-26T06:59:04.768Z"
+    "id": "charusat2",
+    "displayOrder": 2,
+    "createdAt": "2026-06-26T10:00:00.000Z",
+    "updatedAt": "2026-06-26T10:00:00.000Z"
+  },
+  {
+    "title": "The Vibe",
+    "description": "Pitching the product and presenting our vision.",
+    "date": "April 2026",
+    "image": "/hackathons/charusat/charusat3.png",
+    "status": "published",
+    "featured": false,
+    "id": "charusat3",
+    "displayOrder": 3,
+    "createdAt": "2026-06-26T10:00:00.000Z",
+    "updatedAt": "2026-06-26T10:00:00.000Z"
+  },
+  {
+    "title": "The Moment",
+    "description": "Created memories for a lifetime.",
+    "date": "April 2026",
+    "image": "/hackathons/charusat/charusat4.png",
+    "status": "published",
+    "featured": false,
+    "id": "charusat4",
+    "displayOrder": 4,
+    "createdAt": "2026-06-26T10:00:00.000Z",
+    "updatedAt": "2026-06-26T10:00:00.000Z"
   }
 ]

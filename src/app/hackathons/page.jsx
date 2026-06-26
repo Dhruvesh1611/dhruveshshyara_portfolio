@@ -1,4 +1,5 @@
 'use client';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -12,8 +13,18 @@ const HackathonsPage = () => {
         .sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0));
 
     const scrollToGallery = () => {
-        document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('collage-section')?.scrollIntoView({ behavior: 'smooth' });
     };
+
+    const containerRef = useRef(null);
+
+    // Specific positions and data for the floating layout
+    const positions = [
+        { top: "8%", left: "4%", rotate: -8, label: "The Vibe" },
+        { top: "16%", right: "4%", rotate: 6, label: "The Energy" },
+        { bottom: "16%", left: "6%", rotate: -5, label: "The Squad" },
+        { bottom: "8%", right: "6%", rotate: 8, label: "Moments" }
+    ];
 
     return (
         <>
@@ -42,15 +53,6 @@ const HackathonsPage = () => {
                         HACKATHONS
                     </motion.h1>
 
-                    <motion.div
-                        className="hack-hero-flare"
-                        initial={{ scaleX: 0, opacity: 0 }}
-                        animate={{ scaleX: 1, opacity: 1 }}
-                        transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-                    >
-                        <div className="hack-hero-flare-dot" />
-                    </motion.div>
-
                     <motion.p
                         className="hack-hero-bottom-text"
                         initial={{ opacity: 0, y: 20 }}
@@ -70,47 +72,78 @@ const HackathonsPage = () => {
                         <div className="hack-scroll-mouse">
                             <div className="hack-scroll-wheel" />
                         </div>
-                        <span className="hack-scroll-text">SCROLL TO EXPLORE</span>
+                        <span className="hack-scroll-text">SCROLL</span>
                     </motion.div>
                 </section>
 
-                {/* ── Gallery Section ── */}
-                <section className="gallery-section" id="gallery">
-                    <div className="gallery-grid">
-                        {photos.length > 0 ? (
-                            photos.map((photo, index) => (
+                {/* ── Floating Memory Collage Section ── */}
+                <section className="collage-section" id="collage-section" ref={containerRef}>
+                    <div className="collage-container">
+                        
+                        {/* Center Card */}
+                        <motion.div 
+                            className="center-card"
+                            initial={{ opacity: 0, scale: 0.8, y: 50 }}
+                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 1, type: "spring", stiffness: 80 }}
+                        >
+                            <div className="center-card-header">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{marginRight: '8px'}}><path d="M12 2L2 22h20L12 2z"/></svg>
+                                OCEANLAB × CHARUSAT HACKS 2026
+                            </div>
+                            <div className="center-card-title">48 HOURS</div>
+                            <div className="center-card-subtitle">of Ideas, Code &amp; Passion</div>
+                            <p className="center-card-text">
+                                Built an AI-first SaaS solution,<br/>
+                                collaborated with amazing people,<br/>
+                                and created memories for a lifetime.
+                            </p>
+                            <div className="center-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
+                        </motion.div>
+
+                        {/* Floating Photos */}
+                        {photos.slice(0, 4).map((photo, index) => {
+                            const pos = positions[index];
+                            if(!pos) return null;
+
+                            return (
                                 <motion.div 
-                                    key={photo.id || index} 
-                                    className="gallery-item"
-                                    initial={{ opacity: 0, y: 30 }}
+                                    key={photo.id || index}
+                                    className={`collage-photo-wrapper float-anim-${index}`}
+                                    style={{
+                                        top: pos.top,
+                                        bottom: pos.bottom,
+                                        left: pos.left,
+                                        right: pos.right,
+                                        zIndex: 10 + index
+                                    }}
+                                    initial={{ opacity: 0, y: 100 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: "-50px" }}
-                                    transition={{ duration: 0.6, delay: index * 0.08 }}
+                                    viewport={{ once: true, margin: "-100px" }}
+                                    transition={{ duration: 1.2, delay: 0.3 + (index * 0.15), type: "spring", stiffness: 60 }}
                                 >
-                                    {isValidImageSrc(photo.image) ? (
-                                        <Image src={photo.image} alt={photo.title || "Hackathon memory"} fill style={{ objectFit: 'cover' }} />
-                                    ) : (
-                                        <div style={{ position: 'absolute', inset: 0, background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#555' }}>No Image</div>
-                                    )}
-                                    <div className="gallery-overlay">
-                                        <h3 className="gallery-title">{photo.title}</h3>
-                                        {photo.date && <p className="gallery-date">{photo.date}</p>}
-                                        {photo.description && <p className="gallery-desc">{photo.description}</p>}
+                                    <div className="collage-photo" style={{ transform: `rotate(${pos.rotate}deg)` }}>
+                                        {isValidImageSrc(photo.image) ? (
+                                            <Image src={photo.image} alt={photo.title || "Hackathon memory"} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 35vw" />
+                                        ) : (
+                                            <div style={{ position: 'absolute', inset: 0, background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>No Image</div>
+                                        )}
+                                    </div>
+                                    
+                                    <div className={`handwritten-label label-${index}`}>
+                                        <span className="label-text">{pos.label}</span>
+                                        <svg className="handdrawn-arrow" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                            <path d="M 20 20 Q 50 80 80 50" fill="transparent" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+                                            <path d="M 70 40 L 80 50 L 70 60" fill="transparent" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
                                     </div>
                                 </motion.div>
-                            ))
-                        ) : (
-                            <motion.div
-                                className="coming-soon-card"
-                                initial={{ opacity: 0, y: 40 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, ease: 'easeOut' }}
-                                style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '100px 40px', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '32px', border: '1px dashed rgba(255, 255, 255, 0.1)' }}
-                            >
-                                <h3 style={{ fontSize: '2rem', color: '#fff', margin: '0 0 10px 0' }}>No photos yet</h3>
-                                <p style={{ color: 'rgba(255, 255, 255, 0.4)', fontSize: '1.2rem', margin: 0 }}>Check back later for hackathon memories!</p>
-                            </motion.div>
-                        )}
+                            );
+                        })}
+
                     </div>
                 </section>
             </main>
@@ -128,7 +161,7 @@ const HackathonsPage = () => {
                     position: relative;
                     overflow: hidden;
                     text-align: center;
-                    background: #030508;
+                    background: #050816;
                     padding: 0 5%;
                     margin-top: -90px;
                     padding-top: 90px;
@@ -136,9 +169,9 @@ const HackathonsPage = () => {
 
                 .hack-hero-bg-glow {
                     position: absolute;
-                    width: 800px;
-                    height: 800px;
-                    background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 65%);
+                    width: 1000px;
+                    height: 1000px;
+                    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -147,20 +180,20 @@ const HackathonsPage = () => {
                 }
 
                 :global(.hack-hero-subtitle) {
-                    font-size: 1.3rem;
-                    letter-spacing: 0.5em;
-                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 1.1rem;
+                    letter-spacing: 0.4em;
+                    color: rgba(255, 255, 255, 0.6);
                     font-family: var(--font-fira-code);
                     text-transform: uppercase;
-                    margin-bottom: 20px;
+                    margin-bottom: 24px;
                     position: relative;
                     z-index: 1;
                 }
 
                 :global(.hack-hero-title) {
-                    font-size: 16vw;
+                    font-size: 15vw;
                     font-weight: 900;
-                    line-height: 0.9;
+                    line-height: 0.85;
                     margin: 0;
                     letter-spacing: 0.02em;
                     color: #fff;
@@ -168,37 +201,15 @@ const HackathonsPage = () => {
                     font-family: var(--font-anton), sans-serif;
                     position: relative;
                     z-index: 1;
-                    text-shadow: 0 0 80px rgba(59, 130, 246, 0.15);
-                }
-
-                :global(.hack-hero-flare) {
-                    position: relative;
-                    width: 280px;
-                    height: 2px;
-                    background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.8) 40%, rgba(147, 197, 253, 1) 50%, rgba(59, 130, 246, 0.8) 60%, transparent 100%);
-                    margin: 35px auto 0;
-                    z-index: 1;
-                    transform-origin: center;
-                }
-
-                .hack-hero-flare-dot {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 8px;
-                    height: 8px;
-                    background: #fff;
-                    border-radius: 50%;
-                    box-shadow: 0 0 20px 6px rgba(147, 197, 253, 0.8), 0 0 60px 15px rgba(59, 130, 246, 0.4);
+                    text-shadow: 0 0 100px rgba(59, 130, 246, 0.25);
                 }
 
                 :global(.hack-hero-bottom-text) {
                     font-family: var(--font-playfair), serif;
                     font-style: italic;
-                    font-size: clamp(1.3rem, 2.5vw, 2.2rem);
+                    font-size: clamp(1.4rem, 2.5vw, 2.2rem);
                     margin-top: 40px;
-                    color: rgba(255, 255, 255, 0.6);
+                    color: rgba(255, 255, 255, 0.7);
                     font-weight: 400;
                     position: relative;
                     z-index: 1;
@@ -220,7 +231,7 @@ const HackathonsPage = () => {
                 .hack-scroll-mouse {
                     width: 24px;
                     height: 38px;
-                    border: 2px solid rgba(255, 255, 255, 0.3);
+                    border: 2px solid rgba(255, 255, 255, 0.4);
                     border-radius: 14px;
                     position: relative;
                     display: flex;
@@ -230,7 +241,7 @@ const HackathonsPage = () => {
                 .hack-scroll-wheel {
                     width: 3px;
                     height: 8px;
-                    background: rgba(255, 255, 255, 0.6);
+                    background: rgba(255, 255, 255, 0.7);
                     border-radius: 3px;
                     margin-top: 8px;
                     animation: scrollPulse 2s infinite ease-in-out;
@@ -243,95 +254,236 @@ const HackathonsPage = () => {
 
                 .hack-scroll-text {
                     font-size: 0.7rem;
-                    letter-spacing: 0.3em;
-                    color: rgba(255, 255, 255, 0.35);
+                    letter-spacing: 0.2em;
+                    color: rgba(255, 255, 255, 0.4);
                     font-family: var(--font-fira-code);
                 }
 
-                /* ── Gallery ── */
-                .gallery-section {
-                    padding: 100px 5% 150px;
-                    max-width: 1600px;
-                    margin: 0 auto;
-                }
-
-                .gallery-grid {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                    gap: 20px;
-                    width: 100%;
-                }
-
-                :global(.gallery-item) {
+                /* ── Collage Section ── */
+                .collage-section {
                     position: relative;
                     width: 100%;
-                    height: 300px;
-                    border-radius: 16px;
+                    background: #050816;
                     overflow: hidden;
-                    background: rgba(255, 255, 255, 0.03);
-                    border: 1px solid rgba(255, 255, 255, 0.08);
-                    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+                    padding: 80px 0 150px;
                 }
 
-                :global(.gallery-item:hover) {
-                    transform: scale(1.02);
-                    box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15);
-                    border-color: rgba(59, 130, 246, 0.3);
-                }
-
-                :global(.gallery-item:hover) :global(.gallery-overlay) {
-                    opacity: 1;
-                }
-
-                :global(.gallery-overlay) {
-                    position: absolute;
-                    inset: 0;
-                    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
-                    opacity: 0;
-                    transition: opacity 0.3s ease;
+                .collage-container {
+                    position: relative;
+                    width: 100%;
+                    max-width: 1600px;
+                    margin: 0 auto;
+                    min-height: 120vh;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    padding: 24px;
-                    z-index: 2;
+                    justify-content: center;
+                    align-items: center;
                 }
 
-                :global(.gallery-title) {
+                /* ── Center Card ── */
+                :global(.center-card) {
+                    position: relative;
+                    z-index: 50;
+                    width: 90%;
+                    max-width: 460px;
+                    background: rgba(10, 15, 35, 0.3);
+                    backdrop-filter: blur(24px);
+                    -webkit-backdrop-filter: blur(24px);
+                    border: 1px solid rgba(59, 130, 246, 0.4);
+                    border-radius: 28px;
+                    padding: 50px 40px;
+                    text-align: center;
+                    box-shadow: 0 0 50px rgba(59, 130, 246, 0.15), inset 0 0 20px rgba(59, 130, 246, 0.1);
+                    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+                }
+
+                :global(.center-card:hover) {
+                    transform: scale(1.03) !important;
+                    box-shadow: 0 0 80px rgba(59, 130, 246, 0.25), inset 0 0 30px rgba(59, 130, 246, 0.15);
+                    border-color: rgba(59, 130, 246, 0.6);
+                }
+
+                .center-card-header {
+                    font-family: var(--font-inter);
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    letter-spacing: 0.05em;
+                    color: rgba(255,255,255,0.9);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                }
+
+                .center-card-title {
+                    font-family: var(--font-inter);
+                    font-size: 3.5rem;
+                    font-weight: 800;
                     color: #fff;
+                    line-height: 1.1;
+                    margin-bottom: 8px;
+                    letter-spacing: -0.02em;
+                }
+
+                .center-card-subtitle {
+                    font-family: var(--font-playfair), serif;
+                    font-style: italic;
                     font-size: 1.6rem;
-                    font-weight: 700;
-                    margin: 0 0 4px 0;
+                    color: #60a5fa;
+                    margin-bottom: 35px;
                 }
 
-                :global(.gallery-date) {
-                    color: rgba(147, 197, 253, 0.9);
+                .center-card-text {
+                    font-family: var(--font-inter);
                     font-size: 1rem;
-                    font-family: var(--font-fira-code);
-                    margin: 0 0 10px 0;
+                    line-height: 1.8;
+                    color: rgba(255,255,255,0.75);
+                    margin-bottom: 30px;
+                }
+                
+                .center-card-icon {
+                    color: rgba(255,255,255,0.4);
+                    transition: color 0.3s ease;
+                }
+                
+                :global(.center-card:hover) .center-card-icon {
+                    color: #60a5fa;
                 }
 
-                :global(.gallery-desc) {
-                    color: rgba(255,255,255,0.7);
-                    font-size: 0.95rem;
-                    margin: 0;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
+                /* ── Floating Photos ── */
+                :global(.collage-photo-wrapper) {
+                    position: absolute;
+                    width: clamp(240px, 22vw, 360px);
+                    aspect-ratio: 4/3;
+                }
+
+                .collage-photo {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 24px;
                     overflow: hidden;
+                    border: 2px solid rgba(59, 130, 246, 0.3);
+                    box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 30px rgba(59, 130, 246, 0.1);
+                    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease, border-color 0.5s ease;
+                    transform-origin: center;
                 }
 
+                :global(.collage-photo-wrapper:hover) .collage-photo {
+                    transform: scale(1.05) rotate(0deg) !important;
+                    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+                    border-color: rgba(59, 130, 246, 0.7);
+                }
+                
+                :global(.collage-photo-wrapper:hover) {
+                    z-index: 100 !important;
+                }
+
+                .handwritten-label {
+                    position: absolute;
+                    font-family: var(--font-passions-conflict), cursive;
+                    font-size: 3.2rem;
+                    color: #60a5fa;
+                    pointer-events: none;
+                    text-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+                    white-space: nowrap;
+                    display: flex;
+                    align-items: center;
+                }
+                
+                .handdrawn-arrow {
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    color: #60a5fa;
+                    filter: drop-shadow(0 2px 5px rgba(59, 130, 246, 0.3));
+                }
+
+                /* Specific label positioning */
+                .label-0 { bottom: 95%; right: 40%; }
+                .label-0 .handdrawn-arrow { transform: scaleX(-1) rotate(-20deg); top: 80%; right: 10%; }
+
+                .label-1 { bottom: 95%; left: 40%; }
+                .label-1 .handdrawn-arrow { transform: rotate(10deg); top: 80%; left: 10%; }
+
+                .label-2 { top: 95%; right: 20%; }
+                .label-2 .handdrawn-arrow { transform: scaleY(-1) scaleX(-1) rotate(-10deg); bottom: 70%; right: -20%; }
+
+                .label-3 { top: 95%; left: 30%; }
+                .label-3 .handdrawn-arrow { transform: scaleY(-1) rotate(10deg); bottom: 70%; left: -20%; }
+
+                /* Floating animations */
+                @keyframes float-0 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+                @keyframes float-1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+                @keyframes float-2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+                @keyframes float-3 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+
+                :global(.float-anim-0) { animation: float-0 6s ease-in-out infinite; }
+                :global(.float-anim-1) { animation: float-1 7s ease-in-out infinite 1s; }
+                :global(.float-anim-2) { animation: float-2 5.5s ease-in-out infinite 0.5s; }
+                :global(.float-anim-3) { animation: float-3 8s ease-in-out infinite 1.5s; }
+
+                /* Pause float on hover so it doesn't jump */
+                :global(.collage-photo-wrapper:hover) {
+                    animation-play-state: paused;
+                }
+                
+                @media (max-width: 1024px) {
+                    .collage-container {
+                        min-height: 150vh;
+                    }
+                    :global(.collage-photo-wrapper) {
+                        width: clamp(200px, 30vw, 300px);
+                    }
+                }
+                
                 @media (max-width: 768px) {
                     .hack-hero { height: 100svh; min-height: 100svh; }
-                    :global(.hack-hero-subtitle) { font-size: 0.9rem; letter-spacing: 0.25em; }
+                    :global(.hack-hero-subtitle) { font-size: 0.9rem; letter-spacing: 0.3em; }
                     :global(.hack-hero-bottom-text) { font-size: 1.1rem; margin-top: 30px; }
-                    :global(.hack-hero-flare) { width: 180px; }
-                    :global(.hack-hero-scroll) { bottom: 30px; }
-                    .gallery-section { padding: 60px 5% 100px; }
-                    .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
-                    :global(.gallery-item) { height: 250px; }
-                    :global(.gallery-title) { font-size: 1.3rem; }
-                    :global(.gallery-desc) { font-size: 0.85rem; -webkit-line-clamp: 2; }
-                    :global(.gallery-overlay) { opacity: 1; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%); }
+                    
+                    .collage-section { padding: 40px 0 100px; }
+                    .collage-container {
+                        display: flex;
+                        flex-direction: column;
+                        min-height: auto;
+                        padding: 20px;
+                        gap: 80px;
+                    }
+                    
+                    :global(.center-card) {
+                        position: relative;
+                        order: -1; 
+                        width: 100%;
+                        max-width: 100%;
+                        padding: 40px 20px;
+                    }
+                    
+                    :global(.collage-photo-wrapper) {
+                        position: relative;
+                        top: auto !important;
+                        bottom: auto !important;
+                        left: auto !important;
+                        right: auto !important;
+                        width: 90%;
+                        max-width: 400px;
+                        margin: 0 auto;
+                        animation: none;
+                    }
+                    
+                    .handwritten-label {
+                        position: relative;
+                        top: auto !important;
+                        bottom: auto !important;
+                        left: auto !important;
+                        right: auto !important;
+                        margin-top: 15px;
+                        justify-content: center;
+                        font-size: 2.5rem;
+                    }
+                    
+                    .handdrawn-arrow {
+                        display: none;
+                    }
                 }
             `}</style>
         </>
@@ -339,3 +491,4 @@ const HackathonsPage = () => {
 };
 
 export default HackathonsPage;
+
