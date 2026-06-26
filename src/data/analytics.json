@@ -1,6 +1,15 @@
 {
   "pageViews": [
     {
+      "id": "mqutxrb7vr153m54v",
+      "path": "/hackathons",
+      "referrer": "http://localhost:3000/hackathons",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T11:10:20.034Z"
+    },
+    {
       "id": "mqut3ul55kmkgctqv",
       "path": "/hackathons",
       "referrer": "http://localhost:3000/hackathons",
@@ -2945,7 +2954,7 @@
     }
   ],
   "summary": {
-    "totalVisits": 327,
+    "totalVisits": 328,
     "uniqueVisitors": 1,
     "topPages": {
       "/": 54,
@@ -2957,16 +2966,16 @@
       "/login": 1,
       "/projects/doppelganger": 3,
       "/projects/yaritu": 1,
-      "/hackathons": 32
+      "/hackathons": 33
     },
     "deviceBreakdown": {
       "desktop": 317,
-      "mobile": 10,
+      "mobile": 11,
       "tablet": 0
     },
     "browserBreakdown": {
       "Chrome": 318,
-      "Safari": 9
+      "Safari": 10
     },
     "dailyVisits": {
       "2026-06-04": 9,
@@ -2975,7 +2984,7 @@
       "2026-06-07": 27,
       "2026-06-08": 48,
       "2026-06-17": 86,
-      "2026-06-26": 144
+      "2026-06-26": 145
     }
   }
 }
