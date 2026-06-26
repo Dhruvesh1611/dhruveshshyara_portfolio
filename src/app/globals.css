@@ -3357,7 +3357,8 @@ footer {
 }
 
 .full-page-hero {
-    height: 90vh;
+    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3367,14 +3368,17 @@ footer {
     overflow-x: clip;
     text-align: center;
     padding: 0 5%;
+    background: #030508;
+    margin-top: -90px;
+    padding-top: 90px;
 }
 
 .full-page-hero .hero-glow {
     position: absolute;
-    width: 900px;
-    height: 900px;
-    background: radial-gradient(circle, rgba(74, 108, 247, 0.2) 0%, transparent 70%);
-    top: 45%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 65%);
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -3384,38 +3388,110 @@ footer {
 .full-page-hero .hero-content {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .full-page-hero .hero-subtitle {
     display: block;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     letter-spacing: 0.5em;
-    color: #fff;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.5);
     font-family: var(--font-fira-code);
-    opacity: 0.7;
     text-transform: uppercase;
+    margin-bottom: 20px;
+    order: -1;
 }
 
 .full-page-hero .hero-main-title {
     font-size: 16vw;
     font-weight: 900;
-    line-height: 0.85;
+    line-height: 0.9;
     margin: 0;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
     color: #fff;
     text-transform: uppercase;
     font-family: var(--font-anton), sans-serif;
+    text-shadow: 0 0 80px rgba(59, 130, 246, 0.15);
+}
+
+/* Blue Flare Line */
+.hero-flare {
+    position: relative;
+    width: 280px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.8) 40%, rgba(147, 197, 253, 1) 50%, rgba(59, 130, 246, 0.8) 60%, transparent 100%);
+    margin: 35px auto 0;
+    z-index: 1;
+}
+
+.hero-flare-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 6px rgba(147, 197, 253, 0.8), 0 0 60px 15px rgba(59, 130, 246, 0.4);
 }
 
 .full-page-hero .hero-bottom-text {
     font-family: var(--font-playfair), serif;
     font-style: italic;
-    font-size: 5rem;
+    font-size: clamp(1.3rem, 2.5vw, 2.2rem);
     margin-top: 40px;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+/* Scroll Indicator */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hero-scroll-mouse {
+    width: 24px;
+    height: 38px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 14px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-scroll-wheel {
+    width: 3px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    margin-top: 8px;
+    animation: heroScrollPulse 2s infinite ease-in-out;
+}
+
+@keyframes heroScrollPulse {
+    0%, 100% { opacity: 1; transform: translateY(0); }
+    50% { opacity: 0.3; transform: translateY(6px); }
+}
+
+.hero-scroll-text {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: rgba(255, 255, 255, 0.35);
+    font-family: var(--font-fira-code);
 }
 
 @media (max-width: 768px) {
@@ -3424,11 +3500,10 @@ footer {
     .full-page-hero {
         justify-content: center;
         align-items: center;
+        height: 100svh;
+        min-height: 100svh;
+        margin-top: 0;
         padding-top: 0;
-        padding-bottom: 0;
-        height: 70vh;
-        min-height: 70vh;
-        background: linear-gradient(180deg, rgba(10, 7, 14, 0.98) 0%, #070607 30%);
     }
 
     .full-page-hero .hero-content {
@@ -3442,12 +3517,13 @@ footer {
     }
 
     .full-page-hero .hero-bottom-text {
-        font-size: 3rem;
+        font-size: 1.1rem;
+        margin-top: 30px;
     }
 
     .full-page-hero .hero-subtitle {
-        font-size: 1.2rem;
-        letter-spacing: 0.2em;
+        font-size: 0.9rem;
+        letter-spacing: 0.25em;
         max-width: 100%;
         padding: 0 10px;
     }
@@ -3462,15 +3538,17 @@ footer {
         position: absolute;
         width: min(560px, 90vw);
         height: min(560px, 90vw);
-        background: radial-gradient(circle, rgba(74, 108, 247, 0.25) 0%, transparent 55%);
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 55%);
         top: 40%;
         left: 50%;
         transform: translate(-50%, -40%);
         pointer-events: none;
         z-index: 0;
         opacity: 1;
-        will-change: transform, opacity;
     }
+
+    .hero-flare { width: 180px; }
+    .hero-scroll-indicator { bottom: 30px; }
 }
 
 .cta:hover:before,

@@ -226,31 +226,50 @@ const ProjectsPage = () => {
                 <section className="full-page-hero">
                     <div className="hero-glow"></div>
                     <div className="hero-content">
-                        <motion.h1
-                            className="hero-main-title"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1, ease: "easeOut" }}
-                        >
-                            MY WORKS
-                        </motion.h1>
                         <motion.span
                             className="hero-subtitle"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
                         >
                             CRAFTING DIGITAL EXPERIENCES
                         </motion.span>
+                        <motion.h1
+                            className="hero-main-title"
+                            initial={{ opacity: 0, scale: 0.85, y: 30 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
+                        >
+                            MY WORKS
+                        </motion.h1>
+                        <motion.div
+                            className="hero-flare"
+                            initial={{ scaleX: 0, opacity: 0 }}
+                            animate={{ scaleX: 1, opacity: 1 }}
+                            transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
+                            style={{ transformOrigin: 'center' }}
+                        >
+                            <div className="hero-flare-dot" />
+                        </motion.div>
                         <motion.p
                             className="hero-bottom-text"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.5 }}
+                            transition={{ duration: 0.8, delay: 0.8 }}
                         >
-                            with passion & code.
+                            with passion &amp; code.
                         </motion.p>
                     </div>
+                    <motion.div
+                        className="hero-scroll-indicator"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1.4, duration: 0.8 }}
+                        onClick={() => document.querySelector('.projects-grid-section')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                        <div className="hero-scroll-mouse"><div className="hero-scroll-wheel" /></div>
+                        <span className="hero-scroll-text">SCROLL TO EXPLORE</span>
+                    </motion.div>
                 </section>
 
                 <section className="projects-grid-section">
