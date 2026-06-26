@@ -20,9 +20,9 @@ const HackathonsPage = () => {
 
     // Specific positions and data for the floating layout
     const positions = [
-        { top: "12%", left: "12%", rotate: -8, label: "The Vibe" },
-        { top: "20%", right: "8%", rotate: 6, label: "The Energy" },
-        { bottom: "22%", left: "14%", rotate: -5, label: "The Squad" },
+        { top: "7%", left: "12%", rotate: -8, label: "The Vibe" },
+        { top: "10%", right: "15%", rotate: 7, label: "The Energy" },
+        { bottom: "12%", left: "14%", rotate: -5, label: "The Team" },
         { bottom: "14%", right: "12%", rotate: 8, label: "Moments" }
     ];
 
@@ -297,17 +297,17 @@ const HackathonsPage = () => {
                 }
 
                 /* Specific label positioning */
-                .label-0 { bottom: 95%; right: 40%; }
-                .label-0 .handdrawn-arrow { transform: scaleX(-1) rotate(-20deg); top: 80%; right: 10%; }
+                .label-0 { bottom: 105%; right: 45%; }
+                .label-0 .handdrawn-arrow { transform: scaleX(-1) rotate(-20deg); top: 80%; right: 5%; }
 
-                .label-1 { bottom: 95%; left: 40%; }
-                .label-1 .handdrawn-arrow { transform: rotate(10deg); top: 80%; left: 10%; }
+                .label-1 { bottom: 105%; left: 45%; }
+                .label-1 .handdrawn-arrow { transform: rotate(10deg); top: 80%; left: 5%; }
 
-                .label-2 { top: 95%; right: 20%; }
-                .label-2 .handdrawn-arrow { transform: scaleY(-1) scaleX(-1) rotate(-10deg); bottom: 70%; right: -20%; }
+                .label-2 { top: 105%; right: 25%; }
+                .label-2 .handdrawn-arrow { transform: scaleY(-1) scaleX(-1) rotate(-10deg); bottom: 70%; right: -15%; }
 
-                .label-3 { top: 95%; left: 30%; }
-                .label-3 .handdrawn-arrow { transform: scaleY(-1) rotate(10deg); bottom: 70%; left: -20%; }
+                .label-3 { top: 105%; left: 35%; }
+                .label-3 .handdrawn-arrow { transform: scaleY(-1) rotate(10deg); bottom: 70%; left: -15%; }
 
                 /* Floating animations */
                 @keyframes float-0 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
