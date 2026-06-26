@@ -11,6 +11,7 @@ const HackathonsPage = () => {
     const hackathonsList = [
         {
             id: 'charusat',
+            headerTitle: 'CHARUSAT HACKS',
             title: 'OCEANLAB × CHARUSAT HACKS 2026',
             hours: '48 HOURS',
             subtitle: 'of Ideas, Code & Passion',
@@ -24,6 +25,7 @@ const HackathonsPage = () => {
         },
         {
             id: 'svnit',
+            headerTitle: 'SVNIT HACKATHON',
             title: 'SVNIT HACKATHON 2026',
             hours: '36 HOURS',
             subtitle: 'of Innovation & Building',
@@ -32,6 +34,19 @@ const HackathonsPage = () => {
                 { src: "/hackathons/svnit/svnit1.png", top: "8%", left: "15%", rotate: -6, label: "The Build" },
                 { src: "/hackathons/svnit/svnit2.png", top: "16%", right: "12%", rotate: 9, label: "The Squad", aspectRatio: "12/8" },
                 { src: "/hackathons/svnit/svnit3.png", bottom: "10%", left: "25%", rotate: -4, label: "The Setup" }
+            ]
+        },
+        {
+            id: 'rai',
+            headerTitle: 'RAI UNIVERSITY',
+            title: 'RAI UNIVERSITY HACKATHON',
+            hours: '48 HOURS',
+            subtitle: 'of Code & Creativity',
+            text: <>Building the future of technology,<br />one late-night commit at a time,<br />and meeting brilliant minds.</>,
+            photos: [
+                { src: "/hackathons/rai_university/rai1.png", top: "10%", left: "10%", rotate: -7, label: "The Certificate", aspectRatio: "12/8" },
+                { src: "/hackathons/rai_university/rai2.png", top: "18%", right: "12%", rotate: 8, label: "The Squad", aspectRatio: "12/8" },
+                { src: "/hackathons/rai_university/rai3.png", bottom: "12%", left: "30%", rotate: -5, label: "The Product", aspectRatio: "12/8" }
             ]
         }
     ];
@@ -98,6 +113,29 @@ const HackathonsPage = () => {
                 {/* ── Floating Memory Collage Sections ── */}
                 {hackathonsList.map((hackathon, hIndex) => (
                     <section key={hackathon.id} className="collage-section" id={hIndex === 0 ? "collage-section" : `collage-section-${hackathon.id}`}>
+                        
+                        <div className="collage-section-header">
+                            <motion.h2
+                                className="section-main-title"
+                                initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] }}
+                            >
+                                {hackathon.headerTitle}
+                            </motion.h2>
+                            <motion.div
+                                className="hero-flare"
+                                initial={{ scaleX: 0, opacity: 0 }}
+                                whileInView={{ scaleX: 1, opacity: 1 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+                                style={{ transformOrigin: 'center', width: '250px', margin: '0 auto', marginTop: '15px' }}
+                            >
+                                <div className="hero-flare-dot" />
+                            </motion.div>
+                        </div>
+
                         <div className="collage-container">
 
                             {/* Center Card */}
@@ -172,7 +210,29 @@ const HackathonsPage = () => {
                     width: 100%;
                     background: #050816;
                     overflow: hidden;
-                    padding: 80px 0 150px;
+                    padding: 100px 0 150px;
+                }
+
+                .collage-section-header {
+                    text-align: center;
+                    margin-bottom: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    z-index: 60;
+                }
+
+                .section-main-title {
+                    font-size: 8vw;
+                    font-weight: 900;
+                    line-height: 0.9;
+                    margin: 0;
+                    letter-spacing: 0.02em;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-family: var(--font-anton), sans-serif;
+                    text-shadow: 0 0 80px rgba(59, 130, 246, 0.2);
                 }
 
                 .collage-container {
@@ -346,7 +406,11 @@ const HackathonsPage = () => {
                 @media (max-width: 768px) {
                     .hero-section { height: 100svh; min-height: 100svh; }
                     
-                    .collage-section { padding: 40px 0 100px; }
+                    .collage-section { padding: 60px 0 100px; }
+                    
+                    .section-main-title { font-size: 13vw; }
+                    .collage-section-header { margin-bottom: 40px; }
+
                     .collage-container {
                         display: flex;
                         flex-direction: column;
