@@ -1,6 +1,663 @@
 {
   "pageViews": [
     {
+      "id": "mqupzw3qwj2o98oed",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:20:01.093Z"
+    },
+    {
+      "id": "mqupzstnylqi1izzf",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:19:56.843Z"
+    },
+    {
+      "id": "mqupzpvs9h7qxu9d4",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:19:53.032Z"
+    },
+    {
+      "id": "mqupzn5k5m1v1z94r",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:19:49.496Z"
+    },
+    {
+      "id": "mqupzj58it4e92s1o",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:19:44.300Z"
+    },
+    {
+      "id": "mqupzgx06n3zerxgz",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:19:41.411Z"
+    },
+    {
+      "id": "mqupwechr0bkk18tw",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:17:18.112Z"
+    },
+    {
+      "id": "mqupwcttktbm1enhj",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:17:16.143Z"
+    },
+    {
+      "id": "mqupw71h4kem0jqxd",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:17:08.645Z"
+    },
+    {
+      "id": "mqupw56v490k2esf4",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:17:06.246Z"
+    },
+    {
+      "id": "mqupsr5891oass2br",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:14:28.075Z"
+    },
+    {
+      "id": "mqupspwcmqocnfoml",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:14:26.459Z"
+    },
+    {
+      "id": "mqupsb7l4llubjb6b",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:14:07.424Z"
+    },
+    {
+      "id": "mqups9otc68j7vojn",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:14:05.451Z"
+    },
+    {
+      "id": "mquppz87anvsr39ci",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:12:18.581Z"
+    },
+    {
+      "id": "mqupoxol6tf2o9dup",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:11:29.925Z"
+    },
+    {
+      "id": "mqupov4sdzm3u9s77",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:11:26.620Z"
+    },
+    {
+      "id": "mqupop0qvsrgpo9qs",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:11:18.697Z"
+    },
+    {
+      "id": "mqupomn3z2xa9hpoi",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:11:15.614Z"
+    },
+    {
+      "id": "mqupogwfzg1ajqmbc",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:11:08.175Z"
+    },
+    {
+      "id": "mqupofo91m3jjg9sg",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T09:11:06.584Z"
+    },
+    {
+      "id": "mqul1mbqbgz2aumok",
+      "path": "/hackathons",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T07:01:23.653Z"
+    },
+    {
+      "id": "mqul1lfsazk7r9kcp",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T07:01:22.504Z"
+    },
+    {
+      "id": "mqul1j775by5c04g9",
+      "path": "/explanation",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T07:01:19.602Z"
+    },
+    {
+      "id": "mqukyskqommozovrq",
+      "path": "/hackathons",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:59:11.785Z"
+    },
+    {
+      "id": "mqukggoaffa99elym",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:44:56.554Z"
+    },
+    {
+      "id": "mqukgfhvxh5o94i84",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:44:55.025Z"
+    },
+    {
+      "id": "mquke9dhd5rkcizrd",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:43:13.780Z"
+    },
+    {
+      "id": "mqukb3lel1qrrszbg",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:40:46.321Z"
+    },
+    {
+      "id": "mqukb2ogatcpcw28x",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:40:45.136Z"
+    },
+    {
+      "id": "mqukb1ogwvixx89aw",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:40:43.840Z"
+    },
+    {
+      "id": "mqukb0nb9wzesqg4x",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:40:42.503Z"
+    },
+    {
+      "id": "mqukavz85hscv8el4",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:40:36.451Z"
+    },
+    {
+      "id": "mquk88u3fnk4g44uy",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:38:33.147Z"
+    },
+    {
+      "id": "mquk86h5yle8zghv2",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:38:30.089Z"
+    },
+    {
+      "id": "mquk86an0tjgcv1lg",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:38:29.855Z"
+    },
+    {
+      "id": "mquk7zlfbav8phbsf",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:38:21.170Z"
+    },
+    {
+      "id": "mquk7yxrhi5smzfkg",
+      "path": "/explanation",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:38:20.319Z"
+    },
+    {
+      "id": "mquk7xtf6ltzw0czz",
+      "path": "/projects",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:38:18.867Z"
+    },
+    {
+      "id": "mquk7rbm0t6sul7ko",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:38:10.449Z"
+    },
+    {
+      "id": "mquk6wlkrah6fx5rl",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:37:30.631Z"
+    },
+    {
+      "id": "mquk1p8a6c4q10c5v",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:33:27.801Z"
+    },
+    {
+      "id": "mquk1fxgapeuxkx69",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:33:15.747Z"
+    },
+    {
+      "id": "mqujxe4p43i2ws1ax",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:30:06.792Z"
+    },
+    {
+      "id": "mqujxe4hvuue2fijf",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/certificates",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:30:06.785Z"
+    },
+    {
+      "id": "mqujxdhr3mvei2n5f",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:30:05.966Z"
+    },
+    {
+      "id": "mqujv2w29w5ieyxyp",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:28:18.913Z"
+    },
+    {
+      "id": "mqujuvp2r22vub69c",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:28:09.590Z"
+    },
+    {
+      "id": "mqujuu74kph27qldl",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:28:07.648Z"
+    },
+    {
+      "id": "mqujusnobnrtkxzp3",
+      "path": "/aboutme",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:28:05.651Z"
+    },
+    {
+      "id": "mqujp4b5rz7lq6cav",
+      "path": "/projects/doppelganger",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:23:40.817Z"
+    },
+    {
+      "id": "mqujp2vhq4nnnxc7h",
+      "path": "/projects",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:23:38.957Z"
+    },
+    {
+      "id": "mqujoz7l7gzherksq",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:23:34.208Z"
+    },
+    {
+      "id": "mqujo4gyp6ogbznrw",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:22:54.370Z"
+    },
+    {
+      "id": "mqujnxd5wz283qgr6",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:22:45.160Z"
+    },
+    {
+      "id": "mqujnl36algzuao7x",
+      "path": "/projects/doppelganger",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:22:29.249Z"
+    },
+    {
+      "id": "mqujnjdi2wfc7hx6d",
+      "path": "/projects",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:22:27.029Z"
+    },
+    {
+      "id": "mqujlqyju40c6bi1i",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:21:03.547Z"
+    },
+    {
+      "id": "mqujllp5hyf5djax6",
+      "path": "/projects",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:20:56.727Z"
+    },
+    {
+      "id": "mqujk2ofku3qaw6x0",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:19:45.420Z"
+    },
+    {
+      "id": "mqujjhpdi25tubgnd",
+      "path": "/projects",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:19:18.241Z"
+    },
+    {
+      "id": "mqujj4kegr3h654d2",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:19:01.213Z"
+    },
+    {
+      "id": "mquji6atko9fqeqil",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:18:16.804Z"
+    },
+    {
+      "id": "mqujhr7sxcfg190s4",
+      "path": "/projects/yaritu",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:17:57.256Z"
+    },
+    {
+      "id": "mqujhogndoeqcnrv3",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:17:53.687Z"
+    },
+    {
+      "id": "mqujhhgz5fwsaag12",
+      "path": "/projects/doppelganger",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:17:44.625Z"
+    },
+    {
+      "id": "mqujh4wzfunq5hogr",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:17:28.354Z"
+    },
+    {
+      "id": "mquj7ruubyzbjmfhi",
+      "path": "/certificates",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:10:11.525Z"
+    },
+    {
+      "id": "mquj4y7hx6jjbajmm",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:07:59.788Z"
+    },
+    {
+      "id": "mquj27g2vubf1duia",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:05:51.793Z"
+    },
+    {
+      "id": "mquiyazwp2zd4yxip",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:02:49.772Z"
+    },
+    {
+      "id": "mquiyafr3o6nu23p9",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T06:02:49.046Z"
+    },
+    {
+      "id": "mquitpi1wzfhkwhdx",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-26T05:59:15.288Z"
+    },
+    {
       "id": "mqui6h9yzhsbpivt6",
       "path": "/",
       "referrer": "",
@@ -1730,25 +2387,28 @@
     }
   ],
   "summary": {
-    "totalVisits": 192,
+    "totalVisits": 265,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 40,
-      "/aboutme": 46,
-      "/projects": 47,
-      "/certificates": 33,
-      "/explanation": 24,
+      "/": 52,
+      "/aboutme": 48,
+      "/projects": 53,
+      "/certificates": 54,
+      "/explanation": 38,
       "/projects/shyara-gold": 1,
-      "/login": 1
+      "/login": 1,
+      "/projects/doppelganger": 3,
+      "/projects/yaritu": 1,
+      "/hackathons": 14
     },
     "deviceBreakdown": {
-      "desktop": 189,
-      "mobile": 3,
+      "desktop": 261,
+      "mobile": 4,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 190,
-      "Safari": 2
+      "Chrome": 262,
+      "Safari": 3
     },
     "dailyVisits": {
       "2026-06-04": 9,
@@ -1757,7 +2417,7 @@
       "2026-06-07": 27,
       "2026-06-08": 48,
       "2026-06-17": 86,
-      "2026-06-26": 9
+      "2026-06-26": 82
     }
   }
 }

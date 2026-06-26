@@ -156,3 +156,11 @@ export function getAnalytics() {
 export function saveAnalytics(data) {
   return writeData('analytics.json', data);
 }
+
+export function getHackathons() {
+  return readData('hackathons.json') || [];
+}
+
+export function saveHackathons(data) {
+  return writeData('hackathons.json', data);
+}

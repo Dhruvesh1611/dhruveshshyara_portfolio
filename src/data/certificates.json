@@ -240,5 +240,25 @@
     "status": "published",
     "category": "Hackathon",
     "updatedAt": "2026-06-26T05:38:42.037Z"
+  },
+  {
+    "title": "Odoo x Parul University Hackathon 26",
+    "issuer": "Odoo x Parul University",
+    "date": "13 - 14 June, 2026",
+    "description": "This Certificate of Participation in the Odoo x Parul University Hackathon 26 signifies active engagement in a high-intensity, collaborative problem-solving event. Participating in such a hackathon demonstrates strong capabilities in innovative thinking, rapid prototyping, and the practical application of technical skills within a constrained timeframe. It highlights an individual's commitment to continuous learning, teamwork, and the ability to develop effective solutions, potentially involving enterprise resource planning (ERP) concepts or Odoo's business management software. This experience is a testament to hands-on technical proficiency and a proactive approach to tackling real-world challenges.",
+    "image": "/certificates/odooXparul.jpeg",
+    "category": "Hackathon",
+    "status": "published",
+    "featured": false,
+    "id": "mqujbhav",
+    "displayOrder": 15,
+    "createdAt": "2026-06-26T06:13:04.471Z",
+    "updatedAt": "2026-06-26T06:38:01.875Z",
+    "link": "",
+    "relatedSkills": [],
+    "photos": [
+      "/certificates/odooXparul.jpeg",
+      "/certificates/charusat-hacks-2026.png"
+    ]
   }
 ]

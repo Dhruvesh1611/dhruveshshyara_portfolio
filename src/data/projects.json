@@ -51,7 +51,8 @@
         "The power of team collaboration under pressure",
         "Building real developer tools in a limited time",
         "Turning an idea into a working product within 30 hours"
-      ]
+      ],
+      "photos": []
     },
     "purpose": "Built during the Doppelganger 30-Hour Build Sprint hackathon organized by OpenPools — where Team Eklavya secured 1st Rank among 33 teams. The extension eliminates AI hallucinations in Azure SDK code suggestions by using context-injected Azure documentation retrieval (RAG) to provide accurate, grounded inline completions for JS/TS/C# developers.",
     "detailedDescription": "Doppelganger is a full-stack developer tool consisting of a VS Code extension, an Express backend API, and a React-based marketing website — built in an intense 30-hour hackathon sprint.\n\nThe extension detects when a developer is working with Azure SDKs (storage, cosmos, identity, keyvault, service-bus, etc.) and provides inline ghost text suggestions powered by Groq's Llama model. A RAG pipeline using ChromaDB ensures suggestions are grounded in real Azure documentation, drastically reducing hallucinations.\n\nThe backend orchestrates the entire pipeline — context analysis, vector retrieval with SDK-specific filtering, prompt construction, and response cleanup. A feedback endpoint with MongoDB persistence enables continuous improvement of suggestion quality. The extension also features automatic Azure import injection, intent detection from comments, and a multi-layer caching system (session + Redis) that reduces API calls by 80%+.\n\nWhile working with Azure SDKs, developers often need to repeatedly go through documentation and copy commands manually — slowing down the development process. Our solution simplifies this workflow by providing AI-powered suggestions directly inside VS Code, helping developers use Azure SDKs without constantly switching to documentation.",
@@ -131,7 +132,10 @@
     "marketplace": "https://marketplace.visualstudio.com/items?itemName=TEAMEKLAVYA.azure-ai-code-assistant",
     "status": "published",
     "featured": true,
-    "displayOrder": 1
+    "displayOrder": 1,
+    "seoTitle": "",
+    "seoDescription": "",
+    "updatedAt": "2026-06-26T06:24:07.740Z"
   },
   {
     "id": "proj_2",

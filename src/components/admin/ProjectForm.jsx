@@ -37,6 +37,51 @@ export default function ProjectForm({ initialData, onSubmit, isEdit = false }) {
   const [tagInput, setTagInput] = useState('');
   const [saving, setSaving] = useState(false);
   const [errors, setErrors] = useState({});
+  const [aiLoading, setAiLoading] = useState(false);
+
+  const handleAiUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    setAiLoading(true);
+    const toastId = toast.loading('AI is analyzing the project image...');
+    
+    try {
+      const formData = new FormData();
+      formData.append('image', file);
+      formData.append('type', 'project');
+
+      const res = await fetch('/api/admin/ai-extract', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to extract data');
+
+      setForm((prev) => ({
+        ...prev,
+        title: data.data.title || prev.title,
+        description: data.data.description || prev.description,
+        slug: (!isEdit && data.data.title && !prev.slug) ? slugify(data.data.title, { lower: true, strict: true }) : prev.slug,
+      }));
+      
+      if (data.data.technologies) {
+        const techs = data.data.technologies.split(',').map(t => t.trim()).filter(Boolean);
+        setForm((prev) => ({
+           ...prev,
+           tags: [...new Set([...prev.tags, ...techs])]
+        }));
+      }
+
+      toast.success('AI successfully filled the form!', { id: toastId });
+    } catch (err) {
+      toast.error(`AI Error: ${err.message}`, { id: toastId });
+    } finally {
+      setAiLoading(false);
+      e.target.value = '';
+    }
+  };
 
   const updateField = (field, value) => {
     setForm(prev => ({ ...prev, [field]: value }));
@@ -125,6 +170,21 @@ export default function ProjectForm({ initialData, onSubmit, isEdit = false }) {
 
   return (
     <div className="admin-form">
+      {/* AI Auto-fill Section */}
+      <div style={{ marginBottom: '24px', padding: '16px', borderRadius: '12px', background: 'rgba(99, 102, 241, 0.05)', border: '1px dashed rgba(99, 102, 241, 0.3)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#818cf8', fontWeight: 500 }}>
+          <span style={{ fontSize: '18px' }}>✨</span> AI Auto-fill
+        </div>
+        <p style={{ margin: 0, fontSize: '13px', color: 'var(--text-secondary)' }}>Upload a screenshot of the project and our AI will automatically extract the title, description, and technologies.</p>
+        <input 
+          type="file" 
+          accept="image/*"
+          onChange={handleAiUpload}
+          disabled={aiLoading}
+          style={{ marginTop: '8px', fontSize: '14px', cursor: aiLoading ? 'not-allowed' : 'pointer' }}
+        />
+      </div>
+
       {/* Title & Slug */}
       <div className="admin-form-row">
         <div className="admin-form-group">

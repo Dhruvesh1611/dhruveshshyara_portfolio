@@ -16,6 +16,7 @@ const Navbar = () => {
         { name: 'Work', href: '/projects' },
         { name: 'Certificates', href: '/certificates' },
         { name: 'Explanation', href: '/explanation' },
+        { name: 'Hackathons', href: '/hackathons' },
     ];
 
     const toggleMenu = () => setIsOpen(!isOpen);

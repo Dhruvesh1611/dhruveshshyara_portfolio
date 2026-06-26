@@ -3,9 +3,9 @@ import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { HiOutlineSave, HiOutlineEye } from 'react-icons/hi';
 
-export default function CertForm({ initialData, onSubmit, isEdit = false }) {
+export default function HackathonForm({ initialData, onSubmit, isEdit = false }) {
   const [form, setForm] = useState({
-    title: '', issuer: '', description: '', date: '', image: '', link: '', status: 'draft', featured: false, category: 'Skill', relatedSkills: [], ...initialData
+    title: '', description: '', date: '', image: '', status: 'draft', featured: false, ...initialData
   });
   const [saving, setSaving] = useState(false);
   const [errors, setErrors] = useState({});
@@ -16,12 +16,12 @@ export default function CertForm({ initialData, onSubmit, isEdit = false }) {
     if (!file) return;
 
     setAiLoading(true);
-    const toastId = toast.loading('AI is analyzing the certificate...');
+    const toastId = toast.loading('AI is analyzing the photo...');
     
     try {
       const formData = new FormData();
       formData.append('image', file);
-      formData.append('type', 'certificate');
+      formData.append('type', 'hackathon');
 
       const res = await fetch('/api/admin/ai-extract', {
         method: 'POST',
@@ -34,7 +34,6 @@ export default function CertForm({ initialData, onSubmit, isEdit = false }) {
       setForm((prev) => ({
         ...prev,
         title: data.data.title || prev.title,
-        issuer: data.data.issuer || prev.issuer,
         date: data.data.date || prev.date,
         description: data.data.description || prev.description,
       }));
@@ -49,9 +48,9 @@ export default function CertForm({ initialData, onSubmit, isEdit = false }) {
 
   const handleSubmit = async (status) => {
     const newErrors = {};
-    if (!form.title.trim()) newErrors.title = 'Certificate Title is mandatory.';
+    if (!form.title.trim()) newErrors.title = 'Title is mandatory.';
     if (form.image && form.image.trim() && !form.image.trim().startsWith('/') && !form.image.trim().startsWith('http')) {
-      newErrors.image = 'Image path must start with "/" (e.g., /certificates/cert.png) or be a full URL (https://...). Leave empty if no image.';
+      newErrors.image = 'Image path must start with "/" (e.g., /hackathons/photo.png) or be a full URL (https://...). Leave empty if no image.';
     }
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -75,7 +74,7 @@ export default function CertForm({ initialData, onSubmit, isEdit = false }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#818cf8', fontWeight: 500 }}>
           <span style={{ fontSize: '18px' }}>✨</span> AI Auto-fill
         </div>
-        <p style={{ margin: 0, fontSize: '13px', color: 'var(--text-secondary)' }}>Upload a screenshot of the certificate and our AI will automatically fill the details below.</p>
+        <p style={{ margin: 0, fontSize: '13px', color: 'var(--text-secondary)' }}>Upload a screenshot of the hackathon photo and our AI will automatically fill the details below.</p>
         <input 
           type="file" 
           accept="image/*"
@@ -86,45 +85,28 @@ export default function CertForm({ initialData, onSubmit, isEdit = false }) {
       </div>
 
       <div className="admin-form-row">
-        <div className="admin-form-group">
-          <label className="admin-form-label">Title <span className="admin-required-star">*</span></label>
+        <div className="admin-form-group" style={{ flex: 2 }}>
+          <label className="admin-form-label">Title (Event Name) <span className="admin-required-star">*</span></label>
           <input className={`admin-form-input ${errors.title ? 'admin-form-input--error' : ''}`} value={form.title} onChange={e => { setForm({ ...form, title: e.target.value }); if(errors.title) setErrors({...errors, title: null}); }} />
           {errors.title && <div className="admin-form-error-msg">⚠️ {errors.title}</div>}
         </div>
-        <div className="admin-form-group">
-          <label className="admin-form-label">Issuer</label>
-          <input className="admin-form-input" value={form.issuer} onChange={e => setForm({ ...form, issuer: e.target.value })} />
-        </div>
-      </div>
-      <div className="admin-form-row">
-        <div className="admin-form-group">
-          <label className="admin-form-label">Date (e.g., 2024 or Aug 2024)</label>
+        <div className="admin-form-group" style={{ flex: 1 }}>
+          <label className="admin-form-label">Date</label>
           <input className="admin-form-input" value={form.date} onChange={e => setForm({ ...form, date: e.target.value })} />
         </div>
-        <div className="admin-form-group">
-          <label className="admin-form-label">Credential Link</label>
-          <input className="admin-form-input" value={form.link} onChange={e => setForm({ ...form, link: e.target.value })} />
-        </div>
       </div>
       <div className="admin-form-group">
-        <label className="admin-form-label">Category</label>
-        <select className="admin-form-input" value={form.category} onChange={e => setForm({ ...form, category: e.target.value })}>
-          <option value="Skill">Skill</option>
-          <option value="Hackathon">Hackathon</option>
-        </select>
-      </div>
-      <div className="admin-form-group">
-        <label className="admin-form-label">Description</label>
-        <textarea className="admin-form-textarea" value={form.description} onChange={e => setForm({ ...form, description: e.target.value })} rows={3} />
+        <label className="admin-form-label">Description (Highlights & Memories)</label>
+        <textarea className="admin-form-textarea" value={form.description} onChange={e => setForm({ ...form, description: e.target.value })} rows={4} />
       </div>
       <div className="admin-form-group">
         <label className="admin-form-label">Image Path</label>
-        <input className={`admin-form-input ${errors.image ? 'admin-form-input--error' : ''}`} value={form.image} onChange={e => { setForm({ ...form, image: e.target.value }); if(errors.image) setErrors({...errors, image: null}); }} placeholder="/certificates/image.png or leave empty" />
+        <input className={`admin-form-input ${errors.image ? 'admin-form-input--error' : ''}`} value={form.image} onChange={e => { setForm({ ...form, image: e.target.value }); if(errors.image) setErrors({...errors, image: null}); }} placeholder="/public/certificates/... or /hackathons/photo.png or leave empty" />
         {errors.image && <div className="admin-form-error-msg">⚠️ {errors.image}</div>}
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 8 }}>
         <label className="admin-toggle"><input type="checkbox" checked={form.featured} onChange={e => setForm({ ...form, featured: e.target.checked })} /><span className="admin-toggle-slider" /></label>
-        <span className="admin-form-label" style={{ margin: 0 }}>Featured Certificate</span>
+        <span className="admin-form-label" style={{ margin: 0 }}>Featured Memory</span>
       </div>
       <div style={{ display: 'flex', gap: 12, marginTop: 16, justifyContent: 'flex-end' }}>
         <button className="admin-btn admin-btn--secondary" onClick={() => handleSubmit('draft')} disabled={saving}><HiOutlineSave size={16} /> Save Draft</button>

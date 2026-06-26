@@ -21,6 +21,7 @@ import {
   HiOutlineX,
   HiOutlineGlobe,
   HiOutlineEye,
+  HiOutlineCamera,
 } from 'react-icons/hi';
 
 const sidebarItems = [
@@ -28,6 +29,7 @@ const sidebarItems = [
   { type: 'divider', label: 'Content' },
   { name: 'Projects', href: '/admin/projects', icon: HiOutlineFolder },
   { name: 'Certificates', href: '/admin/certificates', icon: HiOutlineAcademicCap },
+  { name: 'Hackathons', href: '/admin/hackathons', icon: HiOutlineCamera },
   { name: 'Skills', href: '/admin/skills', icon: HiOutlineLightningBolt },
   { name: 'Experience', href: '/admin/experience', icon: HiOutlineBriefcase },
   { name: 'About', href: '/admin/about', icon: HiOutlineUser },
