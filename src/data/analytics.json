@@ -1,6 +1,312 @@
 {
   "pageViews": [
     {
+      "id": "mqwp2yuud97dlgl4x",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:29:57.365Z"
+    },
+    {
+      "id": "mqwp2sxfr3wbd29rl",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:29:49.682Z"
+    },
+    {
+      "id": "mqwp1ensuyzwoalg3",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:28:44.535Z"
+    },
+    {
+      "id": "mqwp181nb4i60bvap",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:28:35.961Z"
+    },
+    {
+      "id": "mqwp0y08to035po0p",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:28:22.951Z"
+    },
+    {
+      "id": "mqwp0ra2hcwnofgqv",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:28:14.233Z"
+    },
+    {
+      "id": "mqwp0ou3jtbj6a6gh",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:28:11.067Z"
+    },
+    {
+      "id": "mqwp0n62uy2djyfld",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:28:08.905Z"
+    },
+    {
+      "id": "mqwp0kgq5qv6li51l",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:28:05.401Z"
+    },
+    {
+      "id": "mqwp0h87ida0i1n24",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:28:01.205Z"
+    },
+    {
+      "id": "mqwp0d2gq15s3k7mb",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:27:55.815Z"
+    },
+    {
+      "id": "mqwp0494awexz1gq1",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:27:44.391Z"
+    },
+    {
+      "id": "mqwp02bn3lj73wulw",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:27:41.891Z"
+    },
+    {
+      "id": "mqwozze9kmdz9o7zp",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:27:38.097Z"
+    },
+    {
+      "id": "mqwozrx5djj57x56d",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:27:28.407Z"
+    },
+    {
+      "id": "mqwozi45glwczox1k",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:27:15.699Z"
+    },
+    {
+      "id": "mqwowmlqkoimrmfuu",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:25:01.547Z"
+    },
+    {
+      "id": "mqwow5avku9qxhjml",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:24:39.126Z"
+    },
+    {
+      "id": "mqwovl9pf5cjmggga",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:24:13.164Z"
+    },
+    {
+      "id": "mqwov6g3t5ihdkv1i",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:23:53.954Z"
+    },
+    {
+      "id": "mqwoth8oywyei18fl",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:22:34.629Z"
+    },
+    {
+      "id": "mqwot6mwet3txj2q5",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:22:20.888Z"
+    },
+    {
+      "id": "mqwot0ohas9zobc0x",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:22:13.169Z"
+    },
+    {
+      "id": "mqwosuulh8d9u2ccc",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:22:05.611Z"
+    },
+    {
+      "id": "mqwoskr6oi6o3ir98",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:21:52.528Z"
+    },
+    {
+      "id": "mqwosanasn8a3zq6m",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:21:39.427Z"
+    },
+    {
+      "id": "mqwor9hxjql58ug62",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:20:51.283Z"
+    },
+    {
+      "id": "mqwoqu28xhyqygwhv",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:20:31.279Z"
+    },
+    {
+      "id": "mqwoqo7nok91v5mwd",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:20:23.698Z"
+    },
+    {
+      "id": "mqwoos0lkesnwgbnu",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:18:55.316Z"
+    },
+    {
+      "id": "mqwoolk6ln1g3g6t8",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:18:46.949Z"
+    },
+    {
+      "id": "mqwokbwb6g7ps2uzu",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:15:27.802Z"
+    },
+    {
+      "id": "mqwok4fegfuskqlsj",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:15:18.122Z"
+    },
+    {
+      "id": "mqwojzvpvyojgdbsc",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:15:12.228Z"
+    },
+    {
       "id": "mqwoinzdom63gc4fk",
       "path": "/",
       "referrer": "",
@@ -4691,30 +4997,30 @@
     }
   ],
   "summary": {
-    "totalVisits": 521,
+    "totalVisits": 555,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 179,
-      "/aboutme": 70,
-      "/projects": 77,
-      "/certificates": 69,
-      "/explanation": 56,
+      "/": 203,
+      "/aboutme": 72,
+      "/projects": 79,
+      "/certificates": 71,
+      "/explanation": 58,
       "/projects/shyara-gold": 4,
       "/login": 1,
       "/projects/doppelganger": 10,
       "/projects/yaritu": 3,
-      "/hackathons": 50,
+      "/hackathons": 52,
       "/home": 1,
       "/imag.png": 1
     },
     "deviceBreakdown": {
-      "desktop": 472,
-      "mobile": 49,
+      "desktop": 505,
+      "mobile": 50,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 473,
-      "Safari": 48
+      "Chrome": 506,
+      "Safari": 49
     },
     "dailyVisits": {
       "2026-06-04": 9,
@@ -4724,7 +5030,7 @@
       "2026-06-08": 48,
       "2026-06-17": 86,
       "2026-06-26": 159,
-      "2026-06-27": 179
+      "2026-06-27": 213
     }
   }
 }

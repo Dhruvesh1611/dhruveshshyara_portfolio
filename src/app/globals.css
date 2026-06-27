@@ -2031,10 +2031,12 @@ noscript {
 
 .hero-photo {
     width: 100% !important;
-    max-height: 85vh;
+    max-height: 90vh;
+    /* border: 2px solid red; */
     height: auto !important;
     object-fit: contain;
     object-position: center;
+    margin-top: -100px;
     filter: none;
     border-radius: 0;
 }
