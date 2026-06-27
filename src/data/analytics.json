@@ -1,6 +1,33 @@
 {
   "pageViews": [
     {
+      "id": "mqwgi8cp04dw2b2z3",
+      "path": "/",
+      "referrer": "http://localhost:3000/hackathons",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:29:52.968Z"
+    },
+    {
+      "id": "mqwgi509x0ndzz9ar",
+      "path": "/hackathons",
+      "referrer": "http://localhost:3000/hackathons",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:29:48.632Z"
+    },
+    {
+      "id": "mqwgdgv0ogyqhaaif",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:26:10.714Z"
+    },
+    {
       "id": "mqwg6plyti2aiuyj3",
       "path": "/",
       "referrer": "http://localhost:3000/",
@@ -4196,10 +4223,10 @@
     }
   ],
   "summary": {
-    "totalVisits": 466,
+    "totalVisits": 469,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 148,
+      "/": 150,
       "/aboutme": 69,
       "/projects": 68,
       "/certificates": 68,
@@ -4208,17 +4235,17 @@
       "/login": 1,
       "/projects/doppelganger": 3,
       "/projects/yaritu": 1,
-      "/hackathons": 49,
+      "/hackathons": 50,
       "/home": 1,
       "/imag.png": 1
     },
     "deviceBreakdown": {
-      "desktop": 437,
+      "desktop": 440,
       "mobile": 29,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 438,
+      "Chrome": 441,
       "Safari": 28
     },
     "dailyVisits": {
@@ -4229,7 +4256,7 @@
       "2026-06-08": 48,
       "2026-06-17": 86,
       "2026-06-26": 159,
-      "2026-06-27": 124
+      "2026-06-27": 127
     }
   }
 }
