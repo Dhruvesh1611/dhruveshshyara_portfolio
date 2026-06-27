@@ -1,6 +1,231 @@
 {
   "pageViews": [
     {
+      "id": "mqwg6plyti2aiuyj3",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:20:55.461Z"
+    },
+    {
+      "id": "mqwg6jfwr8s6v1zsa",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:20:47.468Z"
+    },
+    {
+      "id": "mqwg6f3ifrr0nm6ga",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:20:41.838Z"
+    },
+    {
+      "id": "mqwg68wfoo3t6d6jg",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:20:33.806Z"
+    },
+    {
+      "id": "mqwg3uzg2u8ochww8",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:18:42.459Z"
+    },
+    {
+      "id": "mqwg2xt2p196fjao8",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:17:59.461Z"
+    },
+    {
+      "id": "mqwg2odrue48d5ops",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:17:47.247Z"
+    },
+    {
+      "id": "mqwg2kbpddmstvh9h",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:17:41.989Z"
+    },
+    {
+      "id": "mqwg2dsguacz0lij3",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:17:33.519Z"
+    },
+    {
+      "id": "mqwg273olfz4biejz",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:17:24.850Z"
+    },
+    {
+      "id": "mqwg1zoma7b1es3w2",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:17:15.237Z"
+    },
+    {
+      "id": "mqwg1y2obgvrcqfb6",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:17:13.147Z"
+    },
+    {
+      "id": "mqwg1uev7lda4wv32",
+      "path": "/aboutme",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:17:08.406Z"
+    },
+    {
+      "id": "mqwg0c8uc6wajieya",
+      "path": "/aboutme",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:15:58.206Z"
+    },
+    {
+      "id": "mqwg07fbujxtqgcyo",
+      "path": "/aboutme",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:15:51.959Z"
+    },
+    {
+      "id": "mqwg053qgvolg9zds",
+      "path": "/aboutme",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:15:48.949Z"
+    },
+    {
+      "id": "mqwg00nr8me570eqq",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:15:43.190Z"
+    },
+    {
+      "id": "mqwfzsf8oki5ybgi6",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:15:32.515Z"
+    },
+    {
+      "id": "mqwfydxuzy4rkbbrp",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:14:27.089Z"
+    },
+    {
+      "id": "mqwfy0qlf7iyrbt0e",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:14:09.979Z"
+    },
+    {
+      "id": "mqwfxqtdx2fsmj6dw",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:13:57.120Z"
+    },
+    {
+      "id": "mqwfxqt2ljq3ytyed",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:13:57.107Z"
+    },
+    {
+      "id": "mqwfpj47tgxtmeba2",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:07:33.894Z"
+    },
+    {
+      "id": "mqwfi3wp49g8xhnz0",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:01:47.593Z"
+    },
+    {
+      "id": "mqwfhympur8shtz94",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:01:40.750Z"
+    },
+    {
       "id": "mqwffzwuwa0pbjwe0",
       "path": "/",
       "referrer": "http://localhost:3000/",
@@ -3971,11 +4196,11 @@
     }
   ],
   "summary": {
-    "totalVisits": 441,
+    "totalVisits": 466,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 127,
-      "/aboutme": 65,
+      "/": 148,
+      "/aboutme": 69,
       "/projects": 68,
       "/certificates": 68,
       "/explanation": 56,
@@ -3988,13 +4213,13 @@
       "/imag.png": 1
     },
     "deviceBreakdown": {
-      "desktop": 413,
-      "mobile": 28,
+      "desktop": 437,
+      "mobile": 29,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 414,
-      "Safari": 27
+      "Chrome": 438,
+      "Safari": 28
     },
     "dailyVisits": {
       "2026-06-04": 9,
@@ -4004,7 +4229,7 @@
       "2026-06-08": 48,
       "2026-06-17": 86,
       "2026-06-26": 159,
-      "2026-06-27": 99
+      "2026-06-27": 124
     }
   }
 }
