@@ -1,6 +1,78 @@
 {
   "pageViews": [
     {
+      "id": "mqwpurhrvzovzaz8j",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:51:34.189Z"
+    },
+    {
+      "id": "mqwpt56qd0el350r5",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:50:18.625Z"
+    },
+    {
+      "id": "mqwplfcr59dda27dj",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:44:18.553Z"
+    },
+    {
+      "id": "mqwpj836hqnp6hy3k",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:42:35.825Z"
+    },
+    {
+      "id": "mqwpi0yl0eg0eyh0s",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:41:39.930Z"
+    },
+    {
+      "id": "mqwpho0fbgr7ds9r3",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:41:23.151Z"
+    },
+    {
+      "id": "mqwphks2tk2if7cec",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:41:18.961Z"
+    },
+    {
+      "id": "mqwpcymppy3zugqwt",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:37:43.632Z"
+    },
+    {
       "id": "mqwp2yuud97dlgl4x",
       "path": "/",
       "referrer": "",
@@ -4997,10 +5069,10 @@
     }
   ],
   "summary": {
-    "totalVisits": 555,
+    "totalVisits": 563,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 203,
+      "/": 211,
       "/aboutme": 72,
       "/projects": 79,
       "/certificates": 71,
@@ -5014,13 +5086,13 @@
       "/imag.png": 1
     },
     "deviceBreakdown": {
-      "desktop": 505,
-      "mobile": 50,
+      "desktop": 510,
+      "mobile": 53,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 506,
-      "Safari": 49
+      "Chrome": 511,
+      "Safari": 52
     },
     "dailyVisits": {
       "2026-06-04": 9,
@@ -5030,7 +5102,7 @@
       "2026-06-08": 48,
       "2026-06-17": 86,
       "2026-06-26": 159,
-      "2026-06-27": 213
+      "2026-06-27": 221
     }
   }
 }

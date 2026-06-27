@@ -1885,6 +1885,7 @@ noscript {
     bottom: 0;
     left: 0;
     right: 0;
+    /* border: 1px solid red; */
     height: 120px;
     background: linear-gradient(to bottom, transparent 0%, #111111 100%);
     z-index: 3;
@@ -2400,7 +2401,7 @@ noscript {
         margin-bottom: -100px;
     }
 
-    .hero-photo-container::after {
+    /* .hero-photo-container::after {
         content: '';
         position: absolute;
         bottom: -100px;
@@ -2417,7 +2418,7 @@ noscript {
                 #030508 100%);
         z-index: 5;
         pointer-events: none;
-    }
+    } */
 
     .hero-heading {
         font-size: clamp(2.8rem, 5vw, 5rem);
@@ -2446,6 +2447,7 @@ noscript {
 
     .hero-photo {
         width: 440px !important;
+        margin-top: 10px;
     }
 
     .hero-photo-fade {
