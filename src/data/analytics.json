@@ -1,6 +1,51 @@
 {
   "pageViews": [
     {
+      "id": "mqwqnqdgaaiah89oc",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T19:14:05.763Z"
+    },
+    {
+      "id": "mqwqk7brt37tds5ol",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T19:11:21.110Z"
+    },
+    {
+      "id": "mqwqj18nziuhr8n8r",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T19:10:26.565Z"
+    },
+    {
+      "id": "mqwqihtw4g8921t1o",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T19:10:01.411Z"
+    },
+    {
+      "id": "mqwqiel7ryc838ebt",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T19:09:57.205Z"
+    },
+    {
       "id": "mqwpurhrvzovzaz8j",
       "path": "/",
       "referrer": "",
@@ -5069,10 +5114,10 @@
     }
   ],
   "summary": {
-    "totalVisits": 563,
+    "totalVisits": 568,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 211,
+      "/": 216,
       "/aboutme": 72,
       "/projects": 79,
       "/certificates": 71,
@@ -5086,13 +5131,13 @@
       "/imag.png": 1
     },
     "deviceBreakdown": {
-      "desktop": 510,
-      "mobile": 53,
+      "desktop": 514,
+      "mobile": 54,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 511,
-      "Safari": 52
+      "Chrome": 515,
+      "Safari": 53
     },
     "dailyVisits": {
       "2026-06-04": 9,
@@ -5102,7 +5147,7 @@
       "2026-06-08": 48,
       "2026-06-17": 86,
       "2026-06-26": 159,
-      "2026-06-27": 221
+      "2026-06-27": 226
     }
   }
 }
