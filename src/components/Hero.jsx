@@ -105,12 +105,12 @@ const Hero = () => {
 
             {/* ── HTML TEXT OVERLAY (Matches Baked Image Text) ── */}
             <div className="hero-content-overlay">
-                
+
                 {/* ── LEFT SIDE ── */}
                 <div className="hero-content-left">
                     <div className="hero-vertical-text">SCROLL TO EXPLORE</div>
-                    
-                    <motion.p 
+
+                    <motion.p
                         className="hero-eyebrow"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -118,8 +118,8 @@ const Hero = () => {
                     >
                         HELLO, I&apos;M
                     </motion.p>
-                    
-                    <motion.h1 
+
+                    <motion.h1
                         className="hero-main-name"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -127,15 +127,15 @@ const Hero = () => {
                     >
                         Dhruvesh
                     </motion.h1>
-                    
-                    <motion.div 
+
+                    <motion.div
                         className="hero-divider"
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
                         transition={{ duration: 0.8, delay: 0.7 }}
                     />
-                    
-                    <motion.h2 
+
+                    <motion.h2
                         className="hero-subtitle"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -143,20 +143,20 @@ const Hero = () => {
                     >
                         FULL STACK DEVELOPER
                     </motion.h2>
-                    
-                    <motion.p 
+
+                    <motion.p
                         className="hero-description"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.9 }}
                     >
-                        I craft clean, efficient and<br/>
-                        impactful digital experiences<br/>
+                        I craft clean, efficient and<br />
+                        impactful digital experiences<br />
                         that solve real-world problems.
                     </motion.p>
-                    
-                    <motion.a 
-                        href="#projects" 
+
+                    <motion.a
+                        href="#projects"
                         className="hero-view-work"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -164,8 +164,8 @@ const Hero = () => {
                     >
                         VIEW MY WORK <span className="arrow">→</span>
                     </motion.a>
-                    
-                    <motion.div 
+
+                    <motion.div
                         className="hero-quote-block"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -173,8 +173,8 @@ const Hero = () => {
                     >
                         <div className="quote-icon">“</div>
                         <p>
-                            Code is not just<br/>
-                            what I write,<br/>
+                            Code is not just<br />
+                            what I write,<br />
                             it&apos;s how I think.
                         </p>
                     </motion.div>
@@ -182,8 +182,8 @@ const Hero = () => {
 
                 {/* ── RIGHT SIDE ── */}
                 <div className="hero-content-right">
-                    
-                    <motion.div 
+
+                    <motion.div
                         className="hero-mission"
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -191,20 +191,20 @@ const Hero = () => {
                     >
                         <span className="star-icon">✦</span>
                         <p>
-                            BUILDING DIGITAL<br/>
-                            EXPERIENCES<br/>
+                            BUILDING DIGITAL<br />
+                            EXPERIENCES<br />
                             THAT MATTER.
                         </p>
                     </motion.div>
-                    
-                    <motion.div 
+
+                    <motion.div
                         className="hero-divider hero-divider--right"
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                     />
-                    
-                    <motion.div 
+
+                    <motion.div
                         className="hero-specialties"
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -219,22 +219,22 @@ const Hero = () => {
                             <li><span className="dot">•</span> API INTEGRATION</li>
                         </ul>
                     </motion.div>
-                    
-                    <motion.div 
+
+                    <motion.div
                         className="hero-divider hero-divider--right"
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
                         transition={{ duration: 0.8, delay: 0.9 }}
                     />
-                    
-                    <motion.div 
+
+                    <motion.div
                         className="hero-availability"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 1.0 }}
                     >
                         <p>
-                            AVAILABLE FOR<br/>
+                            AVAILABLE FOR<br />
                             OPPORTUNITIES <span className="status-dot"></span>
                         </p>
                         <div className="hero-signature">Dhruvesh</div>

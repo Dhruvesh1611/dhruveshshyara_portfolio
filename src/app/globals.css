@@ -1686,7 +1686,7 @@ noscript {
     padding: 130px 5% 0;
     gap: 0;
     background: #030508;
-    background-image: url('/hero_b2.png');
+    background-image: url('/hero_bg2.png');
     background-size: cover;
     background-position: center 70%;
 }
@@ -2087,6 +2087,70 @@ noscript {
     transform: rotate(-5deg);
     margin-left: 20px;
     margin-top: -10px;
+}
+
+/* ── RESPONSIVE HERO OVERLAY ── */
+@media (max-width: 1100px) {
+    .hero-content-overlay {
+        width: 95%;
+    }
+    .hero-main-name {
+        font-size: 6.5rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .hero-content-overlay {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 100px;
+        gap: 60px;
+    }
+    .hero-content-left, .hero-content-right {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 0;
+    }
+    .hero-vertical-text {
+        display: none;
+    }
+    .hero-main-name {
+        font-size: 5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    .hero-description {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .hero-quote-block {
+        margin-top: 20px;
+    }
+    .hero-mission {
+        flex-direction: column;
+        align-items: center;
+    }
+    .specialty-list {
+        align-items: center;
+    }
+    .hero-availability p {
+        justify-content: center;
+    }
+    .hero-signature {
+        margin-left: 0;
+    }
+    .hero-section {
+        overflow: visible; /* allow content to grow */
+    }
 }
 
 /* ── Cinematic bottom fade — no hard cutoff ── */
@@ -2677,7 +2741,7 @@ noscript {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 998px) {
     .abt-wrapper {
         grid-template-columns: 1fr;
         gap: 60px;
@@ -2727,13 +2791,14 @@ noscript {
     }
 
     .abt-card {
-        padding: 20px;
+        padding: 16px;
+        gap: 12px;
     }
 
     .abt-card-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
+        gap: 4px;
     }
 
     .abt-card-sep {
@@ -2747,7 +2812,16 @@ noscript {
     }
 
     .abt-stat {
-        width: 100%;
+        width: 45%;
+        padding: 12px;
+    }
+
+    .abt-heading {
+        font-size: 2.8rem;
+    }
+
+    .abt-name {
+        font-size: 4rem;
     }
 }
 
