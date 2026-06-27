@@ -2285,68 +2285,70 @@ noscript {
 
 @media (max-width: 850px) {
     .hero-content-overlay {
-        position: relative;
+        position: absolute;
         top: 0;
         left: 0;
         transform: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        height: auto;
-        padding-top: 40px;
-        padding-bottom: 100px;
-        gap: 60px;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        padding: 40px 5% 40px 5%;
+        gap: 10px;
     }
 
-    .hero-content-left,
-    .hero-content-right {
-        align-items: center;
-        text-align: center;
-        width: 100%;
+    .hero-content-left {
+        align-items: flex-start;
+        text-align: left;
+        width: 50%;
         margin-top: 0;
     }
 
-    .hero-vertical-text {
+    .hero-content-right {
+        align-items: flex-end;
+        text-align: right;
+        width: 50%;
+        margin-top: 0;
+    }
+
+    .hero-vertical-text,
+    .hero-quote-block,
+    .hero-description,
+    .hero-divider,
+    .specialty-list,
+    .hero-mission p,
+    .hero-availability p {
         display: none;
     }
 
     .hero-main-name {
-        font-size: 5rem;
+        font-size: 3.5rem;
     }
 
     .hero-subtitle {
-        font-size: 1.3rem;
-    }
-
-    .hero-description {
-        max-width: 100%;
+        font-size: 0.9rem;
         margin-bottom: 20px;
-    }
-
-    .hero-quote-block {
-        margin-top: 20px;
     }
 
     .hero-mission {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-end;
     }
 
-    .specialty-list {
-        align-items: center;
-    }
-
-    .hero-availability p {
-        justify-content: center;
+    .hero-availability {
+        align-items: flex-end;
     }
 
     .hero-signature {
         margin-left: 0;
+        font-size: 2rem;
     }
 
     .hero-section {
-        overflow: visible;
-        /* allow content to grow */
+        overflow: hidden;
+        height: 100vh;
+        min-height: 100vh;
     }
 }
 

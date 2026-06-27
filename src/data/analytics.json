@@ -1,6 +1,42 @@
 {
   "pageViews": [
     {
+      "id": "mqwmnhb7hldsc83aw",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:21:55.553Z"
+    },
+    {
+      "id": "mqwmn6fj723197xl1",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:21:41.453Z"
+    },
+    {
+      "id": "mqwmn2ips6i61yopp",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:21:36.384Z"
+    },
+    {
+      "id": "mqwlzeu5qg9magk5l",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:03:12.602Z"
+    },
+    {
       "id": "mqwh0uyjmnwt0mrbz",
       "path": "/",
       "referrer": "http://localhost:3000/",
@@ -4403,10 +4439,10 @@
     }
   ],
   "summary": {
-    "totalVisits": 489,
+    "totalVisits": 493,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 170,
+      "/": 174,
       "/aboutme": 69,
       "/projects": 68,
       "/certificates": 68,
@@ -4420,13 +4456,13 @@
       "/imag.png": 1
     },
     "deviceBreakdown": {
-      "desktop": 442,
-      "mobile": 47,
+      "desktop": 444,
+      "mobile": 49,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 443,
-      "Safari": 46
+      "Chrome": 445,
+      "Safari": 48
     },
     "dailyVisits": {
       "2026-06-04": 9,
@@ -4436,7 +4472,7 @@
       "2026-06-08": 48,
       "2026-06-17": 86,
       "2026-06-26": 159,
-      "2026-06-27": 147
+      "2026-06-27": 151
     }
   }
 }
