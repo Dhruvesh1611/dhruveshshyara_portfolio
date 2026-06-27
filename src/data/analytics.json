@@ -1,6 +1,15 @@
 {
   "pageViews": [
     {
+      "id": "mqwoinzdom63gc4fk",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T18:14:10.152Z"
+    },
+    {
       "id": "mqwnygdr7qi5ctwe2",
       "path": "/projects",
       "referrer": "",
@@ -4682,10 +4691,10 @@
     }
   ],
   "summary": {
-    "totalVisits": 520,
+    "totalVisits": 521,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 178,
+      "/": 179,
       "/aboutme": 70,
       "/projects": 77,
       "/certificates": 69,
@@ -4699,12 +4708,12 @@
       "/imag.png": 1
     },
     "deviceBreakdown": {
-      "desktop": 471,
+      "desktop": 472,
       "mobile": 49,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 472,
+      "Chrome": 473,
       "Safari": 48
     },
     "dailyVisits": {
@@ -4715,7 +4724,7 @@
       "2026-06-08": 48,
       "2026-06-17": 86,
       "2026-06-26": 159,
-      "2026-06-27": 178
+      "2026-06-27": 179
     }
   }
 }
