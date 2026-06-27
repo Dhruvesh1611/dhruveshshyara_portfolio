@@ -677,7 +677,7 @@
 .preloader-bg {
     position: absolute;
     inset: 0;
-    background: #030508;
+    background: #000;
     z-index: 0;
 }
 
@@ -718,7 +718,7 @@
     height: 90vh !important;
     max-height: 90vh;
     object-fit: contain;
-    filter: brightness(0.5) contrast(1.15);
+    mix-blend-mode: screen;
 }
 
 /* Name container — sits over the image */
@@ -814,8 +814,8 @@
     }
 
     .preloader-hero-photo {
-        height: 70vh !important;
-        max-height: 70vh;
+        height: 75vh !important;
+        max-height: 75vh;
     }
 
     .preloader-subtitle {
@@ -2376,10 +2376,10 @@ noscript {
         padding: 0;
         min-height: 100svh;
         min-height: 100vh;
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: 0;
         gap: 0;
-        padding-top: 0;
+        padding-top: 80px;
         background-size: 100% auto;
         background-position: top center;
         background-repeat: no-repeat;
@@ -2481,8 +2481,8 @@ noscript {
         padding: 0;
         min-height: 100svh;
         min-height: 100vh;
-        justify-content: center;
-        padding-top: 0;
+        justify-content: flex-start;
+        padding-top: 80px;
     }
 
     .hero-heading {
