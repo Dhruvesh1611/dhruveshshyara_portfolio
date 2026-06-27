@@ -1,6 +1,150 @@
 {
   "pageViews": [
     {
+      "id": "mqwffzwuwa0pbjwe0",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:00:09.101Z"
+    },
+    {
+      "id": "mqwffzd681zqasugi",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T14:00:08.391Z"
+    },
+    {
+      "id": "mqwfdjpy1uec6df07",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:58:14.806Z"
+    },
+    {
+      "id": "mqwfdfsq7wenj97je",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:58:09.721Z"
+    },
+    {
+      "id": "mqwfd1ueop5shf23r",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:57:51.638Z"
+    },
+    {
+      "id": "mqwfczgdlxsodjtvn",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:57:48.540Z"
+    },
+    {
+      "id": "mqwf86nhxqx370w7l",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:54:04.588Z"
+    },
+    {
+      "id": "mqwf7g9dz2ek3zxln",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:53:30.380Z"
+    },
+    {
+      "id": "mqwf7cqyj30q5jmd5",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:53:25.833Z"
+    },
+    {
+      "id": "mqwf6dg7ero1ys52i",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:52:40.086Z"
+    },
+    {
+      "id": "mqwf6bz1hchbmr913",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:52:38.166Z"
+    },
+    {
+      "id": "mqwf0czv416jbikhi",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:47:59.562Z"
+    },
+    {
+      "id": "mqwez2zof1ao5xgsw",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:46:59.938Z"
+    },
+    {
+      "id": "mqwenjn6y4l1j640e",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:38:01.649Z"
+    },
+    {
+      "id": "mqwemv827pck9a3qz",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:37:30.002Z"
+    },
+    {
+      "id": "mqwemu0qn5oc11i6i",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T13:37:28.440Z"
+    },
+    {
       "id": "mqwe32lkoakmgrag2",
       "path": "/",
       "referrer": "http://localhost:3000/",
@@ -3827,12 +3971,12 @@
     }
   ],
   "summary": {
-    "totalVisits": 425,
+    "totalVisits": 441,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 113,
-      "/aboutme": 64,
-      "/projects": 67,
+      "/": 127,
+      "/aboutme": 65,
+      "/projects": 68,
       "/certificates": 68,
       "/explanation": 56,
       "/projects/shyara-gold": 1,
@@ -3844,13 +3988,13 @@
       "/imag.png": 1
     },
     "deviceBreakdown": {
-      "desktop": 404,
-      "mobile": 21,
+      "desktop": 413,
+      "mobile": 28,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 405,
-      "Safari": 20
+      "Chrome": 414,
+      "Safari": 27
     },
     "dailyVisits": {
       "2026-06-04": 9,
@@ -3860,7 +4004,7 @@
       "2026-06-08": 48,
       "2026-06-17": 86,
       "2026-06-26": 159,
-      "2026-06-27": 83
+      "2026-06-27": 99
     }
   }
 }

@@ -156,7 +156,7 @@ const Hero = () => {
                     </motion.p>
 
                     <motion.a
-                        href="#projects"
+                        href="/projects"
                         className="hero-view-work"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
