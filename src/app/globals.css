@@ -2383,9 +2383,8 @@ noscript {
         margin-top: 0;
         gap: 0;
         padding-top: 80px;
-        background-size: 100% auto;
-        background-position: top center;
-        background-repeat: no-repeat;
+        background-image: none !important;
+        background-color: #000000 !important;
     }
 
     .hero-heading-wrap {
