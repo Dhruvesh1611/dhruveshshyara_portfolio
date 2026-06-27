@@ -62,7 +62,7 @@ export default function ProjectPage({ params }) {
     }, [navItems]);
 
     return (
-        <div className="project-detail-container">
+        <div className="project-detail-container" style={{ paddingTop: '160px' }}>
             <Navbar />
 
             <nav className="breadcrumb-nav">

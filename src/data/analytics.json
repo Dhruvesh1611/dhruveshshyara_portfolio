@@ -1,6 +1,249 @@
 {
   "pageViews": [
     {
+      "id": "mqwnygdr7qi5ctwe2",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:58:27.182Z"
+    },
+    {
+      "id": "mqwnx4k7v259n8f6p",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:57:25.206Z"
+    },
+    {
+      "id": "mqwnwtkcq7f9pgg2q",
+      "path": "/projects/doppelganger",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:57:10.955Z"
+    },
+    {
+      "id": "mqwnwrq6320hpwg1b",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:57:08.572Z"
+    },
+    {
+      "id": "mqwnwiexstvcc301v",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:56:56.504Z"
+    },
+    {
+      "id": "mqwnq77ebplb0hvvb",
+      "path": "/projects/doppelganger",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:52:02.042Z"
+    },
+    {
+      "id": "mqwnq6bqvay6lywvz",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:52:00.902Z"
+    },
+    {
+      "id": "mqwnq4o89k3soil3n",
+      "path": "/projects/shyara-gold",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:51:58.760Z"
+    },
+    {
+      "id": "mqwnq3y61ddjb5ncu",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:51:57.822Z"
+    },
+    {
+      "id": "mqwnq21i8girbgb9e",
+      "path": "/projects/yaritu",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:51:55.349Z"
+    },
+    {
+      "id": "mqwnq0dulfupd70gr",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:51:53.201Z"
+    },
+    {
+      "id": "mqwnmqegbd8gyb5zc",
+      "path": "/projects/doppelganger",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:49:20.295Z"
+    },
+    {
+      "id": "mqwnhyypeyx8skb9c",
+      "path": "/projects/doppelganger",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:45:38.112Z"
+    },
+    {
+      "id": "mqwnhy6dyhjsvhh19",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:45:37.092Z"
+    },
+    {
+      "id": "mqwnhvsqpd8ymtpvr",
+      "path": "/projects/yaritu",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:45:34.009Z"
+    },
+    {
+      "id": "mqwnhu2syc1fjvqij",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:45:31.780Z"
+    },
+    {
+      "id": "mqwnhqgw914u2rwe2",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:45:27.102Z"
+    },
+    {
+      "id": "mqwnhnljuoye6opz6",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:45:23.381Z"
+    },
+    {
+      "id": "mqwngje1p9c7oa0fr",
+      "path": "/projects/shyara-gold",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:44:31.272Z"
+    },
+    {
+      "id": "mqwn4ebppotwa42yt",
+      "path": "/projects/shyara-gold",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:35:04.837Z"
+    },
+    {
+      "id": "mqwn4bviboh13hteq",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:35:01.661Z"
+    },
+    {
+      "id": "mqwn44pn8r5281eb8",
+      "path": "/projects/doppelganger",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:34:52.378Z"
+    },
+    {
+      "id": "mqwmx7a7glwxeek6v",
+      "path": "/projects/doppelganger",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:29:29.118Z"
+    },
+    {
+      "id": "mqwmpupxl3928qu20",
+      "path": "/projects/doppelganger",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:23:46.244Z"
+    },
+    {
+      "id": "mqwmpmb12gza04mzk",
+      "path": "/projects",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:23:35.341Z"
+    },
+    {
+      "id": "mqwmpgx00x7hprd4r",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:23:28.355Z"
+    },
+    {
+      "id": "mqwmothpxheehriy8",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-27T17:22:57.997Z"
+    },
+    {
       "id": "mqwmnhb7hldsc83aw",
       "path": "/",
       "referrer": "http://localhost:3000/",
@@ -4439,29 +4682,29 @@
     }
   ],
   "summary": {
-    "totalVisits": 493,
+    "totalVisits": 520,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 174,
-      "/aboutme": 69,
-      "/projects": 68,
-      "/certificates": 68,
+      "/": 178,
+      "/aboutme": 70,
+      "/projects": 77,
+      "/certificates": 69,
       "/explanation": 56,
-      "/projects/shyara-gold": 1,
+      "/projects/shyara-gold": 4,
       "/login": 1,
-      "/projects/doppelganger": 3,
-      "/projects/yaritu": 1,
+      "/projects/doppelganger": 10,
+      "/projects/yaritu": 3,
       "/hackathons": 50,
       "/home": 1,
       "/imag.png": 1
     },
     "deviceBreakdown": {
-      "desktop": 444,
+      "desktop": 471,
       "mobile": 49,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 445,
+      "Chrome": 472,
       "Safari": 48
     },
     "dailyVisits": {
@@ -4472,7 +4715,7 @@
       "2026-06-08": 48,
       "2026-06-17": 86,
       "2026-06-26": 159,
-      "2026-06-27": 151
+      "2026-06-27": 178
     }
   }
 }
