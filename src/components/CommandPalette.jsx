@@ -85,19 +85,28 @@ function fuzzyMatch(query, text) {
 }
 
 const CommandPalette = ({ isOpen, onClose }) => {
-    const [query, setQuery] = useState('');
     const [activeIndex, setActiveIndex] = useState(0);
-    const inputRef = useRef(null);
     const listRef = useRef(null);
     const router = useRouter();
 
-    // Focus input when opened
+    // Handle opened state (reset index and lock scroll)
     useEffect(() => {
         if (isOpen) {
-            setQuery('');
             setActiveIndex(0);
-            setTimeout(() => inputRef.current?.focus(), 100);
+            document.documentElement.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.touchAction = 'none';
+        } else {
+            document.documentElement.style.overflow = 'unset';
+            document.body.style.overflow = 'unset';
+            document.body.style.touchAction = 'auto';
         }
+
+        return () => {
+            document.documentElement.style.overflow = 'unset';
+            document.body.style.overflow = 'unset';
+            document.body.style.touchAction = 'auto';
+        };
     }, [isOpen]);
 
     // Keyboard shortcut: Cmd+K / Ctrl+K to open/close
@@ -115,17 +124,8 @@ const CommandPalette = ({ isOpen, onClose }) => {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [isOpen, onClose]);
 
-    // Filter search results
-    const searchResults = useMemo(() => {
-        if (!query.trim()) return [];
-        return searchableContent.filter(item => {
-            const searchText = `${item.title} ${item.description} ${item.keywords}`;
-            return fuzzyMatch(query, searchText);
-        });
-    }, [query]);
-
     // Total items for keyboard nav
-    const totalItems = query.trim() ? searchResults.length : socialLinks.length;
+    const totalItems = socialLinks.length;
 
     // Keyboard navigation within the palette
     const handleKeyDown = (e) => {
@@ -137,11 +137,7 @@ const CommandPalette = ({ isOpen, onClose }) => {
             setActiveIndex(prev => (prev - 1 + Math.max(totalItems, 1)) % Math.max(totalItems, 1));
         } else if (e.key === 'Enter') {
             e.preventDefault();
-            if (query.trim() && searchResults[activeIndex]) {
-                const item = searchResults[activeIndex];
-                router.push(item.href);
-                onClose();
-            } else if (!query.trim() && socialLinks[activeIndex]) {
+            if (socialLinks[activeIndex]) {
                 window.open(socialLinks[activeIndex].url, '_blank');
                 onClose();
             }
@@ -155,8 +151,6 @@ const CommandPalette = ({ isOpen, onClose }) => {
             activeEl.scrollIntoView({ block: 'nearest' });
         }
     }, [activeIndex]);
-
-    const isSearching = query.trim().length > 0;
 
     return (
         <AnimatePresence>
@@ -175,90 +169,34 @@ const CommandPalette = ({ isOpen, onClose }) => {
                     {/* Palette */}
                     <motion.div
                         className="cmd-palette"
-                        initial={{ opacity: 0, scale: 0.95, y: -20 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.95, y: -20 }}
+                        initial={{ opacity: 0, scale: 0.95, y: -20, x: "-50%" }}
+                        animate={{ opacity: 1, scale: 1, y: 0, x: "-50%" }}
+                        exit={{ opacity: 0, scale: 0.95, y: -20, x: "-50%" }}
                         transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
                     >
-                        {/* Search Input */}
-                        <div className="cmd-search">
-                            <svg className="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="m21 21-4.35-4.35" />
-                            </svg>
-                            <input
-                                ref={inputRef}
-                                className="cmd-search-input"
-                                type="text"
-                                placeholder="Search portfolio or browse links..."
-                                value={query}
-                                onChange={(e) => { setQuery(e.target.value); setActiveIndex(0); }}
-                                onKeyDown={handleKeyDown}
-                                aria-label="Search portfolio"
-                            />
-                            <kbd className="cmd-kbd">ESC</kbd>
-                        </div>
-
-                        <div className="cmd-divider" />
-
                         {/* Content Area */}
                         <div className="cmd-content" ref={listRef}>
-                            {!isSearching ? (
-                                <>
-                                    {/* Links Section */}
-                                    <div className="cmd-section-label">Links</div>
-                                    {socialLinks.map((link, index) => (
-                                        <a
-                                            key={link.name}
-                                            href={link.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className={`cmd-item ${index === activeIndex ? 'cmd-item--active' : ''}`}
-                                            onMouseEnter={() => setActiveIndex(index)}
-                                            onClick={onClose}
-                                        >
-                                            <span className="cmd-item-icon">{icons[link.icon]}</span>
-                                            <div className="cmd-item-text">
-                                                <span className="cmd-item-title">{link.name}</span>
-                                                <span className="cmd-item-desc">{link.description}</span>
-                                            </div>
-                                            <svg className="cmd-item-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
-                                                <path d="M7 17L17 7M17 7H7M17 7v10" />
-                                            </svg>
-                                        </a>
-                                    ))}
-                                </>
-                            ) : searchResults.length > 0 ? (
-                                <>
-                                    {/* Search Results */}
-                                    <div className="cmd-section-label">Results</div>
-                                    {searchResults.map((item, index) => (
-                                        <Link
-                                            key={`${item.type}-${item.title}`}
-                                            href={item.href}
-                                            className={`cmd-item ${index === activeIndex ? 'cmd-item--active' : ''}`}
-                                            onMouseEnter={() => setActiveIndex(index)}
-                                            onClick={onClose}
-                                        >
-                                            <span className="cmd-item-icon cmd-item-icon--type">{icons[item.type]}</span>
-                                            <div className="cmd-item-text">
-                                                <span className="cmd-item-title">{item.title}</span>
-                                                <span className="cmd-item-desc">{item.description}</span>
-                                            </div>
-                                            <span className="cmd-item-badge">{item.type}</span>
-                                        </Link>
-                                    ))}
-                                </>
-                            ) : (
-                                <div className="cmd-empty">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="40" height="40">
-                                        <circle cx="11" cy="11" r="8" />
-                                        <path d="m21 21-4.35-4.35" />
+                            <div className="cmd-section-label">Links</div>
+                            {socialLinks.map((link, index) => (
+                                <a
+                                    key={link.name}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`cmd-item ${index === activeIndex ? 'cmd-item--active' : ''}`}
+                                    onMouseEnter={() => setActiveIndex(index)}
+                                    onClick={onClose}
+                                >
+                                    <span className="cmd-item-icon">{icons[link.icon]}</span>
+                                    <div className="cmd-item-text">
+                                        <span className="cmd-item-title">{link.name}</span>
+                                        <span className="cmd-item-desc">{link.description}</span>
+                                    </div>
+                                    <svg className="cmd-item-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
+                                        <path d="M7 17L17 7M17 7H7M17 7v10" />
                                     </svg>
-                                    <p>No results for &ldquo;{query}&rdquo;</p>
-                                    <span>Try searching for projects, skills, or pages</span>
-                                </div>
-                            )}
+                                </a>
+                            ))}
                         </div>
 
                         {/* Footer */}
