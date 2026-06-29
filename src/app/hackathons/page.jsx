@@ -113,7 +113,7 @@ const HackathonsPage = () => {
                 {/* ── Floating Memory Collage Sections ── */}
                 {hackathonsList.map((hackathon, hIndex) => (
                     <section key={hackathon.id} className="collage-section" id={hIndex === 0 ? "collage-section" : `collage-section-${hackathon.id}`}>
-                        
+
                         <div className="collage-section-header">
                             <motion.h2
                                 className="section-main-title"
