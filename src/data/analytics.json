@@ -1,6 +1,15 @@
 {
   "pageViews": [
     {
+      "id": "mqz2g3zu5b4ttfn20",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-06-29T10:19:37.914Z"
+    },
+    {
       "id": "mquw89rsdqb491o51",
       "path": "/hackathons",
       "referrer": "http://localhost:3000/hackathons",
@@ -3080,10 +3089,10 @@
     }
   ],
   "summary": {
-    "totalVisits": 342,
+    "totalVisits": 343,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 55,
+      "/": 56,
       "/aboutme": 56,
       "/projects": 63,
       "/certificates": 67,
@@ -3095,12 +3104,12 @@
       "/hackathons": 39
     },
     "deviceBreakdown": {
-      "desktop": 330,
+      "desktop": 331,
       "mobile": 12,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 331,
+      "Chrome": 332,
       "Safari": 11
     },
     "dailyVisits": {
@@ -3110,7 +3119,8 @@
       "2026-06-07": 27,
       "2026-06-08": 48,
       "2026-06-17": 86,
-      "2026-06-26": 159
+      "2026-06-26": 159,
+      "2026-06-29": 1
     }
   }
 }
