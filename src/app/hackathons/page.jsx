@@ -17,10 +17,10 @@ const HackathonsPage = () => {
             subtitle: 'of Ideas, Code & Passion',
             text: <>Built an AI-first SaaS solution,<br />collaborated with amazing people,<br />and created memories for a lifetime.</>,
             photos: [
-                { src: "/hackathons/charusat/charusat2.png", top: "7%", left: "12%", rotate: -8, label: "The Event" },
-                { src: "/hackathons/charusat/charusat3.png", top: "10%", right: "15%", rotate: 7, label: "The Duo" },
-                { src: "/hackathons/charusat/charusat1.png", bottom: "12%", left: "14%", rotate: -5, label: "CodingGita Teams" },
-                { src: "/hackathons/charusat/charusat4.png", bottom: "10%", right: "12%", rotate: 8, label: "The Badges", aspectRatio: "4/4" }
+                { src: "/hackathons/charusat/charusat2.png", top: "7%", left: "12%", rotate: -8, label: "The Vibe" },
+                { src: "/hackathons/charusat/charusat3.png", top: "10%", right: "15%", rotate: 7, label: "The Energy" },
+                { src: "/hackathons/charusat/charusat1.png", bottom: "12%", left: "14%", rotate: -5, label: "The Team" },
+                { src: "/hackathons/charusat/charusat4.png", bottom: "10%", right: "12%", rotate: 8, label: "Moments", aspectRatio: "4/4" }
             ]
         },
         {
@@ -31,9 +31,9 @@ const HackathonsPage = () => {
             subtitle: 'of Innovation & Building',
             text: <>Pushed our limits overnight,<br />learned new tech stacks,<br />and built a product we are proud of.</>,
             photos: [
-                { src: "/hackathons/svnit/svnit1.png", top: "8%", left: "15%", rotate: -6, label: "The Badge" },
+                { src: "/hackathons/svnit/svnit1.png", top: "8%", left: "15%", rotate: -6, label: "The Build" },
                 { src: "/hackathons/svnit/svnit2.png", top: "16%", right: "12%", rotate: 9, label: "The Squad", aspectRatio: "12/8" },
-                { src: "/hackathons/svnit/svnit3.png", bottom: "10%", left: "25%", rotate: -4, label: "The Workspace" }
+                { src: "/hackathons/svnit/svnit3.png", bottom: "10%", left: "25%", rotate: -4, label: "The Setup" }
             ]
         },
         {
@@ -113,7 +113,7 @@ const HackathonsPage = () => {
                 {/* ── Floating Memory Collage Sections ── */}
                 {hackathonsList.map((hackathon, hIndex) => (
                     <section key={hackathon.id} className="collage-section" id={hIndex === 0 ? "collage-section" : `collage-section-${hackathon.id}`}>
-
+                        
                         <div className="collage-section-header">
                             <motion.h2
                                 className="section-main-title"
