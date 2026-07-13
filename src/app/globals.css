@@ -1867,7 +1867,7 @@ noscript {
     padding: 80px 5% 0;
     gap: 0;
     background: #030508;
-    background-image: url('/hero_bg.png');
+    background-image: url('/hero-bg.png');
     background-size: cover;
     background-position: center 70%;
 }
@@ -1887,7 +1887,7 @@ noscript {
     right: 0;
     /* border: 1px solid red; */
     height: 120px;
-    background: linear-gradient(to bottom, transparent 0%, #111111 100%);
+    background: linear-gradient(to bottom, transparent 0%, #000000 100%);
     z-index: 3;
     pointer-events: none;
 }
@@ -1974,7 +1974,7 @@ noscript {
     position: relative;
     z-index: 2;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     margin-top: 0;
     flex: 1;
@@ -2022,22 +2022,20 @@ noscript {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     height: auto;
-    margin-bottom: 20px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 
 .hero-photo {
     width: 100% !important;
-    max-height: 90vh;
-    /* border: 2px solid red; */
+    max-height: 80vh;
     height: auto !important;
     object-fit: contain;
-    object-position: center;
-    margin-top: -100px;
+    object-position: bottom;
+    margin-top: 0;
     filter: none;
     border-radius: 0;
 }
@@ -2073,14 +2071,15 @@ noscript {
 /* ── LEFT SIDE TYPOGRAPHY ── */
 .hero-vertical-text {
     position: absolute;
-    left: -60px;
-    bottom: 0;
-    transform: rotate(-90deg) translateX(-50%);
+    left: 40px;
+    bottom: 150px;
+    transform: rotate(-90deg);
     transform-origin: left bottom;
     font-family: var(--font-fira-code), monospace;
     font-size: 1.2rem;
     letter-spacing: 0.3em;
     color: rgba(255, 255, 255, 0.3);
+    z-index: 20;
 }
 
 .hero-eyebrow {
@@ -2359,13 +2358,13 @@ noscript {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 300px;
+    height: 400px;
     background: linear-gradient(to bottom,
             transparent 0%,
-            rgba(3, 5, 8, 0.3) 25%,
-            rgba(3, 5, 8, 0.65) 50%,
-            rgba(3, 5, 8, 0.9) 75%,
-            #030508 100%);
+            rgba(0, 0, 0, 0.4) 30%,
+            rgba(0, 0, 0, 0.8) 60%,
+            #000000 85%,
+            #000000 100%);
     z-index: 2;
     pointer-events: none;
 }
@@ -2456,13 +2455,11 @@ noscript {
         width: 100%;
         background: linear-gradient(to bottom,
                 transparent 0%,
-                rgba(3, 5, 8, 0.05) 10%,
-                rgba(3, 5, 8, 0.15) 25%,
-                rgba(3, 5, 8, 0.35) 40%,
-                rgba(3, 5, 8, 0.55) 55%,
-                rgba(3, 5, 8, 0.75) 70%,
-                rgba(3, 5, 8, 0.9) 85%,
-                #030508 100%);
+                rgba(0, 0, 0, 0.2) 20%,
+                rgba(0, 0, 0, 0.5) 45%,
+                rgba(0, 0, 0, 0.85) 70%,
+                #000000 85%,
+                #000000 100%);
     }
 
     .hero-nebula--left,
@@ -2530,13 +2527,11 @@ noscript {
         width: 100%;
         background: linear-gradient(to bottom,
                 transparent 0%,
-                rgba(3, 5, 8, 0.05) 10%,
-                rgba(3, 5, 8, 0.12) 22%,
-                rgba(3, 5, 8, 0.3) 38%,
-                rgba(3, 5, 8, 0.5) 52%,
-                rgba(3, 5, 8, 0.7) 66%,
-                rgba(3, 5, 8, 0.88) 82%,
-                #030508 100%);
+                rgba(0, 0, 0, 0.2) 20%,
+                rgba(0, 0, 0, 0.5) 45%,
+                rgba(0, 0, 0, 0.85) 70%,
+                #000000 85%,
+                #000000 100%);
     }
 
     .hero-nebula--left,
@@ -5188,7 +5183,8 @@ footer {
     }
 
     .mobiletogglemenu {
-        background-color: rgba(10, 10, 10, 0.85); /* semi-transparent black */
+        background-color: rgba(10, 10, 10, 0.85);
+        /* semi-transparent black */
         z-index: 9990;
         height: 100vh;
         width: 100vw;
@@ -5268,7 +5264,7 @@ footer {
         background-color: #fff;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     }
-    
+
     .about-info,
     .dp,
     .info-dp-section {

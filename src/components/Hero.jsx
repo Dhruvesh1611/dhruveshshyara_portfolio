@@ -63,6 +63,8 @@ const Hero = () => {
 
     return (
         <section className="hero-section" id="home">
+            <div className="hero-vertical-text">SCROLL TO EXPLORE</div>
+
             {/* ── Star particles ── */}
             {/* <canvas ref={canvasRef} className="hero-stars-canvas" /> */}
 
@@ -81,18 +83,18 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
                 {/* Centered glow behind image */}
-                {/* <div className="hero-photo-glow" /> */}
+                <div className="hero-photo-glow" />
 
                 {/* Concentric rings — perfectly centered */}
-                {/* <div className="hero-ring hero-ring--outer" />
-                <div className="hero-ring hero-ring--inner" /> */}
+                <div className="hero-ring hero-ring--outer" />
+                <div className="hero-ring hero-ring--inner" />
 
                 {/* Profile photo */}
                 <div className="hero-photo-wrapper">
                     <Image
-                        src="/png/image.png"
+                        src="/png/dhruvesh-hero.png"
                         alt="Dhruvesh Shyara"
-                        width={650}
+                        width={550}
                         height={700}
                         priority
                         className="hero-photo"
@@ -100,7 +102,7 @@ const Hero = () => {
                 </div>
 
                 {/* Bottom cinematic fade */}
-                {/* <div className="hero-photo-fade" /> */}
+                <div className="hero-photo-fade" />
             </motion.div>
 
             {/* ── HTML TEXT OVERLAY (Matches Baked Image Text) ── */}
@@ -108,7 +110,6 @@ const Hero = () => {
 
                 {/* ── LEFT SIDE ── */}
                 <div className="hero-content-left">
-                    <div className="hero-vertical-text">SCROLL TO EXPLORE</div>
 
                     <motion.p
                         className="hero-eyebrow"

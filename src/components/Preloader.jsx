@@ -1,12 +1,10 @@
 'use client';
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
 
 const Preloader = () => {
     const [shouldRender, setShouldRender] = useState(true);
     const [phase, setPhase] = useState('enter'); // enter → reveal → exit → done
-    const imgRef = useRef(null);
 
     useEffect(() => {
         // Skip preloader for Lighthouse, bots, and headless browsers
@@ -67,31 +65,7 @@ const Preloader = () => {
                 transition={{ duration: 1.5, ease: 'easeOut' }}
             />
 
-            {/* Hero Image — centered, large, behind text */}
-            <motion.div
-                className="preloader-hero-img"
-                ref={imgRef}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={
-                    phase === 'enter'
-                        ? { opacity: 0, scale: 1.1 }
-                        : phase === 'reveal'
-                            ? { opacity: 1, scale: 1 }
-                            : { opacity: 1, scale: 1 }
-                }
-                transition={{ duration: 1.0, ease: [0.23, 1, 0.32, 1] }}
-            >
-                <Image
-                    src="/png/image.png"
-                    alt="Dhruvesh Shyara"
-                    width={650}
-                    height={700}
-                    priority
-                    className="preloader-hero-photo"
-                />
-            </motion.div>
-
-            {/* Big name text — over the image */}
+            {/* Big name text */}
             <div className="preloader-name-container">
                 <div className="preloader-name-row">
                     {firstName.map((ch, idx) => (
