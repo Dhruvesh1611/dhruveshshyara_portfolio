@@ -10,6 +10,20 @@ import { isValidImageSrc } from '@/lib/imageUtils';
 const HackathonsPage = () => {
     const hackathonsList = [
         {
+            id: 'swarnim',
+            headerTitle: 'HACK AARAMBH',
+            title: 'HACK AARAMBH 2026',
+            hours: '12 HOURS',
+            subtitle: 'of Innovation & Problem Solving',
+            text: <>Showcasing innovation, creativity,<br />and problem-solving skills<br />at Swarrnim University.</>,
+            photos: [
+                { src: "/hackathons/swarnim/s1.jpeg", top: "7%", left: "12%", rotate: -8, label: "The Setup" },
+                { src: "/hackathons/swarnim/s2.jpeg", top: "10%", right: "15%", rotate: 7, label: "The Team", aspectRatio: "12/8" },
+                { src: "/hackathons/swarnim/s3.jpeg", bottom: "12%", left: "14%", rotate: -5, label: "The Build" },
+                { src: "/hackathons/swarnim/s4.jpeg", bottom: "10%", right: "12%", rotate: 8, label: "The Moment", aspectRatio: "12/8" }
+            ]
+        },
+        {
             id: 'charusat',
             headerTitle: 'CHARUSAT HACKS',
             title: 'OCEANLAB × CHARUSAT HACKS 2026',
@@ -27,7 +41,7 @@ const HackathonsPage = () => {
             id: 'svnit',
             headerTitle: 'SVNIT HACKATHON',
             title: 'SVNIT HACKATHON 2026',
-            hours: '36 HOURS',
+            hours: '24 HOURS',
             subtitle: 'of Innovation & Building',
             text: <>Pushed our limits overnight,<br />learned new tech stacks,<br />and built a product we are proud of.</>,
             photos: [
@@ -40,7 +54,7 @@ const HackathonsPage = () => {
             id: 'rai',
             headerTitle: 'RAI UNIVERSITY',
             title: 'RAI UNIVERSITY HACKATHON',
-            hours: '48 HOURS',
+            hours: '12 HOURS',
             subtitle: 'of Code & Creativity',
             text: <>Building the future of technology,<br />one late-night commit at a time,<br />and meeting brilliant minds.</>,
             photos: [

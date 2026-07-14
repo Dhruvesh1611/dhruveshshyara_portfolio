@@ -1,5 +1,29 @@
 [
   {
+    "id": "cert_swarnim_hack",
+    "title": "Hack Aarambh 2026",
+    "issuer": "Swarrnim Startup & Innovation University",
+    "description": "Showcasing innovation, creativity, and problem-solving skills throughout the Hack Aarambh 2026 hackathon.",
+    "date": "10 July 2026",
+    "image": "/hackathons/swarnim/s1.jpeg",
+    "link": "https://drive.google.com/file/d/1rDfQ_ykwBnd3THdmcoPH8r-XGxME2iZz/view?usp=sharing",
+    "relatedSkills": [
+      "Hackathon",
+      "Innovation",
+      "Problem Solving"
+    ],
+    "featured": true,
+    "displayOrder": 1,
+    "status": "published",
+    "category": "Hackathon",
+    "photos": [
+      "/hackathons/swarnim/s1.jpeg",
+      "/hackathons/swarnim/s2.jpeg",
+      "/hackathons/swarnim/s3.jpeg",
+      "/hackathons/swarnim/s4.jpeg"
+    ]
+  },
+  {
     "id": "cert_1",
     "title": "AWS Cloud Essentials",
     "issuer": "Amazon Web Services",
