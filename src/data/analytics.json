@@ -1,6 +1,33 @@
 {
   "pageViews": [
     {
+      "id": "mrkeg8bmvp0v3c2iz",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:38:48.609Z"
+    },
+    {
+      "id": "mrkefteovt67voom8",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:38:29.279Z"
+    },
+    {
+      "id": "mrkee7ig5172tc5ai",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:37:14.247Z"
+    },
+    {
       "id": "mrkea749hypgep90a",
       "path": "/",
       "referrer": "",
@@ -3629,10 +3656,10 @@
     }
   ],
   "summary": {
-    "totalVisits": 403,
+    "totalVisits": 406,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 89,
+      "/": 92,
       "/aboutme": 59,
       "/projects": 64,
       "/certificates": 68,
@@ -3644,12 +3671,12 @@
       "/hackathons": 60
     },
     "deviceBreakdown": {
-      "desktop": 386,
+      "desktop": 389,
       "mobile": 17,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 389,
+      "Chrome": 392,
       "Safari": 14
     },
     "dailyVisits": {
@@ -3662,7 +3689,7 @@
       "2026-06-26": 159,
       "2026-06-29": 18,
       "2026-07-13": 3,
-      "2026-07-14": 40
+      "2026-07-14": 43
     }
   }
 }

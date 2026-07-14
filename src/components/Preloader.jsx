@@ -20,10 +20,10 @@ const T = {
     SPARK: 0,
     LETTERS: 800,
     IMAGES: 800,
-    SWEEP: 4000,
-    SUBTITLE: 4200,
-    DISSOLVE: 6500,
-    DONE: 7500,
+    SWEEP: 2000,
+    SUBTITLE: 2200,
+    DISSOLVE: 3500,
+    DONE: 4500,
 };
 
 /* ─── Noise Texture (canvas, ~10fps) ─── */
