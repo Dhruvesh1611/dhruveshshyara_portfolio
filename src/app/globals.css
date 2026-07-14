@@ -814,7 +814,7 @@
 .ld-char-solid,
 .ld-char-outline {
     font-family: var(--font-anton), 'Anton', sans-serif;
-    font-size: clamp(72px, 17vw, 250px);
+    font-size: clamp(100px, 22vw, 350px);
     font-weight: 400;
     letter-spacing: -0.03em;
     text-transform: uppercase;
@@ -967,7 +967,7 @@
     .ld-char-img,
     .ld-char-solid,
     .ld-char-outline {
-        font-size: clamp(60px, 14vw, 140px);
+        font-size: clamp(80px, 18vw, 200px);
     }
 }
 
@@ -975,7 +975,7 @@
     .ld-char-img,
     .ld-char-solid,
     .ld-char-outline {
-        font-size: clamp(40px, 13vw, 80px);
+        font-size: clamp(60px, 16vw, 120px);
         letter-spacing: -0.02em;
     }
 
@@ -1011,7 +1011,7 @@
     .ld-char-img,
     .ld-char-solid,
     .ld-char-outline {
-        font-size: clamp(32px, 12vw, 56px);
+        font-size: clamp(40px, 14vw, 80px);
     }
 
     .ld-sub-text {

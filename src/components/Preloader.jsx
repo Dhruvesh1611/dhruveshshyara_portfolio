@@ -6,24 +6,24 @@ import { motion, AnimatePresence, useMotionValue, useTransform, animate } from '
    CONFIGURATION — Edit images & timing here
    ═══════════════════════════════════════════ */
 const LETTER_CONFIG = [
-    { char: 'D', image: '/hackathons/swarnim/s1.jpeg' },
-    { char: 'H', image: '/hackathons/charusat/charusat2.png' },
-    { char: 'R', image: '/hackathons/svnit/svnit3.png' },
-    { char: 'U', image: '/hackathons/charusat/charusat3.png' },
-    { char: 'V', image: '/hackathons/rai_university/rai2.png' },
-    { char: 'E', image: '/hackathons/swarnim/s2.jpeg' },
-    { char: 'S', image: '/hackathons/svnit/svnit1.png' },
-    { char: 'H', image: '/hackathons/swarnim/s4.jpeg' },
+    { char: 'D', image: '/loader/l1.jpg' },
+    { char: 'H', image: '/loader/l2.jpg' },
+    { char: 'R', image: '/loader/l3.jpg' },
+    { char: 'U', image: '/loader/l4.jpg' },
+    { char: 'V', image: '/loader/l5.PNG' },
+    { char: 'E', image: '/loader/l6.jpg' },
+    { char: 'S', image: '/loader/l7.jpg' },
+    { char: 'H', image: '/loader/l8.jpg' },
 ];
 
 const T = {
     SPARK: 0,
     LETTERS: 800,
-    IMAGES: 2000,
-    SWEEP: 2600,
-    SUBTITLE: 2800,
-    DISSOLVE: 3800,
-    DONE: 4500,
+    IMAGES: 800,
+    SWEEP: 4000,
+    SUBTITLE: 4200,
+    DISSOLVE: 6500,
+    DONE: 7500,
 };
 
 /* ─── Noise Texture (canvas, ~10fps) ─── */
@@ -57,12 +57,14 @@ const NoiseCanvas = () => {
 
 /* ─── Floating Particles ─── */
 const Dust = ({ count = 35 }) => {
-    const pts = useMemo(() =>
-        Array.from({ length: count }, (_, i) => ({
+    const [pts, setPts] = useState([]);
+    useEffect(() => {
+        setPts(Array.from({ length: count }, (_, i) => ({
             i, x: Math.random() * 100, y: Math.random() * 100,
             s: Math.random() * 1.5 + 0.5, d: Math.random() * 16 + 10,
             dl: Math.random() * 6, o: Math.random() * 0.2 + 0.04,
-        })), [count]);
+        })));
+    }, [count]);
 
     return (
         <div className="ld-dust">
@@ -80,15 +82,17 @@ const Dust = ({ count = 35 }) => {
 
 /* ─── Dissolve Particles (exit) ─── */
 const Dissolve = ({ active }) => {
-    const pts = useMemo(() =>
-        Array.from({ length: 80 }, (_, i) => ({
+    const [pts, setPts] = useState([]);
+    useEffect(() => {
+        setPts(Array.from({ length: 80 }, (_, i) => ({
             i,
             x: (Math.random() - 0.5) * 900,
             y: -(Math.random() * 350 + 60),
             s: Math.random() * 3 + 0.8,
             dl: Math.random() * 0.35,
             d: Math.random() * 0.9 + 0.5,
-        })), []);
+        })));
+    }, []);
 
     if (!active) return null;
     return (
@@ -202,7 +206,7 @@ const Preloader = () => {
                                     }
                                     transition={{
                                         duration: 1,
-                                        delay: i * 0.08,
+                                        delay: i * 0.3,
                                         ease: [0.23, 1, 0.32, 1],
                                     }}
                                 >
@@ -213,25 +217,15 @@ const Preloader = () => {
                                             backgroundImage: `url(${image})`,
                                         }}
                                         initial={{ clipPath: 'inset(100% 0 0 0)' }}
-                                        animate={stage >= 2
+                                        animate={stage >= 1
                                             ? { clipPath: 'inset(0% 0 0 0)' }
                                             : {}
                                         }
                                         transition={{
-                                            duration: 0.7,
-                                            delay: i * 0.05,
+                                            duration: 1,
+                                            delay: i * 0.3,
                                             ease: [0.23, 1, 0.32, 1],
                                         }}
-                                        aria-hidden="true"
-                                    >
-                                        {char}
-                                    </motion.span>
-
-                                    {/* Layer 2: White solid (fades to reveal image) */}
-                                    <motion.span
-                                        className="ld-char-solid"
-                                        animate={{ opacity: stage >= 2 ? 0 : 1 }}
-                                        transition={{ duration: 0.5, delay: stage >= 2 ? i * 0.04 : 0 }}
                                         aria-hidden="true"
                                     >
                                         {char}

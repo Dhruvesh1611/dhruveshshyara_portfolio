@@ -1,6 +1,159 @@
 {
   "pageViews": [
     {
+      "id": "mrkea749hypgep90a",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:34:07.110Z"
+    },
+    {
+      "id": "mrke67pdlpx6p5pzz",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:31:01.247Z"
+    },
+    {
+      "id": "mrke5vd6lfv8wq62p",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:30:45.256Z"
+    },
+    {
+      "id": "mrke4t4lpr49y48cr",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:29:55.700Z"
+    },
+    {
+      "id": "mrke2p3y2kfsi4l9p",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:28:17.181Z"
+    },
+    {
+      "id": "mrke1h90eios8hpds",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:27:20.338Z"
+    },
+    {
+      "id": "mrke19r4mh5wmwlqk",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:27:10.622Z"
+    },
+    {
+      "id": "mrke0mpjxytfombyb",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:26:40.758Z"
+    },
+    {
+      "id": "mrke0db85336fsypm",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:26:28.577Z"
+    },
+    {
+      "id": "mrkdv4jxm71ckcaes",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:22:23.948Z"
+    },
+    {
+      "id": "mrkd5oojnp71imbwe",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:02:36.978Z"
+    },
+    {
+      "id": "mrkd4evgrzx14mv6m",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:01:37.610Z"
+    },
+    {
+      "id": "mrkd4743ju9frbrzi",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:01:27.553Z"
+    },
+    {
+      "id": "mrkd3y7kepu6ru5cw",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:01:16.015Z"
+    },
+    {
+      "id": "mrkd304mem5inruai",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:00:31.845Z"
+    },
+    {
+      "id": "mrkd2nm2gvr8spsne",
+      "path": "/",
+      "referrer": "",
+      "device": "mobile",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T08:00:15.625Z"
+    },
+    {
+      "id": "mrkd0e8dsf3xrziar",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-14T07:58:30.155Z"
+    },
+    {
       "id": "mrkck5qdqp6axux7m",
       "path": "/hackathons",
       "referrer": "http://localhost:3000/hackathons",
@@ -3476,10 +3629,10 @@
     }
   ],
   "summary": {
-    "totalVisits": 386,
+    "totalVisits": 403,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 72,
+      "/": 89,
       "/aboutme": 59,
       "/projects": 64,
       "/certificates": 68,
@@ -3491,12 +3644,12 @@
       "/hackathons": 60
     },
     "deviceBreakdown": {
-      "desktop": 370,
-      "mobile": 16,
+      "desktop": 386,
+      "mobile": 17,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 372,
+      "Chrome": 389,
       "Safari": 14
     },
     "dailyVisits": {
@@ -3509,7 +3662,7 @@
       "2026-06-26": 159,
       "2026-06-29": 18,
       "2026-07-13": 3,
-      "2026-07-14": 23
+      "2026-07-14": 40
     }
   }
 }
