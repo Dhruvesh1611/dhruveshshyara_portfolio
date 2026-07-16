@@ -10,6 +10,20 @@ import { isValidImageSrc } from '@/lib/imageUtils';
 const HackathonsPage = () => {
     const hackathonsList = [
         {
+            id: 'doppelganger',
+            headerTitle: 'DOPPELGANGER BUILD SPRINT',
+            title: 'DOPPELGANGER 2026',
+            hours: '48 HOURS',
+            subtitle: '🏆 1st Place Winner',
+            isWinner: true,
+            text: <>Built an AI-powered VS Code extension,<br />secured 1st place overall,<br />and pushed the boundaries of AI.</>,
+            photos: [
+                { src: "/hackathons/doppalGangar/team.PNG", top: "4%", left: "8%", rotate: -3, label: "The Winning Squad", aspectRatio: "16/9", width: "clamp(280px, 35vw, 550px)" },
+                { src: "/hackathons/doppalGangar/certificate.PNG", top: "8%", right: "8%", rotate: 6, label: "1st Place Certificate", aspectRatio: "4/3", width: "clamp(220px, 25vw, 400px)" },
+                { src: "/projects/doppelganger.png", bottom: "10%", left: "15%", rotate: -5, label: "The Extension", aspectRatio: "16/9", width: "clamp(250px, 30vw, 450px)" }
+            ]
+        },
+        {
             id: 'swarnim',
             headerTitle: 'HACK AARAMBH',
             title: 'HACK AARAMBH 2026',
@@ -17,10 +31,10 @@ const HackathonsPage = () => {
             subtitle: 'of Innovation & Problem Solving',
             text: <>Showcasing innovation, creativity,<br />and problem-solving skills<br />at Swarrnim University.</>,
             photos: [
-                { src: "/hackathons/swarnim/s1.jpeg", top: "7%", left: "12%", rotate: -8, label: "The Setup" },
-                { src: "/hackathons/swarnim/s2.jpeg", top: "10%", right: "15%", rotate: 7, label: "The Team", aspectRatio: "12/8" },
-                { src: "/hackathons/swarnim/s3.jpeg", bottom: "12%", left: "14%", rotate: -5, label: "The Build" },
-                { src: "/hackathons/swarnim/s4.jpeg", bottom: "10%", right: "12%", rotate: 8, label: "The Moment", aspectRatio: "12/8" }
+                { src: "/hackathons/swarnim/s1.jpeg", top: "7%", left: "12%", rotate: -8, label: "The Awards" },
+                { src: "/hackathons/swarnim/s2.jpeg", top: "10%", right: "15%", rotate: 7, label: "The Pitch", aspectRatio: "12/8" },
+                { src: "/hackathons/swarnim/s3.jpeg", bottom: "12%", left: "14%", rotate: -5, label: "Evaluation" },
+                { src: "/hackathons/swarnim/s4.jpeg", bottom: "10%", right: "12%", rotate: 8, label: "The Certificate", aspectRatio: "12/8" }
             ]
         },
         {
@@ -154,7 +168,7 @@ const HackathonsPage = () => {
 
                             {/* Center Card */}
                             <motion.div
-                                className="center-card"
+                                className={`center-card ${hackathon.isWinner ? 'winner-card' : ''}`}
                                 initial={{ opacity: 0, scale: 0.8, y: 50 }}
                                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
@@ -170,7 +184,18 @@ const HackathonsPage = () => {
                                     {hackathon.text}
                                 </p>
                                 <div className="center-card-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
+                                    {hackathon.isWinner ? (
+                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                            <path d="M4 22h16"></path>
+                                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+                                        </svg>
+                                    ) : (
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
+                                    )}
                                 </div>
                             </motion.div>
 
@@ -185,7 +210,8 @@ const HackathonsPage = () => {
                                         left: photo.left,
                                         right: photo.right,
                                         zIndex: 10 + index,
-                                        ...(photo.aspectRatio ? { aspectRatio: photo.aspectRatio } : {})
+                                        ...(photo.aspectRatio ? { aspectRatio: photo.aspectRatio } : {}),
+                                        ...(photo.width ? { width: photo.width } : {})
                                     }}
                                     initial={{ opacity: 0, y: 100 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -281,6 +307,21 @@ const HackathonsPage = () => {
                     transform: scale(1.03) !important;
                     box-shadow: 0 0 80px rgba(59, 130, 246, 0.25), inset 0 0 30px rgba(59, 130, 246, 0.15);
                     border-color: rgba(59, 130, 246, 0.6);
+                }
+
+                :global(.winner-card) {
+                    border: 1px solid rgba(212, 175, 55, 0.6) !important;
+                    box-shadow: 0 0 50px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.15) !important;
+                }
+
+                :global(.winner-card:hover) {
+                    box-shadow: 0 0 80px rgba(212, 175, 55, 0.35), inset 0 0 30px rgba(212, 175, 55, 0.25) !important;
+                    border-color: rgba(212, 175, 55, 0.9) !important;
+                }
+                
+                :global(.winner-card) .center-card-subtitle {
+                    color: #d4af37 !important;
+                    font-weight: bold;
                 }
 
                 .center-card-header {
