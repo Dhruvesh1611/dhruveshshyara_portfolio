@@ -79,6 +79,5 @@ export const searchableContent = [
     // About / Bio
     { type: 'info', title: 'Full Stack Developer', description: 'MERN Stack — React, Node.js, Express, MongoDB', href: '/aboutme', keywords: 'full stack developer mern stack role job developer engineer' },
     { type: 'info', title: 'Education', description: 'B.Tech from Rai University — CGPA: 9.4/10', href: '/aboutme', keywords: 'education btech bachelor technology rai university cgpa 9.4' },
-    { type: 'info', title: 'Phone', description: '+91-9327595429', href: '/aboutme', keywords: 'phone number contact mobile call' },
     { type: 'info', title: 'Hackathon Wins', description: '🏆 1st Place at Doppelganger Build Sprint, Finalist at CHARUSAT Hacks', href: '/projects/doppelganger', keywords: 'hackathon wins 1st place winner achievement doppelganger charusat openpools' },
 ];

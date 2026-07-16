@@ -683,7 +683,6 @@ The portfolio is optimized for performance with:
 | 💼 **LinkedIn** | [linkedin.com/in/dhruveshshyara](https://linkedin.com/in/dhruveshshyara) |
 | 🐙 **GitHub** | [github.com/Dhruvesh1611](https://github.com/Dhruvesh1611) |
 | 📧 **Email** | [dhruvesh.shyara.cg@gmail.com](mailto:dhruvesh.shyara.cg@gmail.com) |
-| 📱 **Phone** | +91-9327595429 |
 
 </div>
 
