@@ -92,7 +92,7 @@ const Hero = () => {
                 {/* Profile photo */}
                 <div className="hero-photo-wrapper">
                     <Image
-                        src="https://res.cloudinary.com/ggx2rcgy/image/upload/v1784311250/portfolio/dh4.png"
+                        src="/dh3.png"
                         alt="Dhruvesh"
                         width={550}
                         height={900}
