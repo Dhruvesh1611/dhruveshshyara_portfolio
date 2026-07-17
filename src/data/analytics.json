@@ -1,6 +1,123 @@
 {
   "pageViews": [
     {
+      "id": "mrp0juttack5a6sm3",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T14:08:33.999Z"
+    },
+    {
+      "id": "mrp05nkci63lscb8q",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:57:31.402Z"
+    },
+    {
+      "id": "mrp04mqnaft5p9mk0",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:56:43.674Z"
+    },
+    {
+      "id": "mrp044b3kfjitvgk2",
+      "path": "/hackathons",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:56:19.789Z"
+    },
+    {
+      "id": "mrp03gydceboab50z",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:55:49.522Z"
+    },
+    {
+      "id": "mrp039ya2q551xc5f",
+      "path": "/certificates",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:55:40.446Z"
+    },
+    {
+      "id": "mrp02isqqpt2k2osd",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:55:05.257Z"
+    },
+    {
+      "id": "mrp028cgoc6i9uely",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:54:51.709Z"
+    },
+    {
+      "id": "mrozd2x5lblnvwrna",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:35:18.280Z"
+    },
+    {
+      "id": "mroz6oghios6xnbd7",
+      "path": "/projects",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:30:19.544Z"
+    },
+    {
+      "id": "mroyuu6157p36oy2w",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:21:07.126Z"
+    },
+    {
+      "id": "mroyubhal91lvfhp2",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:20:42.907Z"
+    },
+    {
+      "id": "mroymutxoa9uj4s2g",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T13:14:54.739Z"
+    },
+    {
       "id": "mrorbfiwu48n6wnct",
       "path": "/hackathons",
       "referrer": "",
@@ -3701,28 +3818,28 @@
     }
   ],
   "summary": {
-    "totalVisits": 411,
+    "totalVisits": 424,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 95,
-      "/aboutme": 59,
-      "/projects": 64,
-      "/certificates": 68,
-      "/explanation": 57,
+      "/": 103,
+      "/aboutme": 60,
+      "/projects": 65,
+      "/certificates": 69,
+      "/explanation": 58,
       "/projects/shyara-gold": 1,
       "/login": 1,
       "/projects/doppelganger": 3,
       "/projects/yaritu": 1,
-      "/hackathons": 62
+      "/hackathons": 63
     },
     "deviceBreakdown": {
-      "desktop": 392,
-      "mobile": 19,
+      "desktop": 404,
+      "mobile": 20,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 397,
-      "Safari": 14
+      "Chrome": 409,
+      "Safari": 15
     },
     "dailyVisits": {
       "2026-06-04": 9,
@@ -3736,7 +3853,7 @@
       "2026-07-13": 3,
       "2026-07-14": 43,
       "2026-07-16": 2,
-      "2026-07-17": 3
+      "2026-07-17": 16
     }
   }
 }

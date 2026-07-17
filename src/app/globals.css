@@ -736,13 +736,27 @@
 }
 
 @keyframes ld-drift-a {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(35px, -25px); }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(35px, -25px);
+    }
 }
 
 @keyframes ld-drift-b {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(-25px, 20px); }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-25px, 20px);
+    }
 }
 
 /* Vignette */
@@ -792,11 +806,11 @@
     width: 28%;
     height: 150%;
     background: linear-gradient(90deg,
-        transparent,
-        rgba(255, 255, 255, 0.06),
-        rgba(255, 255, 255, 0.14),
-        rgba(255, 255, 255, 0.06),
-        transparent);
+            transparent,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.14),
+            rgba(255, 255, 255, 0.06),
+            transparent);
     z-index: 20;
     pointer-events: none;
     filter: blur(10px);
@@ -917,9 +931,9 @@
 .ld-prog-fill {
     height: 100%;
     background: linear-gradient(90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.45) 40%,
-        rgba(255, 255, 255, 0.85) 100%);
+            transparent 0%,
+            rgba(255, 255, 255, 0.45) 40%,
+            rgba(255, 255, 255, 0.85) 100%);
     border-radius: 1px;
     will-change: width;
 }
@@ -933,22 +947,29 @@
 }
 
 .ld-corner--tl {
-    top: 30px; left: 30px;
+    top: 30px;
+    left: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.07);
     border-left: 1px solid rgba(255, 255, 255, 0.07);
 }
+
 .ld-corner--tr {
-    top: 30px; right: 30px;
+    top: 30px;
+    right: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.07);
     border-right: 1px solid rgba(255, 255, 255, 0.07);
 }
+
 .ld-corner--bl {
-    bottom: 30px; left: 30px;
+    bottom: 30px;
+    left: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     border-left: 1px solid rgba(255, 255, 255, 0.07);
 }
+
 .ld-corner--br {
-    bottom: 30px; right: 30px;
+    bottom: 30px;
+    right: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     border-right: 1px solid rgba(255, 255, 255, 0.07);
 }
@@ -964,6 +985,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
+
     .ld-char-img,
     .ld-char-solid,
     .ld-char-outline {
@@ -972,6 +994,7 @@
 }
 
 @media (max-width: 768px) {
+
     .ld-char-img,
     .ld-char-solid,
     .ld-char-outline {
@@ -989,25 +1012,53 @@
         letter-spacing: 0.2em;
     }
 
-    .ld-sub-line { width: 20px; }
+    .ld-sub-line {
+        width: 20px;
+    }
 
     .ld-prog {
         bottom: 28px;
         width: 45vw;
     }
 
-    .ld-corner--tl { top: 14px; left: 14px; }
-    .ld-corner--tr { top: 14px; right: 14px; }
-    .ld-corner--bl { bottom: 14px; left: 14px; }
-    .ld-corner--br { bottom: 14px; right: 14px; }
+    .ld-corner--tl {
+        top: 14px;
+        left: 14px;
+    }
 
-    .ld-glow--a { width: 280px; height: 280px; }
-    .ld-glow--b { width: 220px; height: 220px; }
+    .ld-corner--tr {
+        top: 14px;
+        right: 14px;
+    }
 
-    .ld-sweep { width: 45%; filter: blur(6px); }
+    .ld-corner--bl {
+        bottom: 14px;
+        left: 14px;
+    }
+
+    .ld-corner--br {
+        bottom: 14px;
+        right: 14px;
+    }
+
+    .ld-glow--a {
+        width: 280px;
+        height: 280px;
+    }
+
+    .ld-glow--b {
+        width: 220px;
+        height: 220px;
+    }
+
+    .ld-sweep {
+        width: 45%;
+        filter: blur(6px);
+    }
 }
 
 @media (max-width: 480px) {
+
     .ld-char-img,
     .ld-char-solid,
     .ld-char-outline {
@@ -2203,22 +2254,31 @@ noscript {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
+    /* border: 2px solid red; */
+    right: 2%;
     height: auto;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    /* Fade out the bottom edge so hard cutoffs and shadows disappear */
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 15%, black 100%);
+    mask-image: linear-gradient(to top, transparent 0%, black 15%, black 100%);
 }
 
 .hero-photo {
     width: 100% !important;
-    max-height: 80vh;
+    max-height: 70vh;
     height: auto !important;
     object-fit: contain;
     object-position: bottom;
     margin-top: 0;
-    filter: none;
-    border-radius: 0;
+    border: none;
+    /* Glowing blurred border */
+    filter: drop-shadow(4px 0px 15px rgba(255, 255, 255, 0.4)) 
+            drop-shadow(-4px 0px 15px rgba(0, 0, 0, 0.8)) 
+            drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.8)) 
+            drop-shadow(0px -4px 15px rgba(0, 0, 0, 0.8));
 }
 
 /* ── HTML TEXT OVERLAY ── */
