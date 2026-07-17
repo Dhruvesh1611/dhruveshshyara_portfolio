@@ -2261,6 +2261,8 @@ noscript {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    /* Add padding so the wrapper is larger than the image, preventing the mask from clipping the shadow */
+    padding: 40px 40px 0 40px;
     /* Fade out the bottom edge so hard cutoffs and shadows disappear */
     -webkit-mask-image: linear-gradient(to top, transparent 0%, black 15%, black 100%);
     mask-image: linear-gradient(to top, transparent 0%, black 15%, black 100%);

@@ -1,6 +1,69 @@
 {
   "pageViews": [
     {
+      "id": "mrp7pf9lhvebxn2vn",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T17:28:51.075Z"
+    },
+    {
+      "id": "mrp75xeno9h5hpx36",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T17:13:41.468Z"
+    },
+    {
+      "id": "mrp753r0m6qpob905",
+      "path": "/aboutme",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T17:13:03.036Z"
+    },
+    {
+      "id": "mrp73lsmq35fl0oq2",
+      "path": "/explanation",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T17:11:53.105Z"
+    },
+    {
+      "id": "mrp713b1jr5ffbq5t",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T17:09:55.829Z"
+    },
+    {
+      "id": "mrp6etrh3infswczj",
+      "path": "/",
+      "referrer": "",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T16:52:37.033Z"
+    },
+    {
+      "id": "mrp69jqpyd783pjat",
+      "path": "/",
+      "referrer": "http://localhost:3000/",
+      "device": "desktop",
+      "browser": "Chrome",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-17T16:48:30.766Z"
+    },
+    {
       "id": "mrp0juttack5a6sm3",
       "path": "/",
       "referrer": "",
@@ -3818,14 +3881,14 @@
     }
   ],
   "summary": {
-    "totalVisits": 424,
+    "totalVisits": 431,
     "uniqueVisitors": 1,
     "topPages": {
-      "/": 103,
-      "/aboutme": 60,
+      "/": 108,
+      "/aboutme": 61,
       "/projects": 65,
       "/certificates": 69,
-      "/explanation": 58,
+      "/explanation": 59,
       "/projects/shyara-gold": 1,
       "/login": 1,
       "/projects/doppelganger": 3,
@@ -3833,12 +3896,12 @@
       "/hackathons": 63
     },
     "deviceBreakdown": {
-      "desktop": 404,
+      "desktop": 411,
       "mobile": 20,
       "tablet": 0
     },
     "browserBreakdown": {
-      "Chrome": 409,
+      "Chrome": 416,
       "Safari": 15
     },
     "dailyVisits": {
@@ -3853,7 +3916,7 @@
       "2026-07-13": 3,
       "2026-07-14": 43,
       "2026-07-16": 2,
-      "2026-07-17": 16
+      "2026-07-17": 23
     }
   }
 }
