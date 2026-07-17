@@ -6,14 +6,14 @@ import { motion, AnimatePresence, useMotionValue, useTransform, animate } from '
    CONFIGURATION — Edit images & timing here
    ═══════════════════════════════════════════ */
 const LETTER_CONFIG = [
-    { char: 'D', image: '/loader/l1.jpg' },
-    { char: 'H', image: '/loader/l2.jpg' },
-    { char: 'R', image: '/loader/l3.jpg' },
-    { char: 'U', image: '/loader/l4.jpg' },
-    { char: 'V', image: '/loader/l5.PNG' },
-    { char: 'E', image: '/loader/l6.jpg' },
-    { char: 'S', image: '/loader/l7.jpg' },
-    { char: 'H', image: '/loader/l8.jpg' },
+    { char: 'D', image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281334/portfolio/loader/l1.jpg' },
+    { char: 'H', image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281336/portfolio/loader/l2.jpg' },
+    { char: 'R', image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281337/portfolio/loader/l3.jpg' },
+    { char: 'U', image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281338/portfolio/loader/l4.jpg' },
+    { char: 'V', image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281340/portfolio/loader/l5.png' },
+    { char: 'E', image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281342/portfolio/loader/l6.jpg' },
+    { char: 'S', image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281345/portfolio/loader/l7.jpg' },
+    { char: 'H', image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281346/portfolio/loader/l8.jpg' },
 ];
 
 const T = {

@@ -696,3 +696,45 @@ The portfolio is optimized for performance with:
 
 </div>
 
+
+
+---
+
+## ☁️ Cloudinary Image Management
+
+This portfolio uses Cloudinary to serve optimized images dynamically, significantly improving load times. The setup ensures that we never rely on local image assets stored in the repository.
+
+### Configuration
+1. Obtain your Cloudinary credentials from your [Cloudinary Dashboard](https://cloudinary.com/).
+2. Create or open your `.env.local` file in the root directory.
+3. Add the following environment variables:
+   ```env
+   CLOUDINARY_CLOUD_NAME="your_cloud_name"
+   CLOUDINARY_API_KEY="your_api_key"
+   CLOUDINARY_API_SECRET="your_api_secret"
+   ```
+
+### Migrating & Uploading New Images
+We have automated scripts to handle image uploads and code migrations.
+
+1. **Upload Images**
+   Place any new images in the `public/` folder, then run:
+   ```bash
+   node scripts/upload-images.mjs
+   ```
+   This script will:
+   - Recursively upload all images from `public/` to your Cloudinary `portfolio/` folder.
+   - Automatically skip duplicates.
+   - Generate or update `cloudinary-map.json` mapping local paths to secure URLs.
+
+2. **Migrate Code**
+   After uploading, run:
+   ```bash
+   node scripts/migrate-code.mjs
+   ```
+   This script will:
+   - Scan all source code files (`.jsx`, `.json`, etc.) for any occurrences of local image paths.
+   - Replace them automatically with the corresponding Cloudinary URLs.
+
+### Cleanup
+Once images are successfully uploaded and your code is migrated, you can safely remove those images from the `public/` directory to keep your repository lightweight!

@@ -18,7 +18,7 @@ const journeyData = [
             'Design & Version Control — Learned UI/UX with Figma, collaboration with Git & GitHub',
         ],
         description: 'Laid a rock-solid foundation by learning programming logic from scratch with C/C++, then quickly moved into the web world — crafting responsive interfaces with HTML5, CSS3 and modern JavaScript. Explored advanced JS concepts like closures, prototypal inheritance and asynchronous programming. Also picked up design thinking through Figma and adopted Git & GitHub for professional version control workflows.',
-        image: '/png/clogo.png',
+        image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281358/portfolio/png/clogo.png',
     },
     {
         id: 2,
@@ -31,7 +31,7 @@ const journeyData = [
             'OOP Mastery — Polymorphism, Inheritance & Encapsulation in C++',
         ],
         description: 'Leveled up into modern full-stack development. Built dynamic Single Page Applications with React.js, then engineered scalable backend services using Node.js and Express.js. Specialized in NoSQL databases — MongoDB for document storage and Redis for blazing-fast caching. Simultaneously strengthened core OOP concepts like Polymorphism, Inheritance and Encapsulation in C++.',
-        image: '/png/reactlogo.png',
+        image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281388/portfolio/png/reactlogo.png',
     },
     {
         id: 3,
@@ -44,7 +44,7 @@ const journeyData = [
             'Core Java — JVM architecture, multi-threaded programming & strong Java foundation',
         ],
         description: 'Entered the world of production-grade architecture. Developed SEO-friendly, full-stack applications using Next.js with App Router and Server Components. Simultaneously sharpened problem-solving by implementing complex data structures and algorithms — Linked Lists, Stacks, Queues, and various Searching/Sorting techniques in C/C++. Gained deep understanding of Relational Database design, Normalization, and complex SQL querying. Also built a strong foundation in Core Java including JVM internals and multi-threaded programming.',
-        image: '/png/nextlogo.png',
+        image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281387/portfolio/png/nextlogo.png',
     },
     {
         id: 4,
@@ -57,7 +57,7 @@ const journeyData = [
             'System Design — Software Project Management & Agile methodologies',
         ],
         description: 'Stepping into enterprise-level engineering. Building robust applications using Servlets, JSP, and JDBC for seamless database connectivity. Exploring DevOps practices — CI/CD pipelines, containerization with Docker, and managing scalable infrastructure on cloud platforms. Deepening knowledge of Operating Systems including process scheduling, memory management, deadlocks, and system calls. Mastering Software Project Management and Agile methodologies to lead technical development cycles effectively.',
-        image: '/png/node.png',
+        image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281388/portfolio/png/node.png',
     },
 ];
 
@@ -70,7 +70,7 @@ const educationData = [
         year: '2019',
         percentage: '96 pr',
         board: 'GSEB',
-        image: '/png/10th-education.jpg',
+        image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281352/portfolio/png/10th-education.jpg',
     },
     {
         id: 2,
@@ -79,7 +79,7 @@ const educationData = [
         year: '2021',
         percentage: '71%',
         board: 'GSEB',
-        image: '/png/12th-education.jpg',
+        image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281353/portfolio/png/12th-education.jpg',
     },
     {
         id: 3,
@@ -88,7 +88,7 @@ const educationData = [
         year: '2024 - Present',
         percentage: 'CGPA: 9.4/10',
         board: 'Final Year',
-        image: '/png/college-education.jpg',
+        image: 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281359/portfolio/png/college-education.jpg',
     },
 ];
 
@@ -302,7 +302,7 @@ const AboutMePage = () => {
                             transition={{ duration: 0.8 }}
                         >
                             <Image
-                                src="/png/dhruvesh-home-avatar.png"
+                                src="https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281370/portfolio/png/dhruvesh-home-avatar.png"
                                 alt="Dhruvesh"
                                 fill
                                 sizes="(max-width: 768px) 100vw, 50vw"

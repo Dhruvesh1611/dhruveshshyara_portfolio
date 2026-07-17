@@ -13,6 +13,6 @@ export function isValidImageSrc(src) {
 /**
  * Returns the src if it's valid for next/image, otherwise returns a fallback.
  */
-export function safeImageSrc(src, fallback = '/placeholder.svg') {
+export function safeImageSrc(src, fallback = 'https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281350/portfolio/placeholder.svg') {
   return isValidImageSrc(src) ? src.trim() : fallback;
 }

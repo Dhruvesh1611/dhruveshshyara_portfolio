@@ -71,7 +71,7 @@ const Footer = () => {
 
                     <div className="footer-avatar-container">
                         <img
-                            src="/png/footer-avatar-dhruvesh.png"
+                            src="https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281373/portfolio/png/footer-avatar-dhruvesh.png"
                             alt="avatar"
                             className="footer-avatar-img"
                             id="footer-wala-avatar"

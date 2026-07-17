@@ -5,7 +5,7 @@
     "issuer": "Swarrnim Startup & Innovation University",
     "description": "Showcasing innovation, creativity, and problem-solving skills throughout the Hack Aarambh 2026 hackathon.",
     "date": "10 July 2026",
-    "image": "/hackathons/swarnim/s1.jpeg",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281322/portfolio/hackathons/swarnim/s1.jpg",
     "link": "https://drive.google.com/file/d/1rDfQ_ykwBnd3THdmcoPH8r-XGxME2iZz/view?usp=sharing",
     "relatedSkills": [
       "Hackathon",
@@ -17,10 +17,10 @@
     "status": "published",
     "category": "Hackathon",
     "photos": [
-      "/hackathons/swarnim/s1.jpeg",
-      "/hackathons/swarnim/s2.jpeg",
-      "/hackathons/swarnim/s3.jpeg",
-      "/hackathons/swarnim/s4.jpeg"
+      "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281322/portfolio/hackathons/swarnim/s1.jpg",
+      "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281323/portfolio/hackathons/swarnim/s2.jpg",
+      "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281324/portfolio/hackathons/swarnim/s3.jpg",
+      "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281325/portfolio/hackathons/swarnim/s4.jpg"
     ]
   },
   {
@@ -29,8 +29,8 @@
     "issuer": "Amazon Web Services",
     "description": "Certified in AWS Cloud Essentials, covering core cloud concepts, services, and architecture best practices.",
     "date": "2025",
-    "image": "/certificates/amazon-documentdb.png",
-    "link": "/certificates/amazon-documentdb.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281283/portfolio/certificates/amazon-documentdb.png",
+    "link": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281283/portfolio/certificates/amazon-documentdb.png",
     "relatedSkills": [
       "AWS S3"
     ],
@@ -45,7 +45,7 @@
     "issuer": "SimpliLearn",
     "description": "Completed Azure Services Basics, demonstrating proficiency in cloud infrastructure, deployment, and management.",
     "date": "2025",
-    "image": "/certificates/azure-services-basics.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281285/portfolio/certificates/azure-services-basics.png",
     "link": "https://simpli-web.app.link/e/N5LenkEbDTb",
     "relatedSkills": [
       "Azure"
@@ -61,7 +61,7 @@
     "issuer": "HackerRank",
     "description": "Certified Frontend Developer with React, skilled in building modern, responsive web applications.",
     "date": "2025",
-    "image": "/certificates/frontend-developer-react.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281290/portfolio/certificates/frontend-developer-react.png",
     "link": "https://www.hackerrank.com/certificates/cc7dcbd6558a",
     "relatedSkills": [
       "React.js"
@@ -77,7 +77,7 @@
     "issuer": "HackerRank",
     "description": "Certificate for completing JavaScript fundamentals and core programming constructs.",
     "date": "2025",
-    "image": "/certificates/javascript-basic.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281292/portfolio/certificates/javascript-basic.png",
     "link": "https://www.hackerrank.com/certificates/065ed799b22f",
     "relatedSkills": [
       "JavaScript"
@@ -93,7 +93,7 @@
     "issuer": "HackerRank",
     "description": "Focused on modern CSS techniques for responsive and accessible layouts.",
     "date": "2025",
-    "image": "/certificates/css-basic.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281287/portfolio/certificates/css-basic.png",
     "link": "https://www.hackerrank.com/certificates/e72e9d42799c",
     "relatedSkills": [
       "CSS",
@@ -110,7 +110,7 @@
     "issuer": "HackerRank",
     "description": "Fundamentals of building server-side applications using Node.js and Express.",
     "date": "2025",
-    "image": "/certificates/node-basic.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281294/portfolio/certificates/node-basic.png",
     "link": "https://www.hackerrank.com/certificates/ceb3ab163e6d",
     "relatedSkills": [
       "Node.js",
@@ -127,7 +127,7 @@
     "issuer": "HackerRank",
     "description": "Core problem-solving and algorithmic thinking certificate.",
     "date": "2025",
-    "image": "/certificates/problem-solving-basic.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281297/portfolio/certificates/problem-solving-basic.png",
     "link": "https://www.hackerrank.com/certificates/0625153f0783",
     "relatedSkills": [
       "Algorithms",
@@ -144,7 +144,7 @@
     "issuer": "SimpliLearn",
     "description": "Understanding gateway architectures and load balancing strategies for scalable systems.",
     "date": "2025",
-    "image": "/certificates/gateway-load-balancer.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281291/portfolio/certificates/gateway-load-balancer.png",
     "link": "https://simpli-web.app.link/e/sq0S9jMwETb",
     "relatedSkills": [
       "Networking",
@@ -161,7 +161,7 @@
     "issuer": "SimpliLearn",
     "description": "Introductory certificate for DocumentDB and managed NoSQL services.",
     "date": "2025",
-    "image": "/certificates/amazon-documentdb.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281283/portfolio/certificates/amazon-documentdb.png",
     "link": "https://simpli-web.app.link/e/uPhDpKxwETb",
     "relatedSkills": [
       "DocumentDB",
@@ -179,7 +179,7 @@
     "issuer": "OpenPools.in",
     "description": "Certificate of Excellence for achieving Top Rank in Doppelganger, the OpenPools collaborative 30 hours build sprint. Team Eklavya demonstrated exceptional synergy, execution, and innovation.",
     "date": "2026",
-    "image": "/certificates/doppelganger-1st.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281288/portfolio/certificates/doppelganger-1st.jpg",
     "link": "",
     "relatedSkills": [
       "Hackathon",
@@ -198,7 +198,7 @@
     "issuer": "DEPSTAR & OceanLab Technology",
     "description": "Participated in the AI-First Open Innovation Hackathon — 'BUILD AI-FIRST SAAS', a national-level 48-hour offline hackathon.",
     "date": "April 2026",
-    "image": "/certificates/charusat-hacks-2026.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281286/portfolio/certificates/charusat-hacks-2026.jpg",
     "link": "",
     "relatedSkills": [
       "Hackathon",
@@ -217,7 +217,7 @@
     "issuer": "SVNIT, Surat",
     "description": "Successfully qualified through the online screening and secured a spot in the offline round of DOTSLASH 9.0 hackathon.",
     "date": "2026",
-    "image": "/certificates/dotslash-9.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281289/portfolio/certificates/dotslash-9.png",
     "link": "",
     "relatedSkills": [
       "Hackathon",
@@ -235,7 +235,7 @@
     "issuer": "IEEE GCET Student Branch",
     "description": "Actively participated in NEXOTHON 2025, a 24-Hour Hackathon held at G H Patel College of Engineering & Technology.",
     "date": "August 2025",
-    "image": "/certificates/nexothon-2025.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281293/portfolio/certificates/nexothon-2025.jpg",
     "link": "",
     "relatedSkills": [
       "Hackathon",
@@ -253,7 +253,7 @@
     "issuer": "Rai University",
     "description": "Successfully participated in TECH EXPO - 2025 Project Exhibition organized by Rai School of Engineering.",
     "date": "February 2025",
-    "image": "/certificates/tech-expo-2025.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281297/portfolio/certificates/tech-expo-2025.jpg",
     "link": "",
     "relatedSkills": [
       "Exhibition",
@@ -270,7 +270,7 @@
     "issuer": "Odoo x Parul University",
     "date": "13 - 14 June, 2026",
     "description": "This Certificate of Participation in the Odoo x Parul University Hackathon 26 signifies active engagement in a high-intensity, collaborative problem-solving event. Participating in such a hackathon demonstrates strong capabilities in innovative thinking, rapid prototyping, and the practical application of technical skills within a constrained timeframe. It highlights an individual's commitment to continuous learning, teamwork, and the ability to develop effective solutions, potentially involving enterprise resource planning (ERP) concepts or Odoo's business management software. This experience is a testament to hands-on technical proficiency and a proactive approach to tackling real-world challenges.",
-    "image": "/certificates/odooXparul.jpeg",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281296/portfolio/certificates/odooXparul.jpg",
     "category": "Hackathon",
     "status": "published",
     "featured": false,
@@ -281,8 +281,8 @@
     "link": "",
     "relatedSkills": [],
     "photos": [
-      "/certificates/odooXparul.jpeg",
-      "/certificates/charusat-hacks-2026.png"
+      "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281296/portfolio/certificates/odooXparul.jpg",
+      "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281286/portfolio/certificates/charusat-hacks-2026.jpg"
     ]
   }
 ]

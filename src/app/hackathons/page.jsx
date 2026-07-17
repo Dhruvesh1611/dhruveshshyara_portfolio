@@ -18,9 +18,9 @@ const HackathonsPage = () => {
             isWinner: true,
             text: <>Built an AI-powered VS Code extension,<br />secured 1st place overall,<br />and pushed the boundaries of AI.</>,
             photos: [
-                { src: "/hackathons/doppalGangar/team.PNG", top: "4%", left: "8%", rotate: -3, label: "The Winning Squad", aspectRatio: "16/9", width: "clamp(280px, 35vw, 550px)" },
-                { src: "/hackathons/doppalGangar/certificate.PNG", top: "8%", right: "8%", rotate: 6, label: "1st Place Certificate", aspectRatio: "4/3", width: "clamp(220px, 25vw, 400px)" },
-                { src: "/projects/doppelganger.png", bottom: "10%", left: "15%", rotate: -5, label: "The Extension", aspectRatio: "16/9", width: "clamp(250px, 30vw, 450px)" }
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281313/portfolio/hackathons/doppalGangar/team.png", top: "4%", left: "8%", rotate: -3, label: "The Winning Squad", aspectRatio: "16/9", width: "clamp(280px, 35vw, 550px)" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281311/portfolio/hackathons/doppalGangar/certificate.jpg", top: "8%", right: "8%", rotate: 6, label: "1st Place Certificate", aspectRatio: "4/3", width: "clamp(220px, 25vw, 400px)" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281392/portfolio/projects/doppelganger.jpg", bottom: "10%", left: "15%", rotate: -5, label: "The Extension", aspectRatio: "16/9", width: "clamp(250px, 30vw, 450px)" }
             ]
         },
         {
@@ -31,10 +31,10 @@ const HackathonsPage = () => {
             subtitle: 'of Innovation & Problem Solving',
             text: <>Showcasing innovation, creativity,<br />and problem-solving skills<br />at Swarrnim University.</>,
             photos: [
-                { src: "/hackathons/swarnim/s1.jpeg", top: "7%", left: "12%", rotate: -8, label: "The Awards" },
-                { src: "/hackathons/swarnim/s2.jpeg", top: "10%", right: "15%", rotate: 7, label: "The Pitch", aspectRatio: "12/8" },
-                { src: "/hackathons/swarnim/s3.jpeg", bottom: "12%", left: "14%", rotate: -5, label: "Evaluation" },
-                { src: "/hackathons/swarnim/s4.jpeg", bottom: "10%", right: "12%", rotate: 8, label: "The Certificate", aspectRatio: "12/8" }
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281322/portfolio/hackathons/swarnim/s1.jpg", top: "7%", left: "12%", rotate: -8, label: "The Awards" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281323/portfolio/hackathons/swarnim/s2.jpg", top: "10%", right: "15%", rotate: 7, label: "The Pitch", aspectRatio: "12/8" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281324/portfolio/hackathons/swarnim/s3.jpg", bottom: "12%", left: "14%", rotate: -5, label: "Evaluation" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281325/portfolio/hackathons/swarnim/s4.jpg", bottom: "10%", right: "12%", rotate: 8, label: "The Certificate", aspectRatio: "12/8" }
             ]
         },
         {
@@ -45,10 +45,10 @@ const HackathonsPage = () => {
             subtitle: 'of Ideas, Code & Passion',
             text: <>Built an AI-first SaaS solution,<br />collaborated with amazing people,<br />and created memories for a lifetime.</>,
             photos: [
-                { src: "/hackathons/charusat/charusat2.png", top: "7%", left: "12%", rotate: -8, label: "The Event" },
-                { src: "/hackathons/charusat/charusat3.png", top: "10%", right: "15%", rotate: 7, label: "The Duo" },
-                { src: "/hackathons/charusat/charusat1.png", bottom: "12%", left: "14%", rotate: -5, label: "CodingGita Teams" },
-                { src: "/hackathons/charusat/charusat4.png", bottom: "10%", right: "12%", rotate: 8, label: "The Badges", aspectRatio: "4/4" }
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281307/portfolio/hackathons/charusat/charusat2.png", top: "7%", left: "12%", rotate: -8, label: "The Event" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281309/portfolio/hackathons/charusat/charusat3.png", top: "10%", right: "15%", rotate: 7, label: "The Duo" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281306/portfolio/hackathons/charusat/charusat1.png", bottom: "12%", left: "14%", rotate: -5, label: "CodingGita Teams" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281310/portfolio/hackathons/charusat/charusat4.png", bottom: "10%", right: "12%", rotate: 8, label: "The Badges", aspectRatio: "4/4" }
             ]
         },
         {
@@ -59,9 +59,9 @@ const HackathonsPage = () => {
             subtitle: 'of Innovation & Building',
             text: <>Pushed our limits overnight,<br />learned new tech stacks,<br />and built a product we are proud of.</>,
             photos: [
-                { src: "/hackathons/svnit/svnit1.png", top: "8%", left: "15%", rotate: -6, label: "The Badge" },
-                { src: "/hackathons/svnit/svnit2.png", top: "16%", right: "12%", rotate: 9, label: "The Squad", aspectRatio: "12/8" },
-                { src: "/hackathons/svnit/svnit3.png", bottom: "10%", left: "25%", rotate: -4, label: "The Workspace" }
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281319/portfolio/hackathons/svnit/svnit1.png", top: "8%", left: "15%", rotate: -6, label: "The Badge" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281320/portfolio/hackathons/svnit/svnit2.png", top: "16%", right: "12%", rotate: 9, label: "The Squad", aspectRatio: "12/8" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281321/portfolio/hackathons/svnit/svnit3.png", bottom: "10%", left: "25%", rotate: -4, label: "The Workspace" }
             ]
         },
         {
@@ -72,9 +72,9 @@ const HackathonsPage = () => {
             subtitle: 'of Code & Creativity',
             text: <>Building the future of technology,<br />one late-night commit at a time,<br />and meeting brilliant minds.</>,
             photos: [
-                { src: "/hackathons/rai_university/rai1.png", top: "10%", left: "10%", rotate: -7, label: "The Certificate", aspectRatio: "12/8" },
-                { src: "/hackathons/rai_university/rai2.png", top: "18%", right: "12%", rotate: 8, label: "The Squad", aspectRatio: "12/8" },
-                { src: "/hackathons/rai_university/rai3.png", bottom: "12%", left: "30%", rotate: -5, label: "The Product", aspectRatio: "12/8" }
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281315/portfolio/hackathons/rai_university/rai1.png", top: "10%", left: "10%", rotate: -7, label: "The Certificate", aspectRatio: "12/8" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281317/portfolio/hackathons/rai_university/rai2.png", top: "18%", right: "12%", rotate: 8, label: "The Squad", aspectRatio: "12/8" },
+                { src: "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281318/portfolio/hackathons/rai_university/rai3.png", bottom: "12%", left: "30%", rotate: -5, label: "The Product", aspectRatio: "12/8" }
             ]
         }
     ];

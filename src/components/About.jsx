@@ -167,7 +167,7 @@ const About = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
                         <Image
-                            src="/png/image1.png"
+                            src="https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281381/portfolio/png/image1.png"
                             alt="Dhruvesh Shyara"
                             width={600}
                             height={800}

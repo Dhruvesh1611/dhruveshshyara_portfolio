@@ -5,7 +5,7 @@
     "title": "Doppelganger — Azure AI Code Assistant",
     "category": "Fullstack",
     "description": "🏆 1st Place among 33 teams — AI-powered VS Code extension that detects Azure SDK coding context and generates Copilot-style inline ghost text suggestions, backed by a RAG pipeline with ChromaDB, feedback collection, and a companion product website.",
-    "image": "/projects/doppelganger.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281392/portfolio/projects/doppelganger.jpg",
     "tags": [
       "TypeScript",
       "VS Code API",
@@ -143,7 +143,7 @@
     "title": "Yaritu — Premium Fashion & Jewelry Showcase",
     "category": "Fullstack",
     "description": "A high-performance, commercial-grade showcase platform built for a premium wedding clothing and jewelry brand. Features cloud-native media optimization and custom CMS.",
-    "image": "/projects/yaritu.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281408/portfolio/projects/yaritu.png",
     "tags": [
       "Next.js",
       "React",
@@ -223,7 +223,7 @@
       "Cloudinary integration for high-quality image management.",
       "Contact & Inquiry system for custom user requests."
     ],
-    "image": "/projects/shyaragold.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281403/portfolio/projects/shyaragold.png",
     "tags": [
       "React.js",
       "Vite",
@@ -300,7 +300,7 @@
       "Tiered VIP system with exclusive benefits and discounts.",
       "Secure JWT-authenticated user accounts."
     ],
-    "image": "/projects/tatto-web.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281404/portfolio/projects/tatto-web.jpg",
     "tags": [
       "React",
       "Node.js",
@@ -389,7 +389,7 @@
     "title": "HireLens — AI Resume Optimization Platform",
     "category": "Fullstack",
     "description": "AI-powered SaaS platform that analyzes resumes and professional profiles to deliver intelligent, actionable optimization insights. Multi-agent pipeline system that evaluates resume content, identifies gaps, and provides structured improvements.",
-    "image": "/projects/hirelens.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281396/portfolio/projects/hirelens.png",
     "tags": [
       "Next.js",
       "TypeScript",
@@ -509,7 +509,7 @@
     "title": "YouTube Shorts Auto-Scroller",
     "category": "Extension",
     "description": "A high-performance Chrome extension that enhances YouTube Shorts viewing by intelligently auto-scrolling to the next video when one ends, with an automated 'Skip Sponsored' mode to filter ads seamlessly.",
-    "image": "/projects/yt-shorts-scroller.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281410/portfolio/projects/yt-shorts-scroller.png",
     "tags": [
       "JavaScript",
       "Chrome Extension",
@@ -588,7 +588,7 @@
       "Fully responsive across mobile, tablet, and desktop breakpoints.",
       "Built from scratch using only HTML5, CSS3, and vanilla JavaScript."
     ],
-    "image": "/projects/eatclub.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281394/portfolio/projects/eatclub.png",
     "tags": [
       "HTML5",
       "CSS3",
@@ -655,7 +655,7 @@
       "High-end visual design with attention to typography and spacing.",
       "Fully responsive layout optimized for all devices."
     ],
-    "image": "/projects/rollsroyce.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281400/portfolio/projects/rollsroyce.png",
     "tags": [
       "HTML5",
       "CSS3",
@@ -722,7 +722,7 @@
       "Responsive navigation with search functionality.",
       "Clean, modular CSS for scalable styling."
     ],
-    "image": "/projects/libas.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281397/portfolio/projects/libas.png",
     "tags": [
       "HTML5",
       "CSS3",
@@ -789,7 +789,7 @@
       "Score tracking, speed progression, and game-over logic.",
       "Keyboard controls with responsive canvas sizing."
     ],
-    "image": "/projects/game.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281394/portfolio/projects/game.png",
     "tags": [
       "JavaScript",
       "HTML5 Canvas",
@@ -856,7 +856,7 @@
       "Color palette, typography system, and component library designed from scratch.",
       "Wireframes, high-fidelity mockups, and interactive prototypes."
     ],
-    "image": "/projects/yaritu_figma.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281409/portfolio/projects/yaritu_figma.png",
     "tags": [
       "UI/UX",
       "Figma"
@@ -919,7 +919,7 @@
       "Product showcase designs with high-fidelity jewelry imagery.",
       "Responsive design system covering mobile and desktop experiences."
     ],
-    "image": "/projects/shyara_gold_figma.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281401/portfolio/projects/shyara_gold_figma.png",
     "tags": [
       "UI/UX",
       "Figma"
@@ -982,7 +982,7 @@
       "Clean, minimal interface with focus on core scanning functionality.",
       "Designed accessible UI with clear visual feedback and intuitive controls."
     ],
-    "image": "/projects/docscanx.png",
+    "image": "https://res.cloudinary.com/ggx2rcgy/image/upload/v1784281391/portfolio/projects/docscanx.png",
     "tags": [
       "UI/UX",
       "Figma"
