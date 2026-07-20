@@ -665,7 +665,7 @@ The portfolio is optimized for performance with:
 | # | Project | Tech Stack | Links |
 |---|---------|------------|-------|
 | 🏆 | **Doppelganger** — Azure AI Code Assistant | TypeScript, VS Code API, Azure OpenAI, ChromaDB | [GitHub](https://github.com/Dhruvesh1611/Doppelganger-March-2026-Eklavya) · [Live](https://azure-ai-code-assistant.vercel.app/) |
-| 👗 | **Yaritu** — Premium Fashion Showcase | Next.js, MongoDB, AWS S3, Cloudinary | [GitHub](https://github.com/Dhruvesh1611/yaritu) · [Live](https://yaritu.vercel.app) |
+| 👗 | **Yaritu** — Premium Fashion Showcase | Next.js, MongoDB, AWS S3, Cloudinary | [GitHub](https://github.com/Dhruvesh1611/yaritu) · [Live](https://yaritu.com) |
 | 💍 | **Shyara Gold** — Jewelry E-commerce | React, Node.js, Express, MongoDB | [GitHub](https://github.com/codinggita/shyara_gold) · [Live](https://shyara-gold.netlify.app/) |
 | 🎨 | **Tattoo Studio** — Membership Platform | React, Node.js, JWT, MongoDB | [GitHub](https://github.com/Dhruvesh1611/tattoos_website) · [Live](https://tattoos-dreamers-studio.onrender.com/) |
 | 📄 | **HireLens** — AI Resume Optimizer | Next.js, TypeScript, Gemini API, Redis | [GitHub](https://github.com/Dhruvesh1611/Team-Velox-AI-RESUME-OPTIMIZER) · [Live](https://hirelens.dev) |
