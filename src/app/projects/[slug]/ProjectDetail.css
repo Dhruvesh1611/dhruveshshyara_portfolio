@@ -702,8 +702,8 @@
         flex: 1;
         width: auto;
         justify-content: center;
-        padding: 12px 10px;
-        font-size: 0.9rem;
+        padding: 12px 8px;
+        font-size: 1.05rem;
         min-height: 48px;
         border-radius: 12px;
     }
@@ -839,8 +839,8 @@
         flex: 1;
         width: auto;
         justify-content: center;
-        padding: 12px 8px;
-        font-size: 0.8rem;
+        padding: 12px 6px;
+        font-size: 1.55rem;
         min-height: 44px;
         border-radius: 10px;
     }
@@ -872,8 +872,13 @@
 }
 
 @keyframes hackathon-badge-pulse {
-    0% { box-shadow: 0 0 10px rgba(251, 191, 36, 0.1); }
-    100% { box-shadow: 0 0 25px rgba(251, 191, 36, 0.25); }
+    0% {
+        box-shadow: 0 0 10px rgba(251, 191, 36, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 25px rgba(251, 191, 36, 0.25);
+    }
 }
 
 .hackathon-achievement-card {
@@ -899,9 +904,19 @@
 }
 
 @keyframes trophy-bounce {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-5px) rotate(-3deg); }
-    75% { transform: translateY(-3px) rotate(3deg); }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-5px) rotate(-3deg);
+    }
+
+    75% {
+        transform: translateY(-3px) rotate(3deg);
+    }
 }
 
 .hackathon-achievement-title {

@@ -1,6 +1,24 @@
 {
   "pageViews": [
     {
+      "id": "mrx52m3d2g24b6s6y",
+      "path": "/projects/doppelganger",
+      "referrer": "http://localhost:3000/projects/doppelganger",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-23T06:37:17.014Z"
+    },
+    {
+      "id": "mrx4y07g4eks8osks",
+      "path": "/projects/doppelganger",
+      "referrer": "http://localhost:3000/projects/doppelganger",
+      "device": "mobile",
+      "browser": "Safari",
+      "visitorId": "7b114857d721",
+      "timestamp": "2026-07-23T06:33:42.027Z"
+    },
+    {
       "id": "mrx4mtfgyz589qoju",
       "path": "/projects/doppelganger",
       "referrer": "http://localhost:3000/projects/doppelganger",
@@ -4358,7 +4376,7 @@
     }
   ],
   "summary": {
-    "totalVisits": 484,
+    "totalVisits": 486,
     "uniqueVisitors": 1,
     "topPages": {
       "/": 129,
@@ -4368,18 +4386,18 @@
       "/explanation": 59,
       "/projects/shyara-gold": 1,
       "/login": 1,
-      "/projects/doppelganger": 19,
+      "/projects/doppelganger": 21,
       "/projects/yaritu": 4,
       "/hackathons": 63
     },
     "deviceBreakdown": {
       "desktop": 442,
-      "mobile": 42,
+      "mobile": 44,
       "tablet": 0
     },
     "browserBreakdown": {
       "Chrome": 447,
-      "Safari": 37
+      "Safari": 39
     },
     "dailyVisits": {
       "2026-06-04": 9,
@@ -4396,7 +4414,7 @@
       "2026-07-17": 36,
       "2026-07-18": 1,
       "2026-07-20": 3,
-      "2026-07-23": 36
+      "2026-07-23": 38
     }
   }
 }
