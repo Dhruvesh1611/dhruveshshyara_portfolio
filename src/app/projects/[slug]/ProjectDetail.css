@@ -8,6 +8,7 @@
     /* Better readability */
     scroll-behavior: smooth;
     padding-top: 120px;
+    overflow-x: hidden;
 }
 
 /* Breadcrumbs */
@@ -57,6 +58,10 @@
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
+}
+
+.mobile-badges {
+    display: none;
 }
 
 .meta-badge {
@@ -315,6 +320,36 @@
     box-shadow: 0 0 10px var(--color-light-purple);
 }
 
+/* Highlights / Features List */
+.highlights-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 28px 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.highlight-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.highlight-text-content {
+    flex: 1;
+    min-width: 0;
+}
+
 .highlight-icon {
     font-size: 3rem;
 }
@@ -419,12 +454,96 @@
     }
 }
 
+/* ── Tablet Breakpoint ── */
+@media screen and (max-width: 1024px) {
+    .detail-header {
+        margin-top: 80px;
+        padding: 10px 30px 30px;
+        gap: 30px;
+    }
+
+    .header-right {
+        flex-wrap: wrap;
+    }
+
+    .detail-main-layout {
+        padding: 40px 30px 100px;
+        gap: 50px;
+    }
+
+    .detail-content-side {
+        gap: 80px;
+    }
+
+    .project-main-visual {
+        border-radius: 24px;
+    }
+
+    .meta-badge {
+        font-size: 1.4rem;
+        padding: 8px 16px;
+    }
+
+    .project-one-liner {
+        font-size: 1.35rem;
+    }
+
+    .detail-section-title {
+        font-size: 3rem;
+        margin-bottom: 35px;
+    }
+
+    .detail-text {
+        font-size: 1.8rem;
+    }
+
+    .standout-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .hackathon-meta-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team-members-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .project-detail-container {
+        padding-top: 80px;
+    }
+
     .detail-header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 10px 20px 20px 20px;
-        margin-top: 120px;
+        padding: 10px 20px 30px 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        gap: 20px;
+    }
+
+    .header-left {
+        width: 100%;
+    }
+
+    .desktop-badges {
+        display: none;
+    }
+
+    .mobile-badges {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    .meta-badge {
+        width: 100%;
+        justify-content: center;
     }
 
     .header-right {
@@ -437,7 +556,7 @@
     }
 
     .detail-main-layout {
-        padding: 0 20px 100px;
+        padding: 20px 20px 120px;
         gap: 40px;
     }
 
@@ -447,22 +566,26 @@
     }
 
     .project-large-title {
-        font-size: clamp(2rem, 8vw, 3.5rem);
+        font-size: clamp(1.8rem, 7vw, 2.8rem);
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
     }
 
     .project-one-liner {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
+        line-height: 1.6;
     }
 
     .detail-section-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         margin-bottom: 25px;
         text-align: center;
     }
 
     .detail-text {
-        font-size: 1.6rem;
-        line-height: 1.7;
+        font-size: 1.5rem;
+        line-height: 1.8;
     }
 
     .arch-card {
@@ -471,135 +594,204 @@
     }
 
     .arch-card h4 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        letter-spacing: 0.12em;
     }
 
     .arch-card p {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        line-height: 1.6;
     }
 
     .standout-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 16px;
     }
 
     .standout-card {
-        padding: 25px;
+        padding: 24px;
+    }
+
+    .highlight-item {
+        padding: 20px;
+        gap: 16px;
+        border-radius: 16px;
     }
 
     .highlight-title {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .highlight-icon {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        flex-shrink: 0;
     }
 
     .roadmap-step {
         padding: 15px 20px;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .challenge-card {
         padding: 20px;
+        border-radius: 14px;
     }
 
     .challenge-problem,
     .challenge-solution {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
+        line-height: 1.6;
     }
 
     .structure-list {
         padding: 15px 20px;
+        border-radius: 10px;
     }
 
     .structure-item {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     .detail-content-side {
-        gap: 60px;
+        gap: 56px;
     }
 
     .meta-badge {
-        font-size: 1.3rem;
-        padding: 6px 14px;
+        font-size: 1.1rem;
+        padding: 8px 14px;
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.4;
+        text-align: center;
+        border-radius: 10px;
     }
 
-    .metadata-badges {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
 
     .project-main-visual {
-        border-radius: 20px;
+        border-radius: 18px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     }
 
     .lightbox-overlay {
-        padding: 15px;
+        padding: 12px;
+    }
+
+    .lightbox-content {
+        width: 100%;
+    }
+
+    .lightbox-content img {
+        width: 100%;
+        height: auto;
     }
 
     .action-button {
         padding: 12px 24px;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        border-radius: 12px;
     }
 
     .mobile-action-bar {
+        flex-direction: row;
         padding: 12px 15px;
-        gap: 10px;
+        gap: 8px;
+        padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     }
 
     .mobile-action-bar .action-button {
         flex: 1;
+        width: auto;
         justify-content: center;
-        padding: 12px 16px;
-        font-size: 1rem;
+        padding: 12px 10px;
+        font-size: 0.9rem;
+        min-height: 48px;
+        border-radius: 12px;
+    }
+
+    /* Nav title in sidebar (hidden but just in case) */
+    .nav-title {
+        font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .project-detail-container {
+        padding-top: 60px;
+    }
+
     .detail-header {
-        padding: 15px;
+        padding: 10px 16px 16px;
+        gap: 20px;
     }
 
     .project-large-title {
-        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
     }
 
     .project-one-liner {
         font-size: 1.1rem;
+        line-height: 1.5;
     }
 
     .detail-main-layout {
-        padding: 0 15px 100px;
-        gap: 30px;
+        padding: 12px 16px 120px;
+        gap: 24px;
     }
 
     .breadcrumb-nav {
-        padding: 110px 15px 10px;
+        padding: 10px 16px 10px;
         font-size: 0.9rem;
     }
 
     .detail-section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-bottom: 20px;
     }
 
     .detail-text {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
+        line-height: 1.75;
+    }
+
+    .arch-card {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .arch-card h4 {
+        font-size: 1.1rem;
     }
 
     .arch-card p {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
+    }
+
+    .highlight-item {
+        padding: 18px;
+        gap: 14px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 14px;
     }
 
     .highlight-title {
-        font-size: 1.5rem;
+        font-size: 1.45rem;
+    }
+
+    .highlight-icon {
+        font-size: 2rem;
     }
 
     .roadmap-step {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
         padding: 12px 15px;
+        border-radius: 12px;
+    }
+
+    .challenge-card {
+        padding: 18px;
+        border-radius: 12px;
     }
 
     .challenge-problem,
@@ -611,14 +803,59 @@
         gap: 40px;
     }
 
-    .meta-badge {
-        font-size: 1.1rem;
-        padding: 5px 10px;
+    .metadata-badges {
+        flex-direction: column;
         gap: 8px;
+    }
+
+    .meta-badge {
+        font-size: 1.05rem;
+        padding: 10px 14px;
+        gap: 8px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        border-radius: 10px;
     }
 
     .standout-card {
         padding: 20px;
+        border-radius: 16px;
+    }
+
+    .project-main-visual {
+        border-radius: 14px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .mobile-action-bar {
+        flex-direction: row;
+        padding: 10px 12px;
+        gap: 6px;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .mobile-action-bar .action-button {
+        flex: 1;
+        width: auto;
+        justify-content: center;
+        padding: 12px 8px;
+        font-size: 0.8rem;
+        min-height: 44px;
+        border-radius: 10px;
+    }
+
+    .structure-list {
+        padding: 14px 16px;
+    }
+
+    .structure-item {
+        font-size: 1.1rem;
+        padding: 6px 0;
+    }
+
+    .lightbox-overlay {
+        padding: 8px;
     }
 }
 
@@ -826,81 +1063,147 @@
 }
 
 /* ── Hackathon Responsive ── */
-@media screen and (max-width: 768px) {
+/* ── Hackathon Tablet ── */
+@media screen and (max-width: 1024px) {
     .hackathon-achievement-card {
-        padding: 25px;
-        gap: 25px;
-    }
-
-    .trophy-icon {
-        font-size: 3.5rem;
+        padding: 30px;
+        gap: 28px;
     }
 
     .hackathon-achievement-title {
-        font-size: 2rem;
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hackathon-achievement-card {
+        padding: 24px;
+        gap: 24px;
+        border-radius: 18px;
+    }
+
+    .hackathon-trophy-header {
+        gap: 18px;
+    }
+
+    .trophy-icon {
+        font-size: 3.2rem;
+    }
+
+    .hackathon-achievement-title {
+        font-size: 1.9rem;
     }
 
     .hackathon-event-name {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
     }
 
     .hackathon-meta-grid {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 10px;
+    }
+
+    .hackathon-meta-item {
+        padding: 16px;
+        border-radius: 12px;
     }
 
     .team-members-grid {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 10px;
+    }
+
+    .team-member-card {
+        padding: 16px;
+        border-radius: 12px;
     }
 
     .hackathon-subtitle {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .hackathon-learning-item {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
         padding: 12px 16px 12px 36px;
+        border-radius: 10px;
     }
 
     .team-member-name {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
     }
 
     .team-member-role {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
+    }
+
+    .hackathon-meta-label {
+        font-size: 1rem;
     }
 
     .hackathon-meta-value {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
     }
 }
 
 @media screen and (max-width: 480px) {
     .hackathon-achievement-card {
-        padding: 20px;
-        gap: 20px;
+        padding: 18px;
+        gap: 18px;
+        border-radius: 14px;
     }
 
     .hackathon-trophy-header {
         flex-direction: column;
         text-align: center;
-        gap: 15px;
+        gap: 12px;
     }
 
     .trophy-icon {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     .hackathon-achievement-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .hackathon-event-name {
+        font-size: 1.1rem;
+    }
+
+    .hackathon-meta-item {
+        padding: 14px;
+    }
+
+    .hackathon-meta-label {
+        font-size: 0.9rem;
+    }
+
+    .hackathon-meta-value {
         font-size: 1.2rem;
     }
 
     .hackathon-learning-item {
+        font-size: 1.15rem;
+        padding: 10px 14px 10px 32px;
+    }
+
+    .hackathon-subtitle {
+        font-size: 1.35rem;
+    }
+
+    .team-member-name {
         font-size: 1.2rem;
+    }
+
+    .team-member-role {
+        font-size: 1.05rem;
+    }
+
+    .team-member-highlight::after {
+        font-size: 0.8rem;
+        padding: 3px 10px;
+        top: 10px;
+        right: 10px;
     }
 }

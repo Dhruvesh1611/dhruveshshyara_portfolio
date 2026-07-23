@@ -61,8 +61,28 @@ export default function ProjectPage({ params }) {
         return () => observer.disconnect();
     }, [navItems]);
 
+    const projectBadges = (
+        <>
+            {project.timeline && (
+                <span className="meta-badge">
+                    <strong>TIMELINE:</strong> {project.timeline}
+                </span>
+            )}
+            {project.role && (
+                <span className="meta-badge">
+                    <strong>ROLE:</strong> {project.role}
+                </span>
+            )}
+            {project.hackathon && (
+                <span className="meta-badge hackathon-meta-badge">
+                    <strong>{project.hackathon.achievement}</strong>
+                </span>
+            )}
+        </>
+    );
+
     return (
-        <div className="project-detail-container" style={{ paddingTop: '160px' }}>
+        <div className="project-detail-container">
             <Navbar />
 
             <nav className="breadcrumb-nav">
@@ -75,22 +95,8 @@ export default function ProjectPage({ params }) {
 
             <header className="detail-header">
                 <div className="header-left">
-                    <div className="metadata-badges">
-                                                {project.timeline && (
-                                                    <span className="meta-badge">
-                                                        <strong>TIMELINE:</strong> {project.timeline}
-                                                    </span>
-                                                )}
-                                                {project.role && (
-                                                    <span className="meta-badge">
-                                                        <strong>ROLE:</strong> {project.role}
-                                                    </span>
-                                                )}
-                                                {project.hackathon && (
-                                                    <span className="meta-badge hackathon-meta-badge">
-                                                        <strong>{project.hackathon.achievement}</strong>
-                                                    </span>
-                                                )}
+                    <div className="metadata-badges desktop-badges">
+                        {projectBadges}
                     </div>
                     <motion.h1
                         className="project-large-title"
@@ -117,6 +123,9 @@ export default function ProjectPage({ params }) {
 
             <div className="detail-main-layout">
                 <main className="detail-content-side">
+                    <div className="metadata-badges mobile-badges">
+                        {projectBadges}
+                    </div>
                     <motion.div
                         className="project-main-visual"
                         onClick={() => setIsLightboxOpen(true)}
@@ -370,7 +379,8 @@ export default function ProjectPage({ params }) {
                                     alt={project.title}
                                     width={1200}
                                     height={800}
-                                    style={{ objectFit: 'contain', borderRadius: '12px' }}
+                                    loading="lazy"
+                                    style={{ objectFit: 'contain', borderRadius: '12px', maxWidth: '100%', height: 'auto' }}
                                 />
                             ) : (
                                 <div style={{ width: 400, height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#111', color: '#64748b', fontSize: '1.2rem', borderRadius: '12px' }}>No Image Available</div>
